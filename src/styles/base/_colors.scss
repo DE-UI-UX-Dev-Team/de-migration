@@ -1,0 +1,244 @@
+/*-----Background-colors----- */
+
+.bg--primary-blue {
+    background-color: --primary-blue--base-hsl;
+}
+
+.bg--light-blue {
+    background-color: --primary-blue--light-3-hsl;
+}
+
+.bg--secondary-orange {
+    background-color: --secondary-orange--accent-hsl;
+}
+
+.bg--white {
+    background-color: --white-surface-hsl;
+}
+
+.bg--light-gray {
+    background-color: --gray--light--background-hsl;
+}
+
+.bg--error {
+    background-color: --error-color--background-hsl;
+}
+
+.bg--warning {
+    background-color: --warning-color--background-hsl;
+}
+
+.bg--success {
+    background-color: --success-color--background-hsl;
+}
+
+
+/*-----foreground-colors-----*/
+
+.color--primary-blue {
+    color: --primary-blue--base-hsl;
+}
+
+.color--light-blue-1 {
+    color: --primary-blue--light-1-hsl;
+}
+
+.color--light-blue-2 {
+    color: --primary-blue--light-2-hsl;
+}
+
+.color--light-blue-3 {
+    color: --primary-blue--light-3-hsl;
+}
+
+.color--dark-blue-1 {
+    color: --primary-blue--dark-1-hsl;
+}
+
+.color--dark-blue-2 {
+    color: --primary-blue--dark-2-hsl;
+}
+
+.color--secondary-orange {
+
+    color: --secondary-orange--accent-hsl;
+}
+
+.color--light-orange-1 {
+    color: --secondary-orange--light-1-hsl;
+}
+
+.color--light-orange-2 {
+    color: --secondary-orange--light-2-hsl;
+}
+
+.color--light-orange-3 {
+    color: --secondary-orange--light-3-hsl;
+}
+
+.color--dark-orange-1 {
+    color: --secondary-orange--dark-1-hsl;
+}
+
+.color--dark-orange-2 {
+    color: --secondary-orange--dark-2-hsl;
+}
+
+.color--white {
+    color: --white-surface-hsl;
+}
+
+.color--black {
+    color: --black-hsl;
+}
+
+.color--dark-gray {
+    color: --gray--dark-hsl;
+}
+
+.color--medium-gray {
+    color: --gray--medium-hsl;
+}
+
+.color--light-gray-body {
+    color: --gray--light--body-hsl;
+}
+
+.color--light-gray-input {
+    color: --gray--light--input-hsl;
+}
+
+.color--light-gray-disabled {
+    color: --gray--light--disabled-hsl;
+}
+
+.color--error-element {
+    color: --error-color--element-hsl;
+}
+
+.color--error-text {
+    color: --error-color--text-hsl;
+}
+
+.color--warning-element {
+    color: --warning-color--element-hsl;
+}
+
+.color--warning-text {
+    color: --warning-color--text-hsl;
+}
+
+.color--success-element {
+    color: --success-color--element-hsl;
+}
+
+.color-success-text {
+    color: --success-color--text-hsl;
+}
+
+/*------Border colors -------*/
+
+
+
+/*-----foreground-colors-----*/
+
+.border--primary-blue {
+    border-color: --primary-blue--base-hsl;
+}
+
+.border--light-blue-1 {
+    border-color: --primary-blue--light-1-hsl;
+}
+
+.border--light-blue-2 {
+    border-color: --primary-blue--light-2-hsl;
+}
+
+.border--light-blue-3 {
+    border-color: --primary-blue--light-3-hsl;
+}
+
+.border--dark-blue-1 {
+    border-color: --primary-blue--dark-1-hsl;
+}
+
+.border--dark-blue-2 {
+    border-color: --primary-blue--dark-2-hsl;
+}
+
+.border--secondary-orange {
+
+    border-color: --secondary-orange--accent-hsl;
+}
+
+.border--light-orange-1 {
+    border-color: --secondary-orange--light-1-hsl;
+}
+
+.border--light-orange-2 {
+    border-color: --secondary-orange--light-2-hsl;
+}
+
+.border--light-orange-3 {
+    border-color: --secondary-orange--light-3-hsl;
+}
+
+.border--dark-orange-1 {
+    border-color: --secondary-orange--dark-1-hsl;
+}
+
+.border--dark-orange-2 {
+    border-color: --secondary-orange--dark-2-hsl;
+}
+
+.border--white {
+    border-color: --white-surface-hsl;
+}
+
+.border--black {
+    border-color: --black-hsl;
+}
+
+.border--dark-gray {
+    border-color: --gray--dark-hsl;
+}
+
+.border--medium-gray {
+    border-color: --gray--medium-hsl;
+}
+
+.border--light-gray{
+    border-color: --gray--light--body-hsl;
+}
+
+.border--light-gray-input {
+    border-color: --gray--light--input-hsl;
+}
+
+.border--light-gray-disabled {
+    border-color: --gray--light--disabled-hsl;
+}
+
+.border--error-element {
+    border-color: --error-color--element-hsl;
+}
+
+.border--error-text {
+    border-color: --error-color--text-hsl;
+}
+
+.border--warning-element {
+    border-color: --warning-color--element-hsl;
+}
+
+.border--warning-text {
+    border-color: --warning-color--text-hsl;
+}
+
+.border--success-element {
+    border-color: --success-color--element-hsl;
+}
+
+.border-success-text {
+    border-color: --success-color--text-hsl;
+}
