@@ -1,3 +1,103 @@
 :root {
-    --primary-color: red;
+  /*primary blue color */
+  --primary-blue--base-hex: #005876;
+  --primary-blue--base-hsl: hsl(195.3,100%,23.1%);
+
+  --primary-blue--light-1-hex: #006E92;
+  --primary-blue--light-1-hsl: hsl(194.8,100%,28.6%);
+
+  --primary-blue--light-2-hex: #0096C8;
+  --primary-blue--light-2-hsl: hsl(195,100%,39.2%);
+
+  --primary-blue--light-3-hex: #E8EEF1;
+  --primary-blue--light-3-hsl: hsl(200,24.3%,92.7%);
+
+  --primary-blue--dark-1-hex: #002C3B;
+  --primary-blue--dark-1-hsl: hsl(195.3,100%,11.6%);
+
+  --primary-blue--dark-2-hex: #00445B;
+  --primary-blue--dark-2-hsl: hsl(195.2,100%,17.8%);
+
+
+  /* secondary orange color */
+  --secondary-orange--accent-hex: #FF5100;
+  --secondary-orange--accent-hsl: hsl(19.1,100%,50%);
+
+  --secondary-orange--light-1-hex: #FF7739;
+  --secondary-orange--light-1-hsl: hsl(18.8,100%,61.2%);
+
+  --secondary-orange--light-2-hex: #FF9464;
+  --secondary-orange--light-2-hsl: hsl(18.6,100%,69.6%);
+
+  --secondary-orange--light-3-hex: #FBE1D5;
+  --secondary-orange--light-3-hsl: hsl(18.9,82.6%,91%);
+
+  --secondary-orange--dark-1-hex: #C63E00;
+  --secondary-orange--dark-1-hsl: hsl(18.8,100%,38.8%); 
+
+  --secondary-orange--dark-2-hex: #9B3000;
+  --secondary-orange--dark-2-hsl: hsl(18.6,100%,30.4%);
+
+  
+  /* white surface color */
+  --white-surface-hex: #FFFFFF;
+  --white-surface-hsl: hsl(0,0%,100%);
+
+  
+  /* black color */
+  --black-hex: #000000;
+  --black-hsl: hsl(0,0%,0%);
+
+  
+  /* Gray scale colors */
+  --gray--dark-hex: #38454A;
+  --gray--dark-hsl: hsl(196.7,13.8%,25.5%);
+
+  --gray--medium-hex: #505E64;
+  --gray--medium-hsl: hsl(198,11.1%,35.3%);
+
+  --gray--light--body-hex: #6D7A7F;
+  --gray--light--body-hsl: hsl(196.7,7.6%,46.3%);
+
+  --gray--light--input-hex: #8C9498;
+  --gray--light--input-hsl: hsl(200,5.5%,57.3%);
+
+  --gray--light--disabled-hex: #C1C5C6;
+  --gray--light--disabled-hsl: hsl(192,4.2%,76.7%);
+
+  --gray--light--background-hex: #FAFAFA;
+  --gray--light--background-hsl: hsl(0,0%,98%);
+
+ 
+  /* Notification colors */
+  /* Error color */
+  --error-color--element-hex: #BD1D00;
+  --error-color--element-hsl: hsl(9.2,100%,37.1%)
+
+  --error-color--text-hex: #721C24;
+  --error-color--text-hsl: hsl(354.4,60.6%,27.8%);
+
+  --error-color--background-hex: #F8D7DA;
+  --error-color--background-hsl: hsl(354.5,70.2%,90.8%);
+
+  /*warning color */
+  --warning-color--element-hex: #FCA326;
+  --warning-color--element-hsl: hsl(35,97.3%,56.9%);
+
+  --warning-color--text-hex: #856404;
+  --warning-color--text-hsl: hsl(44.7,94.2%,26.9%);
+
+  --warning-color--background-hex: #FFF3CD;
+  --warning-color--background-hsl: hsl(45.6,100%,90.2%);
+
+
+  /* Success color */
+  --success-color--element-hex: #008A24;
+  --success-color--element-hsl: hsl(135.7,100%,27.1%);
+
+  --success-color--text-hex: #134E20;
+  --success-color--text-hsl: hsl(133.2,60.8%,19%);
+
+  --success-color--background-hex: #D4EDDA;
+  --success-color--background-hs6l: hsl(134.4,41%,88%);
 }
