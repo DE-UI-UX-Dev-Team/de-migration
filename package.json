@@ -8,7 +8,7 @@
         "dist": "webpack --env env=prod --mode production"
     },
     "keywords": [],
-    "author": "Joshua Uzzell <joshua.uzzell@nrg.com>",
+    "author": "DE UI/UX Development Team <ethan.rahman@nrg.com>",
     "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.20.12",
