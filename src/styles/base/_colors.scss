@@ -1,139 +1,139 @@
 /*-----Background-colors----- */
 
 .bg--primary-blue {
-    background-color: --primary-blue--base;
+    background-color: var(--primary-blue--base);
 }
 
 .bg--light-blue {
-    background-color: --primary-blue--light-3;
+    background-color: var(--primary-blue--light-3);
 }
 
 .bg--secondary-orange {
-    background-color: --secondary-orange--accent;
+    background-color: var(--secondary-orange--accent);
 }
 
 .bg--white {
-    background-color: --white-surface;
+    background-color: var(--white-surface);
 }
 
 .bg--light-gray {
-    background-color: --gray--light--background;
+    background-color: var(--gray--light--background);
 }
 
 .bg--error {
-    background-color: --error-color--background;
+    background-color: var(--error-color--background);
 }
 
 .bg--warning {
-    background-color: --warning-color--background;
+    background-color: var(--warning-color--background);
 }
 
 .bg--success {
-    background-color: --success-color--background;
+    background-color: var(--success-color--background);
 }
 
 
 /*-----foreground-colors-----*/
 
 .color--primary-blue {
-    color: --primary-blue--base;
+    color: var(--primary-blue--base);
 }
 
 .color--light-blue-1 {
-    color: --primary-blue--light-1;
+    color: var(--primary-blue--light-1);
 }
 
 .color--light-blue-2 {
-    color: --primary-blue--light-2;
+    color: var(--primary-blue--light-2);
 }
 
 .color--light-blue-3 {
-    color: --primary-blue--light-3;
+    color: var(--primary-blue--light-3);
 }
 
 .color--dark-blue-1 {
-    color: --primary-blue--dark-1;
+    color: var(--primary-blue--dark-1);
 }
 
 .color--dark-blue-2 {
-    color: --primary-blue--dark-2;
+    color: var(--primary-blue--dark-2);
 }
 
 .color--secondary-orange {
 
-    color: --secondary-orange--accent;
+    color: var(--secondary-orange--accent);
 }
 
 .color--light-orange-1 {
-    color: --secondary-orange--light-1;
+    color: var(--secondary-orange--light-1);
 }
 
 .color--light-orange-2 {
-    color: --secondary-orange--light-2;
+    color: var(--secondary-orange--light-2);
 }
 
 .color--light-orange-3 {
-    color: --secondary-orange--light-3;
+    color: var(--secondary-orange--light-3);
 }
 
 .color--dark-orange-1 {
-    color: --secondary-orange--dark-1;
+    color: var(--secondary-orange--dark-1);
 }
 
 .color--dark-orange-2 {
-    color: --secondary-orange--dark-2;
+    color: var(--secondary-orange--dark-2);
 }
 
 .color--white {
-    color: --white-surface;
+    color: var(--white-surface);
 }
 
 .color--black {
-    color: --black;
+    color: var(--black);
 }
 
 .color--dark-gray {
-    color: --gray--dark;
+    color: var(--gray--dark);
 }
 
 .color--medium-gray {
-    color: --gray--medium;
+    color: var(--gray--medium);
 }
 
 .color--light-gray-body {
-    color: --gray--light--body;
+    color: var(--gray--light--body);
 }
 
 .color--light-gray-input {
-    color: --gray--light--input;
+    color: var(--gray--light--input);
 }
 
 .color--light-gray-disabled {
-    color: --gray--light--disabled;
+    color: var(--gray--light--disabled);
 }
 
 .color--error-element {
-    color: --error-color--element;
+    color: var(--error-color--element);
 }
 
 .color--error-text {
-    color: --error-color--text;
+    color: var(--error-color--text);
 }
 
 .color--warning-element {
-    color: --warning-color--element;
+    color: var(--warning-color--element);
 }
 
 .color--warning-text {
-    color: --warning-color--text;
+    color: var(--warning-color--text);
 }
 
 .color--success-element {
-    color: --success-color--element;
+    color: var(--success-color--element);
 }
 
 .color-success-text {
-    color: --success-color--text;
+    color: var(--success-color--text);
 }
 
 /*------Border colors -------*/
@@ -143,102 +143,102 @@
 /*-----foreground-colors-----*/
 
 .border--primary-blue {
-    border-color: --primary-blue--base;
+    border-color: var(--primary-blue--base);
 }
 
 .border--light-blue-1 {
-    border-color: --primary-blue--light-1;
+    border-color: var(--primary-blue--light-1);
 }
 
 .border--light-blue-2 {
-    border-color: --primary-blue--light-2;
+    border-color: var(--primary-blue--light-2);
 }
 
 .border--light-blue-3 {
-    border-color: --primary-blue--light-3;
+    border-color: var(--primary-blue--light-3);
 }
 
 .border--dark-blue-1 {
-    border-color: --primary-blue--dark-1;
+    border-color: var(--primary-blue--dark-1);
 }
 
 .border--dark-blue-2 {
-    border-color: --primary-blue--dark-2;
+    border-color: var(--primary-blue--dark-2);
 }
 
 .border--secondary-orange {
 
-    border-color: --secondary-orange--accent;
+    border-color: var(--secondary-orange--accent);
 }
 
 .border--light-orange-1 {
-    border-color: --secondary-orange--light-1;
+    border-color: var(--secondary-orange--light-1);
 }
 
 .border--light-orange-2 {
-    border-color: --secondary-orange--light-2;
+    border-color: var(--secondary-orange--light-2);
 }
 
 .border--light-orange-3 {
-    border-color: --secondary-orange--light-3;
+    border-color: var(--secondary-orange--light-3);
 }
 
 .border--dark-orange-1 {
-    border-color: --secondary-orange--dark-1;
+    border-color: var(--secondary-orange--dark-1);
 }
 
 .border--dark-orange-2 {
-    border-color: --secondary-orange--dark-2;
+    border-color: var(--secondary-orange--dark-2);
 }
 
 .border--white {
-    border-color: --white-surface;
+    border-color: var(--white-surface);
 }
 
 .border--black {
-    border-color: --black;
+    border-color: var(--black);
 }
 
 .border--dark-gray {
-    border-color: --gray--dark;
+    border-color: var(--gray--dark);
 }
 
 .border--medium-gray {
-    border-color: --gray--medium;
+    border-color: var(--gray--medium);
 }
 
 .border--light-gray{
-    border-color: --gray--light--body;
+    border-color: var(--gray--light--body);
 }
 
 .border--light-gray-input {
-    border-color: --gray--light--input;
+    border-color: var(--gray--light--input);
 }
 
 .border--light-gray-disabled {
-    border-color: --gray--light--disabled;
+    border-color: var(--gray--light--disabled);
 }
 
 .border--error-element {
-    border-color: --error-color--element;
+    border-color: var(--error-color--element);
 }
 
 .border--error-text {
-    border-color: --error-color--text;
+    border-color: var(--error-color--text);
 }
 
 .border--warning-element {
-    border-color: --warning-color--element;
+    border-color: var(--warning-color--element);
 }
 
 .border--warning-text {
-    border-color: --warning-color--text;
+    border-color: var(--warning-color--text);
 }
 
 .border--success-element {
-    border-color: --success-color--element;
+    border-color: var(--success-color--element);
 }
 
 .border-success-text {
-    border-color: --success-color--text;
+    border-color: var(--success-color--text);
 }
