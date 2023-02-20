@@ -1,18 +1,18 @@
 /*---- Elevation and Shadow levels ----*/
 
 .elev--level-1 {
-    box-shadow: var(--elev-1--drop-1), var(--elev-1--drop-2), var(--elev-1--drop-3);
+    box-shadow: var(--elev-1--dropshadow);
 
 }
 
 .elev--level-2 {
-    box-shadow: var(--elev-2--drop-1), var(--elev-2--drop-2), var(--elev-2--drop-3);
+    box-shadow: var(--elev-2--dropshadow);
 }
 
 .elev--level-3 {
-    box-shadow: var(--elev-3--drop-1), var(--elev-3--drop-2), var(--elev-3--drop-3);
+    box-shadow: var(--elev-3--dropshadow);
 }
 
 .elev--level-4 {
-    box-shadow: var(--elev-4--drop-1), var(--elev-4--drop-2), var(--elev-4--drop-3);
+    box-shadow: var(--elev-4--dropshadow);
 }
