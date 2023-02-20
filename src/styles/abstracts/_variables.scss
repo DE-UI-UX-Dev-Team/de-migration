@@ -107,4 +107,124 @@
   --success-color--background-hex: #D4EDDA;
   --success-color--background-hsl: hsl(134.4,41%,88%);
 
+  
+  /*--- Typography ---*/
+
+  /* Font-family */
+  --font-stack: 'Roboto', sans-serif; 
+
+  /* Headings */
+  --heading-1--s: 3.4rem/4rem var(--font-stack); /* font: <font-size>/<line-height> <font-family */
+  --heading-1--m: 3.4rem/4rem var(--font-stack); 
+  --heading-1--l: 4.8rem/5.6rem var(--font-stack); 
+  --heading-1--xl: 4.8rem/5.6rem var(--font-stack); 
+  --heading-1--letter-spacing--s: 0rem;  
+  --heading-1--letter-spacing--m: 0rem;  
+  --heading-1--letter-spacing--l: 0rem;  
+  --heading-1--letter-spacing--xl: 0rem; 
+
+  --heading-2--s: 2.4rem/3.2rem var(--font-stack);
+  --heading-2--m: 2.4rem/3.2rem var(--font-stack); 
+  --heading-2--l: 3.2rem/4rem var(--font-stack); 
+  --heading-2--xl: 3.2rem/4rem var(--font-stack); 
+  --heading-2--letter-spacing--s: 0rem;  
+  --heading-2--letter-spacing--m: 0rem;  
+  --heading-2--letter-spacing--l: 0rem;  
+  --heading-2--letter-spacing--xl: 0rem; 
+
+  --heading-3--s: 2rem/2.8rem var(--font-stack);
+  --heading-3--m: 2rem/2.8rem var(--font-stack); 
+  --heading-3--l: 2.4rem/3.2rem var(--font-stack); 
+  --heading-3--xl: 2.4rem/3.2rem var(--font-stack); 
+  --heading-3--letter-spacing--s: 0rem;  
+  --heading-3--letter-spacing--m: 0rem;  
+  --heading-3--letter-spacing--l: 0.015rem;  
+  --heading-3--letter-spacing--xl: 0.015rem; 
+
+  --heading-4--s: 1.8rem/2.6rem var(--font-stack);
+  --heading-4--m: 1.8rem/2.6rem var(--font-stack); 
+  --heading-4--l: 2rem/2.8rem var(--font-stack); 
+  --heading-4--xl: 2rem/2.8rem var(--font-stack); 
+  --heading-4--letter-spacing--s: 0.015rem;  
+  --heading-4--letter-spacing--m: 0.015rem;  
+  --heading-4--letter-spacing--l: 0.015rem;  
+  --heading-4--letter-spacing--xl: 0.015rem; 
+
+  --subheading-1--s: 1.6rem/2.4rem var(--font-stack);
+  --subheading-1--m: 1.6rem/2.4rem var(--font-stack);
+  --subheading-1--l: 1.8rem/2.6rem var(--font-stack);
+  --subheading-1--xl: 1.8rem/2.6rem var(--font-stack);
+  --subheading-1--letter-spacing--s: 0.015rem;  
+  --subheading-1--letter-spacing--m: 0.015rem;  
+  --subheading-1--letter-spacing--l: 0.015rem;  
+  --subheading-1--letter-spacing--xl: 0.015rem; 
+
+  --subheading-2--s: 1.4rem/2rem var(--font-stack);
+  --subheading-2--m: 1.4rem/2rem var(--font-stack);
+  --subheading-2--l: 1.4rem/2rem var(--font-stack);
+  --subheading-2--xl: 1.4rem/2rem var(--font-stack); 
+  --subheading-2--letter-spacing--s: 0.01rem;  
+  --subheading-2--letter-spacing--m: 0.01rem;  
+  --subheading-2--letter-spacing--l: 0.01rem;  
+  --subheading-2--letter-spacing--xl: 0.01rem; 
+
+  --paragraph-1--s: 1.6rem/2.4rem var(--font-stack);  
+  --paragraph-1--m: 1.6rem/2.4rem var(--font-stack);  
+  --paragraph-1--l: 1.6rem/2.4rem var(--font-stack);  
+  --paragraph-1--xl: 1.6rem/2.4rem var(--font-stack);  
+  --paragraph-1--letter-spacing--s: 0.05rem;  
+  --paragraph-1--letter-spacing--m: 0.05rem;  
+  --paragraph-1--letter-spacing--l: 0.05rem;  
+  --paragraph-1--letter-spacing--xl: 0.05rem; 
+
+  --paragraph-2--s: 1.4rem/2rem var(--font-stack); 
+  --paragraph-2--m: 1.4rem/2rem var(--font-stack);  
+  --paragraph-2--l: 1.4rem/2.2rem var(--font-stack);   
+  --paragraph-2--xl: 1.4rem/2.2rem var(--font-stack); 
+  --paragraph-2--letter-spacing--s: 0.025rem;  
+  --paragraph-2--letter-spacing--m: 0.025rem;  
+  --paragraph-2--letter-spacing--l: 0.025rem;  
+  --paragraph-2--letter-spacing--xl: 0.025rem;  
+
+  --paragraph-3--s: 1.2rem/1.8rem var(--font-stack); 
+  --paragraph-3--m: 1.2rem/1.8rem var(--font-stack); 
+  --paragraph-3--l: 1.2rem/2rem var(--font-stack); 
+  --paragraph-3--xl: 1.2rem/2rem var(--font-stack); 
+  --paragraph-3--letter-spacing--s: 0.025rem;
+  --paragraph-3--letter-spacing--m: 0.025rem;  
+  --paragraph-3--letter-spacing--l: 0.04rem;  
+  --paragraph-3--letter-spacing--xl: 0.04rem;  
+ 
+  --button-text--s: 1.4rem/2.4rem var(--font-stack); 
+  --button-text--m: 1.4rem/2.4rem var(--font-stack); 
+  --button-text--l: 1.6rem/2.4rem var(--font-stack); 
+  --button-text--xl: 1.6rem/2.4rem var(--font-stack); 
+  --button--letter-spacing--s: 0.4rem; 
+  --button--letter-spacing--m: 0.4rem; 
+  --button--letter-spacing--l: 0.4rem; 
+  --button--letter-spacing--xl: 0.4rem; 
+ 
+  /* Hierarchy */
+  --heading-1__body-text--spacing--s: 3.2rem;
+  --heading-1__body-text--spacing--m: 3.2rem;
+  --heading-1__body-text--spacing--l: 3.2rem;
+  --heading-1__body-text--spacing--xl: 3.2rem;
+
+  --heading-2__body-text--spacing--s: 1.6rem;
+  --heading-2__body-text--spacing--m: 1.6rem;
+  --heading-2__body-text--spacing--l: 1.6rem;
+  --heading-2__body-text--spacing--xl: 1.6rem;
+
+  --heading-3__body-text--spacing--s: 1.6rem;
+  --heading-3__body-text--spacing--m: 1.6rem;
+  --heading-3__body-text--spacing--l: 1.6rem;
+  --heading-3__body-text--spacing--xl: 1.6rem;
+
+  --heading-4__body-text--spacing--s: 1.6rem;
+  --heading-4__body-text--spacing--m: 1.6rem;
+  --heading-4__body-text--spacing--l: 1.6rem;
+  --heading-4__body-text--spacing--xl: 1.6rem;
+ 
+  --paragraph-spacing: 2.4rem;
+
 }
