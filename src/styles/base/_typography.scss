@@ -1,6 +1,6 @@
 /*--- Base fonts ---*/ 
 
-/* Mobile */
+/* Mobile */ 
 body, 
 a, 
 p, 
@@ -16,7 +16,7 @@ textarea,
 label { 
   font: var(--paragraph-1--s);
   letter-spacing: var(--paragraph-1--letter-spacing--s); 
-} 
+}  
  
 button, .btn { font: var(button-text--s); letter-spacing: var(button-text--letter-spacing--s); }
 
@@ -132,15 +132,7 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 
 } 
 
-/*--- Hierarchy ---*/
-h5, .subheading-1, 
-h6, .subheading-2,
-p + p, 
-.paragraph-1 + .paragraph-1, 
-.paragraph-2 + .paragraph-2, 
-.paragraph-3 + .paragraph-3 {
-  margin-top: var(--paragraph-spacing);
-} 
+/*--- Hierarchy ---*/  
 
 h1:last-child, .heading-1:last-child,
 h2:last-child, .heading-2:last-child,
@@ -151,11 +143,47 @@ h6:last-child, .subheading-2:last-child {
   margin-bottom: 0;
 }
 
+menu,
+dir,
+ol,
+ul,
+dl,
+pre,
+address, 
+blockquote { 
+  margin-left: var(--text--indent);
+} 
+ 
+ol { padding-left: var(--text--indent); }
+dd { margin-left: var(--text--indent); }
+
+menu,
+dir, 
+p,
+ol,
+ul,
+dl,
+pre,
+address, 
+blockquote { 
+  margin-bottom: var(--paragraph--spacing);
+} 
+
+blockquote { margin-top: var(--paragraph--spacing); } 
+
+p + h1, p + .heading-1 { margin-top: var(--heading-1__body-text--spacing--s); } 
+p + h2, p + .heading-2 { margin-top: var(--heading-2__body-text--spacing--s); } 
+p + h3, p + .heading-3 { margin-top: var(--heading-3__body-text--spacing--s); } 
+p + h4, p + .heading-4 { margin-top: var(--heading-4__body-text--spacing--s); } 
+p + h5, p + .subheading-1 { margin-top: var(--paragraph--spacing); } 
+p + h6, p + .subheading-2 { margin-top: var(--paragraph--spacing); } 
+
 /*--- Font Weights ---*/
 b, strong, .font-weight--bold { font-weight: 700; }
 .font-weight--semibold { font-weight: 500; }
 .font-weight--regular { font-weight: 400; }
 .font-weight--light { font-weight: 300; } 
+dt { font-weight: 500; }
 
 /*--- Font Styles ---*/
 ul li { list-style-position: inside; }
@@ -212,14 +240,18 @@ textarea,
 label { 
   color: var(--body-text--color);
 }
+  
+blockquote > * { color: var( --gray--light--body ); }
+dd { color: var( --gray--light--body ); }
 
+address, 
 h1, .heading-1,  
 h2, .heading-2 {
   color: var(--primary-color--base);
 }  
 
-[class*="bg--primary-color"] h1, .heading-1,  
-[class*="bg--primary-color"] h2, .heading-2 {
+[class*="bg--primary-color"] h1, [class*="bg--primary-color"] .heading-1,  
+[class*="bg--primary-color"] h2, [class*="bg--primary-color"] .heading-2 {
   color: var(--body-text--on-dark-background);
 }  
 
