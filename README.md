@@ -8,7 +8,7 @@
    ``` 
 2. Copy example-config.json 
    ```
-   $ cd deploy && mv example-config.json config.json 
+   $ cd deploy && cp example-config.json config.json 
    ```
 3. Start development & watch features  
    ```

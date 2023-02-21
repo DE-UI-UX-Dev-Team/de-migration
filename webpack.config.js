@@ -54,22 +54,39 @@ module.exports = ( env ) => {
           use: ["babel-loader"],
         },
         {
-            test: /\.scss$/,
-            exclude: /node_modules/,
-            type: "asset/resource",
-            generator: {
-              filename: "main.css",
-            },
-            use: [ { 
-              loader : "sass-loader", 
-              options: { 
-                sourceMap: true, 
-                sassOptions: {
-                  outputStyle: ( environment !== 'dev' ) ? "compressed" : undefined,
-                }
-              } 
-            } ],
-          }, 
+          test: /main.scss$/,
+          exclude: /node_modules/,
+          type: "asset/resource",
+          generator: {
+            filename: "main.css",
+          },
+          use: [ { 
+            loader : "sass-loader", 
+            options: { 
+              sourceMap: true, 
+              sassOptions: {
+                outputStyle: ( environment !== 'dev' ) ? "compressed" : undefined,
+              }
+            } 
+          } ],
+        },
+        {
+          test: /pages\/(.*).scss$/,
+          exclude: /node_modules/,
+          type: "asset/resource",
+          generator: {
+            filename: "[name].css",
+          },
+          use: [ { 
+            loader : "sass-loader", 
+            options: { 
+              sourceMap: true, 
+              sassOptions: {
+                outputStyle: ( environment !== 'dev' ) ? "compressed" : undefined,
+              }
+            } 
+          } ],
+        }, 
         {
           test: /\.(png|svg|jpg|gif|jpe?g|ico)$/,  
           type: 'asset/resource',
