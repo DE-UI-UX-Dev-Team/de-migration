@@ -1,0 +1,11 @@
+[class*="col--"] { 
+    border: 2px dotted var(--gray--light--input);
+} 
+
+.bg--warning-color {
+    background-color: var(--warning-color--background)
+}
+
+.no-border {
+    border: none;
+}
