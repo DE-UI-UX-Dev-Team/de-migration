@@ -1,0 +1,152 @@
+/*-- Link fonts --*/
+
+.text-link--xs {
+    font: var(--link--xs);
+}
+
+.text-link--s {
+    font: var(--link--s);
+}
+
+/*--- Default link font ---*/
+a,
+.text-link--m {
+    font: var(--link--m);
+}
+
+.text-link--l {
+    font: var(--link--l);
+}
+
+/* Default link font and underline colors for different states */
+a,
+[class*="text-link"] {
+    color: var(--primary-blue--base);
+    text-decoration: var(--link-default--underline);
+}
+
+a:hover,
+[class*="text-link"]:hover {
+    color: var(--primary-blue--dark-1);
+    text-decoration: var(--link-hover--underline);
+}
+
+a:focus,
+[class*="text-link"]:focus {
+    color: var(--primary-blue--dark-1);
+    text-decoration: var(--link-focus--underline);
+    outline: var(--link-focus--outline);
+    border-radius: 0.1rem;
+    outline-offset: 0.2rem;
+}
+
+a:visited,
+[class*="text-link"]:visited {
+    color: var(--primary-blue--light-2);
+    text-decoration: var(--link-visited--underline);
+}
+
+a:disabled,
+[class*="text-link"]:disabled {
+    color: var(--gray--light--disabled);
+    text-decoration: var(--link-disabled--underline);
+}
+
+
+/* Link font and underline colors for different states on dark background */
+
+[class*="bg--primary-color"] a,
+[class*="bg--secondary-color"] a,
+[class*="bg--primary-color"] [class*="text-link"],
+[class*="bg--secondary-color"] [class*="text-link"] {
+    color: var(--white-surface);
+    text-decoration: var(--link-white--underline);
+}
+
+
+[class*="bg--primary-color"] a:hover,
+[class*="bg--primary-color"] a:focus,
+[class*="bg--secondary-color"] a:hover,
+[class*="bg--secondary-color"] a:focus,
+[class*="bg--primary-color"] [class*="text-link"]:hover,
+[class*="bg--primary-color"] [class*="text-link"]:focus,
+[class*="bg--secondary-color"] [class*="text-link"]:hover,
+[class*="bg--secondary-color"] [class*="text-link"]:focus {
+    color: var(--white-surface);
+    opacity: 75%;
+    text-decoration: var(--link-white--underline--opacity);
+}
+
+[class*="bg--primary-color"] a:visited,
+[class*="bg--secondary-color"] a:visited {
+    color: var(--white-surface);
+    text-decoration: var(--link-white--underline);
+}
+
+[class*="bg--primary-color"] p>a:visited,
+[class*="bg--secondary-color"] p>a:visited {
+    color: var(--primary-blue--light-2);
+    text-decoration: var(--link-visited--underline);
+}
+
+
+[class*="bg--primary-color"] a:disabled,
+[class*="bg--primary-color"] [class*="text-link"]:disabled {
+    color: var(--white-surface);
+    opacity: 40%;
+    text-decoration: var(--link-white--underline--disabled);
+}
+
+
+/*--- Group, Footer and Header links ---*/
+
+ol a,
+ul a,
+dl a,
+[class*="bg--primary-color"] ol a,
+[class*="bg--primary-color"] ul a,
+[class*="bg--primary-color"] dl a,
+[class*="bg--secondary-color"] ol a,
+[class*="bg--secondary-color"] ul a,
+[class*="bg--secondary-color"] dl a ol a:disabled,
+ul li a:disabled,
+dl li a:disabled {
+    text-decoration: none;
+}
+
+ol a:visited,
+ul a:visited,
+dl a:visited {
+    color: var(--primary-color--base);
+    text-decoration: none;
+}
+
+[class*="bg--primary-color"] ol a:visited,
+[class*="bg--primary-color"] ul a:visited,
+[class*="bg--primary-color"] dl a:visited,
+[class*="bg--secondary-color"] ol a:visited,
+[class*="bg--secondary-color"] ul a:visited,
+[class*="bg--secondary-color"] dl a:visited {
+    color: var(--white-surface);
+
+}
+
+/*--- Email and Phone number ----*/
+
+a[href^="mailto:"],
+a[href^="tel:"] {
+    font-weight: var(--font-weight--regular);
+}
+
+a[href^="mailto:"]:visited,
+a[href^="tel:"]:visited {
+    color: var(--primary-color--base);
+    text-decoration: var(--link-default--underline);
+}
+
+[class*="bg--primary-color"] a[href^="mailto:"]:visited,
+[class*="bg--secondary-color"] a[href^="mailto:"]>a:visited {
+    color: var(--white-surface);
+    text-decoration: var(--link-white--underline);
+
+}

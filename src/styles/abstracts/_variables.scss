@@ -61,7 +61,7 @@
   /* black color */
   --black-hex: #000000;
   --black-hsl: hsl(0, 0%, 0%);
-  --black-rgb: rgba(0,0,0);
+  --black-rgb: rgba(0, 0, 0);
   --black: var(--black-hsl);
 
 
@@ -77,7 +77,7 @@
   --gray--light--body-hex: #6D7A7F;
   --gray--light--body-hsl: hsl(196.7, 7.6%, 46.3%);
   --gray--light--body: var(--gray--light--body-hsl);
-  
+
 
   --gray--light--input-hex: #8C9498;
   --gray--light--input-hsl: hsl(200, 5.5%, 57.3%);
@@ -132,103 +132,104 @@
   --success-color--background-hex: #D4EDDA;
   --success-color--background-hsl: hsl(134.4, 41%, 88%);
   --success-color--background: var(--success-color--background-hsl);
-  
+
   /*--- Typography ---*/
 
   /* Font-family */
-  --font-stack: 'Roboto', sans-serif; 
+  --font-stack: 'Roboto', sans-serif;
 
   /* Headings */
-  --heading-1--s: 3.4rem/4rem var(--font-stack); /* font: <font-size>/<line-height> <font-family */
-  --heading-1--m: 3.4rem/4rem var(--font-stack); 
-  --heading-1--l: 4.8rem/5.6rem var(--font-stack); 
-  --heading-1--xl: 4.8rem/5.6rem var(--font-stack); 
-  --heading-1--letter-spacing--s: 0rem;  
-  --heading-1--letter-spacing--m: 0rem;  
-  --heading-1--letter-spacing--l: 0rem;  
-  --heading-1--letter-spacing--xl: 0rem; 
+  --heading-1--s: 3.4rem/4rem var(--font-stack);
+  /* font: <font-size>/<line-height> <font-family */
+  --heading-1--m: 3.4rem/4rem var(--font-stack);
+  --heading-1--l: 4.8rem/5.6rem var(--font-stack);
+  --heading-1--xl: 4.8rem/5.6rem var(--font-stack);
+  --heading-1--letter-spacing--s: 0rem;
+  --heading-1--letter-spacing--m: 0rem;
+  --heading-1--letter-spacing--l: 0rem;
+  --heading-1--letter-spacing--xl: 0rem;
 
   --heading-2--s: 2.4rem/3.2rem var(--font-stack);
-  --heading-2--m: 2.4rem/3.2rem var(--font-stack); 
-  --heading-2--l: 3.2rem/4rem var(--font-stack); 
-  --heading-2--xl: 3.2rem/4rem var(--font-stack); 
-  --heading-2--letter-spacing--s: 0rem;  
-  --heading-2--letter-spacing--m: 0rem;  
-  --heading-2--letter-spacing--l: 0rem;  
-  --heading-2--letter-spacing--xl: 0rem; 
+  --heading-2--m: 2.4rem/3.2rem var(--font-stack);
+  --heading-2--l: 3.2rem/4rem var(--font-stack);
+  --heading-2--xl: 3.2rem/4rem var(--font-stack);
+  --heading-2--letter-spacing--s: 0rem;
+  --heading-2--letter-spacing--m: 0rem;
+  --heading-2--letter-spacing--l: 0rem;
+  --heading-2--letter-spacing--xl: 0rem;
 
   --heading-3--s: 2rem/2.8rem var(--font-stack);
-  --heading-3--m: 2rem/2.8rem var(--font-stack); 
-  --heading-3--l: 2.4rem/3.2rem var(--font-stack); 
-  --heading-3--xl: 2.4rem/3.2rem var(--font-stack); 
-  --heading-3--letter-spacing--s: 0rem;  
-  --heading-3--letter-spacing--m: 0rem;  
-  --heading-3--letter-spacing--l: 0.015rem;  
-  --heading-3--letter-spacing--xl: 0.015rem; 
+  --heading-3--m: 2rem/2.8rem var(--font-stack);
+  --heading-3--l: 2.4rem/3.2rem var(--font-stack);
+  --heading-3--xl: 2.4rem/3.2rem var(--font-stack);
+  --heading-3--letter-spacing--s: 0rem;
+  --heading-3--letter-spacing--m: 0rem;
+  --heading-3--letter-spacing--l: 0.015rem;
+  --heading-3--letter-spacing--xl: 0.015rem;
 
   --heading-4--s: 1.8rem/2.6rem var(--font-stack);
-  --heading-4--m: 1.8rem/2.6rem var(--font-stack); 
-  --heading-4--l: 2rem/2.8rem var(--font-stack); 
-  --heading-4--xl: 2rem/2.8rem var(--font-stack); 
-  --heading-4--letter-spacing--s: 0.015rem;  
-  --heading-4--letter-spacing--m: 0.015rem;  
-  --heading-4--letter-spacing--l: 0.015rem;  
-  --heading-4--letter-spacing--xl: 0.015rem; 
+  --heading-4--m: 1.8rem/2.6rem var(--font-stack);
+  --heading-4--l: 2rem/2.8rem var(--font-stack);
+  --heading-4--xl: 2rem/2.8rem var(--font-stack);
+  --heading-4--letter-spacing--s: 0.015rem;
+  --heading-4--letter-spacing--m: 0.015rem;
+  --heading-4--letter-spacing--l: 0.015rem;
+  --heading-4--letter-spacing--xl: 0.015rem;
 
   --subheading-1--s: 1.6rem/2.4rem var(--font-stack);
   --subheading-1--m: 1.6rem/2.4rem var(--font-stack);
   --subheading-1--l: 1.8rem/2.6rem var(--font-stack);
   --subheading-1--xl: 1.8rem/2.6rem var(--font-stack);
-  --subheading-1--letter-spacing--s: 0.015rem;  
-  --subheading-1--letter-spacing--m: 0.015rem;  
-  --subheading-1--letter-spacing--l: 0.015rem;  
-  --subheading-1--letter-spacing--xl: 0.015rem; 
+  --subheading-1--letter-spacing--s: 0.015rem;
+  --subheading-1--letter-spacing--m: 0.015rem;
+  --subheading-1--letter-spacing--l: 0.015rem;
+  --subheading-1--letter-spacing--xl: 0.015rem;
 
   --subheading-2--s: 1.4rem/2rem var(--font-stack);
   --subheading-2--m: 1.4rem/2rem var(--font-stack);
   --subheading-2--l: 1.4rem/2rem var(--font-stack);
-  --subheading-2--xl: 1.4rem/2rem var(--font-stack); 
-  --subheading-2--letter-spacing--s: 0.01rem;  
-  --subheading-2--letter-spacing--m: 0.01rem;  
-  --subheading-2--letter-spacing--l: 0.01rem;  
-  --subheading-2--letter-spacing--xl: 0.01rem; 
+  --subheading-2--xl: 1.4rem/2rem var(--font-stack);
+  --subheading-2--letter-spacing--s: 0.01rem;
+  --subheading-2--letter-spacing--m: 0.01rem;
+  --subheading-2--letter-spacing--l: 0.01rem;
+  --subheading-2--letter-spacing--xl: 0.01rem;
 
-  --paragraph-1--s: 1.6rem/2.4rem var(--font-stack);  
-  --paragraph-1--m: 1.6rem/2.4rem var(--font-stack);  
-  --paragraph-1--l: 1.6rem/2.4rem var(--font-stack);  
-  --paragraph-1--xl: 1.6rem/2.4rem var(--font-stack);  
-  --paragraph-1--letter-spacing--s: 0.05rem;  
-  --paragraph-1--letter-spacing--m: 0.05rem;  
-  --paragraph-1--letter-spacing--l: 0.05rem;  
-  --paragraph-1--letter-spacing--xl: 0.05rem; 
+  --paragraph-1--s: 1.6rem/2.4rem var(--font-stack);
+  --paragraph-1--m: 1.6rem/2.4rem var(--font-stack);
+  --paragraph-1--l: 1.6rem/2.4rem var(--font-stack);
+  --paragraph-1--xl: 1.6rem/2.4rem var(--font-stack);
+  --paragraph-1--letter-spacing--s: 0.05rem;
+  --paragraph-1--letter-spacing--m: 0.05rem;
+  --paragraph-1--letter-spacing--l: 0.05rem;
+  --paragraph-1--letter-spacing--xl: 0.05rem;
 
-  --paragraph-2--s: 1.4rem/2rem var(--font-stack); 
-  --paragraph-2--m: 1.4rem/2rem var(--font-stack);  
-  --paragraph-2--l: 1.4rem/2.2rem var(--font-stack);   
-  --paragraph-2--xl: 1.4rem/2.2rem var(--font-stack); 
-  --paragraph-2--letter-spacing--s: 0.025rem;  
-  --paragraph-2--letter-spacing--m: 0.025rem;  
-  --paragraph-2--letter-spacing--l: 0.025rem;  
-  --paragraph-2--letter-spacing--xl: 0.025rem;  
+  --paragraph-2--s: 1.4rem/2rem var(--font-stack);
+  --paragraph-2--m: 1.4rem/2rem var(--font-stack);
+  --paragraph-2--l: 1.4rem/2.2rem var(--font-stack);
+  --paragraph-2--xl: 1.4rem/2.2rem var(--font-stack);
+  --paragraph-2--letter-spacing--s: 0.025rem;
+  --paragraph-2--letter-spacing--m: 0.025rem;
+  --paragraph-2--letter-spacing--l: 0.025rem;
+  --paragraph-2--letter-spacing--xl: 0.025rem;
 
-  --paragraph-3--s: 1.2rem/1.8rem var(--font-stack); 
-  --paragraph-3--m: 1.2rem/1.8rem var(--font-stack); 
-  --paragraph-3--l: 1.2rem/2rem var(--font-stack); 
-  --paragraph-3--xl: 1.2rem/2rem var(--font-stack); 
+  --paragraph-3--s: 1.2rem/1.8rem var(--font-stack);
+  --paragraph-3--m: 1.2rem/1.8rem var(--font-stack);
+  --paragraph-3--l: 1.2rem/2rem var(--font-stack);
+  --paragraph-3--xl: 1.2rem/2rem var(--font-stack);
   --paragraph-3--letter-spacing--s: 0.025rem;
-  --paragraph-3--letter-spacing--m: 0.025rem;  
-  --paragraph-3--letter-spacing--l: 0.04rem;  
-  --paragraph-3--letter-spacing--xl: 0.04rem;  
- 
-  --button-text--s: 1.4rem/2.4rem var(--font-stack); 
-  --button-text--m: 1.4rem/2.4rem var(--font-stack); 
-  --button-text--l: 1.6rem/2.4rem var(--font-stack); 
-  --button-text--xl: 1.6rem/2.4rem var(--font-stack); 
-  --button--letter-spacing--s: 0.4rem; 
-  --button--letter-spacing--m: 0.4rem; 
-  --button--letter-spacing--l: 0.4rem; 
-  --button--letter-spacing--xl: 0.4rem; 
- 
+  --paragraph-3--letter-spacing--m: 0.025rem;
+  --paragraph-3--letter-spacing--l: 0.04rem;
+  --paragraph-3--letter-spacing--xl: 0.04rem;
+
+  --button-text--s: 1.4rem/2.4rem var(--font-stack);
+  --button-text--m: 1.4rem/2.4rem var(--font-stack);
+  --button-text--l: 1.6rem/2.4rem var(--font-stack);
+  --button-text--xl: 1.6rem/2.4rem var(--font-stack);
+  --button--letter-spacing--s: 0.4rem;
+  --button--letter-spacing--m: 0.4rem;
+  --button--letter-spacing--l: 0.4rem;
+  --button--letter-spacing--xl: 0.4rem;
+
   /* Hierarchy */
   --heading-1__body-text--spacing--s: 3.2rem;
   --heading-1__body-text--spacing--m: 3.2rem;
@@ -249,16 +250,14 @@
   --heading-4__body-text--spacing--m: 1.6rem;
   --heading-4__body-text--spacing--l: 1.6rem;
   --heading-4__body-text--spacing--xl: 1.6rem;
- 
-  --paragraph--spacing: 2.4rem;  
+
+  --paragraph--spacing: 2.4rem;
   --text--indent: 2.4rem;
 
   /*----- Elevations and Drop levels -----*/
 
   /*--- Elevation 1 drop levels ---*/
-  --elev-1--dropshadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14)
-    0 2px 1px 0 rgba(0, 0, 0 , 0.12)
-    0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  --elev-1--dropshadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14) 0 2px 1px 0 rgba(0, 0, 0, 0.12) 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 
   /*--- Elevation 2 drop levels ---*/
   --elev-2--dropshadow: 0 8px 10px 0 rgba(0, 0, 0, 0.14),
@@ -278,52 +277,77 @@
   /*--- Grid and Spacing Measurements ---*/
 
   /* Columns */
-  --gutter--s: 0.75rem; 
+  --gutter--s: 0.75rem;
   --gutter--m: 0.75rem;
   --gutter--l: 0.75rem;
-  --gutter--xl: 0.75rem; 
+  --gutter--xl: 0.75rem;
 
   /* Maximum Content Width */
   --max-content-width--s: 100%;
-  --max-content-width--m: 100%; 
+  --max-content-width--m: 100%;
   --max-content-width--l: 100%;
   --max-content-width--xl: 1440px;
 
   /* Sections */
-  --section-spacing--s: 4.8rem; /* 4.8em == 48px */
-  --section-spacing--m: 4.8rem; 
-  --section-spacing--l: 8rem; 
+  --section-spacing--s: 4.8rem;
+  /* 4.8em == 48px */
+  --section-spacing--m: 4.8rem;
+  --section-spacing--l: 8rem;
   --section-spacing--xl: 8rem;
 
-  --section-top-curve--top-pd--s: 4.8rem; 
-  --section-top-curve--top-pd--m: 4.8rem; 
-  --section-top-curve--top-pd--l: 8rem; 
-  --section-top-curve--top-pd--xl: 8rem; 
+  --section-top-curve--top-pd--s: 4.8rem;
+  --section-top-curve--top-pd--m: 4.8rem;
+  --section-top-curve--top-pd--l: 8rem;
+  --section-top-curve--top-pd--xl: 8rem;
 
-  --section-top-curve--btm-pd--s: 4.8rem; 
-  --section-top-curve--btm-pd--m: 4.8rem; 
-  --section-top-curve--btm-pd--l: 4.8rem; 
-  --section-top-curve--btm-pd--xl: 4.8rem; 
+  --section-top-curve--btm-pd--s: 4.8rem;
+  --section-top-curve--btm-pd--m: 4.8rem;
+  --section-top-curve--btm-pd--l: 4.8rem;
+  --section-top-curve--btm-pd--xl: 4.8rem;
 
-  --section-btm-curve--top-pd--s: 4.8rem; 
-  --section-btm-curve--top-pd--m: 4.8rem; 
-  --section-btm-curve--top-pd--l: 4.8rem; 
-  --section-btm-curve--top-pd--xl: 4.8rem; 
+  --section-btm-curve--top-pd--s: 4.8rem;
+  --section-btm-curve--top-pd--m: 4.8rem;
+  --section-btm-curve--top-pd--l: 4.8rem;
+  --section-btm-curve--top-pd--xl: 4.8rem;
 
-  --section-btm-curve--btm-pd--s: 4.8rem; 
-  --section-btm-curve--btm-pd--m: 4.8rem; 
-  --section-btm-curve--btm-pd--l: 8rem; 
-  --section-btm-curve--btm-pd--xl: 8rem; 
+  --section-btm-curve--btm-pd--s: 4.8rem;
+  --section-btm-curve--btm-pd--m: 4.8rem;
+  --section-btm-curve--btm-pd--l: 8rem;
+  --section-btm-curve--btm-pd--xl: 8rem;
 
   /* Component Spacing */
-  --column-top-mg--s: 3.2rem; /* 3.2em == 32px */
-  --column-top-mg--m: 3.2rem; 
-  --column-top-mg--l: 3.2rem; 
+  --column-top-mg--s: 3.2rem;
+  /* 3.2em == 32px */
+  --column-top-mg--m: 3.2rem;
+  --column-top-mg--l: 3.2rem;
   --column-top-mg--xl: 3.2rem;
 
-  --column-btm-mg--s: 1.6rem; /* 1.6em == 16px */
-  --column-btm-mg--m: 1.6rem; 
-  --column-btm-mg--l: 1.6rem; 
+  --column-btm-mg--s: 1.6rem;
+  /* 1.6em == 16px */
+  --column-btm-mg--m: 1.6rem;
+  --column-btm-mg--l: 1.6rem;
   --column-btm-mg--xl: 1.6rem;
-  
+
+  /*---------Links ------------*/
+
+  --font-weight--regular: 400;
+  --font-weight--medium: 500;
+
+  /* links with underline */
+  --link--xs: var(--font-weight--medium) 1.2rem var(--font-stack); /* font: <font-weight> <font-size> <font-family> */
+  --link--s: var(--font-weight--medium) 1.4rem var(--font-stack);
+  --link--m: var(--font-weight--medium) 1.6rem var(--font-stack);
+  --link--l: var(--font-weight--regular) 2.4rem var(--font-stack);
+
+
+  /* underline and outline for links */
+  --link-default--underline: underline solid var(--primary-blue--base) 0.1rem;
+  --link-hover--underline: underline solid var(--primary-blue--dark-1) 0.1rem;
+  --link-focus--underline: underline solid var(--primary-blue--dark-1) 0.1rem;
+  --link-focus--outline: 0.3rem solid var(--primary-blue--light-2);
+  --link-visited--underline: underline solid var(--primary-blue--light-2) 0.1rem;
+  --link-disabled--underline: underline solid var(--gray--light--disabled);
+  --link-white--underline: underline solid var(--white-surface) 0.1rem;
+  --link-white--underline--opacity: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
+  --link-white--underline--disabled: underline solid rgba(255, 255, 255, 0.4);
 }

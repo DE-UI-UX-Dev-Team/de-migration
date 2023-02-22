@@ -1,8 +1,7 @@
 /*--- Base fonts ---*/ 
 
 /* Mobile */ 
-body, 
-a, 
+body,  
 p, 
 ol,
 ul,
@@ -34,7 +33,6 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 @media(min-width: 744px) {
 
   body, 
-  a, 
   p, 
   ol,
   ul,
@@ -68,7 +66,6 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 @media(min-width: 1235px) {
 
   body, 
-  a, 
   p, 
   ol,
   ul,
@@ -102,7 +99,6 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 @media(min-width: 1440px) {
 
   body, 
-  a, 
   p, 
   ol,
   ul,
@@ -251,7 +247,11 @@ h2, .heading-2 {
 }  
 
 [class*="bg--primary-color"] h1, [class*="bg--primary-color"] .heading-1,  
-[class*="bg--primary-color"] h2, [class*="bg--primary-color"] .heading-2 {
+[class*="bg--primary-color"] h2, [class*="bg--primary-color"] .heading-2,
+[class*="bg--primary-color"] h3, [class*="bg--primary-color"] .heading-3,
+[class*="bg--primary-color"] h4, [class*="bg--primary-color"] .heading-4,
+[class*="bg--primary-color"] h5, [class*="bg--primary-color"] .subheading-1,
+[class*="bg--primary-color"] h6, [class*="bg--primary-color"] .subheading-2 {
   color: var(--body-text--on-dark-background);
 }  
 
