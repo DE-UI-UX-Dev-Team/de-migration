@@ -161,6 +161,20 @@ button:active,
 input[type="button"]:active,
 input[type="submit"]:active {
   color: inherit;
+} 
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
 }
 
 [hidden] {
