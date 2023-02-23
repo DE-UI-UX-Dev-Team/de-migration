@@ -169,4 +169,10 @@ input[type="submit"]:active {
 
 textarea {
   resize: vertical; 
-} 
+}  
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
