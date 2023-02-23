@@ -3,40 +3,41 @@
  */
 
  *, *::before, *::after {
-    padding: 0;
-    margin: 0;
-    line-height: inherit;
-    text-decoration: inherit;
-    letter-spacing: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: inherit;
-    color: inherit;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  color: inherit;
+  box-sizing: border-box; 
+  border-width: 0;
 }
 
 html {
-    height: 100%;
-    -webkit-text-size-adjust: none;
-    -ms-text-size-adjust: none;
-    text-size-adjust: none; 
-    font-size: 62.5%; /* 1em == 10px */
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-size: 62.5%; /* 1em == 10px */
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    min-width: 320px;
-    height: 100%;
-    font-family: Helvetica, Arial, sans-serif;
-    text-align: left;
-    font-weight: normal;
-    font-style: normal;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-width: 320px;
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+  font-weight: normal;
+  font-style: normal;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-    display: block;
+  display: block;
 }
 
 /* Hide focus outline for mouse users */
@@ -143,25 +144,50 @@ video {
 }
 
 button,
-input[type="button"],
-input[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] { 
+  -webkit-appearance: button;
   text-align: left;
   background: transparent;
+  background-image: none;
   border: none;
 }
 
 button:not([disabled]),
 input[type="button"]:not([disabled]),
-input[type="submit"]:not([disabled]) {
+input[type="submit"]:not([disabled]), 
+input[type="reset"]:not([disabled]) {
   cursor: pointer;
 }
 
 button:active,
 input[type="button"]:active,
-input[type="submit"]:active {
+input[type="submit"]:active, 
+input[type="reset"]:active {
   color: inherit;
+} 
+
+button,
+select {
+  text-transform: none;
 }
 
 [hidden] {
   display: none;
+}
+
+textarea {
+  resize: vertical; 
+}  
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+} 
+
+ol, ul, menu {
+  list-style: none;
+  padding: 0;
 }
