@@ -54,24 +54,7 @@ module.exports = ( env ) => {
           use: ["babel-loader"],
         },
         {
-          test: /main.scss$/,
-          exclude: /node_modules/,
-          type: "asset/resource",
-          generator: {
-            filename: "main.css",
-          },
-          use: [ { 
-            loader : "sass-loader", 
-            options: { 
-              sourceMap: true, 
-              sassOptions: {
-                outputStyle: ( environment !== 'dev' ) ? "compressed" : undefined,
-              }
-            } 
-          } ],
-        },
-        {
-          test: /pages\/(.*).scss$/,
+          test:/\.scss$/,
           exclude: /node_modules/,
           type: "asset/resource",
           generator: {
