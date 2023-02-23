@@ -166,3 +166,7 @@ input[type="submit"]:active {
 [hidden] {
   display: none;
 }
+
+textarea {
+  resize: vertical; 
+} 
