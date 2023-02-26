@@ -1,0 +1,11 @@
+/*--- Breakpoints ---*/
+/* Using floating maxes to help with strict inequality on hi-Dpi screens */
+$breakpoint--min-desktop: 1440px;
+
+$breakpoint--max-laptop: 1439.98px; 
+$breakpoint--min-laptop: 1236px;
+
+$breakpoint--max-tablet: 1235.98px;
+$breakpoint--min-tablet: 600px; 
+
+$breakpoint--max-mobile: 599.98px;  
