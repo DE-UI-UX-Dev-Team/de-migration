@@ -265,12 +265,13 @@ h2, .heading-2 {
   color: var(--body-text--on-dark-background);
 }  
 
-/* Text on Background */
-[class*="bg--primary-color"] body, 
+/* Text on Background */ 
+section[class*="bg--primary-color"],
 [class*="bg--primary-color"] p, 
 [class*="bg--primary-color"] ol,
 [class*="bg--primary-color"] ul,
 [class*="bg--primary-color"] dl,
+[class*="bg--primary-color"] dd,
 [class*="bg--primary-color"] pre,
 [class*="bg--primary-color"] menu,
 [class*="bg--primary-color"] dir,
@@ -283,7 +284,7 @@ h2, .heading-2 {
   color: var(--body-text--on-dark-background);
 }
 
-[class*="bg--secondary-color"] body, 
+section[class*="bg--secondary-color"],
 [class*="bg--secondary-color"] p, 
 [class*="bg--secondary-color"] ol,
 [class*="bg--secondary-color"] ul,
@@ -301,6 +302,7 @@ h2, .heading-2 {
 }
 
 body[class*="bg--light-blue"], 
+section[class*="bg--light-blue"],
 p[class*="bg--light-blue"], 
 ol[class*="bg--light-blue"],
 ul[class*="bg--light-blue"],
@@ -318,6 +320,7 @@ label[class*="bg--light-blue"] {
 }
 
 body[class*="bg--primary-color"], 
+section[class*="bg--primary-color"],
 p[class*="bg--primary-color"], 
 ol[class*="bg--primary-color"],
 ul[class*="bg--primary-color"],
