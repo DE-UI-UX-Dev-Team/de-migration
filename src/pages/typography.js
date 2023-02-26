@@ -5,7 +5,7 @@ import '../styles/main.scss';
     const sectionElements = document.querySelectorAll( 'section' );
 
     contrastButton.addEventListener( 'click', ( e ) => {
-        console.log( e );
+
         for( let i = 0; i < sectionElements.length; i++ ) { 
             sectionElements[ i ].classList.toggle( 'bg--primary-color' );
         }
