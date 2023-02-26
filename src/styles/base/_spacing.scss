@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 /*--- Mobile Sections ---*/  
 
 section {
@@ -45,7 +47,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 
 
 /* Tablet */
-@media (min-width: 744px) {
+@media (min-width: $breakpoint--min-tablet) {
 
   /*--- Tablet Sections ---*/  
 
@@ -82,7 +84,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 }
 
 /* Laptop */
-@media (min-width: 1235px) {
+@media (min-width: $breakpoint--min-laptop) {
 
   /*--- Laptop Sections ---*/  
 
@@ -119,7 +121,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 } 
 
 /* Desktop */
-@media ( min-width: 1440px ) {
+@media (min-width: $breakpoint--min-desktop) {
 
   /*--- Desktop Sections ---*/  
 
@@ -164,7 +166,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 }  
  
 /* Tablet */
-@media (min-width: 744px) {
+@media (min-width: $breakpoint--min-tablet) {
 
   .container {
     max-width: var(--max-content-width--m);
@@ -173,7 +175,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 }
 
 /* Laptop */
-@media (min-width: 1235px) {
+@media (min-width: $breakpoint--min-laptop) {
 
   .container {
     max-width: var(--max-content-width--l);
@@ -182,7 +184,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 }
  
 /* Desktop */
-@media (min-width: 1440px) {
+@media (min-width: $breakpoint--min-desktop) {
 
   .container {
     max-width: var(--max-content-width--xl);

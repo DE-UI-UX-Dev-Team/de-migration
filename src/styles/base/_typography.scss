@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 /*--- Base fonts ---*/ 
 
 /* Mobile */ 
@@ -30,7 +32,7 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 .paragraph-3 { font: var(--paragraph-3--s); letter-spacing: var(--paragraph-3--letter-spacing--s); }
 
 /* Tablet */
-@media(min-width: 744px) {
+@media(min-width: $breakpoint--min-tablet) {
 
   body, 
   p, 
@@ -63,7 +65,7 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 }
 
 /* Laptop */
-@media(min-width: 1235px) {
+@media(min-width: $breakpoint--min-laptop) {
 
   body, 
   p, 
@@ -96,7 +98,7 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 }
 
 /* Desktop */
-@media(min-width: 1440px) {
+@media(min-width: $breakpoint--min-desktop) {
 
   body, 
   p, 
@@ -197,7 +199,7 @@ em, .font-style--italic { font-style: italic; }
 .float-right { float: right; }
 .float-left { float: left; } 
 
-@media(min-width: 0px) and (max-width: 743.98px) {
+@media(min-width: 0px) and (max-width: $breakpoint--max-mobile) {
 
   .font-style--text-right--s { text-align: right; }
   .font-style--text-left--s { text-align: left; }
@@ -205,7 +207,7 @@ em, .font-style--italic { font-style: italic; }
 
 }
 
-@media(min-width: 744px) and (max-width: 1234.98px) {
+@media(min-width: $breakpoint--min-tablet) and (max-width: $breakpoint--max-tablet) {
 
   .font-style--text-right--m { text-align: right; }
   .font-style--text-left--m { text-align: left; }
@@ -213,7 +215,7 @@ em, .font-style--italic { font-style: italic; }
 
 }
 
-@media(min-width: 1235px) {
+@media(min-width: $breakpoint--min-laptop) {
 
   .font-style--text-right--l { text-align: right; }
   .font-style--text-left--l { text-align: left; }
