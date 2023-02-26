@@ -6,7 +6,9 @@ p,
 ol,
 ul,
 dl,
-pre,
+pre, 
+menu, 
+dir,
 address, 
 blockquote, 
 input, 
@@ -31,12 +33,14 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 
 /* Tablet */
 @media(min-width: 744px) {
-
+ 
   body, 
   p, 
   ol,
   ul,
-  dl,
+  dl, 
+  menu, 
+  dir,
   pre,
   address, 
   blockquote, 
@@ -71,6 +75,8 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
   ul,
   dl,
   pre,
+  menu, 
+  dir,
   address, 
   blockquote, 
   input, 
@@ -104,6 +110,8 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
   ul,
   dl,
   pre,
+  menu, 
+  dir,
   address, 
   blockquote, 
   input, 
@@ -296,7 +304,7 @@ address[class*="bg--light-blue"],
 blockquote[class*="bg--light-blue"], 
 input[class*="bg--light-blue"], 
 select[class*="bg--light-blue"], 
-textarea[class*="bg--light-blue"], 
+textarea[class*="bg--light-blue"],  
 label[class*="bg--light-blue"] { 
   color: var(--body-text--color);
 }
