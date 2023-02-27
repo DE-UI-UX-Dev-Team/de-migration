@@ -6,7 +6,9 @@ p,
 ol,
 ul,
 dl,
-pre,
+pre, 
+menu, 
+dir,
 address, 
 blockquote, 
 input, 
@@ -31,12 +33,14 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 
 /* Tablet */
 @media(min-width: 744px) {
-
+ 
   body, 
   p, 
   ol,
   ul,
-  dl,
+  dl, 
+  menu, 
+  dir,
   pre,
   address, 
   blockquote, 
@@ -71,6 +75,8 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
   ul,
   dl,
   pre,
+  menu, 
+  dir,
   address, 
   blockquote, 
   input, 
@@ -104,6 +110,8 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
   ul,
   dl,
   pre,
+  menu, 
+  dir,
   address, 
   blockquote, 
   input, 
@@ -149,8 +157,7 @@ address,
 blockquote { 
   margin-left: var(--text--indent);
 } 
- 
-ol { padding-left: var(--text--indent); }
+
 dd { margin-left: var(--text--indent); }
 
 menu,
@@ -161,7 +168,8 @@ ul,
 dl,
 pre,
 address, 
-blockquote { 
+blockquote, 
+table { 
   margin-bottom: var(--paragraph--spacing);
 } 
 
@@ -227,7 +235,9 @@ p,
 ol,
 ul,
 dl,
-pre,
+pre, 
+menu, 
+dir,
 address, 
 blockquote, 
 input, 
@@ -253,15 +263,27 @@ h2, .heading-2 {
 [class*="bg--primary-color"] h5, [class*="bg--primary-color"] .subheading-1,
 [class*="bg--primary-color"] h6, [class*="bg--primary-color"] .subheading-2 {
   color: var(--body-text--on-dark-background);
+}   
+
+[class*="bg--secondary-color"] h1, [class*="bg--secondary-color"] .heading-1,  
+[class*="bg--secondary-color"] h2, [class*="bg--secondary-color"] .heading-2,
+[class*="bg--secondary-color"] h3, [class*="bg--secondary-color"] .heading-3,
+[class*="bg--secondary-color"] h4, [class*="bg--secondary-color"] .heading-4,
+[class*="bg--secondary-color"] h5, [class*="bg--secondary-color"] .subheading-1,
+[class*="bg--secondary-color"] h6, [class*="bg--secondary-color"] .subheading-2 {
+  color: var(--body-text--on-dark-background);
 }  
 
-/* Text on Background */
-[class*="bg--primary-color"] body, 
+/* Text on Background */ 
+section[class*="bg--primary-color"],
 [class*="bg--primary-color"] p, 
 [class*="bg--primary-color"] ol,
 [class*="bg--primary-color"] ul,
 [class*="bg--primary-color"] dl,
+[class*="bg--primary-color"] dd,
 [class*="bg--primary-color"] pre,
+[class*="bg--primary-color"] menu,
+[class*="bg--primary-color"] dir,
 [class*="bg--primary-color"] address, 
 [class*="bg--primary-color"] blockquote, 
 [class*="bg--primary-color"] input, 
@@ -271,12 +293,14 @@ h2, .heading-2 {
   color: var(--body-text--on-dark-background);
 }
 
-[class*="bg--secondary-color"] body, 
+section[class*="bg--secondary-color"],
 [class*="bg--secondary-color"] p, 
 [class*="bg--secondary-color"] ol,
 [class*="bg--secondary-color"] ul,
 [class*="bg--secondary-color"] dl,
-[class*="bg--secondary-color"] pre,
+[class*="bg--secondary-color"] pre, 
+[class*="bg--secondary-color"] menu,
+[class*="bg--secondary-color"] dir,
 [class*="bg--secondary-color"] address, 
 [class*="bg--secondary-color"] blockquote, 
 [class*="bg--secondary-color"] input, 
@@ -287,26 +311,32 @@ h2, .heading-2 {
 }
 
 body[class*="bg--light-blue"], 
+section[class*="bg--light-blue"],
 p[class*="bg--light-blue"], 
 ol[class*="bg--light-blue"],
 ul[class*="bg--light-blue"],
 dl[class*="bg--light-blue"],
 pre[class*="bg--light-blue"],
+menu[class*="bg--light-blue"],
+dir[class*="bg--light-blue"],
 address[class*="bg--light-blue"], 
 blockquote[class*="bg--light-blue"], 
 input[class*="bg--light-blue"], 
 select[class*="bg--light-blue"], 
-textarea[class*="bg--light-blue"], 
+textarea[class*="bg--light-blue"],  
 label[class*="bg--light-blue"] { 
   color: var(--body-text--color);
 }
 
 body[class*="bg--primary-color"], 
+section[class*="bg--primary-color"],
 p[class*="bg--primary-color"], 
 ol[class*="bg--primary-color"],
 ul[class*="bg--primary-color"],
 dl[class*="bg--primary-color"],
 pre[class*="bg--primary-color"],
+menu[class*="bg--primary-color"],
+dir[class*="bg--primary-color"],
 address[class*="bg--primary-color"], 
 blockquote[class*="bg--primary-color"], 
 input[class*="bg--primary-color"], 
