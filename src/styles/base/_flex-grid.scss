@@ -11,7 +11,7 @@
 	flex-wrap: wrap;
 }
 
-@media (min-width: $breakpoint--min-tablet) {
+@include mediaQuery("tablet-up") {
 
 	.row {
 		margin-left: calc(var(--gutter--m) * -1);
@@ -20,7 +20,7 @@
 
 }
 
-@media (min-width: $breakpoint--min-laptop) {
+@include mediaQuery("laptop-up") {
 
 	.row {
 		margin-left: calc(var(--gutter--l) * -1);
@@ -29,7 +29,7 @@
 
 } 
 
-@media (min-width: $breakpoint--min-desktop) {
+@include mediaQuery("desktop-up") {
 
 	.row {
 		margin-left: calc(var(--gutter--xl) * -1);
@@ -59,7 +59,7 @@
 
 [class*="col-"] { margin-bottom: var(--column-btm-mg--s); } 
 
-@media (min-width: $breakpoint--min-tablet) {
+@include mediaQuery("tablet-up") {
 
 	[class*="col-"] {
 		padding-left: var(--gutter--m);
@@ -87,7 +87,7 @@
 
 } 
 
-@media (min-width: $breakpoint--min-laptop) {
+@include mediaQuery("laptop-up") {
 
 	[class*="col-"] {
 		padding-left: var(--gutter--l);
@@ -123,7 +123,7 @@
 
 }
 
-@media (min-width: $breakpoint--min-desktop) {
+@include mediaQuery("desktop-up") {
 
 	[class*="col-"] {
 		padding-left: var(--gutter--xl);

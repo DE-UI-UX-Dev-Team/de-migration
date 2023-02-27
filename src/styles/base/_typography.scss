@@ -32,7 +32,7 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 .paragraph-3 { font: var(--paragraph-3--s); letter-spacing: var(--paragraph-3--letter-spacing--s); }
 
 /* Tablet */
-@media(min-width: $breakpoint--min-tablet) {
+@include mediaQuery("mobile-up") {
 
   body, 
   p, 
@@ -65,7 +65,7 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 }
 
 /* Laptop */
-@media(min-width: $breakpoint--min-laptop) {
+@include mediaQuery("laptop-up") {
 
   body, 
   p, 
@@ -98,7 +98,7 @@ h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheadi
 }
 
 /* Desktop */
-@media(min-width: $breakpoint--min-desktop) {
+@include mediaQuery("desktop-up"){
 
   body, 
   p, 
@@ -199,7 +199,7 @@ em, .font-style--italic { font-style: italic; }
 .float-right { float: right; }
 .float-left { float: left; } 
 
-@media(min-width: 0px) and (max-width: $breakpoint--max-mobile) {
+@include mediaQuery("mobile-only") {
 
   .font-style--text-right--s { text-align: right; }
   .font-style--text-left--s { text-align: left; }
@@ -207,21 +207,29 @@ em, .font-style--italic { font-style: italic; }
 
 }
 
-@media(min-width: $breakpoint--min-tablet) and (max-width: $breakpoint--max-tablet) {
+@include mediaQuery("tablet-only") {
 
   .font-style--text-right--m { text-align: right; }
   .font-style--text-left--m { text-align: left; }
   .font-style--text-center--m { text-align: center; }
 
 }
-
-@media(min-width: $breakpoint--min-laptop) {
+@include mediaQuery("laptop-only") {
 
   .font-style--text-right--l { text-align: right; }
   .font-style--text-left--l { text-align: left; }
   .font-style--text-center--l { text-align: center; }
 
 }
+
+@include mediaQuery("desktop-only") {
+
+  .font-style--text-right--xl { text-align: right; }
+  .font-style--text-left--xl { text-align: left; }
+  .font-style--text-center--xl { text-align: center; }
+
+}
+
 
 /*--- Color Scheme ---*/
 body, 

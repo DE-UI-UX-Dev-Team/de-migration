@@ -47,7 +47,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 
 
 /* Tablet */
-@media (min-width: $breakpoint--min-tablet) {
+@include mediaQuery("tablet-up") {
 
   /*--- Tablet Sections ---*/  
 
@@ -84,7 +84,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 }
 
 /* Laptop */
-@media (min-width: $breakpoint--min-laptop) {
+@include mediaQuery("laptop-up") {
 
   /*--- Laptop Sections ---*/  
 
@@ -121,7 +121,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 } 
 
 /* Desktop */
-@media (min-width: $breakpoint--min-desktop) {
+@include mediaQuery("desktop-up") {
 
   /*--- Desktop Sections ---*/  
 
@@ -166,7 +166,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 }  
  
 /* Tablet */
-@media (min-width: $breakpoint--min-tablet) {
+@include mediaQuery("tablet-up") {
 
   .container {
     max-width: var(--max-content-width--m);
@@ -175,7 +175,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 }
 
 /* Laptop */
-@media (min-width: $breakpoint--min-laptop) {
+@include mediaQuery("laptop-up") {
 
   .container {
     max-width: var(--max-content-width--l);
@@ -184,7 +184,7 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 }
  
 /* Desktop */
-@media (min-width: $breakpoint--min-desktop) {
+@include mediaQuery("desktop-up") {
 
   .container {
     max-width: var(--max-content-width--xl);
