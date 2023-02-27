@@ -39,6 +39,7 @@ input[type="reset"] {
 
 .btn--primary:disabled {
     background-color: var(--gray--light--disabled);
+    color: var(--white-surface);
 }
 
 /*--- Secondary Buttons(default button) states ---*/
@@ -171,7 +172,8 @@ input[type="reset"].selected {
 [class*="bg--secondary-color"] input[type="submit"]:disabled,
 [class*="bg--secondary-color"] input[type="reset"]:disabled {
     color: var(--white-surface);
-    border-color: rgba(255, 255, 255, 0.6)
+    border-color: var(--white-surface);
+    opacity: 60%;
 }
 
 [class*="bg--primary-color"] button.selected,
@@ -196,7 +198,6 @@ input[type="reset"].selected {
 .btn--tertiary{
     border: none;
     min-width: 0;
-    width: fit-content;
     padding: 0;
 }
 
