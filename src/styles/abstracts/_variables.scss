@@ -4,6 +4,7 @@
   /* Primary blue color palette */
   --primary-blue--base-hex: #005876;
   --primary-blue--base-hsl: hsl(195.3, 100%, 23.1%);
+  --primary-blue--base-rgb: rgb(0,88,118);
   --primary-blue--base: var(--primary-blue--base-hsl);
 
   --primary-blue--light-1-hex: #006E92;
@@ -350,4 +351,13 @@
   --link-white--underline: underline solid var(--white-surface) 0.1rem;
   --link-white--underline--opacity: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
   --link-white--underline--disabled: underline solid rgba(255, 255, 255, 0.4);
+
+/*----Buttons------*/
+
+ --btn--font: bold 1.6rem/2.4rem var(--font-stack);
+ --btn--min-width: 22.7rem;
+ --btn--corner-radius:0.4rem;
+ --btn--border: 0.2rem solid var(--primary-blue--base);
+ --btn--secondary-color--hover: rgb(0,88,118,0.15);
+ --btn--secondary-color--pressed: rgb(0,88,118,0.4);
 }

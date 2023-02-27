@@ -1,0 +1,208 @@
+button,
+.btn,
+.btn-secondary,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    min-width: var(--btn--min-width);
+    font: var(--btn--font);
+    border-radius: var(--btn--corner-radius);
+    border: var(--btn--border);
+    color: var(--primary-blue--base);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.6rem 2.4rem;
+}
+
+/*--- Primary Buttons ---*/
+.btn--primary {
+    background-color: var(--secondary-orange--accent);
+    color: var(--white-surface);
+    border: none;
+}
+
+.btn--primary:hover:not([disabled]) {
+    background-color: var(--secondary-orange--dark-1);
+
+}
+
+.btn--primary:focus:not([disabled]) {
+    background-color: var(--secondary-orange--dark-1);
+    outline: var(--link-focus--outline);
+    outline-offset: 0.2rem;
+}
+
+.btn--primary:active:not([disabled]) {
+    background-color: var(--secondary-orange--light-2);
+    color: var(--white-surface);
+}
+
+.btn--primary:disabled {
+    background-color: var(--gray--light--disabled);
+    color: var(--white-surface);
+}
+
+/*--- Secondary Buttons(default button) states ---*/
+button:hover:not([disabled]),
+.btn:hover:not([disabled]),
+.btn-secondary:hover:not([disabled]),
+input[type="button"]:hover:not([disabled]),
+input[type="submit"]:hover:not([disabled]),
+input[type="reset"]:hover:not([disabled]) {
+    background-color: var(--btn--secondary-color--hover);
+}
+
+button:focus:not([disabled]),
+.btn:focus:not([disabled]),
+.btn-secondary:focus:not([disabled]),
+input[type="button"]:focus:not([disabled]),
+input[type="submit"]:focus:not([disabled]),
+input[type="reset"]:focus:not([disabled]) {
+    background-color: var(--btn--secondary-color--hover);
+    outline: var(--link-focus--outline);
+    outline-offset: 0.2rem;
+}
+
+button:active:not([disabled]),
+.btn:active:not([disabled]),
+.btn-secondary:active:not([disabled]),
+input[type="button"]:active:not([disabled]),
+input[type="submit"]:active:not([disabled]),
+input[type="reset"]:active:not([disabled]) {
+    background-color: var(--btn--secondary-color--pressed);
+    color: var(--primary-blue--base);
+}
+
+button:disabled,
+.btn:disabled,
+.btn-secondary:disabled,
+input[type="button"]:disabled,
+input[type="submit"],:disabled
+input[type="reset"]:disabled {
+    color: var(--gray--light--disabled);
+    border-color: var(--gray--light--disabled);
+}
+
+button.selected,
+.btn.selected  ,
+.btn-secondary.selected,
+input[type="button"].selected,
+input[type="submit"].selected,
+input[type="reset"].selected {
+    background-color: var(--primary-blue--base);
+    color: var(--white-surface);
+    border: none;
+}
+
+[class*="bg--primary-color"] button,
+[class*="bg--primary-color"] .btn,
+[class*="bg--primary-color"] .btn-secondary,
+[class*="bg--primary-color"] input[type="button"],
+[class*="bg--primary-color"] input[type="submit"],
+[class*="bg--primary-color"] input[type="reset"],
+[class*="bg--secondary-color"] button,
+[class*="bg--secondary-color"] .btn,
+[class*="bg--secondary-color"] .btn-secondary,
+[class*="bg--secondary-color"] input[type="button"],
+[class*="bg--secondary-color"] input[type="submit"],
+[class*="bg--secondary-color"] input[type="reset"] {
+    color: var(--white-surface);
+    border-color: var(--white-surface);
+
+}
+
+[class*="bg--primary-color"] button:hover:not([disabled]),
+[class*="bg--primary-color"] .btn:hover:not([disabled]),
+[class*="bg--primary-color"] .btn-secondary:hover:not([disabled]),
+[class*="bg--primary-color"] input[type="button"]:hover:not([disabled]),
+[class*="bg--primary-color"] input[type="submit"]:hover:not([disabled]),
+[class*="bg--primary-color"] input[type="reset"]:hover:not([disabled]),
+[class*="bg--secondary-color"] button:hover:not([disabled]),
+[class*="bg--secondary-color"] .btn:hover:not([disabled]),
+[class*="bg--secondary-color"] .btn-secondary:hover:not([disabled]),
+[class*="bg--secondary-color"] input[type="button"]:hover:not([disabled]),
+[class*="bg--secondary-color"] input[type="submit"]:hover:not([disabled]),
+[class*="bg--secondary-color"] input[type="reset"]:hover:not([disabled]) {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+[class*="bg--primary-color"] button:focus:not([disabled]),
+[class*="bg--primary-color"] .btn:focus:not([disabled]),
+[class*="bg--primary-color"] .btn-secondary:focus:not([disabled]),
+[class*="bg--primary-color"] input[type="button"]:focus:not([disabled]),
+[class*="bg--primary-color"] input[type="submit"]:focus:not([disabled]),
+[class*="bg--primary-color"] input[type="reset"]:focus:not([disabled]),
+[class*="bg--secondary-color"] button:focus:not([disabled]),
+[class*="bg--secondary-color"] .btn:focus:not([disabled]),
+[class*="bg--secondary-color"] .btn-secondary:focus:not([disabled]),
+[class*="bg--secondary-color"] input[type="button"]:focus:not([disabled]),
+[class*="bg--secondary-color"] input[type="submit"]:focus:not([disabled]),
+[class*="bg--secondary-color"] input[type="reset"]:focus:not([disabled]) {
+    background-color: rgba(255, 255, 255, 0.15);
+    outline: var(--link-focus--outline);
+    outline-offset: 0.2rem;
+}
+
+[class*="bg--primary-color"] button:active:not([disabled]),
+[class*="bg--primary-color"] .btn:active:not([disabled]),
+[class*="bg--primary-color"] .btn-secondary:active:not([disabled]),
+[class*="bg--primary-color"] input[type="button"]:active:not([disabled]),
+[class*="bg--primary-color"] input[type="submit"]:active:not([disabled]),
+[class*="bg--primary-color"] input[type="reset"]:active:not([disabled]),
+[class*="bg--secondary-color"] button:active:not([disabled]),
+[class*="bg--secondary-color"] .btn:active:not([disabled]),
+[class*="bg--secondary-color"] .btn-secondary:active:not([disabled]),
+[class*="bg--secondary-color"] input[type="button"]:active:not([disabled]),
+[class*="bg--secondary-color"] input[type="submit"]:active:not([disabled]),
+[class*="bg--secondary-color"] input[type="reset"]:active:not([disabled]) {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--white-surface);
+}
+
+[class*="bg--primary-color"] button:disabled,
+[class*="bg--primary-color"] .btn:disabled,
+[class*="bg--primary-color"] .btn-secondary:disabled,
+[class*="bg--primary-color"] input[type="button"]:disabled,
+[class*="bg--primary-color"] input[type="submit"]:disabled,
+[class*="bg--primary-color"] input[type="reset"]:disabled,
+[class*="bg--secondary-color"] button:disabled,
+[class*="bg--secondary-color"] .btn:disabled,
+[class*="bg--secondary-color"] .btn-secondary:disabled,
+[class*="bg--secondary-color"] input[type="button"]:disabled,
+[class*="bg--secondary-color"] input[type="submit"]:disabled,
+[class*="bg--secondary-color"] input[type="reset"]:disabled {
+    color: var(--white-surface);
+    border-color: var(--white-surface);
+    opacity: 60%;
+}
+
+[class*="bg--primary-color"] button.selected,
+[class*="bg--primary-color"] .btn.selected,
+[class*="bg--primary-color"] .btn-secondary.selected,
+[class*="bg--primary-color"] input[type="button"].selected,
+[class*="bg--primary-color"] input[type="submit"].selected,
+[class*="bg--primary-color"] input[type="reset"].selected,
+[class*="bg--secondary-color"] button.selected,
+[class*="bg--secondary-color"] .btn.selected,
+[class*="bg--secondary-color"] .btn-secondary.selected,
+[class*="bg--secondary-color"] input[type="button"].selected,
+[class*="bg--secondary-color"] input[type="submit"].selected,
+[class*="bg--secondary-color"] input[type="reset"].selected{
+    background-color: var(--white-surface);
+    color: var(--primary-blue--base);
+}
+
+
+/*Tertiary button*/
+
+.btn--tertiary{
+    border: none;
+    min-width: 0;
+    padding: 0;
+}
+
+[class*="bg--primary-color"] .btn--tertiary,
+[class*="bg--secondary-color"] .btn--tertiary{
+    color: var(--white-surface);
+}
+
