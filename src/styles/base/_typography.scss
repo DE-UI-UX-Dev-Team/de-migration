@@ -263,6 +263,15 @@ h2, .heading-2 {
 [class*="bg--primary-color"] h5, [class*="bg--primary-color"] .subheading-1,
 [class*="bg--primary-color"] h6, [class*="bg--primary-color"] .subheading-2 {
   color: var(--body-text--on-dark-background);
+}   
+
+[class*="bg--secondary-color"] h1, [class*="bg--secondary-color"] .heading-1,  
+[class*="bg--secondary-color"] h2, [class*="bg--secondary-color"] .heading-2,
+[class*="bg--secondary-color"] h3, [class*="bg--secondary-color"] .heading-3,
+[class*="bg--secondary-color"] h4, [class*="bg--secondary-color"] .heading-4,
+[class*="bg--secondary-color"] h5, [class*="bg--secondary-color"] .subheading-1,
+[class*="bg--secondary-color"] h6, [class*="bg--secondary-color"] .subheading-2 {
+  color: var(--body-text--on-dark-background);
 }  
 
 /* Text on Background */ 
