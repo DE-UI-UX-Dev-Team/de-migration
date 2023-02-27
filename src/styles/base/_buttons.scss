@@ -21,18 +21,18 @@ input[type="reset"] {
     border: none;
 }
 
-.btn--primary:hover {
+.btn--primary:hover:not([disabled]) {
     background-color: var(--secondary-orange--dark-1);
 
 }
 
-.btn--primary:focus {
+.btn--primary:focus:not([disabled]) {
     background-color: var(--secondary-orange--dark-1);
     outline: var(--link-focus--outline);
     outline-offset: 0.2rem;
 }
 
-.btn--primary:active {
+.btn--primary:active:not([disabled]) {
     background-color: var(--secondary-orange--light-2);
     color: var(--white-surface);
 }
@@ -43,32 +43,32 @@ input[type="reset"] {
 }
 
 /*--- Secondary Buttons(default button) states ---*/
-button:hover,
-.btn:hover,
-.btn-secondary:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover {
+button:hover:not([disabled]),
+.btn:hover:not([disabled]),
+.btn-secondary:hover:not([disabled]),
+input[type="button"]:hover:not([disabled]),
+input[type="submit"]:hover:not([disabled]),
+input[type="reset"]:hover:not([disabled]) {
     background-color: var(--btn--secondary-color--hover);
 }
 
-button:focus,
-.btn:focus,
-.btn-secondary:focus,
-input[type="button"]:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus {
+button:focus:not([disabled]),
+.btn:focus:not([disabled]),
+.btn-secondary:focus:not([disabled]),
+input[type="button"]:focus:not([disabled]),
+input[type="submit"]:focus:not([disabled]),
+input[type="reset"]:focus:not([disabled]) {
     background-color: var(--btn--secondary-color--hover);
     outline: var(--link-focus--outline);
     outline-offset: 0.2rem;
 }
 
-button:active,
-.btn:active,
-.btn-secondary:active,
-input[type="button"]:active,
-input[type="submit"]:active,
-input[type="reset"]:active {
+button:active:not([disabled]),
+.btn:active:not([disabled]),
+.btn-secondary:active:not([disabled]),
+input[type="button"]:active:not([disabled]),
+input[type="submit"]:active:not([disabled]),
+input[type="reset"]:active:not([disabled]) {
     background-color: var(--btn--secondary-color--pressed);
     color: var(--primary-blue--base);
 }
@@ -111,50 +111,50 @@ input[type="reset"].selected {
 
 }
 
-[class*="bg--primary-color"] button:hover,
-[class*="bg--primary-color"] .btn:hover,
-[class*="bg--primary-color"] .btn-secondary:hover,
-[class*="bg--primary-color"] input[type="button"]:hover,
-[class*="bg--primary-color"] input[type="submit"]:hover,
-[class*="bg--primary-color"] input[type="reset"]:hover,
-[class*="bg--secondary-color"] button:hover,
-[class*="bg--secondary-color"] .btn:hover,
-[class*="bg--secondary-color"] .btn-secondary:hover,
-[class*="bg--secondary-color"] input[type="button"]:hover,
-[class*="bg--secondary-color"] input[type="submit"]:hover,
-[class*="bg--secondary-color"] input[type="reset"]:hover {
+[class*="bg--primary-color"] button:hover:not([disabled]),
+[class*="bg--primary-color"] .btn:hover:not([disabled]),
+[class*="bg--primary-color"] .btn-secondary:hover:not([disabled]),
+[class*="bg--primary-color"] input[type="button"]:hover:not([disabled]),
+[class*="bg--primary-color"] input[type="submit"]:hover:not([disabled]),
+[class*="bg--primary-color"] input[type="reset"]:hover:not([disabled]),
+[class*="bg--secondary-color"] button:hover:not([disabled]),
+[class*="bg--secondary-color"] .btn:hover:not([disabled]),
+[class*="bg--secondary-color"] .btn-secondary:hover:not([disabled]),
+[class*="bg--secondary-color"] input[type="button"]:hover:not([disabled]),
+[class*="bg--secondary-color"] input[type="submit"]:hover:not([disabled]),
+[class*="bg--secondary-color"] input[type="reset"]:hover:not([disabled]) {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-[class*="bg--primary-color"] button:focus,
-[class*="bg--primary-color"] .btn:focus,
-[class*="bg--primary-color"] .btn-secondary:focus,
-[class*="bg--primary-color"] input[type="button"]:focus,
-[class*="bg--primary-color"] input[type="submit"]:focus,
-[class*="bg--primary-color"] input[type="reset"]:focus,
-[class*="bg--secondary-color"] button:focus,
-[class*="bg--secondary-color"] .btn:focus,
-[class*="bg--secondary-color"] .btn-secondary:focus,
-[class*="bg--secondary-color"] input[type="button"]:focus,
-[class*="bg--secondary-color"] input[type="submit"]:focus,
-[class*="bg--secondary-color"] input[type="reset"]:focus {
+[class*="bg--primary-color"] button:focus:not([disabled]),
+[class*="bg--primary-color"] .btn:focus:not([disabled]),
+[class*="bg--primary-color"] .btn-secondary:focus:not([disabled]),
+[class*="bg--primary-color"] input[type="button"]:focus:not([disabled]),
+[class*="bg--primary-color"] input[type="submit"]:focus:not([disabled]),
+[class*="bg--primary-color"] input[type="reset"]:focus:not([disabled]),
+[class*="bg--secondary-color"] button:focus:not([disabled]),
+[class*="bg--secondary-color"] .btn:focus:not([disabled]),
+[class*="bg--secondary-color"] .btn-secondary:focus:not([disabled]),
+[class*="bg--secondary-color"] input[type="button"]:focus:not([disabled]),
+[class*="bg--secondary-color"] input[type="submit"]:focus:not([disabled]),
+[class*="bg--secondary-color"] input[type="reset"]:focus:not([disabled]) {
     background-color: rgba(255, 255, 255, 0.15);
     outline: var(--link-focus--outline);
     outline-offset: 0.2rem;
 }
 
-[class*="bg--primary-color"] button:active,
-[class*="bg--primary-color"] .btn:active,
-[class*="bg--primary-color"] .btn-secondary:active,
-[class*="bg--primary-color"] input[type="button"]:active,
-[class*="bg--primary-color"] input[type="submit"]:active,
-[class*="bg--primary-color"] input[type="reset"]:active,
-[class*="bg--secondary-color"] button:active,
-[class*="bg--secondary-color"] .btn:active,
-[class*="bg--secondary-color"] .btn-secondary:active,
-[class*="bg--secondary-color"] input[type="button"]:active,
-[class*="bg--secondary-color"] input[type="submit"]:active,
-[class*="bg--secondary-color"] input[type="reset"]:active {
+[class*="bg--primary-color"] button:active:not([disabled]),
+[class*="bg--primary-color"] .btn:active:not([disabled]),
+[class*="bg--primary-color"] .btn-secondary:active:not([disabled]),
+[class*="bg--primary-color"] input[type="button"]:active:not([disabled]),
+[class*="bg--primary-color"] input[type="submit"]:active:not([disabled]),
+[class*="bg--primary-color"] input[type="reset"]:active:not([disabled]),
+[class*="bg--secondary-color"] button:active:not([disabled]),
+[class*="bg--secondary-color"] .btn:active:not([disabled]),
+[class*="bg--secondary-color"] .btn-secondary:active:not([disabled]),
+[class*="bg--secondary-color"] input[type="button"]:active:not([disabled]),
+[class*="bg--secondary-color"] input[type="submit"]:active:not([disabled]),
+[class*="bg--secondary-color"] input[type="reset"]:active:not([disabled]) {
     background-color: rgba(255, 255, 255, 0.4);
     color: var(--white-surface);
 }
