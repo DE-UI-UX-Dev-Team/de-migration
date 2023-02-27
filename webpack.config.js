@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require( './deploy/config.json' );
  
-const htmlFileRegex = new RegExp(/(src\/pages\/)/, 'ig');
+const htmlFileRegex = new RegExp(/(src\/pages\/)|(src\\pages\\)/, 'ig');
 let directories = config.entryPoints.pages.directory;
 
 let htmlFiles = [];
