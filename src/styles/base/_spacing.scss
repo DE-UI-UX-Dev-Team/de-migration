@@ -7,7 +7,6 @@ section {
   width: 100%;
   padding-left: var(--gutter--s);
   padding-right: var(--gutter--s); 
-  font-size: 0;
 } 
 
 section:first-child {
@@ -162,7 +161,6 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 .container {
   max-width: var(--max-content-width--s); 
   margin: 0 auto;
-  font-size: 0;
 }  
  
 /* Tablet */
