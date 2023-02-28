@@ -276,7 +276,9 @@
     0 8px 10px 0 rgba(0, 0, 0, 0.2);
 
   /*--- Grid and Spacing Measurements ---*/
-
+  /*Container gutters */
+  --gutter--container: 2rem;
+  
   /* Columns */
   --gutter--s: 0.75rem;
   --gutter--m: 0.75rem;
@@ -296,10 +298,10 @@
   --section-spacing--l: 8rem;
   --section-spacing--xl: 8rem;
 
-  --section-top-curve--top-pd--s: 4.8rem;
-  --section-top-curve--top-pd--m: 4.8rem;
-  --section-top-curve--top-pd--l: 8rem;
-  --section-top-curve--top-pd--xl: 8rem;
+  --section-top-curve--top-pd--s:0rem;
+  --section-top-curve--top-pd--m: 0rem;
+  --section-top-curve--top-pd--l: 0rem;
+  --section-top-curve--top-pd--xl: 0rem;
 
   --section-top-curve--btm-pd--s: 4.8rem;
   --section-top-curve--btm-pd--m: 4.8rem;

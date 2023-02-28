@@ -256,57 +256,57 @@ h2, .heading-2 {
   color: var(--primary-color--base);
 }  
 
-[class*="bg--primary-color"] h1, [class*="bg--primary-color"] .heading-1,  
-[class*="bg--primary-color"] h2, [class*="bg--primary-color"] .heading-2,
-[class*="bg--primary-color"] h3, [class*="bg--primary-color"] .heading-3,
-[class*="bg--primary-color"] h4, [class*="bg--primary-color"] .heading-4,
-[class*="bg--primary-color"] h5, [class*="bg--primary-color"] .subheading-1,
-[class*="bg--primary-color"] h6, [class*="bg--primary-color"] .subheading-2 {
+[class*="bg--primary-"] h1, [class*="bg--primary-"] .heading-1,  
+[class*="bg--primary-"] h2, [class*="bg--primary-"] .heading-2,
+[class*="bg--primary-"] h3, [class*="bg--primary-"] .heading-3,
+[class*="bg--primary-"] h4, [class*="bg--primary-"] .heading-4,
+[class*="bg--primary-"] h5, [class*="bg--primary-"] .subheading-1,
+[class*="bg--primary-"] h6, [class*="bg--primary-"] .subheading-2 {
   color: var(--body-text--on-dark-background);
 }   
 
-[class*="bg--secondary-color"] h1, [class*="bg--secondary-color"] .heading-1,  
-[class*="bg--secondary-color"] h2, [class*="bg--secondary-color"] .heading-2,
-[class*="bg--secondary-color"] h3, [class*="bg--secondary-color"] .heading-3,
-[class*="bg--secondary-color"] h4, [class*="bg--secondary-color"] .heading-4,
-[class*="bg--secondary-color"] h5, [class*="bg--secondary-color"] .subheading-1,
-[class*="bg--secondary-color"] h6, [class*="bg--secondary-color"] .subheading-2 {
+[class*="bg--secondary-"] h1, [class*="bg--secondary-"] .heading-1,  
+[class*="bg--secondary-"] h2, [class*="bg--secondary-"] .heading-2,
+[class*="bg--secondary-"] h3, [class*="bg--secondary-"] .heading-3,
+[class*="bg--secondary-"] h4, [class*="bg--secondary-"] .heading-4,
+[class*="bg--secondary-"] h5, [class*="bg--secondary-"] .subheading-1,
+[class*="bg--secondary-"] h6, [class*="bg--secondary-"] .subheading-2 {
   color: var(--body-text--on-dark-background);
 }  
 
 /* Text on Background */ 
-section[class*="bg--primary-color"],
-[class*="bg--primary-color"] p, 
-[class*="bg--primary-color"] ol,
-[class*="bg--primary-color"] ul,
-[class*="bg--primary-color"] dl,
-[class*="bg--primary-color"] dd,
-[class*="bg--primary-color"] pre,
-[class*="bg--primary-color"] menu,
-[class*="bg--primary-color"] dir,
-[class*="bg--primary-color"] address, 
-[class*="bg--primary-color"] blockquote, 
-[class*="bg--primary-color"] input, 
-[class*="bg--primary-color"] select, 
-[class*="bg--primary-color"] textarea, 
-[class*="bg--primary-color"] label { 
+section[class*="bg--primary-"],
+[class*="bg--primary-"] p, 
+[class*="bg--primary-"] ol,
+[class*="bg--primary-"] ul,
+[class*="bg--primary-"] dl,
+[class*="bg--primary-"] dd,
+[class*="bg--primary-"] pre,
+[class*="bg--primary-"] menu,
+[class*="bg--primary-"] dir,
+[class*="bg--primary-"] address, 
+[class*="bg--primary-"] blockquote, 
+[class*="bg--primary-"] input, 
+[class*="bg--primary-"] select, 
+[class*="bg--primary-"] textarea, 
+[class*="bg--primary-"] label { 
   color: var(--body-text--on-dark-background);
 }
 
-section[class*="bg--secondary-color"],
-[class*="bg--secondary-color"] p, 
-[class*="bg--secondary-color"] ol,
-[class*="bg--secondary-color"] ul,
-[class*="bg--secondary-color"] dl,
-[class*="bg--secondary-color"] pre, 
-[class*="bg--secondary-color"] menu,
-[class*="bg--secondary-color"] dir,
-[class*="bg--secondary-color"] address, 
-[class*="bg--secondary-color"] blockquote, 
-[class*="bg--secondary-color"] input, 
-[class*="bg--secondary-color"] select, 
-[class*="bg--secondary-color"] textarea, 
-[class*="bg--secondary-color"] label { 
+section[class*="bg--secondary-"],
+[class*="bg--secondary-"] p, 
+[class*="bg--secondary-"] ol,
+[class*="bg--secondary-"] ul,
+[class*="bg--secondary-"] dl,
+[class*="bg--secondary-"] pre, 
+[class*="bg--secondary-"] menu,
+[class*="bg--secondary-"] dir,
+[class*="bg--secondary-"] address, 
+[class*="bg--secondary-"] blockquote, 
+[class*="bg--secondary-"] input, 
+[class*="bg--secondary-"] select, 
+[class*="bg--secondary-"] textarea, 
+[class*="bg--secondary-"] label { 
   color: var(--body-text--on-dark-background);
 }
 
@@ -328,32 +328,32 @@ label[class*="bg--light-blue"] {
   color: var(--body-text--color);
 }
 
-body[class*="bg--primary-color"], 
-section[class*="bg--primary-color"],
-p[class*="bg--primary-color"], 
-ol[class*="bg--primary-color"],
-ul[class*="bg--primary-color"],
-dl[class*="bg--primary-color"],
-pre[class*="bg--primary-color"],
-menu[class*="bg--primary-color"],
-dir[class*="bg--primary-color"],
-address[class*="bg--primary-color"], 
-blockquote[class*="bg--primary-color"], 
-input[class*="bg--primary-color"], 
-select[class*="bg--primary-color"], 
-textarea[class*="bg--primary-color"], 
-label[class*="bg--primary-color"], 
-body[class*="bg--secondary-color"], 
-p[class*="bg--secondary-color"], 
-ol[class*="bg--secondary-color"],
-ul[class*="bg--secondary-color"],
-dl[class*="bg--secondary-color"],
-pre[class*="bg--secondary-color"],
-address[class*="bg--secondary-color"], 
-blockquote[class*="bg--secondary-color"], 
-input[class*="bg--secondary-color"], 
-select[class*="bg--secondary-color"], 
-textarea[class*="bg--secondary-color"], 
-label[class*="bg--secondary-color"]  { 
+body[class*="bg--primary-"], 
+section[class*="bg--primary-"],
+p[class*="bg--primary-"], 
+ol[class*="bg--primary-"],
+ul[class*="bg--primary-"],
+dl[class*="bg--primary-"],
+pre[class*="bg--primary-"],
+menu[class*="bg--primary-"],
+dir[class*="bg--primary-"],
+address[class*="bg--primary-"], 
+blockquote[class*="bg--primary-"], 
+input[class*="bg--primary-"], 
+select[class*="bg--primary-"], 
+textarea[class*="bg--primary-"], 
+label[class*="bg--primary-"], 
+body[class*="bg--secondary-"], 
+p[class*="bg--secondary-"], 
+ol[class*="bg--secondary-"],
+ul[class*="bg--secondary-"],
+dl[class*="bg--secondary-"],
+pre[class*="bg--secondary-"],
+address[class*="bg--secondary-"], 
+blockquote[class*="bg--secondary-"], 
+input[class*="bg--secondary-"], 
+select[class*="bg--secondary-"], 
+textarea[class*="bg--secondary-"], 
+label[class*="bg--secondary-"]  { 
   color: var(--body-text--on-dark-background);
 }

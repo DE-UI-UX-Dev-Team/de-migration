@@ -25,17 +25,17 @@ section:not([class*="bg-"]) + section.bg--white {
 }
  
 /* Sections w/ Curves */
-section[class*="bg-top-curve-"] {
+section[class*="bg-top-curve"] {
   padding-top: var(--section-top-curve--top-pd--s);
   padding-bottom: var(--section-top-curve--btm-pd--s);
 }
 
-section[class*="bg-btm-curve-"] {
+section[class*="bg-btm-curve"] {
   padding-top: var(--section-btm-curve--top-pd--s);
   padding-bottom: var(--section-btm-curve--btm-pd--s);
 }
 
-section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
+section[class*="bg-top-curve"][class*="bg-btm-curve"] {
   padding-top: var(--section-top-curve--top-pd--s);
   padding-bottom: var(--section-btm-curve--btm-pd--s);
 }
@@ -61,17 +61,17 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
   }
     
   /* Sections w/ Curves */
-  section[class*="bg-top-curve-"] {
+  section[class*="bg-top-curve"] {
     padding-top: var(--section-top-curve--top-pd--m);
     padding-bottom: var(--section-top-curve--btm-pd--m);
   }
 
-  section[class*="bg-btm-curve-"] {
+  section[class*="bg-btm-curve"] {
     padding-top: var(--section-btm-curve--top-pd--m);
     padding-bottom: var(--section-btm-curve--btm-pd--m);
   }
 
-  section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
+  section[class*="bg-top-curve"][class*="bg-btm-curve"] {
     padding-top: var(--section-top-curve--top-pd--m);
     padding-bottom: var(--section-btm-curve--btm-pd--m);
   }
@@ -98,17 +98,17 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
   }
   
   /* Sections w/ Curves */
-  section[class*="bg-top-curve-"] {
+  section[class*="bg-top-curve"] {
     padding-top: var(--section-top-curve--top-pd--l);
     padding-bottom: var(--section-top-curve--btm-pd--l);
   }
 
-  section[class*="bg-btm-curve-"] {
+  section[class*="bg-btm-curve"] {
     padding-top: var(--section-btm-curve--top-pd--l);
     padding-bottom: var(--section-btm-curve--btm-pd--l);
   }
 
-  section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
+  section[class*="bg-top-curve"][class*="bg-btm-curve"] {
     padding-top: var(--section-top-curve--top-pd--l);
     padding-bottom: var(--section-btm-curve--btm-pd--l);
   }
@@ -135,17 +135,17 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
   }
     
   /* Sections w/ Curves */
-  section[class*="bg-top-curve-"] {
+  section[class*="bg-top-curve"] {
     padding-top: var(--section-top-curve--top-pd--xl);
     padding-bottom: var(--section-top-curve--btm-pd--xl);
   }
 
-  section[class*="bg-btm-curve-"] {
+  section[class*="bg-btm-curve"] {
     padding-top: var(--section-btm-curve--top-pd--xl);
     padding-bottom: var(--section-btm-curve--btm-pd--xl);
   }
 
-  section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
+  section[class*="bg-top-curve"][class*="bg-btm-curve"] {
     padding-top: var(--section-top-curve--top-pd--xl);
     padding-bottom: var(--section-btm-curve--btm-pd--xl);
   }
@@ -155,7 +155,9 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 /*-- Content Width ---*/ 
 
 .container {
-  max-width: var(--max-content-width--s); 
+  max-width: var(--max-content-width--s);
+  padding-left: var(--gutter--container) ; 
+  padding-right: var(--gutter--container);
   margin: 0 auto;
 }  
  
@@ -177,52 +179,4 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
 
 }
  
-/* Desktop */
-@media (min-width: 1440px) {
 
-  .container {
-    max-width: var(--max-content-width--xl);
-  }  
-
-} 
-
-.bg-curve-top:before, .bg-curve-bottom:after, .bg-reverse-curve-top:before, .bg-reverse-curve-bottom:after {
-  content: '';
-  display: block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 100;
-  padding-bottom: 9.09%;
-  /* height/width of svg image */
-  width: 100%;
-  background-image: url(https://d38suhqqynrvtl.cloudfront.net/images/svgs/de_main_curve.svg);
-}
-
-.bg-curve-top:before {
-  transform: scaleY(-1);
-}
-
-.bg-reverse-curve-bottom:after {
-  transform: scaleX(-1);
-}
-
-.bg-reverse-curve-top:before {
-  transform: scaleX(-1) scaleY(-1);
-}
-
-.bg-curve-top:before, .bg-reverse-curve-top:before {
-  background-position: center top;
-}
-
-.bg-curve-bottom:after, .bg-reverse-curve-bottom:after {
-  background-position: center 0;
-}
-
-@media only screen and (min-width: 992px) {
-  .bg-curve-top:before, .bg-curve-bottom:after {
-      height: inherit;
-  }
-  .container {
-      max-width: 1236px;
-  }
-}
