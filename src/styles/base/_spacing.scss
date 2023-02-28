@@ -3,8 +3,6 @@
 section {
   margin-top: var(--section-spacing--s); 
   width: 100%;
-  padding-left: var(--gutter--s);
-  padding-right: var(--gutter--s); 
 } 
 
 section:first-child {
@@ -187,3 +185,44 @@ section[class*="bg-top-curve-"][class*="bg-btm-curve-"] {
   }  
 
 } 
+
+.bg-curve-top:before, .bg-curve-bottom:after, .bg-reverse-curve-top:before, .bg-reverse-curve-bottom:after {
+  content: '';
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+  padding-bottom: 9.09%;
+  /* height/width of svg image */
+  width: 100%;
+  background-image: url(https://d38suhqqynrvtl.cloudfront.net/images/svgs/de_main_curve.svg);
+}
+
+.bg-curve-top:before {
+  transform: scaleY(-1);
+}
+
+.bg-reverse-curve-bottom:after {
+  transform: scaleX(-1);
+}
+
+.bg-reverse-curve-top:before {
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.bg-curve-top:before, .bg-reverse-curve-top:before {
+  background-position: center top;
+}
+
+.bg-curve-bottom:after, .bg-reverse-curve-bottom:after {
+  background-position: center 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .bg-curve-top:before, .bg-curve-bottom:after {
+      height: inherit;
+  }
+  .container {
+      max-width: 1236px;
+  }
+}
