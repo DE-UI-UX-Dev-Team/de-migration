@@ -1,3 +1,6 @@
+
+
+
 /**------- Section Curves------- **/
 
 .bg-top-curve:before, .bg-btm-curve:after, .bg-top-curve-reverse:before, .bg-btm-curve-reverse:after {
@@ -11,8 +14,22 @@
     width: 100%;
     background-image: url(images/de_main_curve.svg);
 }
-.customer-care:after {
+.bg-curve-blue:after {
     background-image: url(images/de_main_curve_blue.svg);
+}
+
+.bg-curve-orange:after {
+    background-image: url(images/de_main_curve_orange.svg);
+}
+
+.bg-animated-curve-orange:after {
+    
+    background-image: url(images/de_animated_curve_orange.svg);
+}
+
+.bg-animated-curve-blue:after {
+    
+    background-image: url(images/de_animated_curve_blue.svg);
 }
 
 .bg-top-curve:before {
@@ -27,12 +44,9 @@
     transform: scaleX(-1) scaleY(-1);
 }
 
-.bg-top-curve:before, .bg-top-curve-reverse:before {
-    background-position: center top;
-}
 
-.bg-btn-curve:after, .bg-btm-curve-reverse:after {
-    background-position: center 0;
-}
+
+
+
 
 

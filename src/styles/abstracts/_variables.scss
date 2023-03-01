@@ -19,6 +19,10 @@
   --primary-blue--light-3-hsl: hsl(200, 24.3%, 92.7%);
   --primary-blue--light-3: var(--primary-blue--light-3-hsl);
 
+  --primary-blue--light-4-hex: #d5e2e6;
+  --primary-blue--light-4-hsl: hsl(194.1,25.4%,86.9%);
+  --primary-blue--light-4: var(--primary-blue--light-4-hsl);
+
   --primary-blue--dark-1-hex: #002C3B;
   --primary-blue--dark-1-hsl: hsl(195.3, 100%, 11.6%);
   --primary-blue--dark-1: var(--primary-blue--dark-1-hsl);
@@ -278,7 +282,7 @@
   /*--- Grid and Spacing Measurements ---*/
   /*Container gutters */
   --gutter--container: 2rem;
-  
+
   /* Columns */
   --gutter--s: 0.75rem;
   --gutter--m: 0.75rem;
