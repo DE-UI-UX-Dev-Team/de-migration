@@ -94,100 +94,100 @@ input[type="reset"].selected {
     border: none;
 }
 
-[class*="bg--primary-color"] button,
-[class*="bg--primary-color"] .btn,
-[class*="bg--primary-color"] .btn-secondary,
-[class*="bg--primary-color"] input[type="button"],
-[class*="bg--primary-color"] input[type="submit"],
-[class*="bg--primary-color"] input[type="reset"],
-[class*="bg--secondary-color"] button,
-[class*="bg--secondary-color"] .btn,
-[class*="bg--secondary-color"] .btn-secondary,
-[class*="bg--secondary-color"] input[type="button"],
-[class*="bg--secondary-color"] input[type="submit"],
-[class*="bg--secondary-color"] input[type="reset"] {
+[class*="bg--primary-"] button,
+[class*="bg--primary-"] .btn,
+[class*="bg--primary-"] .btn-secondary,
+[class*="bg--primary-"] input[type="button"],
+[class*="bg--primary-"] input[type="submit"],
+[class*="bg--primary-"] input[type="reset"],
+[class*="bg--secondary-"] button,
+[class*="bg--secondary-"] .btn,
+[class*="bg--secondary-"] .btn-secondary,
+[class*="bg--secondary-"] input[type="button"],
+[class*="bg--secondary-"] input[type="submit"],
+[class*="bg--secondary-"] input[type="reset"] {
     color: var(--white-surface);
     border-color: var(--white-surface);
 
 }
 
-[class*="bg--primary-color"] button:hover:not([disabled]),
-[class*="bg--primary-color"] .btn:hover:not([disabled]),
-[class*="bg--primary-color"] .btn-secondary:hover:not([disabled]),
-[class*="bg--primary-color"] input[type="button"]:hover:not([disabled]),
-[class*="bg--primary-color"] input[type="submit"]:hover:not([disabled]),
-[class*="bg--primary-color"] input[type="reset"]:hover:not([disabled]),
-[class*="bg--secondary-color"] button:hover:not([disabled]),
-[class*="bg--secondary-color"] .btn:hover:not([disabled]),
-[class*="bg--secondary-color"] .btn-secondary:hover:not([disabled]),
-[class*="bg--secondary-color"] input[type="button"]:hover:not([disabled]),
-[class*="bg--secondary-color"] input[type="submit"]:hover:not([disabled]),
-[class*="bg--secondary-color"] input[type="reset"]:hover:not([disabled]) {
+[class*="bg--primary-"] button:hover:not([disabled]),
+[class*="bg--primary-"] .btn:hover:not([disabled]),
+[class*="bg--primary-"] .btn-secondary:hover:not([disabled]),
+[class*="bg--primary-"] input[type="button"]:hover:not([disabled]),
+[class*="bg--primary-"] input[type="submit"]:hover:not([disabled]),
+[class*="bg--primary-"] input[type="reset"]:hover:not([disabled]),
+[class*="bg--secondary-"] button:hover:not([disabled]),
+[class*="bg--secondary-"] .btn:hover:not([disabled]),
+[class*="bg--secondary-"] .btn-secondary:hover:not([disabled]),
+[class*="bg--secondary-"] input[type="button"]:hover:not([disabled]),
+[class*="bg--secondary-"] input[type="submit"]:hover:not([disabled]),
+[class*="bg--secondary-"] input[type="reset"]:hover:not([disabled]) {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-[class*="bg--primary-color"] button:focus:not([disabled]),
-[class*="bg--primary-color"] .btn:focus:not([disabled]),
-[class*="bg--primary-color"] .btn-secondary:focus:not([disabled]),
-[class*="bg--primary-color"] input[type="button"]:focus:not([disabled]),
-[class*="bg--primary-color"] input[type="submit"]:focus:not([disabled]),
-[class*="bg--primary-color"] input[type="reset"]:focus:not([disabled]),
-[class*="bg--secondary-color"] button:focus:not([disabled]),
-[class*="bg--secondary-color"] .btn:focus:not([disabled]),
-[class*="bg--secondary-color"] .btn-secondary:focus:not([disabled]),
-[class*="bg--secondary-color"] input[type="button"]:focus:not([disabled]),
-[class*="bg--secondary-color"] input[type="submit"]:focus:not([disabled]),
-[class*="bg--secondary-color"] input[type="reset"]:focus:not([disabled]) {
+[class*="bg--primary-"] button:focus:not([disabled]),
+[class*="bg--primary-"] .btn:focus:not([disabled]),
+[class*="bg--primary-"] .btn-secondary:focus:not([disabled]),
+[class*="bg--primary-"] input[type="button"]:focus:not([disabled]),
+[class*="bg--primary-"] input[type="submit"]:focus:not([disabled]),
+[class*="bg--primary-"] input[type="reset"]:focus:not([disabled]),
+[class*="bg--secondary-"] button:focus:not([disabled]),
+[class*="bg--secondary-"] .btn:focus:not([disabled]),
+[class*="bg--secondary-"] .btn-secondary:focus:not([disabled]),
+[class*="bg--secondary-"] input[type="button"]:focus:not([disabled]),
+[class*="bg--secondary-"] input[type="submit"]:focus:not([disabled]),
+[class*="bg--secondary-"] input[type="reset"]:focus:not([disabled]) {
     background-color: rgba(255, 255, 255, 0.15);
     outline: var(--link-focus--outline);
     outline-offset: 0.2rem;
 }
 
-[class*="bg--primary-color"] button:active:not([disabled]),
-[class*="bg--primary-color"] .btn:active:not([disabled]),
-[class*="bg--primary-color"] .btn-secondary:active:not([disabled]),
-[class*="bg--primary-color"] input[type="button"]:active:not([disabled]),
-[class*="bg--primary-color"] input[type="submit"]:active:not([disabled]),
-[class*="bg--primary-color"] input[type="reset"]:active:not([disabled]),
-[class*="bg--secondary-color"] button:active:not([disabled]),
-[class*="bg--secondary-color"] .btn:active:not([disabled]),
-[class*="bg--secondary-color"] .btn-secondary:active:not([disabled]),
-[class*="bg--secondary-color"] input[type="button"]:active:not([disabled]),
-[class*="bg--secondary-color"] input[type="submit"]:active:not([disabled]),
-[class*="bg--secondary-color"] input[type="reset"]:active:not([disabled]) {
+[class*="bg--primary-"] button:active:not([disabled]),
+[class*="bg--primary-"] .btn:active:not([disabled]),
+[class*="bg--primary-"] .btn-secondary:active:not([disabled]),
+[class*="bg--primary-"] input[type="button"]:active:not([disabled]),
+[class*="bg--primary-"] input[type="submit"]:active:not([disabled]),
+[class*="bg--primary-"] input[type="reset"]:active:not([disabled]),
+[class*="bg--secondary-"] button:active:not([disabled]),
+[class*="bg--secondary-"] .btn:active:not([disabled]),
+[class*="bg--secondary-"] .btn-secondary:active:not([disabled]),
+[class*="bg--secondary-"] input[type="button"]:active:not([disabled]),
+[class*="bg--secondary-"] input[type="submit"]:active:not([disabled]),
+[class*="bg--secondary-"] input[type="reset"]:active:not([disabled]) {
     background-color: rgba(255, 255, 255, 0.4);
     color: var(--white-surface);
 }
 
-[class*="bg--primary-color"] button:disabled,
-[class*="bg--primary-color"] .btn:disabled,
-[class*="bg--primary-color"] .btn-secondary:disabled,
-[class*="bg--primary-color"] input[type="button"]:disabled,
-[class*="bg--primary-color"] input[type="submit"]:disabled,
-[class*="bg--primary-color"] input[type="reset"]:disabled,
-[class*="bg--secondary-color"] button:disabled,
-[class*="bg--secondary-color"] .btn:disabled,
-[class*="bg--secondary-color"] .btn-secondary:disabled,
-[class*="bg--secondary-color"] input[type="button"]:disabled,
-[class*="bg--secondary-color"] input[type="submit"]:disabled,
-[class*="bg--secondary-color"] input[type="reset"]:disabled {
+[class*="bg--primary-"] button:disabled,
+[class*="bg--primary-"] .btn:disabled,
+[class*="bg--primary-"] .btn-secondary:disabled,
+[class*="bg--primary-"] input[type="button"]:disabled,
+[class*="bg--primary-"] input[type="submit"]:disabled,
+[class*="bg--primary-"] input[type="reset"]:disabled,
+[class*="bg--secondary-"] button:disabled,
+[class*="bg--secondary-"] .btn:disabled,
+[class*="bg--secondary-"] .btn-secondary:disabled,
+[class*="bg--secondary-"] input[type="button"]:disabled,
+[class*="bg--secondary-"] input[type="submit"]:disabled,
+[class*="bg--secondary-"] input[type="reset"]:disabled {
     color: var(--white-surface);
     border-color: var(--white-surface);
     opacity: 60%;
 }
 
-[class*="bg--primary-color"] button.selected,
-[class*="bg--primary-color"] .btn.selected,
-[class*="bg--primary-color"] .btn-secondary.selected,
-[class*="bg--primary-color"] input[type="button"].selected,
-[class*="bg--primary-color"] input[type="submit"].selected,
-[class*="bg--primary-color"] input[type="reset"].selected,
-[class*="bg--secondary-color"] button.selected,
-[class*="bg--secondary-color"] .btn.selected,
-[class*="bg--secondary-color"] .btn-secondary.selected,
-[class*="bg--secondary-color"] input[type="button"].selected,
-[class*="bg--secondary-color"] input[type="submit"].selected,
-[class*="bg--secondary-color"] input[type="reset"].selected{
+[class*="bg--primary-"] button.selected,
+[class*="bg--primary-"] .btn.selected,
+[class*="bg--primary-"] .btn-secondary.selected,
+[class*="bg--primary-"] input[type="button"].selected,
+[class*="bg--primary-"] input[type="submit"].selected,
+[class*="bg--primary-"] input[type="reset"].selected,
+[class*="bg--secondary-"] button.selected,
+[class*="bg--secondary-"] .btn.selected,
+[class*="bg--secondary-"] .btn-secondary.selected,
+[class*="bg--secondary-"] input[type="button"].selected,
+[class*="bg--secondary-"] input[type="submit"].selected,
+[class*="bg--secondary-"] input[type="reset"].selected{
     background-color: var(--white-surface);
     color: var(--primary-blue--base);
 }
@@ -201,8 +201,8 @@ input[type="reset"].selected {
     padding: 0;
 }
 
-[class*="bg--primary-color"] .btn--tertiary,
-[class*="bg--secondary-color"] .btn--tertiary{
+[class*="bg--primary-"] .btn--tertiary,
+[class*="bg--secondary-"] .btn--tertiary{
     color: var(--white-surface);
 }
 

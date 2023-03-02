@@ -55,43 +55,43 @@ a:disabled,
 
 /* Link font and underline colors for different states on dark background */
 
-[class*="bg--primary-color"] a,
-[class*="bg--secondary-color"] a,
-[class*="bg--primary-color"] [class*="text-link"],
-[class*="bg--secondary-color"] [class*="text-link"] {
+[class*="bg--primary-"] a,
+[class*="bg--secondary-"] a,
+[class*="bg--primary-"] [class*="text-link"],
+[class*="bg--secondary-"] [class*="text-link"] {
     color: var(--white-surface);
     text-decoration: var(--link-white--underline);
 }
 
 
-[class*="bg--primary-color"] a:hover,
-[class*="bg--primary-color"] a:focus,
-[class*="bg--secondary-color"] a:hover,
-[class*="bg--secondary-color"] a:focus,
-[class*="bg--primary-color"] [class*="text-link"]:hover,
-[class*="bg--primary-color"] [class*="text-link"]:focus,
-[class*="bg--secondary-color"] [class*="text-link"]:hover,
-[class*="bg--secondary-color"] [class*="text-link"]:focus {
+[class*="bg--primary-"] a:hover,
+[class*="bg--primary-"] a:focus,
+[class*="bg--secondary-"] a:hover,
+[class*="bg--secondary-"] a:focus,
+[class*="bg--primary-"] [class*="text-link"]:hover,
+[class*="bg--primary-"] [class*="text-link"]:focus,
+[class*="bg--secondary-"] [class*="text-link"]:hover,
+[class*="bg--secondary-"] [class*="text-link"]:focus {
     color: var(--white-surface);
     opacity: 75%;
     text-decoration: var(--link-white--underline--opacity);
 }
 
-[class*="bg--primary-color"] a:visited,
+[class*="bg--primary-"] a:visited,
 [class*="bg--secondary-color"] a:visited {
     color: var(--white-surface);
     text-decoration: var(--link-white--underline);
 }
 
-[class*="bg--primary-color"] p>a:visited,
-[class*="bg--secondary-color"] p>a:visited {
+[class*="bg--primary-"] p>a:visited,
+[class*="bg--secondary-"] p>a:visited {
     color: var(--primary-blue--light-2);
     text-decoration: var(--link-visited--underline);
 }
 
 
-[class*="bg--primary-color"] a:disabled,
-[class*="bg--primary-color"] [class*="text-link"]:disabled {
+[class*="bg--primary-"] a:disabled,
+[class*="bg--primary-"] [class*="text-link"]:disabled {
     color: var(--white-surface);
     opacity: 40%;
     text-decoration: var(--link-white--underline--disabled);
@@ -103,12 +103,12 @@ a:disabled,
 ol a,
 ul a,
 dl a,
-[class*="bg--primary-color"] ol a,
-[class*="bg--primary-color"] ul a,
-[class*="bg--primary-color"] dl a,
-[class*="bg--secondary-color"] ol a,
-[class*="bg--secondary-color"] ul a,
-[class*="bg--secondary-color"] dl a ol a:disabled,
+[class*="bg--primary-"] ol a,
+[class*="bg--primary-"] ul a,
+[class*="bg--primary-"] dl a,
+[class*="bg--secondary-"] ol a,
+[class*="bg--secondary-"] ul a,
+[class*="bg--secondary-"] dl a ol a:disabled,
 ul li a:disabled,
 dl li a:disabled {
     text-decoration: none;
@@ -121,12 +121,12 @@ dl a:visited {
     text-decoration: none;
 }
 
-[class*="bg--primary-color"] ol a:visited,
-[class*="bg--primary-color"] ul a:visited,
-[class*="bg--primary-color"] dl a:visited,
-[class*="bg--secondary-color"] ol a:visited,
-[class*="bg--secondary-color"] ul a:visited,
-[class*="bg--secondary-color"] dl a:visited {
+[class*="bg--primary-"] ol a:visited,
+[class*="bg--primary-"] ul a:visited,
+[class*="bg--primary-"] dl a:visited,
+[class*="bg--secondary-"] ol a:visited,
+[class*="bg--secondary-"] ul a:visited,
+[class*="bg--secondary-"] dl a:visited {
     color: var(--white-surface);
 
 }
@@ -144,8 +144,8 @@ a[href^="tel:"]:visited {
     text-decoration: var(--link-default--underline);
 }
 
-[class*="bg--primary-color"] a[href^="mailto:"]:visited,
-[class*="bg--secondary-color"] a[href^="mailto:"]>a:visited {
+[class*="bg--primary-"] a[href^="mailto:"]:visited,
+[class*="bg--secondary-"] a[href^="mailto:"]>a:visited {
     color: var(--white-surface);
     text-decoration: var(--link-white--underline);
 

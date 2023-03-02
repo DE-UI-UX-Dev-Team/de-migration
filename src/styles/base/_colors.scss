@@ -4,12 +4,24 @@
     background-color: var(--primary-color--base);
 }
 
+.bg--primary-dark{
+    background-color: var( --primary-blue--dark-2);
+}
+
+.bg--primary-light1{
+    background-color: var( --primary-blue--light-1);
+}
+
 .bg--light-blue {
     background-color: var(--primary-color--light-3);
 }
 
 .bg--secondary-color {
     background-color: var(--secondary-color--accent);
+}
+
+.bg--secondary-dark{
+    background-color: var( --secondary-orange--dark-2);
 }
 
 .bg--white {
@@ -241,4 +253,34 @@
 
 .border-success-text {
     border-color: var(--success-color--text);
+}
+
+/*----background color gradients ---*/
+.bg--secondary-gradient{
+    background: linear-gradient(-84deg, var( --secondary-color--dark-1), var(--secondary-color--accent));
+}
+
+.bg--secondary-gradient-1{
+    background: linear-gradient(135deg, var(--secondary-color--dark-2), var(--secondary-color--dark-1), var(--secondary-color--accent));
+}
+
+.bg--secondary-gradient-2{
+    background: linear-gradient(-82deg, var(--secondary-color--dark-2), var(--secondary-color--dark-1), var(--secondary-color--accent));
+}
+
+.bg--primary-gradient{
+    background: linear-gradient(0deg, var(--primary-color--base), var(--primary-color--dark-2));
+}
+
+.bg--primary-gradient-1{
+    background: linear-gradient(132deg, var(--primary-blue--dark-2), var(--primary-blue--light-1));
+}
+
+.bg--light-blue-gradient{
+    background: linear-gradient(360deg, var(--primary-blue--light-4), var(--white-surface));
+}
+
+
+.bg--light-blue-gradient-1{
+    background: linear-gradient(360deg, var(--primary-blue--light-4), var(--white-surface) 68%);
 }

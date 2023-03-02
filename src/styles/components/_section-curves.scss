@@ -1,0 +1,52 @@
+
+
+
+/**------- Section Curves------- **/
+
+.bg-top-curve:before, .bg-btm-curve:after, .bg-top-curve-reverse:before, .bg-btm-curve-reverse:after {
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+    padding-bottom: 9.09%;
+    /* height/width of svg image */
+    width: 100%;
+    background-image: url(images/de_main_curve.svg);
+}
+.bg-curve-blue:after {
+    background-image: url(images/de_main_curve_blue.svg);
+}
+
+.bg-curve-orange:after {
+    background-image: url(images/de_main_curve_orange.svg);
+}
+
+.bg-animated-curve-orange:after {
+    
+    background-image: url(images/de_animated_curve_orange.svg);
+}
+
+.bg-animated-curve-blue:after {
+    
+    background-image: url(images/de_animated_curve_blue.svg);
+}
+
+.bg-top-curve:before {
+    transform: scaleY(-1);
+}
+
+.bg-btm-curve-reverse:after {
+    transform: scaleX(-1);
+}
+
+.bg-top-curve-reverse:before {
+    transform: scaleX(-1) scaleY(-1);
+}
+
+
+
+
+
+
+
