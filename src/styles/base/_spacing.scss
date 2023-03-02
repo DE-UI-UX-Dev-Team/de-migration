@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 /*--- Mobile Sections ---*/  
 
 section {
@@ -42,7 +44,7 @@ section[class*="bg-top-curve"][class*="bg-btm-curve"] {
 
 
 /* Tablet */
-@media (min-width: 744px) {
+@include mediaQuery("tablet-up") {
 
   /*--- Tablet Sections ---*/  
 
@@ -79,7 +81,7 @@ section[class*="bg-top-curve"][class*="bg-btm-curve"] {
 }
 
 /* Laptop */
-@media (min-width: 1235px) {
+@include mediaQuery("laptop-up") {
 
   /*--- Laptop Sections ---*/  
 
@@ -116,7 +118,7 @@ section[class*="bg-top-curve"][class*="bg-btm-curve"] {
 } 
 
 /* Desktop */
-@media ( min-width: 1440px ) {
+@include mediaQuery("desktop-up") {
 
   /*--- Desktop Sections ---*/  
 
@@ -162,7 +164,7 @@ section[class*="bg-top-curve"][class*="bg-btm-curve"] {
 }  
  
 /* Tablet */
-@media (min-width: 744px) {
+@include mediaQuery("tablet-up") {
 
   .container {
     max-width: var(--max-content-width--m);
@@ -171,15 +173,15 @@ section[class*="bg-top-curve"][class*="bg-btm-curve"] {
 }
 
 /* Laptop */
-@media (min-width: 1235px) {
+@include mediaQuery("laptop-up") {
 
   .container {
     max-width: var(--max-content-width--l);
   }  
 }
-
-  /* Desktop */
-@media (min-width: 1440px) {
+ 
+/* Desktop */
+@include mediaQuery("desktop-up") {
 
   .container {
     max-width: var(--max-content-width--xl);
