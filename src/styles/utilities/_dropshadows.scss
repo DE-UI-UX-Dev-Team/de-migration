@@ -1,0 +1,10 @@
+@use "sass:map"; 
+
+@use "../abstracts" as *;
+
+/* Dropshadows */
+@each $variant, $value in map.get( $dropshadows, #{$active-theme} ) {
+    .dropshadow-#{$variant} {
+        box-shadow: var(--dropshadow-#{$variant})
+    }
+}

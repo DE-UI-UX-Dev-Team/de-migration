@@ -1,39 +1,41 @@
+@use '../abstracts/' as *;
+
 /*-- Link fonts --*/
 
-.text-link--xs {
-    font: var(--link--xs);
+.link--xs {
+    font: var(--link-xs--sm);
 }
 
-.text-link--s {
-    font: var(--link--s);
+.link--s {
+    font: var(--link-s--sm);
 }
 
 /*--- Default link font ---*/
 a,
-.text-link--m {
-    font: var(--link--m);
+.link--m {
+    font: var(--link-m--sm);
 }
 
-.text-link--l {
-    font: var(--link--l);
+.link--l {
+    font: var(--link-l--sm);
 }
 
 /* Default link font and underline colors for different states */
 a,
-[class*="text-link"] {
-    color: var(--primary-blue--base);
+[class*="link-"] {
+    color: var(--primary-base);
     text-decoration: var(--link-default--underline);
 }
 
 a:hover,
-[class*="text-link"]:hover {
-    color: var(--primary-blue--dark-1);
+[class*="link-"]:hover {
+    color: var(--primary-dark-1);
     text-decoration: var(--link-hover--underline);
 }
 
 a:focus,
-[class*="text-link"]:focus {
-    color: var(--primary-blue--dark-1);
+[class*="link-"]:focus {
+    color: var(--primary-dark-1);
     text-decoration: var(--link-focus--underline);
     outline: var(--link-focus--outline);
     border-radius: 0.1rem;
@@ -41,14 +43,14 @@ a:focus,
 }
 
 a:visited,
-[class*="text-link"]:visited {
-    color: var(--primary-blue--light-2);
+[class*="link-"]:visited {
+    color: var(--primary-light-2);
     text-decoration: var(--link-visited--underline);
 }
 
 a:disabled,
-[class*="text-link"]:disabled {
-    color: var(--gray--light--disabled);
+[class*="link-"]:disabled {
+    color: var(--gray-disabled);
     text-decoration: var(--link-disabled--underline);
 }
 
@@ -57,9 +59,9 @@ a:disabled,
 
 [class*="bg--primary-"] a,
 [class*="bg--secondary-"] a,
-[class*="bg--primary-"] [class*="text-link"],
-[class*="bg--secondary-"] [class*="text-link"] {
-    color: var(--white-surface);
+[class*="bg--primary-"] [class*="link-"],
+[class*="bg--secondary-"] [class*="link-"] {
+    color: var(--white-base);
     text-decoration: var(--link-white--underline);
 }
 
@@ -68,31 +70,31 @@ a:disabled,
 [class*="bg--primary-"] a:focus,
 [class*="bg--secondary-"] a:hover,
 [class*="bg--secondary-"] a:focus,
-[class*="bg--primary-"] [class*="text-link"]:hover,
-[class*="bg--primary-"] [class*="text-link"]:focus,
-[class*="bg--secondary-"] [class*="text-link"]:hover,
-[class*="bg--secondary-"] [class*="text-link"]:focus {
-    color: var(--white-surface);
+[class*="bg--primary-"] [class*="link-"]:hover,
+[class*="bg--primary-"] [class*="link-"]:focus,
+[class*="bg--secondary-"] [class*="link-"]:hover,
+[class*="bg--secondary-"] [class*="link-"]:focus {
+    color: var(--white-base);
     opacity: 75%;
     text-decoration: var(--link-white--underline--opacity);
 }
 
 [class*="bg--primary-"] a:visited,
-[class*="bg--secondary-color"] a:visited {
-    color: var(--white-surface);
+[class*="bg--secondary-"] a:visited {
+    color: var(--white-base);
     text-decoration: var(--link-white--underline);
 }
 
 [class*="bg--primary-"] p>a:visited,
 [class*="bg--secondary-"] p>a:visited {
-    color: var(--primary-blue--light-2);
+    color: var(--primary-light-2);
     text-decoration: var(--link-visited--underline);
 }
 
 
 [class*="bg--primary-"] a:disabled,
-[class*="bg--primary-"] [class*="text-link"]:disabled {
-    color: var(--white-surface);
+[class*="bg--primary-"] [class*="link-"]:disabled {
+    color: var(--white-base);
     opacity: 40%;
     text-decoration: var(--link-white--underline--disabled);
 }
@@ -117,7 +119,7 @@ dl li a:disabled {
 ol a:visited,
 ul a:visited,
 dl a:visited {
-    color: var(--primary-color--base);
+    color: var(--primary-base);
     text-decoration: none;
 }
 
@@ -127,7 +129,7 @@ dl a:visited {
 [class*="bg--secondary-"] ol a:visited,
 [class*="bg--secondary-"] ul a:visited,
 [class*="bg--secondary-"] dl a:visited {
-    color: var(--white-surface);
+    color: var(--white-base);
 
 }
 
@@ -140,13 +142,12 @@ a[href^="tel:"] {
 
 a[href^="mailto:"]:visited,
 a[href^="tel:"]:visited {
-    color: var(--primary-color--base);
+    color: var(--primary-base);
     text-decoration: var(--link-default--underline);
 }
 
 [class*="bg--primary-"] a[href^="mailto:"]:visited,
 [class*="bg--secondary-"] a[href^="mailto:"]>a:visited {
-    color: var(--white-surface);
+    color: var(--white-base);
     text-decoration: var(--link-white--underline);
-
 }

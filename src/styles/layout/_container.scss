@@ -1,0 +1,33 @@
+@use "../abstracts/mixins/" as *; 
+$multiplier: -1;
+.container {
+    max-width: var(--max-content-width--s);
+    padding-left: calc(#{$multiplier} * var(--container--gutter--sm)); 
+    padding-right: calc(#{$multiplier} * var(--container--gutter--sm));
+    margin: 0 auto;
+}  
+
+@include mediaQuery("tablet-up") {
+    .container {
+        max-width: var(--max-content-width--m);  
+        padding-left: calc(#{$multiplier} * var(--container--gutter--md)); 
+        padding-right: calc(#{$multiplier} * var(--container--gutter--md));   
+    }  
+}
+
+@include mediaQuery("laptop-up") {
+    .container {
+        max-width: var(--max-content-width--l);
+        padding-left: calc(#{$multiplier} * var(--container--gutter--lg)); 
+        padding-right: calc(#{$multiplier} * var(--container--gutter--lg));
+    }   
+}
+
+@include mediaQuery("desktop-up") {
+    .container {
+        max-width: var(--max-content-width--xl);
+        padding-left: calc(#{$multiplier} * var(--container--gutter--xl)); 
+        padding-right: calc(#{$multiplier} * var(--container--gutter--xl));
+    }   
+}
+

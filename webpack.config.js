@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require( './deploy/config.json' );
  
-const htmlFileRegex = new RegExp(/(src\/pages\/)|(src\\pages\\)/, 'ig');
+const htmlFileRegex = new RegExp(/(src\/demos\/)|(src\\demos\\)/, 'ig');
 let directories = config.entryPoints.pages.directory;
 
 let htmlFiles = [];
@@ -37,6 +37,9 @@ module.exports = ( env ) => {
   const clean = ( environment === 'dev' ) ? true : false;  
 
   return {
+    stats: {
+      loggingDebug: ["sass-loader"],
+    },
     entry: entryPoints,
     output: {
       path: path.resolve(__dirname, outputPath),
@@ -58,7 +61,7 @@ module.exports = ( env ) => {
           exclude: /node_modules/,
           type: "asset/resource",
           generator: {
-            filename: "[name].css",
+            filename: "styles/[name].css",
           },
           use: [ { 
             loader : "sass-loader", 

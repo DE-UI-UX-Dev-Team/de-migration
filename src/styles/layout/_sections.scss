@@ -1,0 +1,15 @@
+@use "../abstracts/mixins" as *;
+
+/* Section - Spacing */
+@include getSectionSpacing( "mobile-up", "sm" );
+@include getSectionSpacing( "tablet-up", "md" );
+@include getSectionSpacing( "laptop-up", "lg" );
+@include getSectionSpacing( "desktop-up", "xl" ); 
+
+section[class*=bg-] + section[class*=bg-] {
+    margin-top: 0; 
+} 
+ 
+section:not([class*=bg-]) + section.bg--white-base { 
+    margin-top: 0; 
+}

@@ -1,8 +1,7 @@
 @use '../abstracts' as *;
 
 /*--- Base fonts ---*/ 
-
-/* Mobile */ 
+ 
 body,  
 p, 
 ol,
@@ -17,229 +16,163 @@ input,
 select, 
 textarea, 
 label { 
-  font: var(--paragraph-1--s);
-  letter-spacing: var(--paragraph-1--letter-spacing--s); 
+    font: var(--p-1--sm);
+    letter-spacing: var(--p-1--ltr-spc--sm);  
+    margin-bottom: var(--p-1--spacing--sm);
 }  
- 
-button, .btn { font: var(button-text--s); letter-spacing: var(button-text--letter-spacing--s); }
-
-h1, .heading-1 { font: var(--heading-1--s); letter-spacing: var(--heading-1--letter-spacing--s); margin-bottom: var(--heading-1__body-text--spacing--s); }
-h2, .heading-2 { font: var(--heading-2--s); letter-spacing: var(--heading-2--letter-spacing--s); margin-bottom: var(--heading-2__body-text--spacing--s); }
-h3, .heading-3 { font: var(--heading-3--s); letter-spacing: var(--heading-3--letter-spacing--s); margin-bottom: var(--heading-3__body-text--spacing--s); }
-h4, .heading-4 { font: var(--heading-4--s); letter-spacing: var(--heading-4--letter-spacing--s); margin-bottom: var(--heading-4__body-text--spacing--s); }
-h5, .subheading-1 { font: var(--subheading-1--s); letter-spacing: var(--subheading-1--letter-spacing--s); }
-h6, .subheading-2 { font: var(--subheading-2--s); letter-spacing: var(--subheading-2--letter-spacing--s); } 
-
-.paragraph-2 { font: var(--paragraph-2--s); letter-spacing: var(--paragraph-2--letter-spacing--s); }
-.paragraph-3 { font: var(--paragraph-3--s); letter-spacing: var(--paragraph-3--letter-spacing--s); }
-
-/* Tablet */
-
-@include mediaQuery("mobile-up") {
-  body, 
-  p, 
-  ol,
-  ul,
-  dl, 
-  menu, 
-  dir,
-  pre,
-  address, 
-  blockquote, 
-  input, 
-  select, 
-  textarea, 
-  label { 
-    font: var(--paragraph-1--m);
-    letter-spacing: var(--paragraph-1--letter-spacing--m);
-  } 
-    
-  button, .btn { font: var(button-text--m); letter-spacing: var(button-text--letter-spacing--m); }
-  
-  h1, .heading-1 { font: var(--heading-1--m); letter-spacing: var(--heading-1--letter-spacing--m); margin-bottom: var(--heading-1__body-text--spacing--m); }
-  h2, .heading-2 { font: var(--heading-2--m); letter-spacing: var(--heading-2--letter-spacing--m); margin-bottom: var(--heading-2__body-text--spacing--m); }
-  h3, .heading-3 { font: var(--heading-3--m); letter-spacing: var(--heading-3--letter-spacing--m); margin-bottom: var(--heading-3__body-text--spacing--m); }
-  h4, .heading-4 { font: var(--heading-4--m); letter-spacing: var(--heading-4--letter-spacing--m); margin-bottom: var(--heading-4__body-text--spacing--m); }
-  h5, .subheading-1 { font: var(--subheading-1--m); letter-spacing: var(--subheading-1--letter-spacing--m); }
-  h6, .subheading-2 { font: var(--subheading-2--m); letter-spacing: var(--subheading-2--letter-spacing--m); } 
-  
-  .paragraph-2 { font: var(--paragraph-2--m); letter-spacing: var(--paragraph-2--letter-spacing--m); }
-  .paragraph-3 { font: var(--paragraph-3--m); letter-spacing: var(--paragraph-3--letter-spacing--m); }
-
-}
-
-/* Laptop */
-@include mediaQuery("laptop-up") {
-
-  body, 
-  p, 
-  ol,
-  ul,
-  dl,
-  pre,
-  menu, 
-  dir,
-  address, 
-  blockquote, 
-  input, 
-  select, 
-  textarea, 
-  label { 
-    font: var(--paragraph-1--l);
-    letter-spacing: var(--paragraph-1--letter-spacing--l);
-  } 
-    
-  button, .btn { font: var(button-text--l); letter-spacing: var(button-text--letter-spacing--l); }
-  
-  h1, .heading-1 { font: var(--heading-1--l); letter-spacing: var(--heading-1--letter-spacing--l); margin-bottom: var(--heading-1__body-text--spacing--l); }
-  h2, .heading-2 { font: var(--heading-2--l); letter-spacing: var(--heading-2--letter-spacing--l); margin-bottom: var(--heading-2__body-text--spacing--l); }
-  h3, .heading-3 { font: var(--heading-3--l); letter-spacing: var(--heading-3--letter-spacing--l); margin-bottom: var(--heading-3__body-text--spacing--l); }
-  h4, .heading-4 { font: var(--heading-4--l); letter-spacing: var(--heading-4--letter-spacing--l); margin-bottom: var(--heading-4__body-text--spacing--l); }
-  h5, .subheading-1 { font: var(--subheading-1--l); letter-spacing: var(--subheading-1--letter-spacing--l); }
-  h6, .subheading-2 { font: var(--subheading-2--l); letter-spacing: var(--subheading-2--letter-spacing--l); } 
-  
-  .paragraph-2 { font: var(--paragraph-2--l); letter-spacing: var(--paragraph-2--letter-spacing--l); }
-  .paragraph-3 { font: var(--paragraph-3--l); letter-spacing: var(--paragraph-3--letter-spacing--l); }
-
-}
-
-/* Desktop */
-@include mediaQuery("desktop-up"){
-
-  body, 
-  p, 
-  ol,
-  ul,
-  dl,
-  pre,
-  menu, 
-  dir,
-  address, 
-  blockquote, 
-  input, 
-  select, 
-  textarea, 
-  label { 
-    font: var(--paragraph-1--xl);
-    letter-spacing: var(--paragraph-1--letter-spacing--xl);
-  } 
-    
-  button, .btn { font: var(button-text--xl); letter-spacing: var(button-text--letter-spacing--xl); }
-  
-  h1, .heading-1 { font: var(--heading-1--xl); letter-spacing: var(--heading-1--letter-spacing--xl);  margin-bottom: var(--heading-1__body-text--spacing--xl); }
-  h2, .heading-2 { font: var(--heading-2--xl); letter-spacing: var(--heading-2--letter-spacing--xl);  margin-bottom: var(--heading-2__body-text--spacing--xl); }
-  h3, .heading-3 { font: var(--heading-3--xl); letter-spacing: var(--heading-3--letter-spacing--xl);  margin-bottom: var(--heading-3__body-text--spacing--xl); }
-  h4, .heading-4 { font: var(--heading-4--xl); letter-spacing: var(--heading-4--letter-spacing--xl);  margin-bottom: var(--heading-4__body-text--spacing--xl); }
-  h5, .subheading-1 { font: var(--subheading-1--xl); letter-spacing: var(--subheading-1--letter-spacing--xl); }
-  h6, .subheading-2 { font: var(--subheading-2--xl); letter-spacing: var(--subheading-2--letter-spacing--xl); } 
-  
-  .paragraph-2 { font: var(--paragraph-2--xl); letter-spacing: var(--paragraph-2--letter-spacing--xl); }
-  .paragraph-3 { font: var(--paragraph-3--xl); letter-spacing: var(--paragraph-3--letter-spacing--xl); }
-
-} 
-
-/*--- Hierarchy ---*/  
-
-h1:last-child, .heading-1:last-child,
-h2:last-child, .heading-2:last-child,
-h3:last-child, .heading-3:last-child,
-h4:last-child, .heading-4:last-child,
-h5:last-child, .subheading-1:last-child, 
-h6:last-child, .subheading-2:last-child { 
-  margin-bottom: 0;
-}
 
 menu,
 dir,
 ol,
 ul,
 dl,
+dd,
 pre,
 address, 
 blockquote { 
-  margin-left: var(--text--indent);
+  margin-left: var(--text-indent--sm);
+}  
+
+hr, table { 
+    margin-bottom: var(--p-1--spacing--sm);
+}
+
+@include mediaQuery("tablet-up") {
+
+    body,  
+    p, 
+    ol,
+    ul,
+    dl,
+    pre, 
+    menu, 
+    dir,
+    address, 
+    blockquote, 
+    input, 
+    select, 
+    textarea, 
+    label { 
+        font: var(--p-1--sm);
+        letter-spacing: var(--p-1--ltr-spc--sm);  
+        margin-bottom: var(--p-1--spacing--sm);
+    }  
+
+    menu,
+    dir,
+    ol,
+    ul,
+    dl,
+    dd,
+    pre,
+    address, 
+    blockquote { 
+      margin-left: var(--text-indent--md);
+    } 
+
+    hr, table { 
+        margin-bottom: var(--p-1--spacing--md);
+    }
+
+}
+
+@include mediaQuery("laptop-up") {
+
+    body,  
+    p, 
+    ol,
+    ul,
+    dl,
+    pre, 
+    menu, 
+    dir,
+    address, 
+    blockquote, 
+    input, 
+    select, 
+    textarea, 
+    label { 
+        font: var(--p-1--lg);
+        letter-spacing: var(--p-1--ltr-spc--lg);  
+        margin-bottom: var(--p-1--spacing--lg);
+    }   
+
+    menu,
+    dir,
+    ol,
+    ul,
+    dl,
+    dd,
+    pre,
+    address, 
+    blockquote { 
+      margin-left: var(--text-indent--lg);
+    } 
+
+    hr, table { 
+        margin-bottom: var(--p-1--spacing--lg);
+    }
+
 } 
 
-dd { margin-left: var(--text--indent); }
+@include mediaQuery("desktop-up") {
 
-menu,
-dir, 
-p,
-ol,
-ul,
-dl,
-pre,
-address, 
-blockquote, 
-table { 
-  margin-bottom: var(--paragraph--spacing);
+    body,  
+    p, 
+    ol,
+    ul,
+    dl,
+    pre, 
+    menu, 
+    dir,
+    address, 
+    blockquote, 
+    input, 
+    select, 
+    textarea, 
+    label { 
+        font: var(--p-1--xl);
+        letter-spacing: var(--p-1--ltr-spc--xl);  
+        margin-bottom: var(--p-1--spacing--xl);
+    }  
+
+    menu,
+    dir,
+    ol,
+    ul,
+    dl,
+    dd,
+    pre,
+    address, 
+    blockquote { 
+      margin-left: var(--text-indent--xl);
+    } 
+
+    hr, table { 
+        margin-bottom: var(--p-1--spacing--xl);
+    }
+    
 } 
+ 
+/*--- Typography - Misc ---*/  
 
-blockquote { margin-top: var(--paragraph--spacing); } 
+blockquote { margin-top: var(--p-1--spacing--sm); }  
 
-p + h1, p + .heading-1 { margin-top: var(--heading-1__body-text--spacing--s); } 
-p + h2, p + .heading-2 { margin-top: var(--heading-2__body-text--spacing--s); } 
-p + h3, p + .heading-3 { margin-top: var(--heading-3__body-text--spacing--s); } 
-p + h4, p + .heading-4 { margin-top: var(--heading-4__body-text--spacing--s); } 
-p + h5, p + .subheading-1 { margin-top: var(--paragraph--spacing); } 
-p + h6, p + .subheading-2 { margin-top: var(--paragraph--spacing); } 
-
-/*--- Font Weights ---*/
-b, strong, .font-weight--bold { font-weight: 700; }
-.font-weight--semibold { font-weight: 500; }
-.font-weight--regular { font-weight: 400; }
-.font-weight--light { font-weight: 300; } 
 dt { font-weight: 500; }
 
-/*--- Font Styles ---*/
 ul li { list-style-position: inside; }
-ul.font-style--inline li { display: inline; }
-em, .font-style--italic { font-style: italic; }
-.font-style--uppercase { text-transform: uppercase; }
-.font-style--lowercase { text-transform: lowercase; }
-.font-style--underline { text-decoration: underline; }
-.font-style--no-underline { text-decoration: none; }
-.font-style--text-center { text-align: center; }
-.font-style--text-right { text-align: right; }
-.font-style--text-left { text-align: left; }
-.font-style--no-wrap { white-space: nowrap; }
 
-.float-right { float: right; }
-.float-left { float: left; } 
+h1:last-child, .h-1:last-child,
+h2:last-child, .h-2:last-child,
+h3:last-child, .h-3:last-child,
+h4:last-child, .h-4:last-child,
+h5:last-child, .h-5:last-child, 
+h6:last-child, .h-6:last-child { 
+    margin-bottom: 0;
+} 
 
-@include mediaQuery("mobile-only") {
+/*-- Color Palette --*/
 
-  .font-style--text-right--s { text-align: right; }
-  .font-style--text-left--s { text-align: left; }
-  .font-style--text-center--s { text-align: center; }
-
-}
-
-@include mediaQuery("tablet-only") {
-
-  .font-style--text-right--m { text-align: right; }
-  .font-style--text-left--m { text-align: left; }
-  .font-style--text-center--m { text-align: center; }
-
-}
-@include mediaQuery("laptop-only") {
-
-  .font-style--text-right--l { text-align: right; }
-  .font-style--text-left--l { text-align: left; }
-  .font-style--text-center--l { text-align: center; }
-
-}
-
-@include mediaQuery("desktop-only") {
-
-  .font-style--text-right--xl { text-align: right; }
-  .font-style--text-left--xl { text-align: left; }
-  .font-style--text-center--xl { text-align: center; }
-
-}
-
-
-/*--- Color Scheme ---*/
 body, 
 p, 
 ol,
@@ -257,113 +190,20 @@ label {
   color: var(--body-text--color);
 }
   
-blockquote > * { color: var( --gray--light--body ); }
-dd { color: var( --gray--light--body ); }
+blockquote > * { color: var(--body-text--light-color); }
+dd { color: var(--body-text--light-color); }
 
 address, 
-h1, .heading-1,  
-h2, .heading-2 {
-  color: var(--primary-color--base);
+h1, .h-1,  
+h2, .h-2 {
+  color: var(--heading-color);
 }  
-
-[class*="bg--primary-"] h1, [class*="bg--primary-"] .heading-1,  
-[class*="bg--primary-"] h2, [class*="bg--primary-"] .heading-2,
-[class*="bg--primary-"] h3, [class*="bg--primary-"] .heading-3,
-[class*="bg--primary-"] h4, [class*="bg--primary-"] .heading-4,
-[class*="bg--primary-"] h5, [class*="bg--primary-"] .subheading-1,
-[class*="bg--primary-"] h6, [class*="bg--primary-"] .subheading-2 {
-  color: var(--body-text--on-dark-background);
-}   
-
-[class*="bg--secondary-"] h1, [class*="bg--secondary-"] .heading-1,  
-[class*="bg--secondary-"] h2, [class*="bg--secondary-"] .heading-2,
-[class*="bg--secondary-"] h3, [class*="bg--secondary-"] .heading-3,
-[class*="bg--secondary-"] h4, [class*="bg--secondary-"] .heading-4,
-[class*="bg--secondary-"] h5, [class*="bg--secondary-"] .subheading-1,
-[class*="bg--secondary-"] h6, [class*="bg--secondary-"] .subheading-2 {
-  color: var(--body-text--on-dark-background);
-}  
-
-/* Text on Background */ 
-section[class*="bg--primary-"],
-[class*="bg--primary-"] p, 
-[class*="bg--primary-"] ol,
-[class*="bg--primary-"] ul,
-[class*="bg--primary-"] dl,
-[class*="bg--primary-"] dd,
-[class*="bg--primary-"] pre,
-[class*="bg--primary-"] menu,
-[class*="bg--primary-"] dir,
-[class*="bg--primary-"] address, 
-[class*="bg--primary-"] blockquote, 
-[class*="bg--primary-"] input, 
-[class*="bg--primary-"] select, 
-[class*="bg--primary-"] textarea, 
-[class*="bg--primary-"] label { 
-  color: var(--body-text--on-dark-background);
+ 
+[class*=bg--primary]:not([class*=light-]) hr,
+[class*=bg--secondary]:not([class*=light-]) hr {
+    background-color: var(--body-text--on-dark-background);
 }
 
-section[class*="bg--secondary-"],
-[class*="bg--secondary-"] p, 
-[class*="bg--secondary-"] ol,
-[class*="bg--secondary-"] ul,
-[class*="bg--secondary-"] dl,
-[class*="bg--secondary-"] pre, 
-[class*="bg--secondary-"] menu,
-[class*="bg--secondary-"] dir,
-[class*="bg--secondary-"] address, 
-[class*="bg--secondary-"] blockquote, 
-[class*="bg--secondary-"] input, 
-[class*="bg--secondary-"] select, 
-[class*="bg--secondary-"] textarea, 
-[class*="bg--secondary-"] label { 
-  color: var(--body-text--on-dark-background);
-}
-
-body[class*="bg--light-blue"], 
-section[class*="bg--light-blue"],
-p[class*="bg--light-blue"], 
-ol[class*="bg--light-blue"],
-ul[class*="bg--light-blue"],
-dl[class*="bg--light-blue"],
-pre[class*="bg--light-blue"],
-menu[class*="bg--light-blue"],
-dir[class*="bg--light-blue"],
-address[class*="bg--light-blue"], 
-blockquote[class*="bg--light-blue"], 
-input[class*="bg--light-blue"], 
-select[class*="bg--light-blue"], 
-textarea[class*="bg--light-blue"],  
-label[class*="bg--light-blue"] { 
-  color: var(--body-text--color);
-}
-
-body[class*="bg--primary-"], 
-section[class*="bg--primary-"],
-p[class*="bg--primary-"], 
-ol[class*="bg--primary-"],
-ul[class*="bg--primary-"],
-dl[class*="bg--primary-"],
-pre[class*="bg--primary-"],
-menu[class*="bg--primary-"],
-dir[class*="bg--primary-"],
-address[class*="bg--primary-"], 
-blockquote[class*="bg--primary-"], 
-input[class*="bg--primary-"], 
-select[class*="bg--primary-"], 
-textarea[class*="bg--primary-"], 
-label[class*="bg--primary-"], 
-body[class*="bg--secondary-"], 
-p[class*="bg--secondary-"], 
-ol[class*="bg--secondary-"],
-ul[class*="bg--secondary-"],
-dl[class*="bg--secondary-"],
-pre[class*="bg--secondary-"],
-address[class*="bg--secondary-"], 
-blockquote[class*="bg--secondary-"], 
-input[class*="bg--secondary-"], 
-select[class*="bg--secondary-"], 
-textarea[class*="bg--secondary-"], 
-label[class*="bg--secondary-"]  { 
-  color: var(--body-text--on-dark-background);
-}
+// Backgrounds on parents 
+ 
+@include getTextOnBgColor();

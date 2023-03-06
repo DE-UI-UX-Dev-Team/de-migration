@@ -1,0 +1,64 @@
+@use "sass:map";   
+@use "sass:list"; 
+@use "sass:string";
+
+@use '../../abstracts/tokens' as *;
+@use '../../abstracts/base' as *;
+@use '../mixins/breakpoints' as *; 
+
+$filter : 
+    "h-1", 
+    "h-2", 
+    "h-3", 
+    "h-4", 
+    "h-5", 
+    "h-6", 
+    "p-1", 
+    "p-2", 
+    "p-3", 
+    "link-xs", 
+    "link-s", 
+    "link-m", 
+    "link-l", 
+    "btn-1"
+;
+
+@mixin getTypeUtilities($mediaQuery, $screenSize) {
+
+    // Print media query
+    @include mediaQuery( #{$mediaQuery} ) { 
+
+        // Loop over typography map
+        @each $type, $categories in map.get( $typography, #{$active-theme } ) { 
+            @each $variant, $sizes in $categories { 
+            
+                // Filter typography map to limit classes generated
+                @if list.index( $filter, #{$type}-#{$variant} ) { 
+                    @each $size, $value in $sizes { 
+                        @if ( #{$size} == #{$screenSize} ) {  
+
+                            // Handle heading tags
+                            $variant-name: ".#{$type}-#{$variant}"; 
+                            @if #{$type} == "h" { $variant-name: "#{$type}#{$variant}, .#{$type}-#{$variant}" } 
+
+                            // Output CSS Class 
+                            #{$variant-name} {
+                                font: var(--#{$type}-#{$variant}--#{$size});  
+                                letter-spacing: var(--#{$type}-#{$variant}--ltr-spc--#{$size});
+                                
+                                @if #{$type}- == "p-" {
+                                    margin-bottom: var(--#{$type}-#{$variant}--spacing--#{$size}); 
+                                } 
+
+                                @if #{$type}- == "h-" {  
+                                    margin-bottom: var(--#{$type}-#{$variant}--bd-txt-spc--#{$size}); 
+                                }
+                            } // end output
+                        }
+                    }
+                } // end filter
+            }
+        } // end loop
+    } // end media query 
+
+}

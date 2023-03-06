@@ -1,0 +1,105 @@
+@use "sass:map"; 
+
+@use "../abstracts" as *;
+
+:root {
+      
+    /* Color Schemes */
+    @each $palette, $colors in map.get( $colors, #{$active-theme} ) {
+        @each $color, $value in $colors {
+            --#{$palette}-#{$color}: hsl(#{$value});
+        }
+    }  
+
+    /* Dropshadows */
+    @each $variant, $value in map.get( $dropshadows, #{$active-theme} ) {
+        --dropshadow-#{$variant}: #{$value};
+    }
+
+    /* Spacing - Section */
+    @each $type, $categories in map.get( $spacing, #{$active-theme}, "section" ) { 
+
+        // String manipulation of CSS property name
+        $modType: "";
+        @if $type != "" {
+            $modType: -#{$type};
+        }
+         
+        @each $variant, $sizes in $categories { 
+            @each $size, $value in $sizes { 
+                --sect#{$modType}--#{$variant}--#{$size}: #{$value};
+            }
+        }
+    } 
+
+    /* Spacing - Gutters */ 
+    @each $size, $value in map.get( $spacing, #{$active-theme}, "gutter" ) {
+        --gutter-#{$size}: #{$value};
+    }
+
+    /* Spacing - Columns */
+    @each $type, $categories in map.get( $spacing, #{$active-theme}, "column" ) {
+        @each $size, $value in $categories { 
+            --col-#{$type}--#{$size}: #{$value};
+        }
+    } 
+
+ 
+    /* Typography */
+    @each $type, $categories in map.get( $typography, #{$active-theme }) {
+        @each $variant, $sizes in $categories {
+            @each $size, $value in $sizes {
+                --#{$type}-#{$variant}--#{$size}: #{$value};
+            }
+        }
+    }
+         
+    // Manual Theme Options
+    --max-content-width--sm: #{$content--width-sm};
+    --max-content-width--md: #{$content--width-md};
+    --max-content-width--lg: #{$content--width-lg};
+    --max-content-width--xl: #{$content--width-xl};
+
+    --container--gutter--sm: var(--gutter-sm);
+    --container--gutter--md: var(--gutter-md);
+    --container--gutter--lg: var(--gutter-lg);
+    --container--gutter--xl: var(--gutter-xl);
+
+    --text-indent--sm: #{$h-spacing--150};
+    --text-indent--md: #{$h-spacing--150};
+    --text-indent--lg: #{$h-spacing--150};
+    --text-indent--xl: #{$h-spacing--150};
+
+    --heading-color: var(--primary-base);
+    --body-text--color: var(--gray-body);
+    --body-text--light-color: var(--gray-medium-1);
+    --heading--on-dark-background: var(--white-base);
+    --body-text--on-dark-background: var(--white-base);
+    --heading--on-light-background: var(--primary-base);
+    --body-text--on-light-background: var(--gray-body);
+ 
+    --font-weight--regular: #{$font-weight--regular};
+    --font-weight--medium: #{$font-weight--medium};
+     
+    --font-stack: #{$font-stack--sans-serif};
+
+    /* Anchor Styles */
+    --link-default--underline: underline solid var(--primary-base) 0.1rem;
+    --link-hover--underline: underline solid var(--primary-dark-1) 0.1rem;
+    --link-focus--underline: underline solid var(--primary-dark-1) 0.1rem;
+    --link-focus--outline: 0.3rem solid var(--primary-light-2);
+    --link-visited--underline: underline solid var(--primary-light-2) 0.1rem;
+    --link-disabled--underline: underline solid var(--gray-disabled);
+    --link-white--underline: underline solid var(--white-base) 0.1rem;
+    --link-white--underline--opacity: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
+    --link-white--underline--disabled: underline solid rgba(255, 255, 255, 0.4);
+
+    /* Buttons */
+    --btn--font: bold 1.6rem/2.4rem var(--font-stack);
+    --btn--min-width: 22.7rem;
+    --btn--corner-radius:0.4rem;
+    --btn--border: 0.2rem solid var(--primary-base);
+    --btn--secondary-color--hover: rgb(0,88,118,0.15);
+    --btn--secondary-color--pressed: rgb(0,88,118,0.4);
+
+}  

@@ -1,0 +1,105 @@
+@use "../abstracts/mixins" as *;
+ 
+/* Flex Grid - Rows */ 
+$multiplier: -1;
+
+.row { 
+	margin-left: calc(var(--gutter-sm) * #{$multiplier});
+	margin-right: calc(var(--gutter-sm) * #{$multiplier}); 
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+} 
+ 
+.row.even-3--sm > [class*=col] { flex: 0 1 calc((100%/3) * 1); }
+.row.even-4--sm > [class*=col] { flex: 0 1 calc((100%/4) * 1); }
+
+@include mediaQuery("tablet-up") {
+ 
+	.row {
+		margin-left: calc(var(--gutter-md) * #{$multiplier});
+		margin-right: calc(var(--gutter-md) * #{$multiplier});
+	}
+
+	.row.even-5--md > [class*=col] { flex: 0 1 calc((100%/5) * 1); } 
+	.row.even-8--md > [class*=col] { flex: 0 1 calc((100%/8) * 1); } 
+
+}
+
+@include mediaQuery("laptop-up") {
+
+	.row {
+		margin-left: calc(var(--gutter-lg) * #{$multiplier});
+		margin-right: calc(var(--gutter-lg) * #{$multiplier});
+	}
+
+	.row.even-12--lg > [class*=col] { flex: 0 1 calc((100%/12) * 1); }
+
+} 
+
+@include mediaQuery("desktop-up") {
+
+	.row {
+		margin-left: calc(var(--gutter-xl) * #{$multiplier});
+		margin-right: calc(var(--gutter-xl) * #{$multiplier});
+	}
+    
+	.row.even-12--xl > [class*=col] { flex: 0 1 calc((100%/12) * 1); }
+
+}
+
+/* Flex Grid - Gutters */
+
+@include getGridGutters( "mobile-up", "sm" );
+@include getGridGutters( "tablet-up", "md" );
+@include getGridGutters( "laptop-up", "lg" );
+@include getGridGutters( "desktop-up", "xl" ); 
+
+/* Flex Grid - Columns */
+
+[class*=col],
+[class*=col--] {
+	flex: 0 1 100%;
+}
+/* Flex Grid - Vertical Spacing */
+
+@include getColumnMgBtm( "mobile-up", "sm" );
+@include getColumnMgBtm( "tablet-up", "md" );
+@include getColumnMgBtm( "laptop-up", "lg" );
+@include getColumnMgBtm( "desktop-up", "xl" );
+
+[class*=col] > [class*=col],
+[class*=col--] > [class*=col--] { 
+	margin-bottom: 0; 
+}
+
+@include getColumns( "mobile-up", "sm-odd", 3);
+@include getColumns( "mobile-up", "sm", 4);
+@include getColumns( "tablet-up", "md-odd", 9);
+@include getColumns( "tablet-up", "md", 8);
+@include getColumns( "laptop-up", "lg", 12);
+@include getColumns( "desktop-up", "xl", 12); 
+ 
+/* Flexbox - Utilities */ 
+
+.row.gutters--justify-between { justify-content: space-between; }  
+.row.gutters--justify-around { justify-content: space-around; }  
+.row.gutters--justify-evenly { justify-content: space-evenly; }  
+
+.row.row--h-align-left { justify-content: flex-start; }
+.row.row--h-align-right { justify-content: flex-end; }
+.row.row--h-align-center { justify-content: center; } 
+
+.row.direction-reverse { flex-direction: row-reverse; }
+
+.row.col--v-align-center { align-items: center; }
+.row.col--v-align-top { align-items: flex-start; }
+.row.col--v-align-btm { align-items: flex-end; }
+.row.col--same-height { align-items: stretch; }  
+
+.row.col--fill-space > [class*=col],
+.row.col--fill-space > [class*=col--] { 
+	flex-grow: 1; 
+} 
+
+.row.col--no-wrap { flex-wrap: nowrap; }
