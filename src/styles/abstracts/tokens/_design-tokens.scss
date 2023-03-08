@@ -191,6 +191,9 @@ $border-radius-50: 0.8rem;
 $border-radius-75: 1.2rem; 
 $border-radius-100: 1.6rem;  
 
+//--Opacity
+$opacity-15: 15%;
+$opacity-40: 40%;
 
 //-- Dropshadows 
 
@@ -209,3 +212,15 @@ $elevation-3: 0 9px 12px 0 rgba(0, 0, 0, 0.14),
 $elevation-4: 0 16px 24px 0 rgba(0, 0, 0, 0.14),
               0 6px 30px 0 rgba(0, 0, 0, 0.12),
               0 8px 10px 0 rgba(0, 0, 0, 0.2);
+
+//-- buttons 
+
+
+
+$outline--focus-offset: 0.2rem;
+$btn--border: 0.2rem solid "hsl(#{$blue--base-hsl})";
+$btn--border-disabled: 0.2rem solid "hsl(#{$gray--light-3-hsl})";
+$outline--focus: 0.3rem solid "hsl(#{$blue--light-2-hsl})";
+$btn-focus--opacity: 15%;
+$btn-active--opacity: 40%;
+

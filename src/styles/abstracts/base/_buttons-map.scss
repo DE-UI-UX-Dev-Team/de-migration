@@ -1,0 +1,258 @@
+@use '../../abstracts/tokens' as *;
+
+// Map used to create media query mixins
+$lightBackgroundClasses : (
+    "bg--primary-light-3",
+    "bg--primary-light-4",
+    "bg--secondary-light-3"    
+);
+
+$darkBackgroundClasses : (
+    "bg--primary-base", 
+    "bg--primary-light-1",
+    "bg--primary-light-2",
+    "bg--primary-dark-2" ,
+    "bg--primary-dark-1" ,
+    "bg--secondary-base",
+    "bg--secondary-light-1",
+    "bg--secondary-light-2",
+    "bg--secondary-dark-1",
+    "bg--secondary-dark-2"
+);
+
+
+
+
+$buttonsOnLightBg: (
+    "default-theme" : (       
+        "secondary" : (
+            "default":(
+                "background-color":null,
+                "color":"hsl(#{$blue--base-hsl})",
+                "border": $btn--border,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null,
+                
+            ),
+            "hover":(
+                "background-color":"hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                "color":"hsl(#{$blue--base-hsl})",
+                "border": $btn--border,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+
+            "focus":(
+                "background-color":"hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                "color":"hsl(#{$blue--base-hsl})",
+                "border":  $btn--border,
+                "outline": $outline--focus,
+                "outline-offset": $outline--focus-offset,
+                "opacity": null
+            ),
+            "active":(
+                "background-color":"hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                "color":"hsl(#{$blue--base-hsl})",
+                "border":  $btn--border,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+            "disabled":(
+                "background-color":null,
+                "color":"hsl(#{$gray--light-3-hsl})",
+                "border": $btn--border-disabled,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            )
+        ),
+        "primary"   : (
+            "default":(
+                "background-color":"hsl(#{$orange--base-hsl})",
+                "color":"hsl(#{$white-hsl})",
+                "border": none,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+            "hover":(
+                "background-color":"hsl(#{$orange--dark-1-hsl})",
+                "color":"hsl(#{$white-hsl})",
+                "border": none,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+
+            "focus":(
+                "background-color":"hsl(#{$orange--dark-1-hsl})",
+                "color":"hsl(#{$white-hsl})",
+                "border": none,
+                "outline": $outline--focus,
+                "outline-offset": $outline--focus-offset,
+                "opacity": null
+            ),
+            "active":(
+                "background-color":"hsl(#{$orange--light-2-hsl})",
+                "color":"hsl(#{$white-hsl})",
+                "border": none,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+            "disabled":(
+                "background-color":"hsl(#{$gray--light-3-hsl})",
+                "color":"hsl(#{$white-hsl})",
+                "border": none,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            )
+        ),
+        "tertiary"  : (
+            "default":(
+                "background-color":null ,
+                "color":"hsl(#{$blue--base-hsl})",
+                "border": none,
+                "padding":0,
+                "min-width":0,
+                "opacity": null
+            ),
+            "hover":(
+                "background-color":"hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})" ,
+                "color":"hsl(#{$blue--base-hsl})",
+                "border": none,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+
+            "focus":(
+                "background-color":"hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                "color":"hsl(#{$blue--base-hsl})",
+                "border": none,
+                "outline": $outline--focus,
+                "outline-offset": $outline--focus-offset,
+                "opacity": null
+            ),
+            "active":(
+                "background-color":"hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                "color":"hsl(#{$blue--base-hsl})",
+                "border": none,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+            "disabled":(
+                "background-color":null,
+                "color":$btn--border-disabled,
+                "border": none,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            )
+        ), 
+    
+    )
+);
+
+$buttonsOnDarkBg: (
+    "default-theme" : (
+        "secondary" : (
+            "default":(
+                "background-color":null,
+                "color":"hsl(#{$white-hsl})",
+                "border-color": "hsl(#{$white-hsl})",
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+            "hover":(
+                "background-color":"hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                "color":"hsl(#{$white-hsl})",
+                "border-color": "hsl(#{$white-hsl})",
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+
+            "focus":(
+                "background-color":"hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                "color":"hsl(#{$white-hsl})",
+                "border-color": "hsl(#{$white-hsl})",
+                "outline": $outline--focus,
+                "outline-offset": $outline--focus-offset,
+                "opacity": null
+            ),
+            "active":(
+                "background-color":"hsla(#{$white-hsl}, #{$btn-active--opacity})",
+                "color":"hsl(#{$white-hsl})",
+                "border-color": "hsl(#{$white-hsl})",
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+            "disabled":(
+                "background-color":null,
+                "color":"hsl(#{$white-hsl})",
+                "border-color": "hsl(#{$white-hsl})",
+                "outline": null,
+                "outline-offset": null,
+                "opacity": 60%
+            )
+        ),
+        "tertiary"  : (
+            "default":(
+                "background-color":null,
+                "color":"hsl(#{$white-hsl})",
+                "border-color": null,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+            "hover":(
+                "background-color":"hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                "color":"hsl(#{$white-hsl})",
+                "border-color": null,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+
+            "focus":(
+                "background-color":"hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                "color":"hsl(#{$white-hsl})",
+                "border-color": null,
+                "outline": $outline--focus,
+                "outline-offset": $outline--focus-offset,
+                "opacity": null
+            ),
+            "active":(
+                "background-color":"hsla(#{$white-hsl}, #{$btn-active--opacity})",
+                "color":"hsl(#{$white-hsl})",
+                "border-color": "hsl(#{$white-hsl})",
+                "outline": null,
+                "outline-offset": null,
+                "opacity": null
+            ),
+            "disabled":(
+                "background-color":null,
+                "color":"hsl(#{$white-hsl})",
+                "border-color": null,
+                "outline": null,
+                "outline-offset": null,
+                "opacity": 60%
+            )
+        ), 
+
+    )
+)
+
+
+
+
+
+
