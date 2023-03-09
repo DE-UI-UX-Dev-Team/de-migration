@@ -1,6 +1,8 @@
 import '../../styles/main.scss'; 
 
 /* Fonts */
+import '../../assets/icons/kit-4aceee39de-web/webfonts/custom-icons.woff2';
+
 import '../../assets/fonts/roboto/roboto-bold-webfont.woff';
 import '../../assets/fonts/roboto/roboto-bolditalic-webfont.woff';
 import '../../assets/fonts/roboto/roboto-italic-webfont.woff';

@@ -2,4 +2,6 @@
 @use 'base'; 
 @use 'layout';
 @use 'components';
-@use 'utilities'; // Utilities will override everything
+@use 'utilities'; // Utilities will override everything 
+
+@use '../assets/icons/kit-4aceee39de-web/scss/custom-icons';
