@@ -1,0 +1,8 @@
+@use "sass:map"; 
+
+@use '../abstracts' as *;
+
+
+
+@include getLinksOnColoredBackground( $linksOnLightBg, "lightBackgrounds" );
+@include getLinksOnColoredBackground( $linksOnDarkBg, "darkBackgrounds" );

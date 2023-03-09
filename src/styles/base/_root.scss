@@ -53,24 +53,36 @@
         }
     }
 
-    /* Anchor Styles */
-    --link-default--underline: underline solid var(--primary-base) 0.1rem;
-    --link-hover--underline: underline solid var(--primary-dark-1) 0.1rem;
-    --link-focus--underline: underline solid var(--primary-dark-1) 0.1rem;
-    --link-focus--outline: 0.3rem solid var(--primary-light-2);
-    --link-visited--underline: underline solid var(--primary-light-2) 0.1rem;
-    --link-disabled--underline: underline solid var(--gray-disabled);
-    --link-white--underline: underline solid var(--white-base) 0.1rem;
-    --link-white--underline--opacity: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
-    --link-white--underline--disabled: underline solid rgba(255, 255, 255, 0.4);
+   
+    
+    /* Anchor Links - On Light Backgrounds */
+    @each $palette, $linksOnLightBg in map.get( $linksOnLightBg, #{$active-theme} ) {
+        @each $state, $properties in $linksOnLightBg { 
+            @each $property, $value in $properties { 
+                @if $value != null {
+                    --#{$palette}-link-on-lgt-bg--#{$state}--#{$property}: #{$value};
+                }
+            }
+        }
+    }  
+
+     /* Anchor Links - On Dark Backgrounds */
+     @each $palette, $linksOnDarkBg in map.get( $linksOnDarkBg, #{$active-theme} ) {
+        @each $state, $properties in $linksOnDarkBg { 
+            @each $property, $value in $properties { 
+                @if $value != null {
+                    --#{$palette}-link-on-drk-bg--#{$state}--#{$property}: #{$value};
+                }
+            }
+        }
+    }  
 
     /* Buttons */
     --btn--font: bold 1.6rem/2.4rem var(--font-stack);
     --btn--min-width: 22.7rem;
     --btn--corner-radius:0.4rem;
     --btn--border: 0.2rem solid var(--primary-base);
-    --btn--secondary-color--hover: rgb(0,88,118,0.15);
-    --btn--secondary-color--pressed: rgb(0,88,118,0.4); 
+
 
     /* Buttons - On Light Backgrounds */
     @each $palette, $buttonsOnLightBg in map.get( $buttonsOnLightBg, #{$active-theme} ) {
