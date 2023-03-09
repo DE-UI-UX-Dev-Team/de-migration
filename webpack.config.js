@@ -61,7 +61,7 @@ module.exports = ( env ) => {
           exclude: /node_modules/,
           type: "asset/resource",
           generator: {
-            filename: "styles/[name].css",
+            filename: "assets/styles/[name].css",
           },
           use: [ { 
             loader : "sass-loader", 
@@ -77,7 +77,7 @@ module.exports = ( env ) => {
           test: /\.(png|svg|jpg|gif|jpe?g|ico)$/,  
           type: 'asset/resource',
           generator: {
-            filename: 'images/[name][ext]'
+            filename: 'assets/images/[name][ext]'
           }
         }
       ],
