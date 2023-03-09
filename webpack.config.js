@@ -97,10 +97,7 @@ module.exports = ( env ) => {
             template: htmlFile,
             filename: htmlFile.replace( htmlFileRegex, "" ), 
             chunks: [ htmlFile.replace( htmlFileRegex, "" ) ], 
-            inject: false,
-            templateParameters: {
-              javascriptSrc: "..\/" + javascriptFile.replace( htmlFileRegex, "" )
-            }
+            inject: false
           })
         }
       )
