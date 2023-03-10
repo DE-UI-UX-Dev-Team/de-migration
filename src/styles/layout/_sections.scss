@@ -1,6 +1,6 @@
 @use "../abstracts/mixins" as *;
 
-/*--- Section - Spacing ---*/
+/*--- Layout - Section Spacing ---*/ 
 
 @include getSectionSpacing( "mobile-up", "sm" );
 @include getSectionSpacing( "tablet-up", "md" );

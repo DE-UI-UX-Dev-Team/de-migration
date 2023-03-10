@@ -7,14 +7,14 @@
 @include getTypeUtilities( "laptop-up", "lg" );
 @include getTypeUtilities( "desktop-up", "xl" ); 
 
-/*--- Font Weights ---*/
+/*--- Utilities - Typography, Font Weights ---*/
 
 b, strong, .fw--bold { font-weight: 700; }
 .fw--semibold { font-weight: 500; }
 .fw--regular { font-weight: 400; }
 .fw--light { font-weight: 300; } 
 
-/*--- Font Styles ---*/
+/*--- Utilities - Typography, Font Styles ---*/
 
 ul.fs--inline li { display: inline; }
 em, .fs--italic { font-style: italic; }
@@ -27,8 +27,12 @@ em, .fs--italic { font-style: italic; }
 .fs--text-left { text-align: left; }
 .fs--no-wrap { white-space: nowrap; }
 
+/*--- Utilities - Typography, Floats ---*/
+
 .float-right { float: right; }
 .float-left { float: left; } 
+
+/*--- Utilities - Typography, Text Alignment (Right, Left, Center) ---*/
 
 @include mediaQuery("mobile-only") {
 

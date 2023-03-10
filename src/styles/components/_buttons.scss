@@ -2,6 +2,7 @@
 
 @use '../abstracts' as *;
 
+/*--- Components - Buttons ---*/
 
 button,
 .btn,
@@ -16,6 +17,8 @@ input[type="reset"] {
     text-transform: uppercase;
     padding: 1.6rem 2.4rem;
 }
+
+/*--- Components - Buttons, Selected ---*/
 
 button.selected,
 .btn.selected  ,
@@ -44,10 +47,10 @@ input[type="reset"].selected {
     color: var(--primary-base);
 }
 
+/*--- Components - Buttons on Light Backgrounds ---*/
 
-@include getButtonsOnColoredBackground( $buttonsOnLightBg, "lightBackgrounds" );
+@include getButtonsOnColoredBackground( $buttonsOnLightBg, "lightBackgrounds" ); 
+
+/*--- Components - Buttons on Dark Backgrounds ---*/ 
+
 @include getButtonsOnColoredBackground( $buttonsOnDarkBg, "darkBackgrounds" );
-
-
-   
-

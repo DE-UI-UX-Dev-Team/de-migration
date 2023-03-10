@@ -1,6 +1,6 @@
 @use "../abstracts/mixins" as *;
  
-/*--- Flex Grid - Rows ---*/ 
+/*--- Utilities - Flex Grid, Rows ---*/ 
 
 $multiplier: -1;
 
@@ -49,21 +49,21 @@ $multiplier: -1;
 
 }
 
-/*--- Flex Grid - Gutters ---*/
+/*--- Utilities - Flex Grid, Gutters ---*/
 
 @include getGridGutters( "mobile-up", "sm" );
 @include getGridGutters( "tablet-up", "md" );
 @include getGridGutters( "laptop-up", "lg" );
 @include getGridGutters( "desktop-up", "xl" ); 
 
-/*--- Flex Grid - Columns ---*/
+/*--- Utilities - Flex Grid, Columns ---*/
 
 [class*=col],
 [class*=col--] {
 	flex: 0 1 100%;
 }
 
-/*--- Flex Grid - Vertical Spacing ---*/
+/*--- Utilities - Flex Grid, Vertical Spacing ---*/
 
 @include getColumnMgBtm( "mobile-up", "sm" );
 @include getColumnMgBtm( "tablet-up", "md" );
