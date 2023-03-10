@@ -4,19 +4,22 @@
 
 :root {
       
-    /* Color Schemes */
+    /*--- Default Properties - Color Schemes ---*/
+
     @each $palette, $colors in map.get( $colors, #{$active-theme} ) {
         @each $color, $value in $colors {
             --#{$palette}-#{$color}: hsl(#{$value});
         }
     }  
 
-    /* Dropshadows */
+    /*--- Default Properties - Dropshadows ---*/
+
     @each $variant, $value in map.get( $dropshadows, #{$active-theme} ) {
         --dropshadow-#{$variant}: #{$value};
     }
 
-    /* Spacing - Section */
+    /*--- Default Properties - Spacing, Section ---*/
+
     @each $type, $categories in map.get( $spacing, #{$active-theme}, "section" ) { 
 
         // String manipulation of CSS property name
@@ -32,19 +35,22 @@
         }
     } 
 
-    /* Spacing - Gutters */ 
+    /*--- Default Properties - Spacing, Gutters ---*/ 
+
     @each $size, $value in map.get( $spacing, #{$active-theme}, "gutter" ) {
         --gutter-#{$size}: #{$value};
     }
 
-    /* Spacing - Columns */
+    /*--- Default Properties - Spacing, Columns ---*/
+
     @each $type, $categories in map.get( $spacing, #{$active-theme}, "column" ) {
         @each $size, $value in $categories { 
             --col-#{$type}--#{$size}: #{$value};
         }
     } 
  
-    /* Typography */
+    /*--- Default Properties - Typography ---*/
+
     @each $type, $categories in map.get( $typography, #{$active-theme }) {
         @each $variant, $sizes in $categories {
             @each $size, $value in $sizes {
@@ -52,10 +58,9 @@
             }
         }
     }
-
-   
     
-    /* Anchor Links - On Light Backgrounds */
+    /*--- Default Properties - Anchor/Links on Light Backgrounds ---*/
+    
     @each $palette, $linksOnLightBg in map.get( $linksOnLightBg, #{$active-theme} ) {
         @each $state, $properties in $linksOnLightBg { 
             @each $property, $value in $properties { 
@@ -66,7 +71,8 @@
         }
     }  
 
-     /* Anchor Links - On Dark Backgrounds */
+     /*--- Default Properties - Anchor Links, on Dark Backgrounds ---*/
+
      @each $palette, $linksOnDarkBg in map.get( $linksOnDarkBg, #{$active-theme} ) {
         @each $state, $properties in $linksOnDarkBg { 
             @each $property, $value in $properties { 
@@ -77,14 +83,16 @@
         }
     }  
 
-    /* Buttons */
+    /*--- Default Properties - Buttons ---*/
+
     --btn--font: bold 1.6rem/2.4rem var(--font-stack);
     --btn--min-width: 22.7rem;
     --btn--corner-radius:0.4rem;
     --btn--border: 0.2rem solid var(--primary-base);
 
 
-    /* Buttons - On Light Backgrounds */
+    /*--- Default Properties - Buttons on Light Backgrounds ---*/
+
     @each $palette, $buttonsOnLightBg in map.get( $buttonsOnLightBg, #{$active-theme} ) {
         @each $state, $properties in $buttonsOnLightBg { 
             @each $property, $value in $properties { 
@@ -95,7 +103,8 @@
         }
     }  
 
-    /* Buttons - On Dark Backgrounds */
+    /*--- Default Properties - Buttons on Dark Backgrounds ---*/
+
     @each $palette, $buttonsOnLightBg in map.get( $buttonsOnDarkBg, #{$active-theme} ) {
         @each $state, $properties in $buttonsOnLightBg { 
             @each $property, $value in $properties { 
@@ -106,33 +115,50 @@
         }
     }  
 
-    // Manual Theme Options
+    /*--- Default Properties - Content Width ---*/
+
     --max-content-width--sm: #{$content--width-sm};
     --max-content-width--md: #{$content--width-md};
     --max-content-width--lg: #{$content--width-lg};
     --max-content-width--xl: #{$content--width-xl};
+
+    /*--- Default Properties - Gutters ---*/
 
     --container--gutter--sm: var(--gutter-sm);
     --container--gutter--md: var(--gutter-md);
     --container--gutter--lg: var(--gutter-lg);
     --container--gutter--xl: var(--gutter-xl);
 
+    /*--- Default Properties - Text Indent ---*/
+
     --text-indent--sm: #{$h-spacing--150};
     --text-indent--md: #{$h-spacing--150};
     --text-indent--lg: #{$h-spacing--150};
     --text-indent--xl: #{$h-spacing--150};
 
+    /*--- Default Properties - Text on Colors ---*/
+
     --heading-color: var(--primary-base);
     --body-text--color: var(--gray-body);
     --body-text--light-color: var(--gray-medium-1);
+
+    /*--- Default Properties - Text on Dark Backgrounds ---*/
+
     --heading--on-dark-background: var(--white-base);
     --body-text--on-dark-background: var(--white-base);
+
+    /*--- Default Properties - Text on Light Backgrounds ---*/
+
     --heading--on-light-background: var(--primary-base);
     --body-text--on-light-background: var(--gray-body);
     
+    /*--- Default Properties - Font Weights ---*/
+
     --font-weight--regular: #{$font-weight--regular};
     --font-weight--medium: #{$font-weight--medium};
         
+    /*--- Default Properties - Font Stack ---*/
+
     --font-stack: #{$font-stack--sans-serif};
 
 }  

@@ -1,18 +1,21 @@
 @use "../abstracts" as *; 
 
-/* Utilities - Typography */
+/*--- Utilities - Typography ---*/
+
 @include getTypeUtilities( "mobile-up", "sm" ); 
 @include getTypeUtilities( "tablet-up", "md" );
 @include getTypeUtilities( "laptop-up", "lg" );
 @include getTypeUtilities( "desktop-up", "xl" ); 
 
 /*--- Font Weights ---*/
+
 b, strong, .fw--bold { font-weight: 700; }
 .fw--semibold { font-weight: 500; }
 .fw--regular { font-weight: 400; }
 .fw--light { font-weight: 300; } 
 
 /*--- Font Styles ---*/
+
 ul.fs--inline li { display: inline; }
 em, .fs--italic { font-style: italic; }
 .fs--uppercase { text-transform: uppercase; }
