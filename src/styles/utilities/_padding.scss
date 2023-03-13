@@ -1,0 +1,10 @@
+@use "../abstracts/mixins/" as *;  
+
+/*--- Utilities - Padding (Adhoc) ---*/
+
+@include getUtilitySpacing( "mobile-up", "", "pd" );
+
+@include getUtilitySpacing( "mobile-only", "sm", "pd" );
+@include getUtilitySpacing( "tablet-only", "md", "pd" ); 
+@include getUtilitySpacing( "laptop-only", "lg", "pd" );
+@include getUtilitySpacing( "desktop-only", "xl", "pd" );

@@ -1,0 +1,66 @@
+@use "../abstracts" as *; 
+
+/*--- Utilities - Typography ---*/
+
+@include getTypeUtilities( "mobile-up", "sm" ); 
+@include getTypeUtilities( "tablet-up", "md" );
+@include getTypeUtilities( "laptop-up", "lg" );
+@include getTypeUtilities( "desktop-up", "xl" ); 
+
+/*--- Utilities - Typography, Font Weights ---*/
+
+b, strong, .fw--bold { font-weight: 700; }
+.fw--semibold { font-weight: 500; }
+.fw--regular { font-weight: 400; }
+.fw--light { font-weight: 300; } 
+
+/*--- Utilities - Typography, Font Styles ---*/
+
+ul.fs--inline li { display: inline; }
+em, .fs--italic { font-style: italic; }
+.fs--uppercase { text-transform: uppercase; }
+.fs--lowercase { text-transform: lowercase; }
+.fs--underline { text-decoration: underline; }
+.fs--no-underline { text-decoration: none; }
+.fs--text-center { text-align: center; }
+.fs--text-right { text-align: right; }
+.fs--text-left { text-align: left; }
+.fs--no-wrap { white-space: nowrap; }
+
+/*--- Utilities - Typography, Floats ---*/
+
+.float-right { float: right; }
+.float-left { float: left; } 
+
+/*--- Utilities - Typography, Text Alignment (Right, Left, Center) ---*/
+
+@include mediaQuery("mobile-only") {
+
+  .fs--text-right--sm { text-align: right; }
+  .fs--text-left--sm { text-align: left; }
+  .fs--text-center--sm { text-align: center; }
+
+}
+
+@include mediaQuery("tablet-only") {
+
+  .fs--text-right--md { text-align: right; }
+  .fs--text-left--md { text-align: left; }
+  .fs--text-center--md { text-align: center; }
+
+}
+@include mediaQuery("laptop-only") {
+
+  .fs--text-right--lg { text-align: right; }
+  .fs--text-left--lg { text-align: left; }
+  .fs--text-center--lg { text-align: center; }
+
+}
+
+@include mediaQuery("desktop-only") {
+
+  .fs--text-right--xl { text-align: right; }
+  .fs--text-left--xl { text-align: left; }
+  .fs--text-center--xl { text-align: center; }
+
+}

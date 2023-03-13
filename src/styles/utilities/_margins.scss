@@ -1,0 +1,8 @@
+@use "../abstracts/mixins/" as *; 
+
+@include getUtilitySpacing( "mobile-up", "", "mg" );
+
+@include getUtilitySpacing( "mobile-only", "sm", "mg" );
+@include getUtilitySpacing( "tablet-only", "md", "mg" ); 
+@include getUtilitySpacing( "laptop-only", "lg", "mg" );
+@include getUtilitySpacing( "desktop-only", "xl", "mg" );

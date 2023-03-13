@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require( './deploy/config.json' );
  
-const htmlFileRegex = new RegExp(/(src\/pages\/)|(src\\pages\\)/, 'ig');
+const htmlFileRegex = new RegExp(/(src\/demos\/)|(src\\demos\\)/, 'ig');
 let directories = config.entryPoints.pages.directory;
 
 let htmlFiles = [];
@@ -17,8 +17,8 @@ while (directories.length > 0) {
   directories.push(...dirContents.filter(file => fs.statSync(file).isDirectory()));
 }
  
-htmlFiles.map(file => {
-    let name = file.replace( htmlFileRegex, "" );
+htmlFiles.map(file => { 
+    let name = file.replace( htmlFileRegex, "" ); 
     entryPoints[ name ] = path.resolve(
       __dirname, file.replace( ".html", ".js" )
     ); 
@@ -37,10 +37,13 @@ module.exports = ( env ) => {
   const clean = ( environment === 'dev' ) ? true : false;  
 
   return {
+    stats: {
+      loggingDebug: ["sass-loader"],
+    },
     entry: entryPoints,
     output: {
       path: path.resolve(__dirname, outputPath),
-      filename: '[name]_[contenthash].js',
+      filename: '[name].js',
       clean: clean,
       assetModuleFilename: assetModuleFilename + './[name][ext]',
       publicPath: publicPath + '/'
@@ -51,14 +54,14 @@ module.exports = ( env ) => {
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          use: ["babel-loader"],
+          use: ["babel-loader"]
         },
         {
           test:/\.scss$/,
           exclude: /node_modules/,
           type: "asset/resource",
           generator: {
-            filename: "[name].css",
+            filename: "styles/[name].css",
           },
           use: [ { 
             loader : "sass-loader", 
@@ -88,12 +91,15 @@ module.exports = ( env ) => {
       poll: 1000,
     },
     plugins: [
-      ...htmlFiles.map(htmlFile =>
-        new HtmlWebpackPlugin({
-          template: htmlFile,
-          filename: htmlFile.replace( htmlFileRegex, "" ), 
-          chunks: [ htmlFile.replace( htmlFileRegex, "" ) ]
-        })
+      ...htmlFiles.map(htmlFile => { 
+          let javascriptFile = htmlFile.replace( ".html", ".html.js" ); 
+          return new HtmlWebpackPlugin({
+            template: htmlFile,
+            filename: htmlFile.replace( htmlFileRegex, "" ), 
+            chunks: [ htmlFile.replace( htmlFileRegex, "" ) ], 
+            inject: false
+          })
+        }
       )
     ]
   }

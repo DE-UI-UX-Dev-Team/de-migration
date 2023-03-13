@@ -2,7 +2,7 @@
   "targets": {
     "dev": { 
       "outputPath": "public",
-      "publicPath" : ".", 
+      "publicPath" : "", 
       "assetModuleFilename" : "./public"
     }, 
     "prod": { 
@@ -13,7 +13,7 @@
   }, 
   "entryPoints" : {
     "pages" : {
-      "directory" : ["src/pages/"] 
+      "directory" : ["src/demos/"] 
     }
   }
 }

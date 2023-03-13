@@ -1,0 +1,16 @@
+@use '../../abstracts/tokens' as *;
+
+// Map used to create media query mixins
+
+$breakpoints: ( 
+    "default-theme" : (
+        "mobile-only"  : '(max-width: #{$mobile--max-width})', 
+        "tablet-only"  : '(min-width: #{$tablet--min-width}) and (max-width: #{$tablet--max-width})',
+        "laptop-only"  : '(min-width: #{$laptop--min-width}) and (max-width: #{$laptop--max-width})',
+        "desktop-only" : '(min-width: #{$desktop--min-width})',
+        "mobile-up"    : '(min-width: #{$mobile--min-width})',
+        "tablet-up"    : '(min-width: #{$tablet--min-width})',
+        "laptop-up"    : '(min-width: #{$laptop--min-width})',
+        "desktop-up"   : '(min-width: #{$desktop--min-width})'
+    )
+);
