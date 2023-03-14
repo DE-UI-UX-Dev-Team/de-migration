@@ -5,3 +5,5 @@
 @use 'utilities'; // Utilities will override everything 
 
 @use '../assets/fonts/roboto/stylesheet.css';
+@use '../../node_modules/@fortawesome/fontawesome-pro/scss/regular.scss';
+@use '../../node_modules/@fortawesome/fontawesome-pro/scss/fontawesome.scss';
