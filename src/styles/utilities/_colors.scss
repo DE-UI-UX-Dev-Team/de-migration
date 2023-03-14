@@ -2,7 +2,8 @@
 
 @use "../abstracts" as *;
 
-/* Utilities - Color Schemes */
+/*--- Utilities - Color Schemes (Foreground, Background, & Borders ) ---*/
+
 @each $palette, $colors in map.get( $colors, #{$active-theme} ) {
     @each $color, $value in $colors { 
         
@@ -28,7 +29,10 @@
     }
 }   
 
+/*--- Utilities - Color Schemes (Gradients) ---*/
+
 // bg--[palette]-[color]--grad-[iteration]
+
 .bg--secondary-dark-1--grad-1 {
     background-image: linear-gradient(-84deg, var(--secondary-dark-1), var(--secondary-base));
 }

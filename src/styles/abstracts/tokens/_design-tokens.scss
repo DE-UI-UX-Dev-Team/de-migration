@@ -191,9 +191,6 @@ $border-radius-50: 0.8rem;
 $border-radius-75: 1.2rem; 
 $border-radius-100: 1.6rem;  
 
-//-- Opacity
-$opacity-15: 15%;
-$opacity-40: 40%;
 
 //-- Dropshadows 
 
@@ -214,10 +211,19 @@ $elevation-4: 0 16px 24px 0 rgba(0, 0, 0, 0.14),
               0 8px 10px 0 rgba(0, 0, 0, 0.2);
 
 //-- Buttons 
-
 $outline--focus-offset: 0.2rem;
 $btn--border: 0.2rem solid "hsl(#{$blue--base-hsl})";
 $btn--border-disabled: 0.2rem solid "hsl(#{$gray--light-3-hsl})";
 $outline--focus: 0.3rem solid "hsl(#{$blue--light-2-hsl})";
 $btn-focus--opacity: 15%;
 $btn-active--opacity: 40%; 
+
+//-- Links
+$link-default--underline: underline solid "hsl(#{$blue--base-hsl})" 0.1rem;
+$link-hover--underline:underline solid "hsl(#{$blue--dark-1-hsl})" 0.1rem;
+$link-focus--underline: underline solid "hsl(#{$blue--dark-1-hsl})" 0.1rem;
+$link-visited--underline: underline solid "hsl(#{$blue--light-2-hsl})" 0.1rem;
+$link-disabled--underline: underline solid "hsl(#{$gray--light-3-hsl})";
+$link-default--underline-darkBg: underline solid var(--white-base) 0.1rem;
+$link-focus--underline-darkBg: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
+$link-disabled--underline--darkBg: underline solid rgba(255, 255, 255, 0.4);
