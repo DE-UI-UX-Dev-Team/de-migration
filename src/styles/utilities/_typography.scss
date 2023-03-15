@@ -25,7 +25,8 @@ em, .fs--italic { font-style: italic; }
 .fs--text-center { text-align: center; }
 .fs--text-right { text-align: right; }
 .fs--text-left { text-align: left; }
-.fs--no-wrap { white-space: nowrap; }
+.fs--no-wrap { white-space: nowrap; } 
+ul.fs--bulleted-list { list-style-type: disc; }
 
 /*--- Utilities - Typography, Floats ---*/
 
