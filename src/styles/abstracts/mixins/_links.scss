@@ -10,23 +10,30 @@
             @each $state, $properties in $states {
                 @if $link == "default-links" {
                     @if $state == "default" {
-                        a,
-                        [class*="link-"]{
+                        a, 
+                        a i {
                             @each $property, $value in $properties{ 
                                 @if $value != null {
                                     #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
                                 }
                             }
-                        } 
-                    }
-                    @else{
-                        a:#{$state},  
-                        [class*="link-"]:#{$state}
-                        {
+                        }
+                    } 
+                    @else if $state == "disabled" {
+                        a[#{$state}] {
                             @each $property, $value in $properties{
                                 @if $value != null {
                                     #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                }
+                                } 
+                            }
+                        }
+                    }
+                    @else{
+                        a:#{$state} {
+                            @each $property, $value in $properties{
+                                @if $value != null {
+                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
+                                } 
                             }
                         } 
                     }
@@ -35,13 +42,24 @@
                     @if $state == "default" {
                         ol a,
                         ul a,
-                        dl a{
+                        dl a {
                             @each $property, $value in $properties{
                                 @if $value != null {
                                     #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
                                 }
                             }
                         } 
+                    }
+                    @else if $state == "disabled" {
+                        ol a[#{$state}],
+                        ul a[#{$state}],
+                        dl a[#{$state}] {
+                            @each $property, $value in $properties{
+                                @if $value != null {
+                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
+                                } 
+                            }
+                        }
                     }
                     @else{
                         ol a:#{$state},
@@ -59,6 +77,16 @@
                     @if $state == "default" {
                         a[href^="mailto:"],
                         a[href^="tel:"]{
+                            @each $property, $value in $properties{
+                                @if $value != null {
+                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                    @else if $state == "disabled" {
+                        a[href^="mailto:"][#{$state}],
+                        a[href^="tel:"][#{$state}]{
                             @each $property, $value in $properties{
                                 @if $value != null {
                                     #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
@@ -87,8 +115,17 @@
                 @each $state, $properties in $states {
                     @if $link == "default-links" {
                         @if $state == "default" {
-                            [class*=#{$bgClass}] a,
-                            [class*=#{$bgClass}] [class*="link-"]{
+                            [class*=#{$bgClass}] a, 
+                            [class*=#{$bgClass}] a i {
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @else if $state == "disabled" {
+                            [class*=#{$bgClass}] a[#{$state}] {
                                 @each $property, $value in $properties{ 
                                     @if $value != null {
                                         #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
@@ -97,9 +134,7 @@
                             } 
                         }
                         @else{
-                            [class*=#{$bgClass}] a:#{$state},  
-                            [class*=#{$bgClass}] [class*="link-"]:#{$state}
-                            {
+                            [class*=#{$bgClass}] a:#{$state} {
                                 @each $property, $value in $properties{
                                     @if $value != null {
                                         #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
@@ -112,13 +147,27 @@
                         @if $state == "default" {
                             [class*=#{$bgClass}] ol a,
                             [class*=#{$bgClass}] ul a,
-                            [class*=#{$bgClass}] dl a{
+                            [class*=#{$bgClass}] dl a,
+                            [class*=#{$bgClass}] ol a i,
+                            [class*=#{$bgClass}] ul a i,
+                            [class*=#{$bgClass}] dl a i  {
                                 @each $property, $value in $properties{
                                     @if $value != null {
                                         #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
                                     }
                                 }
                             } 
+                        }
+                        @else if $state == "disabled" {
+                            [class*=#{$bgClass}] ol a[#{$state}],
+                            [class*=#{$bgClass}] li a[#{$state}],
+                            [class*=#{$bgClass}] dl a[#{$state}] {
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            }
                         }
                         @else{
                             [class*=#{$bgClass}] ol a:#{$state},
@@ -142,6 +191,16 @@
                                     }
                                 }
                             } 
+                        }
+                        @else if $state == "disabled" {
+                            [class*=#{$bgClass}] a[href^="mailto:"][#{$state}],
+                            [class*=#{$bgClass}] a[href^="tel:"][#{$state}] {
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            }
                         }
                         @else{
                             [class*=#{$bgClass}] a[href^="mailto:"]:#{$state},

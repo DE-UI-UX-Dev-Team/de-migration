@@ -38,16 +38,17 @@ $linksOnLightBg: (
                 "border-radius": null,
                 "opacity": null
             ),
+            "visited":(
+                "color": "hsl(#{$blue--light-2-hsl})"
+            ),
             "disabled":(
                 "color": "hsl(#{$gray--light-3-hsl})",
                 "text-decoration": $link-disabled--underline,
                 "outline":  null,
                 "outline-offset":  null,
                 "border-radius": null,
-                "opacity": null
-            ), 
-            "visited":(
-                "color": "hsl(#{$blue--light-2-hsl})"
+                "opacity": null, 
+                "pointer-events": none
             )
         ),
         "group-links": (
@@ -84,16 +85,17 @@ $linksOnLightBg: (
                 "border-radius": null,
                 "opacity": null
             ),
+            "visited":(
+                "color": "hsl(#{$blue--base-hsl})"
+            ),
             "disabled":(
                 "color": "hsl(#{$gray--light-3-hsl})",
                 "text-decoration": none,
                 "outline":  null,
                 "outline-offset":  null,
                 "border-radius": null,
-                "opacity": null
-            ), 
-            "visited":(
-                "color": "hsl(#{$blue--base-hsl})"
+                "opacity": null, 
+                "pointer-events": none
             )
         ),
         "email-phone-links":(
@@ -130,16 +132,17 @@ $linksOnLightBg: (
                 "border-radius": null,
                 "opacity": null
             ),
+            "visited":(
+                "color": "hsl(#{$blue--base-hsl})"
+            ),
             "disabled":(
                 "color": "hsl(#{$gray--light-3-hsl})",
                 "text-decoration": $link-disabled--underline,
                 "outline":  null,
                 "outline-offset":  null,
                 "border-radius": null,
-                "opacity": null
-            ), 
-            "visited":(
-                "color": "hsl(#{$blue--base-hsl})"
+                "opacity": null, 
+                "pointer-events": none
             )
         ), 
     
