@@ -115,6 +115,33 @@
         }
     }  
 
+    /*--- Default Properties - Toggle Switch on Light Backgrounds ---*/
+    
+    @each $palette, $toggleSwitchOnLightBg in map.get( $toggleSwitchOnLightBg, #{$active-theme} ) {
+        @each $state, $properties in $toggleSwitchOnLightBg { 
+            @each $property, $value in $properties { 
+                @if $value != null {
+                    --#{$palette}-toggle-on-lgt-bg--#{$state}--#{$property}: #{$value};
+                }
+                
+            }
+        }
+    }
+
+    /*--- Default Properties - Toggle Switch on Dark Backgrounds ---*/
+    
+    @each $palette, $toggleSwitchOnDarkBg in map.get( $toggleSwitchOnDarkBg, #{$active-theme} ) {
+        @each $state, $properties in $toggleSwitchOnDarkBg { 
+            @each $property, $value in $properties { 
+                @if $value != null {
+                    --#{$palette}-toggle-on-drk-bg--#{$state}--#{$property}: #{$value};
+                }
+                
+            }
+        }
+    }
+   
+
     /*--- Default Properties - Content Width ---*/
 
     --max-content-width--sm: #{$content--width-sm};
