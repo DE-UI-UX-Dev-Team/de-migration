@@ -8,7 +8,7 @@
     @if($backgroundType== "lightBackgrounds"){
         @each $link, $states in map.get($linksOnLightBg, #{$active-theme}) { 
             @each $state, $properties in $states {
-                @if $link == "defaultLinks" {
+                @if $link == "default-links" {
                     @if $state == "default" {
                         a,
                         [class*="link-"]{
@@ -31,7 +31,7 @@
                         } 
                     }
                 }
-                @if $link == "groupLinks"{
+                @if $link == "group-links"{
                     @if $state == "default" {
                         ol a,
                         ul a,
@@ -55,7 +55,7 @@
                         }
                     }
                 }
-                @if $link == "emailPhoneLinks"{
+                @if $link == "email-phone-links"{
                     @if $state == "default" {
                         a[href^="mailto:"],
                         a[href^="tel:"]{
@@ -83,80 +83,80 @@
 
     @if($backgroundType== "darkBackgrounds"){
         @each $bgClass in $darkBackgroundClasses {
-        @each $link, $states in map.get($linksOnDarkBg, #{$active-theme}) { 
-            @each $state, $properties in $states {
-                @if $link == "defaultLinks" {
-                    @if $state == "default" {
-                        [class*=#{$bgClass}] a,
-                        [class*=#{$bgClass}] [class*="link-"]{
-                            @each $property, $value in $properties{ 
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+            @each $link, $states in map.get($linksOnDarkBg, #{$active-theme}) { 
+                @each $state, $properties in $states {
+                    @if $link == "default-links" {
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] a,
+                            [class*=#{$bgClass}] [class*="link-"]{
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
                                 }
-                            }
-                        } 
-                    }
-                    @else{
-                        [class*=#{$bgClass}] a:#{$state},  
-                        [class*=#{$bgClass}] [class*="link-"]:#{$state}
-                        {
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] a:#{$state},  
+                            [class*=#{$bgClass}] [class*="link-"]:#{$state}
+                            {
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
                                 }
-                            }
-                        } 
+                            } 
+                        }
                     }
-                }
-                @if $link == "groupLinks"{
-                    @if $state == "default" {
-                        [class*=#{$bgClass}] ol a,
-                        [class*=#{$bgClass}] ul a,
-                        [class*=#{$bgClass}] dl a{
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                    @if $link == "group-links"{
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] ol a,
+                            [class*=#{$bgClass}] ul a,
+                            [class*=#{$bgClass}] dl a{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
                                 }
-                            }
-                        } 
-                    }
-                    @else{
-                        [class*=#{$bgClass}] ol a:#{$state},
-                        [class*=#{$bgClass}] li a:#{$state},
-                        [class*=#{$bgClass}] dl a:#{$state}{
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] ol a:#{$state},
+                            [class*=#{$bgClass}] li a:#{$state},
+                            [class*=#{$bgClass}] dl a:#{$state}{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                @if $link == "emailPhoneLinks"{
-                    @if $state == "default" {
-                        [class*=#{$bgClass}] a[href^="mailto:"],
-                        [class*=#{$bgClass}] a[href^="tel:"]{
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                    @if $link == "email-phone-links"{
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] a[href^="mailto:"],
+                            [class*=#{$bgClass}] a[href^="tel:"]{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
                                 }
-                            }
-                        } 
-                    }
-                    @else{
-                        [class*=#{$bgClass}] a[href^="mailto:"]:#{$state},
-                        [class*=#{$bgClass}] a[href^="tel:"]:#{$state}{
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] a[href^="mailto:"]:#{$state},
+                            [class*=#{$bgClass}] a[href^="tel:"]:#{$state}{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-    } // end darkBackgrounds conditional
+        } // end darkBackgrounds conditional
     }
    
 }

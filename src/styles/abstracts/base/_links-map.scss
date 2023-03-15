@@ -2,18 +2,17 @@
 
 // Map used to create media query mixins
 
-
-
 $linksOnLightBg: (
-    "default-theme" : (       
-        "defaultLinks" : (
+    "default-theme": (       
+        "default-links": (
             "default":(
                 "color": "hsl(#{$blue--base-hsl})",
                 "text-decoration": $link-default--underline,
                 "outline": null,
                 "outline-offset": null,
                 "border-radius": null,
-                "opacity": null
+                "opacity": null, 
+                "font-weight": $font-weight--medium
             ),
             "hover":(
                 "color": "hsl(#{$blue--dark-1-hsl})",
@@ -46,16 +45,20 @@ $linksOnLightBg: (
                 "outline-offset":  null,
                 "border-radius": null,
                 "opacity": null
+            ), 
+            "visited":(
+                "color": "hsl(#{$blue--light-2-hsl})"
             )
         ),
-        "groupLinks"   : (
+        "group-links": (
             "default":(
                 "color": "hsl(#{$blue--base-hsl})",
                 "text-decoration": none,
                 "outline": null,
                 "outline-offset": null,
                 "border-radius": null,
-                "opacity": null
+                "opacity": null, 
+                "font-weight": $font-weight--medium
             ),
             "hover":(
                 "color": "hsl(#{$blue--dark-1-hsl})",
@@ -88,16 +91,20 @@ $linksOnLightBg: (
                 "outline-offset":  null,
                 "border-radius": null,
                 "opacity": null
+            ), 
+            "visited":(
+                "color": "hsl(#{$blue--base-hsl})"
             )
         ),
-        "emailPhoneLinks"  : (
+        "email-phone-links":(
             "default":(
                 "color": "hsl(#{$blue--base-hsl})",
                 "text-decoration": $link-default--underline,
                 "outline": null,
                 "outline-offset": null,
                 "border-radius": null,
-                "opacity": null
+                "opacity": null, 
+                "font-weight": $font-weight--medium
             ),
             "hover":(
                 "color": "hsl(#{$blue--dark-1-hsl})",
@@ -130,6 +137,9 @@ $linksOnLightBg: (
                 "outline-offset":  null,
                 "border-radius": null,
                 "opacity": null
+            ), 
+            "visited":(
+                "color": "hsl(#{$blue--base-hsl})"
             )
         ), 
     
@@ -137,15 +147,16 @@ $linksOnLightBg: (
 );
 
 $linksOnDarkBg: (
-    "default-theme" : (       
-        "defaultLinks" : (
+    "default-theme": (       
+        "default-links": (
             "default":(
                 "color": "hsl(#{$white-hsl})",
                 "text-decoration": $link-default--underline-darkBg,
                 "outline": null,
                 "outline-offset": null,
                 "border-radius": null,
-                "opacity": null
+                "opacity": null, 
+                "font-weight": $font-weight--medium
             ),
             "hover":(
                 "color": "hsl(#{$white-hsl})",
@@ -180,14 +191,15 @@ $linksOnDarkBg: (
                 "opacity": 40%
             )
         ),
-        "groupLinks"   : (
+        "group-links": (
             "default":(
                 "color": "hsl(#{$white-hsl})",
                 "text-decoration": none,
                 "outline": null,
                 "outline-offset": null,
                 "border-radius": null,
-                "opacity": null
+                "opacity": null, 
+                "font-weight": $font-weight--medium
             ),
             "hover":(
                 "color": "hsl(#{$white-hsl})",
@@ -222,14 +234,15 @@ $linksOnDarkBg: (
                 "opacity": 40%
             )
         ),
-        "emailPhoneLinks"  : (
+        "email-phone-links": (
             "default":(
                 "color": "hsl(#{$white-hsl})",
                 "text-decoration": $link-default--underline-darkBg,
                 "outline": null,
                 "outline-offset": null,
                 "border-radius": null,
-                "opacity": null
+                "opacity": null, 
+                "font-weight": $font-weight--medium
             ),
             "hover":(
                 "color": "hsl(#{$white-hsl})",
@@ -263,8 +276,7 @@ $linksOnDarkBg: (
                 "border-radius": null,
                 "opacity": 40%
             )
-        ), 
-    
+        )
     )
 );
 
