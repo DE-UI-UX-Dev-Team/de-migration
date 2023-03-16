@@ -26,7 +26,6 @@ em, .fs--italic { font-style: italic; }
 .fs--text-right { text-align: right; }
 .fs--text-left { text-align: left; }
 .fs--no-wrap { white-space: nowrap; } 
-ul.fs--bulleted-list { list-style-type: disc; }
 
 /*--- Utilities - Typography, Floats ---*/
 
@@ -63,5 +62,55 @@ ul.fs--bulleted-list { list-style-type: disc; }
   .fs--text-right--xl { text-align: right; }
   .fs--text-left--xl { text-align: left; }
   .fs--text-center--xl { text-align: center; }
+
+} 
+
+/*--- Utilities - Lists ---*/
+ 
+ul.fs--link-list {
+  margin-left: 0; 
+}
+
+ul.fs--link-list li:last-child {
+  margin-bottom: 0;
+}
+
+@include mediaQuery("mobile-up") {
+
+  ul.fs--link-list li {  margin-bottom: var(--list-item-spacing-m--sm); }
+  ul.fs--bulleted-list li { 
+    list-style-type: disc;  
+    margin-bottom: var(--list-item-spacing-s--sm); 
+  } 
+
+}
+
+@include mediaQuery("tablet-up") {
+
+  ul.fs--link-list li {  margin-bottom: var(--list-item-spacing-m--md); }
+  ul.fs--bulleted-list li { 
+    list-style-type: disc;  
+    margin-bottom: var(--list-item-spacing-s--md); 
+  }
+
+}
+
+@include mediaQuery("laptop-up") {
+
+  ul.fs--link-list li {  margin-bottom: var(--list-item-spacing-m--lg); }
+  ul.fs--bulleted-list li { 
+    list-style-type: disc;  
+    margin-bottom: var(--list-item-spacing-s--lg); 
+  }
+
+}
+
+@include mediaQuery("desktop-up") {
+
+  ul.fs--link-list li {  margin-bottom: var(--list-item-spacing-m--xl); }
+  ul.fs--bulleted-list li { 
+    list-style-type: disc;  
+    margin-bottom: var(--list-item-spacing-s--xl); 
+  }
 
 }

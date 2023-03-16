@@ -161,4 +161,27 @@
 
     --font-stack: #{$font-stack--sans-serif};
 
+    /*--- Default Properties - List Styles ---*/
+    
+    --list-item-spacing-s--sm: #{$list-item-spacing-s--sm};
+    --list-item-spacing-s--md: #{$list-item-spacing-s--md};
+    --list-item-spacing-s--lg: #{$list-item-spacing-s--lg};
+    --list-item-spacing-s--xl: #{$list-item-spacing-s--xl};
+
+    --list-item-spacing-m--sm: #{$list-item-spacing-m--sm};
+    --list-item-spacing-m--md: #{$list-item-spacing-m--md};
+    --list-item-spacing-m--lg: #{$list-item-spacing-m--lg};
+    --list-item-spacing-m--xl: #{$list-item-spacing-m--xl};
+
+    --list-item-spacing-l--sm: #{$list-item-spacing-l--sm};
+    --list-item-spacing-l--md: #{$list-item-spacing-l--md};
+    --list-item-spacing-l--lg: #{$list-item-spacing-l--lg};
+    --list-item-spacing-l--xl: #{$list-item-spacing-l--xl}; 
+
+    /*--- Default Properties - Border Radius ---*/
+    --border-radius-25: #{$border-radius-25};
+    --border-radius-50: #{$border-radius-50};
+    --border-radius-75: #{$border-radius-75};
+    --border-radius-100: #{$border-radius-100};
+
 }  
