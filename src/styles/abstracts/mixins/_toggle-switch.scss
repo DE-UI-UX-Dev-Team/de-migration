@@ -1,0 +1,142 @@
+@use "sass:map"; 
+
+@use '../../abstracts/base' as *;
+@use '../../abstracts/tokens' as *;
+
+@mixin getToggleSwitch($toggleSwitchOnBackgrounds, $backgroundType) {
+    @if($backgroundType== "lightBackgrounds"){
+        @each $toggle, $states in map.get($toggleSwitchOnLightBg, #{$active-theme}) { 
+            @each $state, $properties in $states {
+                @if $toggle == "toggleOn" {
+                    @if $state == "checked" {
+                        .toggle-switch input:not(:disabled):#{$state} + .slider:before{
+                            @each $property, $value in $properties{ 
+                                @if $value != null {
+                                    #{$property}: var(--#{$toggle}-toggle-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                    @if $state == "disabled" {
+                        .toggle-switch input:checked:#{$state} + .slider:before{
+                            @each $property, $value in $properties{ 
+                                @if $value != null {
+                                    #{$property}: var(--#{$toggle}-toggle-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                    @else{
+                        .toggle-switch input:not(:disabled):checked:#{$state} + .slider:before{
+                            @each $property, $value in $properties{
+                                @if $value != null {
+                                    #{$property}: var(--#{$toggle}-toggle-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        }
+                    }
+                }
+                @if $toggle == "toggleOff" {
+                    @if $state == "default" {
+                        .toggle-switch input:not(:disabled) + .slider:before{
+                            @each $property, $value in $properties{ 
+                                @if $value != null {
+                                    #{$property}: var(--#{$toggle}-toggle-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                    @if $state == "disabled" {
+                        .toggle-switch input:#{$state} + .slider:before{
+                            @each $property, $value in $properties{ 
+                                @if $value != null {
+                                    #{$property}: var(--#{$toggle}-toggle-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                    @else{
+                        .toggle-switch input:not(:disabled):#{$state} + .slider:before{
+                            @each $property, $value in $properties{
+                                @if $value != null {
+                                    #{$property}: var(--#{$toggle}-toggle-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        }
+                    }
+                }
+
+            
+            }
+        }
+    }  // end lightBackgrounds conditional
+
+    @if($backgroundType== "darkBackgrounds"){
+        @each $bgClass in $darkBackgroundClasses {
+            @each $toggle, $states in map.get($toggleSwitchOnDarkBg, #{$active-theme}) { 
+                @each $state, $properties in $states {
+                    @if $toggle == "toggleOn" {
+                        @if $state == "checked" {
+                            [class*=#{$bgClass}] .toggle-switch input:not(:disabled):#{$state} + .slider:before{
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$toggle}-toggle-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @if $state == "disabled" {
+                            [class*=#{$bgClass}] .toggle-switch input:checked:#{$state} + .slider:before{
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$toggle}-toggle-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] .toggle-switch input:not(:disabled):checked:#{$state} + .slider:before{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$toggle}-toggle-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @if $toggle == "toggleOff" {
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] .toggle-switch input:not(:disabled) + .slider:before{
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$toggle}-toggle-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @if $state == "disabled" {
+                            [class*=#{$bgClass}] .toggle-switch input:#{$state} + .slider:before{
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$toggle}-toggle-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] .toggle-switch input:not(:disabled):#{$state} + .slider:before{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$toggle}-toggle-on-drk-bg--#{$state}--#{$property});
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                
+                }
+            }
+        }
+    }  // end darkBackgrounds conditional
+}
