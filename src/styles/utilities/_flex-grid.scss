@@ -12,7 +12,12 @@ $col-multiplier: 2;
 	flex-direction: row;
 	flex-wrap: wrap;
 } 
- 
+
+.row[class*=bg] {
+	margin-left: 0;
+	margin-right: 0; 
+}
+
 .row[class*=bg] .col {
 	padding-left: calc(var(--gutter-sm) * #{$col-multiplier});
 	padding-right: calc(var(--gutter-sm) * #{$col-multiplier}); 
@@ -128,4 +133,6 @@ $col-multiplier: 2;
 	flex-grow: 1; 
 } 
 
-.row.col--no-wrap { flex-wrap: nowrap; }
+.row.col--no-wrap { flex-wrap: nowrap; } 
+
+.display-flex { display: flex; }

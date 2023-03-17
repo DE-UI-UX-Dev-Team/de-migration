@@ -116,6 +116,25 @@ $textOnColorBg : (
             "bg--secondary-light-3" : "--body-text--on-light-background",
             "bg--secondary-dark-1"  : "--body-text--on-dark-background",
             "bg--secondary-dark-2"  : "--body-text--on-dark-background"
+        ), 
+        "icons" :(
+            "bg--primary-base"       : "--icon--on-dark-background", 
+            "bg--primary-light-1"    : "--icon--on-dark-background",
+            "bg--primary-light-2"    : "--icon--on-dark-background",
+            "bg--primary-light-3"    : "--icon--on-primary-light-background",
+            "bg--primary-light-4"    : "--icon--on-primary-light-background",
+            "bg--primary-dark-1"     : "--icon--on-dark-background",
+            "bg--primary-dark-2"     : "--icon--on-dark-background",
+            "bg--secondary-base"     : "--icon--on-dark-background",
+            "bg--secondary-light-1"  : "--icon--on-dark-background",
+            "bg--secondary-light-2"  : "--icon--on-dark-background",
+            "bg--secondary-light-3"  : "--icon--on-secondary-light-background",
+            "bg--secondary-dark-1"   : "--icon--on-dark-background",
+            "bg--secondary-dark-2"   : "--icon--on-dark-background", 
+            "bg--success-background" : "--icon--on-success-background", 
+            "bg--warning-background" : "--icon--on-warning-background", 
+            "bg--error-background"   : "--icon--on-error-background", 
+            "bg--gray-background"    : "--icon--on-light-background"
         )
     )
 );

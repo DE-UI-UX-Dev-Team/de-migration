@@ -58,7 +58,6 @@ module.exports = ( env ) => {
         },
         {
           test:/\.scss$/,
-          exclude: /node_modules/,
           type: "asset/resource",
           generator: {
             filename: "assets/styles/[name].css",
@@ -68,7 +67,7 @@ module.exports = ( env ) => {
             options: { 
               sourceMap: true, 
               sassOptions: {
-                outputStyle: ( environment !== 'dev' ) ? "compressed" : undefined,
+                outputStyle: ( environment !== 'dev' ) ? "compressed" : undefined
               }
             } 
           } ],
