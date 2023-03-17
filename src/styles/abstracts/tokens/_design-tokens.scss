@@ -153,8 +153,24 @@ $letter-spacing--dsk-sm-3: 0.04rem;
 //-- Font Weight 
 
 $font-weight--regular: 400; 
-$font-weight--medium: 500;
+$font-weight--medium: 500; 
 
+//-- List Styles 
+
+$list-item-spacing-s--sm: 0.8rem;
+$list-item-spacing-s--md: 0.8rem;
+$list-item-spacing-s--lg: 0.8rem;
+$list-item-spacing-s--xl: 0.8rem;
+
+$list-item-spacing-m--sm: 1.6rem;
+$list-item-spacing-m--md: 1.6rem;
+$list-item-spacing-m--lg: 1.6rem;
+$list-item-spacing-m--xl: 1.6rem;
+
+$list-item-spacing-l--sm: 1.6rem;
+$list-item-spacing-l--md: 1.6rem;
+$list-item-spacing-l--lg: 1.6rem;
+$list-item-spacing-l--xl: 1.6rem;
 
 //-- Vertical Spacing
 
@@ -186,7 +202,7 @@ $content--width-xl: 1440px;
 
 //-- Border-radius
 
-$border-radius-25: 0.4rem; 
+$border-radius-25: 0.5rem; 
 $border-radius-50: 0.8rem; 
 $border-radius-75: 1.2rem; 
 $border-radius-100: 1.6rem;  
@@ -223,10 +239,11 @@ $link-default--underline: underline solid "hsl(#{$blue--base-hsl})" 0.1rem;
 $link-hover--underline:underline solid "hsl(#{$blue--dark-1-hsl})" 0.1rem;
 $link-focus--underline: underline solid "hsl(#{$blue--dark-1-hsl})" 0.1rem;
 $link-visited--underline: underline solid "hsl(#{$blue--light-2-hsl})" 0.1rem;
-$link-disabled--underline: underline solid "hsl(#{$gray--light-3-hsl})";
+$link-disabled--underline: underline solid "hsl(#{$gray--light-3-hsl})" 0.1rem;
 $link-default--underline-darkBg: underline solid var(--white-base) 0.1rem;
 $link-focus--underline-darkBg: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
-$link-disabled--underline--darkBg: underline solid rgba(255, 255, 255, 0.4);
+$link-disabled--underline--darkBg: underline solid rgba(255, 255, 255, 0.4) 0.1rem;
+
 
 //--Toggles
 $toggle-track--height: 3.4rem;
@@ -245,3 +262,4 @@ $toggleOn-active--shadow: 0 0 0 1.1rem "hsla(#{$blue--base-hsl}, 25%)";
 $toggleOff-active--shadow: 0 0 0 1.1rem "hsla(#{$gray--light-2-hsl}, 25%)";
 $toggleOn-hover--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 10%)";
 $toggleOn-active--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 25%)";
+

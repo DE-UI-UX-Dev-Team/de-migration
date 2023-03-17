@@ -27,6 +27,12 @@
         h2[class*=#{$bgClass}], .h-2[class*=#{$bgClass}] {
             color: var(#{$customProp});
         }
+    } 
+
+    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "icons" ) {
+        i[class*=#{$bgClass}] {
+            color: var(#{$customProp});
+        } 
     }
 
     @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "body-text" ) {

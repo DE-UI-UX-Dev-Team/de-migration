@@ -2,22 +2,29 @@
 
 ## Getting Started 
 
-1. Installation
+1. Load private environment variables by copying the bash runtime configuration file and adding the FONTAWESOME_NPM_AUTH_TOKEN token that you received from your administrator into this file
+
+   ```
+   $ cp .bashrc.example .bashrc && . .bashrc
+   ```
+2. Installation
    ```
     $ npm install
    ``` 
-2. Copy example-config.json 
+3. Copy example-config.json 
    ```
    $ cd deploy && cp example-config.json config.json 
    ```
-3. Start development & watch features  
+4. Start development & watch features  
    ```
     $ npm run build
-   ```
-4. Production build 
+   ``` 
+5. Production build 
    ```
     $ npm run dist
    ``` 
+
+Note: This project requires an implementtaion of (sh) and does not support command.exe at this time.
 
 ---
 ## Basic Usage 

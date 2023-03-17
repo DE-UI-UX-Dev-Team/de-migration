@@ -33,7 +33,7 @@ blockquote {
   margin-left: var(--text-indent--sm);
 }  
 
-hr, table { 
+table { 
     margin-bottom: var(--p-1--spacing--sm);
 }
 
@@ -70,7 +70,7 @@ hr, table {
       margin-left: var(--text-indent--md);
     } 
 
-    hr, table { 
+    table { 
         margin-bottom: var(--p-1--spacing--md);
     }
 
@@ -109,7 +109,7 @@ hr, table {
       margin-left: var(--text-indent--lg);
     } 
 
-    hr, table { 
+    table { 
         margin-bottom: var(--p-1--spacing--lg);
     }
 
@@ -148,7 +148,7 @@ hr, table {
       margin-left: var(--text-indent--xl);
     } 
 
-    hr, table { 
+    table { 
         margin-bottom: var(--p-1--spacing--xl);
     }
     
