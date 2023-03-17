@@ -1,0 +1,140 @@
+@use '../../abstracts/tokens' as *;
+
+// Map used to create toggle switch mixins
+
+
+
+$toggleSwitchOnLightBg: (
+    "default-theme" : ( 
+        "toggleOn":(
+          "checked":(
+            "outline": null,
+            "outline-offset": null,
+            "background-color": "hsl(#{$blue--base-hsl})"
+            ),      
+            "hover":(
+                "box-shadow": $toggleOn-hover--shadow,
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$blue--base-hsl})"
+            ),
+            "focus":(
+                "box-shadow": $toggleOn-hover--shadow,
+                "outline": $outline--focus,
+                "outline-offset": 0.9rem,
+                "background-color": "hsl(#{$blue--base-hsl})"
+            ),
+            "active":(
+                "box-shadow": $toggleOn-active--shadow,
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$blue--base-hsl})"
+            ),
+            "disabled":(
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$gray--light-3-hsl})"
+            )
+        ),
+        "toggleOff":(
+            "default":(
+            "outline": null,
+            "outline-offset": null,
+            "background-color": "hsl(#{$white-hsl})"
+            ),       
+            "hover":(
+                "box-shadow": $toggleOff-hover--shadow,
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$white-hsl})"
+            ),
+            "focus":(
+                "box-shadow": $toggleOff-hover--shadow,
+                "outline": $outline--focus,
+                "outline-offset": 0.9rem,
+                "background-color": "hsl(#{$white-hsl})"
+            ),
+            "active":(
+                "box-shadow": $toggleOff-active--shadow,
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$white-hsl})"
+            ),
+            "disabled":(
+                "outline": null,
+                "outline-offset": null,
+                "background-color":"hsl(#{$white-hsl})"
+            )
+        ),
+        
+    )
+);
+
+$toggleSwitchOnDarkBg: (
+    "default-theme" : ( 
+        "toggleOn":(
+          "checked":(
+            "outline": null,
+            "outline-offset": null,
+            "background-color": "hsl(#{$white-hsl})"
+            ),      
+            "hover":(
+                "box-shadow": $toggleOn-hover--shadow--darkbg,
+                "outline": null,
+                "outline-offset": null,
+                "background-color":  "hsl(#{$white-hsl})"
+            ),
+            "focus":(
+                "box-shadow": $toggleOn-hover--shadow--darkbg,
+                "outline": $outline--focus,
+                "outline-offset": 0.9rem,
+                "background-color":  "hsl(#{$white-hsl})"
+            ),
+            "active":(
+                "box-shadow": $toggleOn-active--shadow--darkbg,
+                "outline": null,
+                "outline-offset": null,
+                "background-color":  "hsl(#{$white-hsl})"
+            ),
+            "disabled":(
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$gray--light-3-hsl})"
+            )
+        ),
+        "toggleOff":(
+            "default":(
+            "outline": null,
+            "outline-offset": null,
+            "background-color": "hsl(#{$white-hsl})"
+            ),       
+            "hover":(
+                "box-shadow": $toggleOff-hover--shadow,
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$white-hsl})"
+            ),
+            "focus":(
+                "box-shadow": $toggleOff-hover--shadow,
+                "outline": $outline--focus,
+                "outline-offset": 0.9rem,
+                "background-color": "hsl(#{$white-hsl})"
+            ),
+            "active":(
+                "box-shadow": $toggleOff-active--shadow,
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$white-hsl})"
+            ),
+            "disabled":(
+                "outline": null,
+                "outline-offset": null,
+                "background-color":"hsl(#{$white-hsl})"
+            )
+        ),
+        
+    )
+);
+
+
+
