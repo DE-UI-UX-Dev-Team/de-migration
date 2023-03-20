@@ -247,8 +247,9 @@ $toggleOn-hover--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 10%)";
 $toggleOn-active--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 25%)";
 
 //--Content Switcher
-$content-switcher--track-shadow-right: 3px 0 8px 0 rgba(0, 0, 0, 0.2);
+$content-switcher--track-shadow-right: 3px 0 8px 0 "hsla(#{$blue--base-hsl}, 20%)";
 $content-switcher--track-shadow-left: -3px 0 8px 0 rgba(0, 0, 0, 0.2);
+$content-switcher--track-bg: hsl(200,24.3%,92.7%);
 
 
 
