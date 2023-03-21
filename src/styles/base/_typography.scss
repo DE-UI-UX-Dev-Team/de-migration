@@ -11,11 +11,7 @@ pre,
 menu, 
 dir,
 address, 
-blockquote, 
-input, 
-select, 
-textarea, 
-label { 
+blockquote { 
     font: var(--p-1--sm);
     letter-spacing: var(--p-1--ltr-spc--sm);  
     margin-bottom: var(--p-1--spacing--sm);
@@ -48,11 +44,7 @@ table {
     menu, 
     dir,
     address, 
-    blockquote, 
-    input, 
-    select, 
-    textarea, 
-    label { 
+    blockquote { 
         font: var(--p-1--sm);
         letter-spacing: var(--p-1--ltr-spc--sm);  
         margin-bottom: var(--p-1--spacing--sm);
@@ -87,11 +79,7 @@ table {
     menu, 
     dir,
     address, 
-    blockquote, 
-    input, 
-    select, 
-    textarea, 
-    label { 
+    blockquote { 
         font: var(--p-1--lg);
         letter-spacing: var(--p-1--ltr-spc--lg);  
         margin-bottom: var(--p-1--spacing--lg);
@@ -126,11 +114,7 @@ table {
     menu, 
     dir,
     address, 
-    blockquote, 
-    input, 
-    select, 
-    textarea, 
-    label { 
+    blockquote { 
         font: var(--p-1--xl);
         letter-spacing: var(--p-1--ltr-spc--xl);  
         margin-bottom: var(--p-1--spacing--xl);
@@ -182,11 +166,7 @@ pre,
 menu, 
 dir,
 address, 
-blockquote, 
-input, 
-select, 
-textarea, 
-label { 
+blockquote { 
   color: var(--body-text--color);
 }
   
