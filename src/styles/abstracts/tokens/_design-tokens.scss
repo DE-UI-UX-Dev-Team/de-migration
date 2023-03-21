@@ -195,9 +195,9 @@ $h-spacing--500: 8rem;
 
 //-- Content Width
 
-$content--width-sm: 100%;
-$content--width-md: 100%;
-$content--width-lg: 100%;
+$content--width-sm: 640px;
+$content--width-md: 800px;
+$content--width-lg: 960px;
 $content--width-xl: 1440px; 
 
 //-- Border-radius
@@ -262,4 +262,3 @@ $toggleOn-active--shadow: 0 0 0 1.1rem "hsla(#{$blue--base-hsl}, 25%)";
 $toggleOff-active--shadow: 0 0 0 1.1rem "hsla(#{$gray--light-2-hsl}, 25%)";
 $toggleOn-hover--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 10%)";
 $toggleOn-active--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 25%)";
-
