@@ -157,46 +157,6 @@ $typography: (
                 "lg" : #{$v-spacing--150}, 
                 "xl" : #{$v-spacing--150}  
             ),
-        ),  
-        "link" : ( 
-            "xs" : (
-                "sm" : #{$font-weight--medium} #{$font-size--mob-sm-3}/#{$line-height--mob-sm-3} #{$font-stack--sans-serif}, 
-                "md" : #{$font-weight--medium} #{$font-size--mob-sm-3}/#{$line-height--mob-sm-3} #{$font-stack--sans-serif}, 
-                "lg" : #{$font-weight--medium} #{$font-size--dsk-sm-3}/#{$line-height--dsk-sm-3} #{$font-stack--sans-serif}, 
-                "xl" : #{$font-weight--medium} #{$font-size--dsk-sm-3}/#{$line-height--dsk-sm-3} #{$font-stack--sans-serif}
-            ), 
-            "s" : (
-                "sm" : #{$font-weight--medium} #{$font-size--mob-sm-2}/#{$line-height--mob-sm-2} #{$font-stack--sans-serif}, 
-                "md" : #{$font-weight--medium} #{$font-size--mob-sm-2}/#{$line-height--mob-sm-2} #{$font-stack--sans-serif}, 
-                "lg" : #{$font-weight--medium} #{$font-size--dsk-sm-2}/#{$line-height--dsk-sm-2} #{$font-stack--sans-serif}, 
-                "xl" : #{$font-weight--medium} #{$font-size--dsk-sm-2}/#{$line-height--dsk-sm-2} #{$font-stack--sans-serif}
-            ), 
-            "m" : (
-                "sm" : #{$font-weight--medium} #{$font-size--mob-sm-1}/#{$line-height--mob-sm-1} #{$font-stack--sans-serif}, 
-                "md" : #{$font-weight--medium} #{$font-size--mob-sm-1}/#{$line-height--mob-sm-1} #{$font-stack--sans-serif}, 
-                "lg" : #{$font-weight--medium} #{$font-size--dsk-sm-1}/#{$line-height--dsk-sm-1} #{$font-stack--sans-serif}, 
-                "xl" : #{$font-weight--medium} #{$font-size--dsk-sm-1}/#{$line-height--dsk-sm-1} #{$font-stack--sans-serif}
-            ), 
-            "l" : (
-                "sm" : #{$font-weight--regular} #{$font-size--mob-lg-5}/#{$line-height--mob-lg-5} #{$font-stack--sans-serif}, 
-                "md" : #{$font-weight--regular} #{$font-size--mob-lg-5}/#{$line-height--mob-lg-5} #{$font-stack--sans-serif}, 
-                "lg" : #{$font-weight--regular} #{$font-size--dsk-lg-5}/#{$line-height--dsk-lg-5} #{$font-stack--sans-serif}, 
-                "xl" : #{$font-weight--regular} #{$font-size--dsk-lg-5}/#{$line-height--dsk-lg-5} #{$font-stack--sans-serif}
-            )
-        ), 
-        "btn" : (
-            "1" : (
-                "sm"  : #{$font-size--mob-sm-2}/#{$line-height--mob-sm-1} #{$font-stack--sans-serif}, 
-                "md"  : #{$font-size--mob-sm-2}/#{$line-height--mob-sm-1} #{$font-stack--sans-serif}, 
-                "lg"  : #{$font-size--dsk-sm-1}/#{$line-height--dsk-sm-1} #{$font-stack--sans-serif}, 
-                "xl" : #{$font-size--dsk-sm-1}/#{$line-height--dsk-sm-1} #{$font-stack--sans-serif}
-            ), 
-            "1--ltr-spc" : (
-                "sm" : #{$letter-spacing--dsk-sm-3},
-                "md" : #{$letter-spacing--dsk-sm-3},
-                "lg" : #{$letter-spacing--dsk-sm-3},
-                "xl" : #{$letter-spacing--dsk-sm-3},
-            ),
-        ), 
+        )
     )
 ); 
