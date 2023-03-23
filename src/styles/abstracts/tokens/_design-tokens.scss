@@ -185,6 +185,7 @@ $v-spacing--500: 8rem;
 //-- Horizontal Spacing
 
 $h-spacing--50: 0.75rem;
+$h-spacing--60: 1.0rem;
 $h-spacing--100: 1.6rem; // 100% of base font-size
 $h-spacing--150: 2.4rem; 
 $h-spacing--200: 3.2rem; 
@@ -263,3 +264,7 @@ $toggleOff-active--shadow: 0 0 0 1.1rem "hsla(#{$gray--light-2-hsl}, 25%)";
 $toggleOn-hover--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 10%)";
 $toggleOn-active--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 25%)";
 
+//--tables
+$table--border-spacing: 1.5rem;
+$table--border: 1px solid "hsl(#{$gray--light-3-hsl})";
+$table--td--border-right: 2px solid "hsl(#{$blue--base-hsl})";
