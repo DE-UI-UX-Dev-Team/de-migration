@@ -26,6 +26,14 @@
         .bdr-clr--#{$palette}-#{$color} {  
             border-color: var(--#{$palette}-#{$color});
         }
+
+        // table/table--transpose tdcolor only
+        table.bg--#{$palette}-#{$color} tr:nth-child(even),
+        table.bg--#{$palette}-#{$color} tr td:nth-child(even),
+        table.bg--#{$palette}-#{$color} .thead td,
+        table.table--transpose.bg--#{$palette}-#{$color} .thead td {
+            background-color: var(--#{$palette}-#{$color});
+        } 
     }
 }   
 

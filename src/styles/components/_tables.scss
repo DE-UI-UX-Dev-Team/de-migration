@@ -1,0 +1,32 @@
+@use "sass:map"; 
+
+@use '../abstracts' as *;
+
+//default table styles
+table {
+    display: table;
+    border-spacing: 15px;
+    border: 1px solid #c1c5c6;
+    width: fit-content;
+}
+
+//Evenly spaces table class on laptop and larger screens
+@media(min-width: 1235.98px) {
+    .table--layout-fixed {
+        table-layout: fixed;
+        width: 100%;
+    }
+}
+
+//responsive table on mobile and tablet screens
+@media(max-width: 1235.98px) {
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/*--- Components - Tables  ---*/
+@include getTable();

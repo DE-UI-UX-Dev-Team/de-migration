@@ -140,7 +140,6 @@
             }
         }
     }
-   
 
     /*--- Default Properties - Content Width ---*/
 
@@ -222,6 +221,29 @@
     --icon--on-success-background: var(--success-text);
     --icon--on-warning-background: var(--warning-text);
     --icon--on-error-background: var(--error-text);
+
+  /*--- Default Properties - Icons on Various Backgrounds ---*/ 
+ 
+  --table--on-light-background: var(--gray-body);
+  --table--on-dark-background: var(--white-base);
+  --table-on-primary-light-background: var(--primary-base);
+  --table--on-secondary-light-background: var(--secondary-base);  
+  --table--on-gray-background: var(--white-base);
+  --table--on-success-background: var(--success-text);
+  --table--on-warning-background: var(--warning-text);
+  --table--on-error-background: var(--error-text);
+  
+  --thead--on-light-background: var(--primary-base);
+  --thead--on-dark-background: var(--white-base);
+  --thead--on-primary-light-background: var(--primary-base);
+  --thead--on-secondary-light-background: var(--secondary-base);  
+  --thead--on-gray-background: var(--white-base);
+  --thead--on-success-background: var(--success-text);
+  --thead--on-warning-background: var(--warning-text);
+  --thead--on-error-background: var(--error-text);
+  
+  --thead--bg-on-light-background: var(--primary-light-3);
+
 
     /*--- Default Properties - Icons */
 
