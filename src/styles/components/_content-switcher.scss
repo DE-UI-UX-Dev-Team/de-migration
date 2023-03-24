@@ -2,75 +2,96 @@
 
 @use '../abstracts' as *;
 
-/*--- Components - Content switcher  ---*/
 
-.content-switcher {
-    position: relative;
-    font: var(--p-1--lg);
+.content-switcher--pill {
+    background-color: #{"hsl(#{$blue--light-3-hsl})"};
+    .content-switcher--slider{
+        background-color: #{"hsl(#{$white-hsl})"};
+    }
+    .content-switcher--label span{
+        color: #{"hsl(#{$gray--dark-1-hsl})"}; 
+    }
+} 
+
+.content-switcher{
+    --switch-gutter: 4px; //padding for the pill
+
+    &--input,
+    &--content{
+        display: none;
+        margin-top: $v-spacing--300;
+    }
+
+    &--slider{
+        display: block;
+        width: calc(50% - var(--switch-gutter));
+        height: calc(100% - var(--switch-gutter) * 2);
+        border-radius: $border-radius-25;
+        transition: $transition--ease-25;
+        position: absolute;
+        left: var(--switch-gutter);
+        z-index: 0;
+    }
+
+    &--pill{
+        padding: var(--switch-gutter);
+        margin: 0 auto;
+        border-radius: $border-radius-25;
+        position: relative;
+        display: table;
+        cursor: pointer;
+
+        .content-switcher{
+            
+            &--label{
+                display: table-cell;
+                vertical-align: middle;
+                z-index: 10;
+                width: 50%;
+                position: relative;
+                cursor: pointer;
+                padding: #{$v-spacing--50} #{$h-spacing--150};
+
+                .label-head{
+                    font-size: $font-size--mob-lg-3;
+                }
+
+                .label-subhead{
+                    font: #{$font-size--mob-lg-5}/#{$line-height--mob-sm-1} #{$font-stack--sans-serif};
+                }
+            }
+       }
+    }  
 }
 
-.content-switcher>.content-switcher-inner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 4px;
-    background: $content-switcher--track-bg;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    box-shadow: none;
+// slider transition to selected label
+[id*='content-switcher--input-right']:checked ~ .content-switcher--pill .content-switcher--slider{
+    transform: translateX(100%);
+    box-shadow: #{$content-switcher--track-shadow-left};
 }
 
-.content-switcher>.content-switcher-inner:before,
-.content-switcher>.content-switcher-inner:after {
-    transform: translateX(0px);
-    justify-content: center;
-    border-radius: $border-radius-25;
-    padding: 14px 40px;
-}
-
-.content-switcher>.content-switcher-inner:before {
-    content: attr(data-on);
-    background: #{"hsl(#{$white-hsl})"};
-    color: #{"hsl(#{$blue--base-hsl})"};
-    transition: all 0.1s ease;
-    width: 49.75%;
-    margin-right: 4px;
+// slider transition to selected label
+[id*='content-switcher--input-left']:checked ~ .content-switcher--pill .content-switcher--slider{
+    transform: translateX(0%);
     box-shadow: #{$content-switcher--track-shadow-right};
 }
 
-.content-switcher>.content-switcher-inner:after {
-    content: attr(data-off);
-    background: transparent;
-    color:  #{"hsl(#{$gray--dark-1-hsl})"};
-    margin-right: 0;
-    width: 50%;
+// selected label related content display
+[id*='content-switcher--input-right']:checked ~ #content-switcher--content-right,
+[id*='content-switcher--input-left']:checked ~ #content-switcher--content-left{
+    display: block;
 }
 
-.content-switcher input[type="checkbox"]:focus+label.content-switcher-inner:after {
+// selected label color
+[id*='content-switcher--input-right']:checked ~ .content-switcher--pill #content-switcher--label-right span,
+[id*='content-switcher--input-left']:checked ~ .content-switcher--pill #content-switcher--label-left span{
+    color: #{"hsl(#{$blue--base-hsl})"};
+ }
+
+ //focus states of unchecked label
+#content-switcher--input-right:not(:checked):focus ~ .content-switcher--pill #content-switcher--label-right,
+#content-switcher--input-left:not(:checked):focus ~ .content-switcher--pill #content-switcher--label-left{
     outline: #{$outline--focus};
     outline-offset: -4px;
     border-radius: $border-radius-25;
-}
-
-/*--- Hiding the checkbox ---*/
-
-.content-switcher input[type="checkbox"] {
-    opacity: 0;
-    position: absolute;
-}
-
-/*--- Slider animation when checked ---*/
-
-.content-switcher input[type="checkbox"]:checked+label.content-switcher-inner:after {
-    content: attr(data-on);
-    box-shadow: none;
-    transform: translateX(-100%);
-}
-
-.content-switcher input[type="checkbox"]:checked+label.content-switcher-inner:before {
-    content: attr(data-off);
-    transform: translateX(100.75%);
-    box-shadow:  #{$content-switcher--track-shadow-left};
-    margin-right: 0;
 }
