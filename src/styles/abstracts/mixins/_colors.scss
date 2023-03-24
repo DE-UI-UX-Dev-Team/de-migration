@@ -71,11 +71,7 @@
         [class*=#{$bgClass}] menu,
         [class*=#{$bgClass}] dir,
         [class*=#{$bgClass}] address, 
-        [class*=#{$bgClass}] blockquote, 
-        [class*=#{$bgClass}] input, 
-        [class*=#{$bgClass}] select, 
-        [class*=#{$bgClass}] textarea, 
-        [class*=#{$bgClass}] label { 
+        [class*=#{$bgClass}] blockquote { 
             color: var(#{$customProp});
         }
 
@@ -95,13 +91,8 @@
         pre[class*=#{$bgClass}], 
         menu[class*=#{$bgClass}],
         dir[class*=#{$bgClass}],
-        address[class*=#{$bgClass}], 
-        blockquote[class*=#{$bgClass}], 
-        input[class*=#{$bgClass}], 
-        select[class*=#{$bgClass}], 
-        textarea[class*=#{$bgClass}], 
-        label[class*=#{$bgClass}]
-         { 
+        address[class*=#{$bgClass}],
+        blockquote[class*=#{$bgClass}] { 
             color: var(#{$customProp});
         }
     }

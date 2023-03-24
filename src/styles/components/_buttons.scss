@@ -5,11 +5,10 @@
 /*--- Components - Buttons ---*/
 
 button,
-.btn,
-.btn-secondary,
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
+[class*=btn],
+[type="button"],
+[type="submit"],
+[type="reset"] {
     min-width: var(--btn--min-width);
     font: var(--btn--font);
     border-radius: var(--btn--corner-radius);
@@ -21,30 +20,63 @@ input[type="reset"] {
 /*--- Components - Buttons, Selected ---*/
 
 button.selected,
-.btn.selected  ,
-.btn-secondary.selected,
-input[type="button"].selected,
-input[type="submit"].selected,
-input[type="reset"].selected {
+[class*=btn].selected,
+[type="button"].selected,
+[type="submit"].selected,
+[type="reset"].selected {
     background-color: var(--primary-base);
     color: var(--white-base);
     border: none;
 }
 
 [class*="bg--primary-"] button.selected,
-[class*="bg--primary-"] .btn.selected,
-[class*="bg--primary-"] .btn-secondary.selected,
+[class*="bg--primary-"] [class*=btn].selected,
 [class*="bg--primary-"] input[type="button"].selected,
 [class*="bg--primary-"] input[type="submit"].selected,
 [class*="bg--primary-"] input[type="reset"].selected,
 [class*="bg--secondary-"] button.selected,
-[class*="bg--secondary-"] .btn.selected,
-[class*="bg--secondary-"] .btn-secondary.selected,
+[class*="bg--secondary-"] [class*=btn].selected,
 [class*="bg--secondary-"] input[type="button"].selected,
 [class*="bg--secondary-"] input[type="submit"].selected,
 [class*="bg--secondary-"] input[type="reset"].selected{
     background-color: var(--white-base);
     color: var(--primary-base);
+}
+
+label[type="button"],
+label[type="submit"],
+label[type="reset"] {
+    display: inline-block;
+    cursor: pointer;
+}
+
+label[type="button"] > input,
+label[type="submit"] > input,
+label[type="reset"] > input, 
+label[type="button"] > input:hover,
+label[type="submit"] > input:hover,
+label[type="reset"] > input:hover, 
+label[type="button"] > input:focus,
+label[type="submit"] > input:focus,
+label[type="reset"] > input:focus,
+label[type="button"] > input:active,
+label[type="submit"] > input:active,
+label[type="reset"] > input:active {
+    background: transparent !important; 
+    border: none; 
+    padding: 0;
+    display: inline;
+    min-width: auto;
+} 
+
+label[type]:focus {
+    outline: 2px;
+}
+
+label[type="button"] > input + i,
+label[type="submit"] > input + i,
+label[type="reset"] > input+ i {
+    display: inline;
 }
 
 /*--- Components - Buttons on Light Backgrounds ---*/

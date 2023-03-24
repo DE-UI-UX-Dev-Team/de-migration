@@ -10,7 +10,8 @@ $buttonsOnLightBg: (
                 "border": $btn--border,
                 "outline": null,
                 "outline-offset": null,
-                "opacity": null
+                "opacity": null,
+                "padding" : #{$btn--border-button-padding}
             ),
             "hover":(
                 "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",

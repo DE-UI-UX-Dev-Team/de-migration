@@ -233,7 +233,8 @@ $btn--border: 0.2rem solid "hsl(#{$blue--base-hsl})";
 $btn--border-disabled: 0.2rem solid "hsl(#{$gray--light-3-hsl})";
 $outline--focus: 0.3rem solid "hsl(#{$blue--light-2-hsl})";
 $btn-focus--opacity: 15%;
-$btn-active--opacity: 40%; 
+$btn-active--opacity: 40%;  
+$btn--border-button-padding: 1.4rem 2.4rem; // Buttons with borders are the same default height as non-border buttons
 
 //-- Links
 $link-default--underline: underline solid "hsl(#{$blue--base-hsl})" 0.1rem;
