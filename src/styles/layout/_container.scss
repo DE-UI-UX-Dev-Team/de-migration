@@ -7,6 +7,7 @@ $row-multiplier: -1;
 $col-multiplier: 2; 
 
 .container {
+    max-width: var(--max-content-width--xl);
     padding-left: calc(#{$multiplier} * var(--container--gutter--sm)); 
     padding-right: calc(#{$multiplier} * var(--container--gutter--sm));
     margin: calc(var(--gutter-sm) * ( #{$row-multiplier} * 2 )) auto;
