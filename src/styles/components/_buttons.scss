@@ -43,6 +43,9 @@ button.selected,
     color: var(--primary-base);
 }
 
+[type="button"],
+[type="submit"], 
+[type="reset"], 
 label[type="button"],
 label[type="submit"],
 label[type="reset"] {
