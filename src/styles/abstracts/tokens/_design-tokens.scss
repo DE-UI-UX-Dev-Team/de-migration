@@ -174,6 +174,8 @@ $list-item-spacing-l--xl: 1.6rem;
 
 //-- Vertical Spacing
 
+$v-spacing--25: 0.4rem;
+$v-spacing--50: 0.75rem;
 $v-spacing--100: 1.6rem; // 100% of base font-size
 $v-spacing--150: 2.4rem;
 $v-spacing--200: 3.2rem; 
@@ -227,6 +229,10 @@ $elevation-4: 0 16px 24px 0 rgba(0, 0, 0, 0.14),
               0 6px 30px 0 rgba(0, 0, 0, 0.12),
               0 8px 10px 0 rgba(0, 0, 0, 0.2);
 
+//-- Transitions
+
+$transition--ease-25: all 0.4s ease;
+
 //-- Buttons 
 $outline--focus-offset: 0.2rem;
 $btn--border: 0.2rem solid "hsl(#{$blue--base-hsl})";
@@ -246,7 +252,6 @@ $link-default--underline-darkBg: underline solid var(--white-base) 0.1rem;
 $link-focus--underline-darkBg: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
 $link-disabled--underline--darkBg: underline solid rgba(255, 255, 255, 0.4) 0.1rem;
 
-
 //--Toggles
 $toggle-track--height: 3.4rem;
 $toggle-track--width: 1.5rem;
@@ -264,6 +269,10 @@ $toggleOn-active--shadow: 0 0 0 1.1rem "hsla(#{$blue--base-hsl}, 25%)";
 $toggleOff-active--shadow: 0 0 0 1.1rem "hsla(#{$gray--light-2-hsl}, 25%)";
 $toggleOn-hover--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 10%)";
 $toggleOn-active--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 25%)";
+
+//--Content Switcher
+$content-switcher--track-shadow-right: 3px 0 8px 0 "hsla(#{$blue--base-hsl}, 20%)";
+$content-switcher--track-shadow-left: -3px 0 8px 0 rgba(0, 0, 0, 0.2);
 
 //--tables
 $table--border-spacing: 1.5rem;
