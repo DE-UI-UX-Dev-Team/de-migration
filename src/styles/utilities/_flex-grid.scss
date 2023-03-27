@@ -2,15 +2,26 @@
  
 /*--- Utilities - Flex Grid, Rows ---*/ 
 
-$multiplier: -1;
+$row-multiplier: -1; 
+$col-multiplier: 2;
 
 .row { 
-	margin-left: calc(var(--gutter-sm) * #{$multiplier});
-	margin-right: calc(var(--gutter-sm) * #{$multiplier}); 
+	margin-left: calc(var(--gutter-sm) * #{$row-multiplier});
+	margin-right: calc(var(--gutter-sm) * #{$row-multiplier});  
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 } 
+
+.row[class*=bg] {
+	margin-left: 0;
+	margin-right: 0; 
+}
+
+.row[class*=bg] .col {
+	padding-left: calc(var(--gutter-sm) * #{$col-multiplier});
+	padding-right: calc(var(--gutter-sm) * #{$col-multiplier}); 
+}
  
 .row.even-3--sm > [class*=col] { flex: 0 1 calc((100%/3) * 1); }
 .row.even-4--sm > [class*=col] { flex: 0 1 calc((100%/4) * 1); }
@@ -18,8 +29,13 @@ $multiplier: -1;
 @include mediaQuery("tablet-up") {
  
 	.row {
-		margin-left: calc(var(--gutter-md) * #{$multiplier});
-		margin-right: calc(var(--gutter-md) * #{$multiplier});
+		margin-left: calc(var(--gutter-md) * #{$row-multiplier});
+		margin-right: calc(var(--gutter-md) * #{$row-multiplier});
+	} 
+
+	.row[class*=bg] .col {
+		padding-left: calc(var(--gutter-md) * #{$col-multiplier});
+		padding-right: calc(var(--gutter-md) * #{$col-multiplier});
 	}
 
 	.row.even-5--md > [class*=col] { flex: 0 1 calc((100%/5) * 1); } 
@@ -30,8 +46,13 @@ $multiplier: -1;
 @include mediaQuery("laptop-up") {
 
 	.row {
-		margin-left: calc(var(--gutter-lg) * #{$multiplier});
-		margin-right: calc(var(--gutter-lg) * #{$multiplier});
+		margin-left: calc(var(--gutter-lg) * #{$row-multiplier});
+		margin-right: calc(var(--gutter-lg) * #{$row-multiplier});
+	}
+
+	.row[class*=bg] .col {
+		padding-left: calc(var(--gutter-lg) * #{$col-multiplier});
+		padding-right: calc(var(--gutter-lg) * #{$col-multiplier});
 	}
 
 	.row.even-12--lg > [class*=col] { flex: 0 1 calc((100%/12) * 1); }
@@ -41,13 +62,18 @@ $multiplier: -1;
 @include mediaQuery("desktop-up") {
 
 	.row {
-		margin-left: calc(var(--gutter-xl) * #{$multiplier});
-		margin-right: calc(var(--gutter-xl) * #{$multiplier});
+		margin-left: calc(var(--gutter-xl) * #{$row-multiplier});
+		margin-right: calc(var(--gutter-xl) * #{$row-multiplier});
+	}
+
+	.row[class*=bg] .col {
+		padding-left: calc(var(--gutter-xl) * #{$col-multiplier});
+		padding-right: calc(var(--gutter-xl) * #{$col-multiplier});
 	}
     
 	.row.even-12--xl > [class*=col] { flex: 0 1 calc((100%/12) * 1); }
 
-}
+} 
 
 /*--- Utilities - Flex Grid, Gutters ---*/
 
@@ -61,7 +87,10 @@ $multiplier: -1;
 [class*=col],
 [class*=col--] {
 	flex: 0 1 100%;
-}
+} 
+
+.row > .row [class*=col]:first-child { margin-top: 0; }
+.row > .row [class*=col]:last-child { margin-bottom: 0; }
 
 /*--- Utilities - Flex Grid, Vertical Spacing ---*/
 
@@ -104,4 +133,7 @@ $multiplier: -1;
 	flex-grow: 1; 
 } 
 
-.row.col--no-wrap { flex-wrap: nowrap; }
+.row.col--no-wrap { flex-wrap: nowrap; } 
+
+.display-flex { display: flex; } 
+.display-block { display: block; }

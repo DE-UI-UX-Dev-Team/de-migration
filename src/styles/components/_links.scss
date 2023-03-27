@@ -3,6 +3,10 @@
 @use '../abstracts' as *;
 
 /*--- Components - Links on Light Background ---*/ 
+ 
+a {
+    cursor: pointer;
+}
 
 @include getLinksOnColoredBackground( $linksOnLightBg, "lightBackgrounds" );
 

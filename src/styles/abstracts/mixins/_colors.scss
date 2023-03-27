@@ -27,6 +27,30 @@
         h2[class*=#{$bgClass}], .h-2[class*=#{$bgClass}] {
             color: var(#{$customProp});
         }
+    } 
+
+    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "icons" ) {
+        i[class*=#{$bgClass}] {
+            color: var(#{$customProp});
+        } 
+    }
+
+     @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "tables" ) {
+        table[class*=#{$bgClass}] {
+            color: var(#{$customProp});
+        } 
+        table[class*=#{$bgClass}] .thead {
+            border-color: var(#{$customProp});
+        } 
+    }
+    
+    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "thead" ) {
+        table[class*=#{$bgClass}] .thead {
+            color: var(#{$customProp});
+        } 
+        table[class*=#{$bgClass}].table--transpose .thead {
+            color: var(#{$customProp});
+        } 
     }
 
     @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "body-text" ) {
@@ -47,11 +71,7 @@
         [class*=#{$bgClass}] menu,
         [class*=#{$bgClass}] dir,
         [class*=#{$bgClass}] address, 
-        [class*=#{$bgClass}] blockquote, 
-        [class*=#{$bgClass}] input, 
-        [class*=#{$bgClass}] select, 
-        [class*=#{$bgClass}] textarea, 
-        [class*=#{$bgClass}] label { 
+        [class*=#{$bgClass}] blockquote { 
             color: var(#{$customProp});
         }
 
@@ -71,14 +91,9 @@
         pre[class*=#{$bgClass}], 
         menu[class*=#{$bgClass}],
         dir[class*=#{$bgClass}],
-        address[class*=#{$bgClass}], 
-        blockquote[class*=#{$bgClass}], 
-        input[class*=#{$bgClass}], 
-        select[class*=#{$bgClass}], 
-        textarea[class*=#{$bgClass}], 
-        label[class*=#{$bgClass}] { 
+        address[class*=#{$bgClass}],
+        blockquote[class*=#{$bgClass}] { 
             color: var(#{$customProp});
         }
     }
-
 }
