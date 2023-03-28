@@ -4,13 +4,7 @@
 
 :root {
       
-    /*--- Default Properties - Color Schemes ---*/
-
-    @each $palette, $colors in map.get( $colors, #{$active-theme} ) {
-        @each $color, $value in $colors {
-            --#{$palette}-#{$color}: hsl(#{$value});
-        }
-    }  
+    @include getColorCustomProperties();
 
     /*--- Default Properties - Dropshadows ---*/
 
