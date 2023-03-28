@@ -17,7 +17,7 @@
   height: 0;
 }
 
-/*--- Component- Toggle switch Track styling ---*/
+/*--- Components- Toggle switch Track styling ---*/
 
 .toggle-switch .slider {
   position: absolute;
@@ -32,13 +32,13 @@
   border-radius: $toggle-track--radius;
 }
 
-/*--- Component- Toggle switch DIsabled Track styling ---*/ 
+/*--- Components- Toggle switch DIsabled Track styling ---*/ 
 
 .toggle-switch input:disabled + .slider{
   background-color: rgba(193,197,198,0.45);
 }
 
-/*--- Component- Toggle switch Thumb styling ---*/
+/*--- Components- Toggle switch Thumb styling ---*/
 
 .toggle-switch .slider:before {
   position: absolute;
@@ -53,7 +53,7 @@
   box-shadow: $elevation-1;
 }
 
-/*--- Component- Toggle switch Checked thumb animation ---*/
+/*--- Components- Toggle switch Checked thumb animation ---*/
 
 .toggle-switch input:checked + .slider:before {
   -webkit-transform: $toggle-check--transform;

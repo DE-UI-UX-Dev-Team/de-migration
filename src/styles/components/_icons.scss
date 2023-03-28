@@ -1,4 +1,4 @@
-/*--- Component - Icons ---*/
+/*--- Components - Icons ---*/
 
 :root { 
     --fa-pull-margin: 3rem;  
@@ -28,7 +28,7 @@ i.icon-lg {
     direction: rtl;
 }
  
-/*--- Component - Icons w/ Backgrounds ---*/
+/*--- Components - Icons w/ Backgrounds ---*/
 
 i[class*=icon][class*=bg] {
     border-radius: 100%; 
@@ -50,7 +50,7 @@ i.icon-lg[class*=bg] {
     width: var(--icon--size-with-background--lg);
 }
   
-/*--- Component - Icon Placement ---*/
+/*--- Components - Icon Placement ---*/
 
 .icon-right i, 
 i.fa-pull-right {
@@ -58,7 +58,7 @@ i.fa-pull-right {
     margin-left: var(--icon--margin--sm);
 }    
 
-/*--- Component - Links with Icons ---*/  
+/*--- Components - Links with Icons ---*/  
 
 a i {
     text-decoration: none;
@@ -76,7 +76,7 @@ a.icon-left i {
     margin-left: 0;
 }  
  
-/*--- Component - Font Awesome List Styles ---*/
+/*--- Components - Font Awesome List Styles ---*/
 
 .fa-ul {
     margin-top: 20px; 
