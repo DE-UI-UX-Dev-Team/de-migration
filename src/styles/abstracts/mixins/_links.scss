@@ -3,7 +3,7 @@
 @use '../../abstracts/base' as *;
 @use '../../abstracts/tokens' as *;
 
-@mixin getLinksOnColoredBackground ( $LinksOnBackgrounds, $backgroundType ) {
+@mixin getLinksOnColorBg ( $LinksOnBackgrounds, $backgroundType ) {
 
     @if($backgroundType== "lightBackgrounds"){
         @each $link, $states in map.get($linksOnLightBg, #{$active-theme}) { 

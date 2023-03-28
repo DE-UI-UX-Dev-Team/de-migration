@@ -3,7 +3,7 @@
 @use '../../abstracts/base' as *;
 @use '../../abstracts/tokens' as *;
 
-@mixin getToggleSwitch($toggleSwitchOnBackgrounds, $backgroundType) {
+@mixin getToggleOnColorBg($toggleSwitchOnBackgrounds, $backgroundType) {
     @if($backgroundType== "lightBackgrounds"){
         @each $toggle, $states in map.get($toggleSwitchOnLightBg, #{$active-theme}) { 
             @each $state, $properties in $states {

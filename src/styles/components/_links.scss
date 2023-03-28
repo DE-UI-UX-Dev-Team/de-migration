@@ -8,8 +8,8 @@ a {
     cursor: pointer;
 }
 
-@include getLinksOnColoredBackground( $linksOnLightBg, "lightBackgrounds" );
+@include getLinksOnColorBg( $linksOnLightBg, "lightBackgrounds" );
 
 /*--- Components - Links on Dark Background ---*/ 
 
-@include getLinksOnColoredBackground( $linksOnDarkBg, "darkBackgrounds" );
+@include getLinksOnColorBg( $linksOnDarkBg, "darkBackgrounds" );

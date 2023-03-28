@@ -81,8 +81,8 @@ label[type="reset"] > input+ i {
 
 /*--- Components - Buttons on Light Backgrounds ---*/
 
-@include getButtonsOnColoredBackground( $buttonsOnLightBg, "lightBackgrounds" ); 
+@include getButtonsOnColorBg( $buttonsOnLightBg, "lightBackgrounds" ); 
 
 /*--- Components - Buttons on Dark Backgrounds ---*/ 
 
-@include getButtonsOnColoredBackground( $buttonsOnDarkBg, "darkBackgrounds" );
+@include getButtonsOnColorBg( $buttonsOnDarkBg, "darkBackgrounds" );

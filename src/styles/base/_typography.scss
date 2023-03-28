@@ -198,4 +198,4 @@ h2, .h-2 {
     --body-text--on-light-background: var(--gray-body);
 }
 
-@include getTextOnBgColor();
+@include getTypeOnColorBg();

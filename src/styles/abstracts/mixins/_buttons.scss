@@ -3,7 +3,7 @@
 @use '../../abstracts/base' as *;
 @use '../../abstracts/tokens' as *;
 
-@mixin getButtonsOnColoredBackground ( $buttonsOnBackgrounds, $backgroundType ) {
+@mixin getButtonsOnColorBg ( $buttonsOnBackgrounds, $backgroundType ) {
 
     @if($backgroundType== "lightBackgrounds"){
         @each $button, $states in map.get($buttonsOnLightBg, #{$active-theme}) { 

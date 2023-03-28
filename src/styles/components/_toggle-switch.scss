@@ -63,9 +63,9 @@
 
 /*--- Components - Toggle-switch on Light backgrounds ---*/
 
-@include getToggleSwitch($toggleSwitchOnLightBg, "lightBackgrounds"); 
+@include getToggleOnColorBg($toggleSwitchOnLightBg, "lightBackgrounds"); 
 
 
 /*--- Components - Toggle-switch on Dark backgrounds ---*/
 
-@include getToggleSwitch($toggleSwitchOnDarkBg, "darkBackgrounds"); 
+@include getToggleOnColorBg($toggleSwitchOnDarkBg, "darkBackgrounds"); 
