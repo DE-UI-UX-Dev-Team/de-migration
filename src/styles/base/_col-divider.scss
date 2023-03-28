@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.grid-divider [class*='col-']{
+    position: relative;
+  }
+  
+  .grid-divider [class*='col-']:not(:last-child):after {
+    border-bottom: 1px solid var(--gray-disabled);
+    content: "";
+    display:block;  
+    top:0;
+    bottom: 0;
+    right: 0;
+    min-height: calc(var(--col-top-mg--sm) * 2);
+ }
+
+@media(min-width:576px){  
+  .grid-divider [class*='col-']:not(:last-child):after {    
+    background: var(--gray-disabled);
+    width: 1px;
+    content: "";
+    display:block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+  }
+}
+
+  
