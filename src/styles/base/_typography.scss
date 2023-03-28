@@ -183,7 +183,19 @@ h2, .h-2 {
 [class*=bg--secondary]:not([class*=light-]) hr {
     background-color: var(--body-text--on-dark-background);
 }
- 
-/*--- Base - Text on Colored Backgrounds ---*/
+
+/*--- Color Scheme - Text on Contrasting Backgrounds ---*/
+
+:root {
+    --heading-color: var(--primary-base);
+    --body-text--color: var(--gray-body);
+    --body-text--light-color: var(--gray-medium-1);
+
+    --heading--on-dark-background: var(--white-base);
+    --body-text--on-dark-background: var(--white-base);
+
+    --heading--on-light-background: var(--primary-base);
+    --body-text--on-light-background: var(--gray-body);
+}
 
 @include getTextOnBgColor();

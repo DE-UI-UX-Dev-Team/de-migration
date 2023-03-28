@@ -1,4 +1,4 @@
-/*--- Base - Icons ---*/
+/*--- Component - Icons ---*/
 
 :root { 
     --fa-pull-margin: 3rem;  
@@ -28,7 +28,7 @@ i.icon-lg {
     direction: rtl;
 }
  
-/*--- Base - Icons w/ Backgrounds ---*/
+/*--- Component - Icons w/ Backgrounds ---*/
 
 i[class*=icon][class*=bg] {
     border-radius: 100%; 
@@ -50,7 +50,7 @@ i.icon-lg[class*=bg] {
     width: var(--icon--size-with-background--lg);
 }
   
-/*--- Base - Icon Placement ---*/
+/*--- Component - Icon Placement ---*/
 
 .icon-right i, 
 i.fa-pull-right {
@@ -58,7 +58,7 @@ i.fa-pull-right {
     margin-left: var(--icon--margin--sm);
 }    
 
-/*--- Base - Links with Icons ---*/  
+/*--- Component - Links with Icons ---*/  
 
 a i {
     text-decoration: none;
@@ -76,7 +76,7 @@ a.icon-left i {
     margin-left: 0;
 }  
  
-/*--- Base - Font Awesome List Styles ---*/
+/*--- Component - Font Awesome List Styles ---*/
 
 .fa-ul {
     margin-top: 20px; 
@@ -88,4 +88,17 @@ a.icon-left i {
 
 .fa-ul li:last-child {
     margin-bottom: 10px;
+} 
+
+/*--- Color Scheme - Icons on Contrasting Backgrounds ---*/ 
+
+:root {
+    --icon--on-light-background: var(--gray-body);
+    --icon--on-dark-background: var(--white-base);
+    --icon--on-primary-light-background: var(--primary-base);
+    --icon--on-secondary-light-background: var(--secondary-base);  
+    --icon--on-gray-background: var(--white-base);
+    --icon--on-success-background: var(--success-text);
+    --icon--on-warning-background: var(--warning-text);
+    --icon--on-error-background: var(--error-text);
 }
