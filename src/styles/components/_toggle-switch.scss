@@ -60,6 +60,34 @@
   -ms-transform: $toggle-check--transform;
   transform: $toggle-check--transform;
 }
+ 
+/*--- Color Scheme - Toggles on Contrasting Backgrounds ---*/  
+
+:root {
+
+  @each $palette, $toggleSwitchOnLightBg in map.get( $toggleSwitchOnLightBg, #{$active-theme} ) {
+    @each $state, $properties in $toggleSwitchOnLightBg { 
+        @each $property, $value in $properties { 
+            @if $value != null {
+                --#{$palette}-toggle-on-lgt-bg--#{$state}--#{$property}: #{$value};
+            }
+            
+        }
+    }
+  }
+  
+  @each $palette, $toggleSwitchOnDarkBg in map.get( $toggleSwitchOnDarkBg, #{$active-theme} ) {
+    @each $state, $properties in $toggleSwitchOnDarkBg { 
+        @each $property, $value in $properties { 
+            @if $value != null {
+                --#{$palette}-toggle-on-drk-bg--#{$state}--#{$property}: #{$value};
+            }
+            
+        }
+    }
+  }
+
+}
 
 /*--- Components - Toggle-switch on Light backgrounds ---*/
 

@@ -2,14 +2,42 @@
 
 @use '../abstracts' as *;
 
-/*--- Components - Links on Light Background ---*/ 
- 
 a {
     cursor: pointer;
 }
+ 
+/*--- Color Scheme - Links on Contrasting Backgrounds ---*/ 
+
+:root {
+    /*--- Default Properties - Anchor/Links on Light Backgrounds ---*/
+
+    @each $palette, $linksOnLightBg in map.get( $linksOnLightBg, #{$active-theme} ) {
+        @each $state, $properties in $linksOnLightBg { 
+            @each $property, $value in $properties { 
+                @if $value != null {
+                    --#{$palette}-link-on-lgt-bg--#{$state}--#{$property}: #{$value};
+                }
+            }
+        }
+    }  
+
+        /*--- Default Properties - Anchor Links, on Dark Backgrounds ---*/
+
+        @each $palette, $linksOnDarkBg in map.get( $linksOnDarkBg, #{$active-theme} ) {
+        @each $state, $properties in $linksOnDarkBg { 
+            @each $property, $value in $properties { 
+                @if $value != null {
+                    --#{$palette}-link-on-drk-bg--#{$state}--#{$property}: #{$value};
+                }
+            }
+        }
+    }  
+}
+
+/*--- Components - Links on Light Background ---*/ 
 
 @include getLinksOnColorBg( $linksOnLightBg, "lightBackgrounds" );
 
 /*--- Components - Links on Dark Background ---*/ 
 
-@include getLinksOnColorBg( $linksOnDarkBg, "darkBackgrounds" );
+@include getLinksOnColorBg( $linksOnDarkBg, "darkBackgrounds" ); 
