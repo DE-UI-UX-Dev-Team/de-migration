@@ -1,0 +1,54 @@
+@use "sass:map"; 
+
+@use '../abstracts' as *;
+
+footer, .footer{
+
+    .link-list--head{
+        font: var(--h-5--sm);
+        letter-spacing: var(--h-5--ltr-spc--sm);
+        font-weight: var(--font-weight--medium);
+    }
+
+    .fs--link-list
+
+        li{
+            margin-bottom: 0;
+
+            a{
+                font: var(--p-1--sm);
+                letter-spacing: var(--p-1--ltr-spc--sm);
+                font-weight: var(--font-weight--regular)     
+            }
+        }
+    .store-button{
+        text-decoration: none;
+    }
+
+    .store-button img {
+        display: block;
+        height: 46.5px;
+    }
+
+   
+    @media(min-width: 600px){
+        .store-button img{ 
+            display: inline-block;
+        }
+    }
+
+    .social li{
+        display: inline-block;
+        margin-right: 0.5rem;
+       
+        .social-icon{
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            padding: 0.3rem 0.7rem;
+        
+            i{
+                margin-left: 0;
+            }
+        }
+    }
+}
