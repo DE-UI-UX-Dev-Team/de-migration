@@ -65,37 +65,13 @@ $filter :
 
 @mixin getTypeOnColorBg() {
  
-    @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "body" ) {
-        body[class*=#{$bgClass}] {
-            color: var(#{$customProp});
-        }
-    }
+    @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "body-text" ) {
 
-    @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "section" ) {
+        body[class*=#{$bgClass}],
         section[class*=#{$bgClass}] {
             color: var(#{$customProp});
-        } 
-    }
-
-    @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "headings" ) {
-        [class*=#{$bgClass}] h1, [class*=#{$bgClass}] .h-1,  
-        [class*=#{$bgClass}] h2, [class*=#{$bgClass}] .h-2 {
-            color: var(#{$customProp});
-        } 
-
-        h1[class*=#{$bgClass}], .h-1[class*=#{$bgClass}],
-        h2[class*=#{$bgClass}], .h-2[class*=#{$bgClass}] {
-            color: var(#{$customProp});
         }
-    } 
 
-    @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "icons" ) {
-        i[class*=#{$bgClass}] {
-            color: var(#{$customProp});
-        } 
-    }
-
-    @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "body-text" ) {
         [class*=#{$bgClass}] h3, [class*=#{$bgClass}] .h-3,
         [class*=#{$bgClass}] h4, [class*=#{$bgClass}] .h-4,
         [class*=#{$bgClass}] h5, [class*=#{$bgClass}] .h-5,
@@ -137,5 +113,25 @@ $filter :
         blockquote[class*=#{$bgClass}] { 
             color: var(#{$customProp});
         }
+
     }
+
+    @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "headings" ) {
+        [class*=#{$bgClass}] h1, [class*=#{$bgClass}] .h-1,  
+        [class*=#{$bgClass}] h2, [class*=#{$bgClass}] .h-2 {
+            color: var(#{$customProp});
+        } 
+
+        h1[class*=#{$bgClass}], .h-1[class*=#{$bgClass}],
+        h2[class*=#{$bgClass}], .h-2[class*=#{$bgClass}] {
+            color: var(#{$customProp});
+        }
+    } 
+
+    @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "icons" ) {
+        i[class*=#{$bgClass}] {
+            color: var(#{$customProp});
+        } 
+    }
+
 }

@@ -7,20 +7,28 @@ export function initBackgroundToggle() {
     }; 
 
     let bgProps = [ 
-        'none', 
-        'bg--primary-light-3', 
-        'bg--primary-light-4', 
-        'bg--secondary-light-3', 
-        'bg--primary-base', 
-        'bg--primary-light-1', 
-        'bg--primary-light-2', 
-        'bg--primary-dark-1', 
-        'bg--primary-dark-2',
-        'bg--secondary-base', 
-        'bg--secondary-light-1',
-        'bg--secondary-light-2',
-        'bg--secondary-dark-1', 
-        'bg--secondary-dark-2' 
+        "none", 
+        "bg--primary-base",       
+        "bg--primary-light-1",    
+        "bg--primary-light-2",    
+        "bg--primary-light-3",    
+        "bg--primary-dark-1",     
+        "bg--primary-dark-2",     
+        "bg--secondary-base",     
+        "bg--secondary-light-1",  
+        "bg--secondary-light-2",  
+        "bg--secondary-light-3",  
+        "bg--secondary-dark-1",   
+        "bg--secondary-dark-2",   
+        "bg--tertiary-base",      
+        "bg--tertiary-light-1",   
+        "bg--tertiary-light-2",     
+        "bg--tertiary-dark-1",    
+        "bg--tertiary-dark-2",    
+        "bg--error-background",   
+        "bg--success-background", 
+        "bg--warning-background", 
+        "bg--info-background"    
     ]; 
 
     for( let i = 0; i < sectionElements.length; i++ ) {
