@@ -1,0 +1,12 @@
+@use "sass:map"; 
+
+@use '../abstracts' as *;
+
+.customer-care{
+    @media(max-width: 1235px){
+        .hours{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
