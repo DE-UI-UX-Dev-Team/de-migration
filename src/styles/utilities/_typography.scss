@@ -68,7 +68,10 @@ em, .fs--italic { font-style: italic; }
 /*--- Utilities - Lists ---*/
  
 ul.fs--link-list {
-  margin-left: 0; 
+  margin-left: 0;  
+
+  li { display: flex; }
+  
 }
 
 ul.fs--link-list li:last-child {
@@ -77,7 +80,10 @@ ul.fs--link-list li:last-child {
 
 @include mediaQuery("mobile-up") {
 
-  ul.fs--link-list li {  margin-bottom: var(--list-item-spacing-m--sm); }
+  ul.fs--link-list li { 
+    margin-bottom: var(--list-item-spacing-m--sm); 
+  }
+
   ul.fs--bulleted-list li { 
     list-style-type: disc;  
     margin-bottom: var(--list-item-spacing-s--sm); 
@@ -87,7 +93,10 @@ ul.fs--link-list li:last-child {
 
 @include mediaQuery("tablet-up") {
 
-  ul.fs--link-list li {  margin-bottom: var(--list-item-spacing-m--md); }
+  ul.fs--link-list li { 
+    margin-bottom: var(--list-item-spacing-m--md); 
+  }
+
   ul.fs--bulleted-list li { 
     list-style-type: disc;  
     margin-bottom: var(--list-item-spacing-s--md); 
@@ -97,7 +106,10 @@ ul.fs--link-list li:last-child {
 
 @include mediaQuery("laptop-up") {
 
-  ul.fs--link-list li {  margin-bottom: var(--list-item-spacing-m--lg); }
+  ul.fs--link-list li { 
+    margin-bottom: var(--list-item-spacing-m--lg); 
+  }
+
   ul.fs--bulleted-list li { 
     list-style-type: disc;  
     margin-bottom: var(--list-item-spacing-s--lg); 
@@ -107,7 +119,10 @@ ul.fs--link-list li:last-child {
 
 @include mediaQuery("desktop-up") {
 
-  ul.fs--link-list li {  margin-bottom: var(--list-item-spacing-m--xl); }
+  ul.fs--link-list li { 
+    margin-bottom: var(--list-item-spacing-m--xl); 
+  }
+
   ul.fs--bulleted-list li { 
     list-style-type: disc;  
     margin-bottom: var(--list-item-spacing-s--xl); 
