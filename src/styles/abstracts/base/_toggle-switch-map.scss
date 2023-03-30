@@ -2,15 +2,13 @@
 
 // Map used to create toggle switch mixins
 
-
-
 $toggleSwitchOnLightBg: (
     "default-theme" : ( 
         "toggleOn":(
           "checked":(
-            "outline": null,
-            "outline-offset": null,
-            "background-color": "hsl(#{$blue--base-hsl})"
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$blue--base-hsl})"
             ),      
             "hover":(
                 "box-shadow": $toggleOn-hover--shadow,
@@ -38,9 +36,9 @@ $toggleSwitchOnLightBg: (
         ),
         "toggleOff":(
             "default":(
-            "outline": null,
-            "outline-offset": null,
-            "background-color": "hsl(#{$white-hsl})"
+                "outline": null,
+                "outline-offset": null,
+                "background-color": "hsl(#{$white-hsl})"
             ),       
             "hover":(
                 "box-shadow": $toggleOff-hover--shadow,
@@ -65,8 +63,7 @@ $toggleSwitchOnLightBg: (
                 "outline-offset": null,
                 "background-color":"hsl(#{$white-hsl})"
             )
-        ),
-        
+        )
     )
 );
 
@@ -131,10 +128,6 @@ $toggleSwitchOnDarkBg: (
                 "outline-offset": null,
                 "background-color":"hsl(#{$white-hsl})"
             )
-        ),
-        
+        )   
     )
 );
-
-
-

@@ -8,6 +8,8 @@ $col-multiplier: 2;
 .row { 
 	margin-left: calc(var(--gutter-sm) * #{$row-multiplier});
 	margin-right: calc(var(--gutter-sm) * #{$row-multiplier});  
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
