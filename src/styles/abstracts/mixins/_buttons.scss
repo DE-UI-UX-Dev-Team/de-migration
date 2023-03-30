@@ -1,13 +1,62 @@
-@use "sass:map"; 
+@use "sass:map";  
+@use "sass:string";
+ 
+@use '../../abstracts/' as *;
+@use '../../abstracts/base/buttons-map' as *;
+@use '../../abstracts/tokens' as *; 
+@use '../functions/string-replace.scss' as *;
+ 
+@mixin getButtonColorProps( $backgroundType ) { 
+ 
+    $type-prefix: "";
+    $backgroundMap: "";
 
-@use '../../abstracts/base' as *;
-@use '../../abstracts/tokens' as *;
+    @if $backgroundType == "light-backgrounds" { 
+        $type-prefix: "btn-on-lgt-bg";
+        $backgroundMap: $buttonsOnLightBg;
+    }  
+    @else if $backgroundType == "dark-backgrounds" {
+        $type-prefix: "btn-on-drk-bg";
+        $backgroundMap: $buttonsOnDarkBg;
+    } 
+    @else if $backgroundType == "error-backgrounds" { 
+        $type-prefix: "btn-on-error-bg";
+        $backgroundMap: $buttonsOnErrorBg;
+    }
+    @else if $backgroundType == "info-backgrounds" { 
+        $type-prefix: "btn-on-info-bg";
+        $backgroundMap: $buttonsOnInfoBg;
+    }
+    @else if $backgroundType == "warning-backgrounds" { 
+        $type-prefix: "btn-on-warning-bg";
+        $backgroundMap: $buttonsOnWarningBg;
+    }
+    @else if $backgroundType == "success-backgrounds" { 
+        $type-prefix: "btn-on-success-bg";
+        $backgroundMap: $buttonsOnSuccessBg;
+    }
+     
+    @each $palette, $background in map.get( $backgroundMap, #{$active-theme} ) {
+         
+        @if string.index($palette, '.') != 0 { 
+            $palette: str-replace($palette, '.', '');
+        }
+        @each $state, $properties in $background {   
+            @each $property, $value in $properties { 
+                @if $value != null {
+                    --#{$palette}-#{$type-prefix}--#{$state}--#{$property}: #{$value};
+                }
+            }
+        }
+    }
+
+}
 
 @mixin getButtonsOnColorBg ( $buttonsOnBackgrounds, $backgroundType ) {
 
     @if($backgroundType== "lightBackgrounds"){
-        @each $button, $states in map.get($buttonsOnLightBg, #{$active-theme}) { 
-            @each $state, $properties in $states { 
+        @each $button, $states in map.get($buttonsOnBackgrounds, #{$active-theme}) { 
+            @each $state, $properties in $states {  
                 @if $button == "primary" {
                     @if $state == "default" {
                         .btn--#{$button}, 
@@ -29,7 +78,7 @@
                             }
                         }
                     }
-                }
+                }  
                 @else if $button == "secondary" {
                     @if $state == "default" {
                         button,
@@ -53,6 +102,55 @@
                             @each $property, $value in $properties{
                                 @if $value != null {
                                     #{$property}: var(--#{$button}-btn-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                } 
+                @else if $button == "tertiary" { 
+                    @if $state == "default" {
+                        .btn--#{$button}{
+                            @each $property, $value in $properties{ 
+                                @if $value != null {
+                                    #{$property}: var(--#{$button}-btn-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                    @else{
+                        .btn--#{$button}:#{$state}{
+                            @each $property, $value in $properties{
+                                @if $value != null {
+                                    #{$property}: var(--#{$button}-btn-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                }
+                @else if string.index($button, '.') != 0 { 
+                    $prop-prefix: str-replace($button, '.', '');
+                    @if $state == "default" {
+                        button#{$button},
+                        [class*=btn]#{$button},
+                        [type="button"]#{$button},
+                        [type="submit"]#{$button},
+                        [type="reset"]#{$button} {
+                            @each $property, $value in $properties{ 
+                                @if $value != null {
+                                    #{$property}: var(--#{$prop-prefix}-btn-on-lgt-bg--#{$state}--#{$property});
+                                }
+                            }
+                        } 
+                    }
+                    @else{
+                        button#{$button}:#{$state},
+                        [class*=btn]#{$button}:#{$state},
+                        [type="button"]#{$button}:#{$state},
+                        [type="submit"]#{$button}:#{$state},
+                        [type="reset"]#{$button}:#{$state} {
+                            @each $property, $value in $properties{ 
+                                @if $value != null {
+                                    #{$property}: var(--#{$prop-prefix}-btn-on-lgt-bg--#{$state}--#{$property});
                                 }
                             }
                         } 
@@ -82,11 +180,16 @@
         }
     } // end lightBackgrounds conditional
 
-    @if($backgroundType== "darkBackgrounds"){
-        @each $bgClass in $darkBackgroundClasses {
-            @each $button, $states in map.get($buttonsOnDarkBg, #{$active-theme}) {
-                @each $state, $properties in $states {
-                    @if $button == "secondary" {
+    @if($backgroundType == "darkBackgrounds"){ 
+        @each $bgClass in $darkBackgroundClasses { 
+            
+            $suffix: "drk-bg";
+
+            @each $button, $states in map.get($buttonsOnBackgrounds, #{$active-theme}) { 
+
+                @if $button == "secondary" or $button == "tertiary" {
+                    @each $state, $properties in $states { 
+
                         @if $state == "default" {
                             [class*=#{$bgClass}] button,
                             [class*=#{$bgClass}] .btn, 
@@ -96,7 +199,7 @@
                             [class*=#{$bgClass}] .btn--#{$button}{
                                 @each $property, $value in $properties{
                                     @if $value != null {
-                                        #{$property}: var(--#{$button}-btn-on-drk-bg--#{$state}--#{$property});
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
                                     }
                                 }
                             } 
@@ -110,18 +213,22 @@
                             [class*=#{$bgClass}] .btn--#{$button}:#{$state}{
                                 @each $property, $value in $properties{
                                     @if $value != null {
-                                        #{$property}: var(--#{$button}-btn-on-drk-bg--#{$state}--#{$property});
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
                                     }
                                 }
                             } 
                         }
                     }
-                    @else{
+                }
+
+                @else{
+                    @each $state, $properties in $states { 
+
                         @if $state == "default" {
                             [class*=#{$bgClass}] .btn--#{$button} {
                                 @each $property, $value in $properties{
                                     @if $value != null {
-                                        #{$property}: var(--#{$button}-btn-on-drk-bg--#{$state}--#{$property});
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
                                     }
                                 }
                             } 
@@ -130,7 +237,7 @@
                             [class*=#{$bgClass}] .btn--#{$button}:#{$state} {
                                 @each $property, $value in $properties{
                                     @if $value != null {
-                                        #{$property}: var(--#{$button}-btn-on-drk-bg--#{$state}--#{$property});
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
                                     }
                                 }
                             }
@@ -139,6 +246,143 @@
                 }
             }
         }
-    } // end darkBackground conditional
+    } // end darkBackground conditional 
 
+
+    @if $backgroundType == "alerts" {
+        $suffix: "drk-bg";
+        @each $bgClass in $alertBackgroundClasses { 
+
+            @if $bgClass == "bg--success-background" or 
+                $bgClass == "bg--warning-background" or 
+                $bgClass == "bg--error-background" or 
+                $bgClass == "bg--info-background" {
+                $suffix: str-replace( str-replace($bgClass, "bg--", ""), "-background", "-bg" ); 
+            } 
+                
+            @each $button, $states in map.get($buttonsOnBackgrounds, #{$active-theme}) { 
+                @each $state, $properties in $states {  
+                    @if $button == "primary" {
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] .btn--#{$button}, 
+                            [class*=#{$bgClass}] [type="submit"] {
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] .btn--#{$button}:#{$state}, 
+                            [class*=#{$bgClass}] [type="submit"]:#{$state} {
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            }
+                        }
+                    }  
+                    @else if $button == "secondary" {
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] button,
+                            [class*=#{$bgClass}] .btn, 
+                            [class*=#{$bgClass}] [type="button"],
+                            [class*=#{$bgClass}] [type="reset"],
+                            [class*=#{$bgClass}] .btn--#{$button}{
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] button:#{$state},  
+                            [class*=#{$bgClass}] .btn:#{$state},
+                            [class*=#{$bgClass}] [type="reset"]:#{$state}, 
+                            [class*=#{$bgClass}] [type="button"]:#{$state}, 
+                            [class*=#{$bgClass}] .btn--#{$button}:#{$state}{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                    } 
+                    @else if $button == "tertiary" { 
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] .btn--#{$button}{
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] .btn--#{$button}:#{$state}{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                    @else if string.index($button, '.') != 0 { 
+                        $prop-prefix: str-replace($button, '.', '');
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] button#{$button},
+                            [class*=#{$bgClass}] [class*=btn]#{$button},
+                            [class*=#{$bgClass}] [type="button"]#{$button},
+                            [class*=#{$bgClass}] [type="submit"]#{$button},
+                            [class*=#{$bgClass}] [type="reset"]#{$button} {
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$prop-prefix}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] button#{$button}:#{$state},
+                            [class*=#{$bgClass}] [class*=btn]#{$button}:#{$state},
+                            [class*=#{$bgClass}] [type="button"]#{$button}:#{$state},
+                            [class*=#{$bgClass}] [type="submit"]#{$button}:#{$state},
+                            [class*=#{$bgClass}] [type="reset"]#{$button}:#{$state} {
+                                @each $property, $value in $properties{ 
+                                    @if $value != null {
+                                        #{$property}: var(--#{$prop-prefix}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                    }
+                    @else{
+                        @if $state == "default" {
+                            [class*=#{$bgClass}] .btn--#{$button}{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            } 
+                        }
+                        @else{
+                            [class*=#{$bgClass}] .btn--#{$button}:#{$state}{
+                                @each $property, $value in $properties{
+                                    @if $value != null {
+                                        #{$property}: var(--#{$button}-btn-on-#{$suffix}--#{$state}--#{$property});
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } // end lightBackgrounds conditional
+    }
 }

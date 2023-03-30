@@ -1,6 +1,8 @@
 @use "sass:map"; 
 
-@use '../abstracts' as *;
+@use '../abstracts/base/buttons-map' as *;
+@use '../abstracts/tokens/contextual-tokens' as *; 
+@use '../abstracts/mixins/buttons' as *;
 
 /*--- Components - Buttons ---*/
 
@@ -8,40 +10,26 @@ button,
 [class*=btn],
 [type="button"],
 [type="submit"],
-[type="reset"] {
+[type="reset"] { 
+
+    /*--- Default Properties - Buttons ---*/
+
+    --btn--font: #{$btn--font};
+    --btn--min-width: #{$btn--min-width};
+    --btn--corner-radius: #{$btn--corner-radius};
+    --btn--border-width: #{$btn--border-width}; 
+    --btn--padding: #{$btn--button-padding};
+    --btn--padding-w-border: #{$btn--border-button-padding}; 
+ 
     min-width: var(--btn--min-width);
     font: var(--btn--font);
     border-radius: var(--btn--corner-radius);
     text-align: center;
     text-transform: uppercase;
-    padding: 1.6rem 2.4rem;
+
 }
 
 /*--- Components - Buttons, Selected ---*/
-
-button.selected,
-[class*=btn].selected,
-[type="button"].selected,
-[type="submit"].selected,
-[type="reset"].selected {
-    background-color: var(--primary-base);
-    color: var(--white-base);
-    border: none;
-}
-
-[class*="bg--primary-"] button.selected,
-[class*="bg--primary-"] [class*=btn].selected,
-[class*="bg--primary-"] input[type="button"].selected,
-[class*="bg--primary-"] input[type="submit"].selected,
-[class*="bg--primary-"] input[type="reset"].selected,
-[class*="bg--secondary-"] button.selected,
-[class*="bg--secondary-"] [class*=btn].selected,
-[class*="bg--secondary-"] input[type="button"].selected,
-[class*="bg--secondary-"] input[type="submit"].selected,
-[class*="bg--secondary-"] input[type="reset"].selected{
-    background-color: var(--white-base);
-    color: var(--primary-base);
-}
 
 label[type="button"],
 label[type="submit"],
@@ -67,6 +55,7 @@ label[type="reset"] > input:active {
     padding: 0;
     display: inline;
     min-width: auto;
+    outline: none;
 } 
 
 label[type]:focus {
@@ -78,42 +67,97 @@ label[type="submit"] > input + i,
 label[type="reset"] > input+ i {
     display: inline;
 }
-  
-/*--- Color Scheme - Buttons on Contrasting Backgrounds ---*/ 
 
-:root {
-    /*--- Default Properties - Buttons ---*/
+button,
+.btn, 
+[type=button],
+[type=reset], 
+[type=submit],
+button[class*=btn--secondary],
+.btn[class*=btn--secondary], 
+[type=button][class*=btn--secondary],
+[type=reset][class*=btn--secondary], 
+[type=submit][class*=btn--secondary] { 
 
-    --btn--font: bold 1.6rem/2.4rem var(--font-stack);
-    --btn--min-width: 22.7rem;
-    --btn--corner-radius:0.4rem;
-    --btn--border: 0.2rem solid var(--primary-base);
+    padding: var(--btn--padding-w-border);
+    border-width: #{$btn--border-width}; 
+    border-style: solid; 
 
-    @each $palette, $buttonsOnLightBg in map.get( $buttonsOnLightBg, #{$active-theme} ) {
-        @each $state, $properties in $buttonsOnLightBg { 
-            @each $property, $value in $properties { 
-                @if $value != null {
-                    --#{$palette}-btn-on-lgt-bg--#{$state}--#{$property}: #{$value};
-                }
-            }
-        }
+    &:hover {
+        outline: #{$outline--focus};
+        outline-offset: #{$outline--focus-offset};
     }
 
-    @each $palette, $buttonsOnLightBg in map.get( $buttonsOnDarkBg, #{$active-theme} ) {
-        @each $state, $properties in $buttonsOnLightBg { 
-            @each $property, $value in $properties { 
-                @if $value != null {
-                    --#{$palette}-btn-on-drk-bg--#{$state}--#{$property}: #{$value};
-                }
-            }
-        }
-    }  
+    &:focus {
+        outline: #{$outline--focus};
+        outline-offset: #{$outline--focus-offset};
+    }
+
 }
 
-/*--- Components - Buttons on Light Backgrounds ---*/
+button[class*=btn--primary],
+.btn[class*=btn--primary], 
+[type=button][class*=btn--primary],
+[type=reset][class*=btn--primary], 
+[type=submit] { 
+
+    padding: var(--btn--padding);
+    
+    &:focus {
+        outline: #{$outline--focus};
+        outline-offset: #{$outline--focus-offset};
+    }
+
+}
+ 
+button[class*=btn--tertiary],
+.btn[class*=btn--tertiary], 
+[type=button][class*=btn--tertiary],
+[type=reset][class*=btn--tertiary], 
+[type=submit][class*=btn--tertiary] { 
+
+    padding: 0; 
+    min-width: unset;
+    border: none;
+
+    &:focus {
+        outline: #{$outline--focus};
+        outline-offset: #{$outline--focus-offset};
+    }
+
+}
+
+/*--- Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/ 
+
+:root {
+
+    @include getButtonColorProps( "light-backgrounds" );
+    @include getButtonColorProps( "dark-backgrounds" ); 
+    @include getButtonColorProps( "success-backgrounds" ); 
+    @include getButtonColorProps( "warning-backgrounds" ); 
+    @include getButtonColorProps( "error-backgrounds" ); 
+    @include getButtonColorProps( "info-backgrounds" ); 
+
+}
+
+/*--- Color Scheme - Buttons on Contrasting Backgrounds, Styles ---*/ 
+
+button.selected,
+[class*=btn].selected,
+[type="button"].selected,
+[type="submit"].selected,
+[type="reset"].selected {
+    border: none;
+}
 
 @include getButtonsOnColorBg( $buttonsOnLightBg, "lightBackgrounds" ); 
 
-/*--- Components - Buttons on Dark Backgrounds ---*/ 
-
 @include getButtonsOnColorBg( $buttonsOnDarkBg, "darkBackgrounds" );
+
+@include getButtonsOnColorBg( $buttonsOnSuccessBg, "alerts" );
+
+@include getButtonsOnColorBg( $buttonsOnWarningBg, "alerts" );
+
+@include getButtonsOnColorBg( $buttonsOnErrorBg, "alerts" );
+
+@include getButtonsOnColorBg( $buttonsOnInfoBg, "alerts" );
