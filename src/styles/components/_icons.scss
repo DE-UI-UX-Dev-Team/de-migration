@@ -90,6 +90,21 @@ a.icon-left i {
     margin-bottom: 10px;
 } 
 
+.fal,
+.fa-light {
+  font-weight: 300 !important;
+}
+
+.far,
+.fa-regular {
+  font-weight: 400 !important;
+}
+
+.fas,
+.fa-solid {
+  font-weight: 900 !important;
+}
+
 /*--- Color Scheme - Icons on Contrasting Backgrounds ---*/ 
 
 :root {
@@ -100,5 +115,5 @@ a.icon-left i {
     --icon--on-gray-background: var(--white-base);
     --icon--on-success-background: var(--success-text);
     --icon--on-warning-background: var(--warning-text);
-    --icon--on-error-background: var(--error-text);
+    --icon--on-error-background: var(--error-text); 
 }

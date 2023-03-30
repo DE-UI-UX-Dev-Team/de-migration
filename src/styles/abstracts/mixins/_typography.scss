@@ -15,12 +15,7 @@ $filter :
     "h-6", 
     "p-1", 
     "p-2", 
-    "p-3", 
-    "link-xs", 
-    "link-s", 
-    "link-m", 
-    "link-l", 
-    "btn-1"
+    "p-3"
 ;
 
 @mixin getTypeUtilities($mediaQuery, $screenSize) {
