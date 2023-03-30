@@ -31,7 +31,12 @@ section:not([class*="bg--"]) + .customer-care:not([class*="bg--"]){
         margin: auto;
         min-height: var(--sect--top-pd--lg);
 
+        @include mediaQuery( "tablet-below" ) {
+            min-height: var(--sect--top-pd--sm);
+        }
+
     }
+
 
 }
 
