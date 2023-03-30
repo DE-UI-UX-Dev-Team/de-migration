@@ -133,10 +133,10 @@ button[class*=btn--tertiary],
 
     @include getButtonColorProps( "light-backgrounds" );
     @include getButtonColorProps( "dark-backgrounds" ); 
-    @include getButtonColorProps( "success-backgrounds" ); 
-    @include getButtonColorProps( "warning-backgrounds" ); 
-    @include getButtonColorProps( "error-backgrounds" ); 
-    @include getButtonColorProps( "info-backgrounds" ); 
+    @include getButtonColorProps( "success-background" ); 
+    @include getButtonColorProps( "warning-background" ); 
+    @include getButtonColorProps( "error-background" ); 
+    @include getButtonColorProps( "info-background" ); 
 
 }
 
@@ -150,14 +150,9 @@ button.selected,
     border: none;
 }
 
-@include getButtonsOnColorBg( $buttonsOnLightBg, "lightBackgrounds" ); 
-
-@include getButtonsOnColorBg( $buttonsOnDarkBg, "darkBackgrounds" );
-
-@include getButtonsOnColorBg( $buttonsOnSuccessBg, "alerts" );
-
-@include getButtonsOnColorBg( $buttonsOnWarningBg, "alerts" );
-
-@include getButtonsOnColorBg( $buttonsOnErrorBg, "alerts" );
-
-@include getButtonsOnColorBg( $buttonsOnInfoBg, "alerts" );
+@include getButtonsOnLightBg( "light-backgrounds" );
+@include getButtonsOnColorBg( "dark-backgrounds" );
+@include getButtonsOnAlertBg( "error-background" );
+@include getButtonsOnAlertBg( "warning-background" );
+@include getButtonsOnAlertBg( "success-background" );
+@include getButtonsOnAlertBg( "info-background" );

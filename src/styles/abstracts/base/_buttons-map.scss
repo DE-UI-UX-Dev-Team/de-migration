@@ -1,395 +1,383 @@
 @use '../../abstracts/tokens' as *;
 
 // Map used to create media query mixins
-$buttonsOnLightBg: (
-    "default-theme": (       
-        "secondary": (
-            "default":(
-                "color": "var(--tertiary-base)",
-                "border-color": "var(--tertiary-base)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
-            ),
-            "focus":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
-            ),
-            "active":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
-            )
-        ),
-        "primary": (
-            "default":(
-                "background-color": "var(--primary-base)",
-                "color": "var(--white-base)",
-                "border": none
-            ),
-            "hover":(
-                "background-color": "var(--primary-dark-1)",
-                "color": "var(--white-base)"
-            ),
-            "focus":(
-                "background-color": "var(--primary-dark-1)",
-                "color": "var(--white-base)"
-            ),
-            "active":(
-                "background-color": "var(--primary-light-2)",
-                "color": "var(--white-base)"
-            ),
-            "disabled":(
-                "background-color": "var(--primary-light-3)",
-                "color": "var(--white-base)"
-            )
-        ),
-        "tertiary": (
-            "default":(
-                "color": "var(--tertiary-base)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})" ,
-                "color": "var(--tertiary-base)"
-            ),
-            "focus":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--tertiary-base)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--tertiary-base)"
-            ),
-            "disabled":(
-                "color": "var(--secondary-light-2)"
-            )
-        ),  
-        ".selected": ( 
-            "default" : (
-                "color": "var(--white-base)", 
-                "background-color": "var(--tertiary-base)"
-            ), 
-            "hover" : ( 
-                "color": "var(--tertiary-base)", 
-                "background-color": "var(--white-base)"
-            )
-        )
-    )
-);
-
-$buttonsOnDarkBg: (
+$buttonsOnContrastingBg: (
     "default-theme": (
-        "secondary": (
-            "default":(
-                "color": "var(--white-base)",
-                "border-color": "var(--white-base)"
+        "light-backgrounds": (       
+            "secondary": (
+                "default":(
+                    "color": "var(--tertiary-base)",
+                    "border-color": "var(--tertiary-base)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                ),
+                "active":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                )
             ),
-            "hover":(
-                "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--white-base)",
-                "border-color": "var(--white-base)"
+            "primary": (
+                "default":(
+                    "background-color": "var(--primary-base)",
+                    "color": "var(--white-base)",
+                    "border": none
+                ),
+                "hover":(
+                    "background-color": "var(--primary-dark-1)",
+                    "color": "var(--white-base)"
+                ),
+                "focus":(
+                    "background-color": "var(--primary-dark-1)",
+                    "color": "var(--white-base)"
+                ),
+                "active":(
+                    "background-color": "var(--primary-light-2)",
+                    "color": "var(--white-base)"
+                ),
+                "disabled":(
+                    "background-color": "var(--primary-light-3)",
+                    "color": "var(--white-base)"
+                )
             ),
-            "focus":(
-                "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--white-base)",
-                "border-color": "var(--white-base)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$white-hsl}, #{$btn-active--opacity})",
-                "color": "var(--white-base)",
-                "border-color": "var(--white-base)"
-            ),
-            "disabled":(
-                "color": "var(--white-base)",
-                "border-color": "var(--white-base)",
-                "opacity": 60%
+            "tertiary": (
+                "default":(
+                    "color": "var(--tertiary-base)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})" ,
+                    "color": "var(--tertiary-base)"
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--tertiary-base)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--tertiary-base)"
+                ),
+                "disabled":(
+                    "color": "var(--secondary-light-2)"
+                )
+            ),  
+            ".selected": ( 
+                "default" : (
+                    "color": "var(--white-base)", 
+                    "background-color": "var(--tertiary-base)"
+                ), 
+                "hover" : ( 
+                    "color": "var(--tertiary-base)", 
+                    "background-color": "var(--white-base)"
+                )
             )
-        ),
-        "tertiary"  : (
-            "default":(
-                "color": "var(--white-base)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--white-base)",
-            ),
-            "focus":(
-                "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--white-base)",
-            ),
-            "active":(
-                "background-color": "hsla(#{$white-hsl}, #{$btn-active--opacity})",
-                "color": "var(--white-base)",
-                "border-color": "var(--white-base)"
-            ),
-            "disabled":(
-                "color": "var(--white-base)",
-                "opacity": 60%
-            )
-        )
-    )
-); 
 
-$buttonsOnSuccessBg: (
-    "default-theme": (       
-        "secondary": (
-            "default":(
-                "color": "var(--success-element)",
-                "border-color": "var(--success-element)"
+        ),
+        "dark-backgrounds": (
+            "secondary": (
+                "default":(
+                    "color": "var(--white-base)",
+                    "border-color": "var(--white-base)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--white-base)",
+                    "border-color": "var(--white-base)"
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--white-base)",
+                    "border-color": "var(--white-base)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$white-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--white-base)",
+                    "border-color": "var(--white-base)"
+                ),
+                "disabled":(
+                    "color": "var(--white-base)",
+                    "border-color": "var(--white-base)",
+                    "opacity": 60%
+                )
             ),
-            "hover":(
-                "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--success-text)"
-            ),
-            "focus":(
-                "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--success-text)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--success-text)"
+            "tertiary"  : (
+                "default":(
+                    "color": "var(--white-base)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--white-base)",
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--white-base)",
+                ),
+                "active":(
+                    "background-color": "hsla(#{$white-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--white-base)",
+                    "border-color": "var(--white-base)"
+                ),
+                "disabled":(
+                    "color": "var(--white-base)",
+                    "opacity": 60%
+                )
             )
         ),
-        "primary": (
-            "default":(
-                "background-color": "var(--success-element)",
-                "color": "var(--white-base)",
-                "border": none
+        "success-background": ( 
+            "secondary": (
+                "default":(
+                    "color": "var(--success-element)",
+                    "border-color": "var(--success-element)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--success-text)"
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--success-text)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--success-text)"
+                )
             ),
-            "hover":(
-                "background-color": "var(--success-text)",
-                "color": "var(--white-base)"
+            "primary": (
+                "default":(
+                    "background-color": "var(--success-element)",
+                    "color": "var(--white-base)",
+                    "border": none
+                ),
+                "hover":(
+                    "background-color": "var(--success-text)",
+                    "color": "var(--white-base)"
+                ),
+                "focus":(
+                    "background-color": "var(--success-text)",
+                    "color": "var(--white-base)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--white-base)"
+                )
             ),
-            "focus":(
-                "background-color": "var(--success-text)",
-                "color": "var(--white-base)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--white-base)"
-            )
-        ),
-        "tertiary": (
-            "default":(
-                "color": "var(--success-element)",
-                "border-color": "var(--success-element)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
-            ),
-            "focus":(
-                "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
-            ),
-            "active":(
-                "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
-            )
-        ), 
-        ".selected": ( 
-            "default" : (
-                "color": "var(--white-base)", 
-                "background-color": "var(--tertiary-base)"
+            "tertiary": (
+                "default":(
+                    "color": "var(--success-element)",
+                    "border-color": "var(--success-element)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
+                ),
+                "active":(
+                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
+                )
             ), 
-            "hover" : ( 
-                "color": "var(--tertiary-base)", 
-                "background-color": "var(--white-base)"
-            )
-        )
-    )
-);
-
-$buttonsOnWarningBg: (
-    "default-theme": (       
-        "secondary": (
-            "default":(
-                "color": "var(--warning-element)",
-                "border-color": "var(--warning-element)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--warning-text)"
-            ),
-            "focus":(
-                "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--warning-text)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--warning-text)"
+            ".selected": ( 
+                "default" : (
+                    "color": "var(--white-base)", 
+                    "background-color": "var(--tertiary-base)"
+                ), 
+                "hover" : ( 
+                    "color": "var(--tertiary-base)", 
+                    "background-color": "var(--white-base)"
+                )
             )
         ),
-        "primary": (
-            "default":(
-                "background-color": "var(--warning-element)",
-                "color": "var(--white-base)",
-                "border": none
+        "warning-background": (       
+            "secondary": (
+                "default":(
+                    "color": "var(--warning-element)",
+                    "border-color": "var(--warning-element)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--warning-text)"
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--warning-text)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--warning-text)"
+                )
             ),
-            "hover":(
-                "background-color": "var(--warning-text)",
-                "color": "var(--white-base)"
+            "primary": (
+                "default":(
+                    "background-color": "var(--warning-element)",
+                    "color": "var(--white-base)",
+                    "border": none
+                ),
+                "hover":(
+                    "background-color": "var(--warning-text)",
+                    "color": "var(--white-base)"
+                ),
+                "focus":(
+                    "background-color": "var(--warning-text)",
+                    "color": "var(--white-base)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--white-base)"
+                )
             ),
-            "focus":(
-                "background-color": "var(--warning-text)",
-                "color": "var(--white-base)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--white-base)"
-            )
-        ),
-        "tertiary": (
-            "default":(
-                "color": "var(--warning-element)",
-                "border-color": "var(--warning-element)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
-            ),
-            "focus":(
-                "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
-            ),
-            "active":(
-                "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
-            )
-        ), 
-        ".selected": ( 
-            "default" : (
-                "color": "var(--white-base)", 
-                "background-color": "var(--tertiary-base)"
+            "tertiary": (
+                "default":(
+                    "color": "var(--warning-element)",
+                    "border-color": "var(--warning-element)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
+                ),
+                "active":(
+                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
+                )
             ), 
-            "hover" : ( 
-                "color": "var(--tertiary-base)", 
-                "background-color": "var(--white-base)"
-            )
-        )
-    )
-);
-
-$buttonsOnErrorBg: (
-    "default-theme": (       
-        "secondary": (
-            "default":(
-                "color": "var(--error-element)",
-                "border-color": "var(--error-element)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$red--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--error-text)"
-            ),
-            "focus":(
-                "background-color": "hsla(#{$red--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--error-text)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--error-text)"
+            ".selected": ( 
+                "default" : (
+                    "color": "var(--white-base)", 
+                    "background-color": "var(--tertiary-base)"
+                ), 
+                "hover" : ( 
+                    "color": "var(--tertiary-base)", 
+                    "background-color": "var(--white-base)"
+                )
             )
         ),
-        "primary": (
-            "default":(
-                "background-color": "var(--error-element)",
-                "color": "var(--white-base)",
-                "border": none
+        "error-background": (
+            "secondary": (
+                "default":(
+                    "color": "var(--error-element)",
+                    "border-color": "var(--error-element)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--error-text)"
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--error-text)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--error-text)"
+                )
             ),
-            "hover":(
-                "background-color": "var(--error-text)",
-                "color": "var(--white-base)"
+            "primary": (
+                "default":(
+                    "background-color": "var(--error-element)",
+                    "color": "var(--white-base)",
+                    "border": none
+                ),
+                "hover":(
+                    "background-color": "var(--error-text)",
+                    "color": "var(--white-base)"
+                ),
+                "focus":(
+                    "background-color": "var(--error-text)",
+                    "color": "var(--white-base)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--white-base)"
+                )
             ),
-            "focus":(
-                "background-color": "var(--error-text)",
-                "color": "var(--white-base)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--white-base)"
-            )
-        ),
-        "tertiary": (
-            "default":(
-                "color": "var(--error-element)",
-                "border-color": "var(--error-element)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
-            ),
-            "focus":(
-                "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
-            ),
-            "active":(
-                "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
-            )
-        ), 
-        ".selected": ( 
-            "default" : (
-                "color": "var(--white-base)", 
-                "background-color": "var(--tertiary-base)"
+            "tertiary": (
+                "default":(
+                    "color": "var(--error-element)",
+                    "border-color": "var(--error-element)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                ),
+                "active":(
+                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                )
             ), 
-            "hover" : ( 
-                "color": "var(--tertiary-base)", 
-                "background-color": "var(--white-base)"
-            )
-        )
-    )
-);
-
-$buttonsOnInfoBg: (
-    "default-theme": (       
-        "secondary": (
-            "default":(
-                "color": "var(--info-element)",
-                "border-color": "var(--info-element)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--sucinfo-text)"
-            ),
-            "focus":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
-                "color": "var(--info-text)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--info-text)"
+            ".selected": ( 
+                "default" : (
+                    "color": "var(--white-base)", 
+                    "background-color": "var(--tertiary-base)"
+                ), 
+                "hover" : ( 
+                    "color": "var(--tertiary-base)", 
+                    "background-color": "var(--white-base)"
+                )
             )
         ),
-        "primary": (
-            "default":(
-                "background-color": "var(--info-element)",
-                "color": "var(--white-base)",
-                "border": none
+        "info-background": (  
+            "secondary": (
+                "default":(
+                    "color": "var(--info-element)",
+                    "border-color": "var(--info-element)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--sucinfo-text)"
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "color": "var(--info-text)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--info-text)"
+                )
             ),
-            "hover":(
-                "background-color": "var(--info-text)",
-                "color": "var(--white-base)"
+            "primary": (
+                "default":(
+                    "background-color": "var(--info-element)",
+                    "color": "var(--white-base)",
+                    "border": none
+                ),
+                "hover":(
+                    "background-color": "var(--info-text)",
+                    "color": "var(--white-base)"
+                ),
+                "focus":(
+                    "background-color": "var(--info-text)",
+                    "color": "var(--white-base)"
+                ),
+                "active":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                    "color": "var(--white-base)"
+                )
             ),
-            "focus":(
-                "background-color": "var(--info-text)",
-                "color": "var(--white-base)"
-            ),
-            "active":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
-                "color": "var(--white-base)"
-            )
-        ),
-        "tertiary": (
-            "default":(
-                "color": "var(--info-element)",
-                "border-color": "var(--info-element)"
-            ),
-            "hover":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
-            ),
-            "focus":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
-            ),
-            "active":(
-                "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
-            )
-        ), 
-        ".selected": ( 
-            "default" : (
-                "color": "var(--white-base)", 
-                "background-color": "var(--tertiary-base)"
+            "tertiary": (
+                "default":(
+                    "color": "var(--info-element)",
+                    "border-color": "var(--info-element)"
+                ),
+                "hover":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                ),
+                "focus":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                ),
+                "active":(
+                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                )
             ), 
-            "hover" : ( 
-                "color": "var(--tertiary-base)", 
-                "background-color": "var(--white-base)"
+            ".selected": ( 
+                "default" : (
+                    "color": "var(--white-base)", 
+                    "background-color": "var(--tertiary-base)"
+                ), 
+                "hover" : ( 
+                    "color": "var(--tertiary-base)", 
+                    "background-color": "var(--white-base)"
+                )
             )
         )
     )

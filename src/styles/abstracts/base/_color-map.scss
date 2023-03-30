@@ -63,11 +63,7 @@ $lightBackgroundClasses : (
     "bg--secondary-light-1", 
     "bg--secondary-light-2", 
     "bg--tertiary-light-1", 
-    "bg--white-base", 
-    "bg--error-background", 
-    "bg--warning-background", 
-    "bg--success-background", 
-    "bg--info-background"
+    "bg--white-base"
 );
 
 $darkBackgroundClasses : (
@@ -77,11 +73,18 @@ $darkBackgroundClasses : (
     "bg--primary-dark-1", 
     "bg--primary-dark-2", 
     "bg--secondary-base",
-    "bg--secondary-light-3"
+    "bg--secondary-light-3",
     "bg--secondary-dark-1", 
     "bg--secondary-dark-2", 
     "bg--tertiary-base", 
     "bg--tertiary-light-2", 
     "bg--tertiary-dark-1", 
     "bg--tertiary-dark-2"
+); 
+
+$alertBackgroundClasses: (
+    "bg--error-background", 
+    "bg--warning-background", 
+    "bg--success-background", 
+    "bg--info-background"
 );
