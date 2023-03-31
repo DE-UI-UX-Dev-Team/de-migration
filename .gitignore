@@ -5,3 +5,4 @@ dist/
 deploy/config.json 
 .vscode/ 
 .bashrc
+deploy/demo-repo/
