@@ -1,9 +1,10 @@
+# Get Environment Variables 
 source .bashrc
 
+# Get Working Branch Name 
 branchName=$(git rev-parse --abbrev-ref HEAD)
-echo ">> this branch $branchName" 
-# echo "\n"
-# git push --set-upstream origin $branchName 
+echo ">> Uploading demo for branch $branchName" 
+git push --set-upstream origin $branchName 
 
 # Verify global variables
 if [ "${DEMO_REPOSITORY_SSH}" == "" ];then 
@@ -39,7 +40,7 @@ cd $DEMO_DIR
 git add -A
 git commit -m "Commit demo for $branchName"
 
-# Push demo to the remote repository
+# Push Demo to the Remote Repository
 git push origin 
 
 # Done, Publish Link to Demo Site
