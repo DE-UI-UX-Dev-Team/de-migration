@@ -158,9 +158,9 @@ h6:last-child, .h-6:last-child {
 /*--- Color Scheme - Typography Default Properties ---*/
 
 :root {
-    --heading-color: var(--tertiary-base);
+    --heading-color: var(--seconadary-base);
     --heading--on-dark-background: var(--white-base);
-    --heading--on-light-background: var(--tertiary-base);
+    --heading--on-light-background: var(--secondary-base);
 
     --heading--on-error-background: var(--error-text);
     --heading--on-success-background: var(--success-text);
