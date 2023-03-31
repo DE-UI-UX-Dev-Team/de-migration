@@ -24,7 +24,7 @@
     $ npm run dist
    ``` 
 
-Note: This project requires an implementtaion of (sh) and does not support command.exe at this time.
+Note: This project requires an implementtaion of (sh) and does not support command.exe at this time
 
 ---
 ## Basic Usage 
@@ -43,6 +43,27 @@ Note: This project requires an implementtaion of (sh) and does not support comma
 3. Open the corresponding **‘__abstracts.scss', ‘__base.scss’,** and **'__components.scss’** and add a **“@forward“** statement to make your new styles available in the index.html
 4. Add elements in the **pages/index.html** to target with your CSS
 5. Running the **public/index.html** file in your browser and refreshing after saves will allow you to review your changes
+
+---
+## Publish Demo with PR
+
+To publish a demo for in-browser internal review:
+
+1. Establish a GitHub Page using the instructions in this link https://pages.github.com/ or plan to leverage an existing account. 
+2. Once the repo for your GitHub Page exists, retrieve the URL for cloning your repo via SSH. Example git@github.com:username/my-demo-site.github.io.git 
+3. In the .bashrc file at the root of the project, set the value of DEMO_REPOSITORY_SSH variable to the SSH Clone URL: 
+```
+export DEMO_REPOSITORY_SSH=<ssh-clone-url-here>
+```
+4. Also in the .bashrc file at the root of the project, set the value of DEMO_REPOSITORY_SITE to the name of the GitHub Page repository: 
+```
+export DEMO_REPOSITORY_SITE=my-demo-site.github.io.git 
+```
+5. To publish your demo and push a copy of your code to the DE-UI-UX-Dev-Team/de-migration repository, run: 
+```
+npm run push-demo
+```
+6. Once the command completes the URL for the GitHub Page will print. Be sure to include a link to your Demo in your Pull Request and add it to your Jira Task when it's ready for review.
 
 ---
 ## Production Code
