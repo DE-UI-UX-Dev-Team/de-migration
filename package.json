@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --env env=dev --mode development",
     "dist": "webpack --env env=prod --mode production",
+    "push-demo": "sh deploy/push-demo.sh",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
