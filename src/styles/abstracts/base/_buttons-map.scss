@@ -1,22 +1,22 @@
 @use '../../abstracts/tokens' as *;
 
-// Map used to create media query mixins
 $buttonsOnContrastingBg: (
     "default-theme": (
-        "light-backgrounds": (       
+        "light-bg": (       
             "secondary": (
                 "default":(
                     "color": "var(--tertiary-base)",
                     "border-color": "var(--tertiary-base)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-secondary--lgt-bg--hover)",
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-secondary--lgt-bg--hover)",
                 ),
                 "active":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-secondary--lgt-bg--active)",
+                    "color": "var(--white-base)",
                 )
             ),
             "primary": (
@@ -44,18 +44,19 @@ $buttonsOnContrastingBg: (
             ),
             "tertiary": (
                 "default":(
-                    "color": "var(--tertiary-base)"
+                    "color": "var(--tertiary-base)", 
+                    "border": none
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})" ,
+                    "background-color": "var(--btn-tertiary--lgt-bg--hover)" ,
                     "color": "var(--tertiary-base)"
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--lgt-bg--hover)",
                     "color": "var(--tertiary-base)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-tertiary--lgt-bg--active)",
                     "color": "var(--tertiary-base)"
                 ),
                 "disabled":(
@@ -72,26 +73,25 @@ $buttonsOnContrastingBg: (
                     "background-color": "var(--white-base)"
                 )
             )
-
         ),
-        "dark-backgrounds": (
+        "dark-bg": (
             "secondary": (
                 "default":(
                     "color": "var(--white-base)",
                     "border-color": "var(--white-base)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-secondary--drk-bg--hover)",
                     "color": "var(--white-base)",
                     "border-color": "var(--white-base)"
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-secondary--drk-bg--hover)",
                     "color": "var(--white-base)",
                     "border-color": "var(--white-base)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$white-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-secondary--drk-bg--active)",
                     "color": "var(--white-base)",
                     "border-color": "var(--white-base)"
                 ),
@@ -106,15 +106,15 @@ $buttonsOnContrastingBg: (
                     "color": "var(--white-base)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--drk-bg--hover)",
                     "color": "var(--white-base)",
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$white-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--drk-bg--hover)",
                     "color": "var(--white-base)",
                 ),
                 "active":(
-                    "background-color": "hsla(#{$white-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-tertiary--drk-bg--active)",
                     "color": "var(--white-base)",
                     "border-color": "var(--white-base)"
                 ),
@@ -124,22 +124,22 @@ $buttonsOnContrastingBg: (
                 )
             )
         ),
-        "success-background": ( 
+        "success-bg": ( 
             "secondary": (
                 "default":(
                     "color": "var(--success-element)",
                     "border-color": "var(--success-element)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-secondary--success-bg--hover)",
                     "color": "var(--success-text)"
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
-                    "color": "var(--success-text)"
+                    "background-color": "var(--btn-secondary--success-bg--hover)",
+                    "color": "var(--success-element)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-secondary--success-bg--active)",
                     "color": "var(--success-text)"
                 )
             ),
@@ -150,15 +150,15 @@ $buttonsOnContrastingBg: (
                     "border": none
                 ),
                 "hover":(
-                    "background-color": "var(--success-text)",
-                    "color": "var(--white-base)"
+                    "background-color": "var(--btn-primary--success-bg--hover)",
+                    "color": "var(--success-text)"
                 ),
                 "focus":(
-                    "background-color": "var(--success-text)",
+                    "background-color": "var(--btn-primary--success-bg--hover)",
                     "color": "var(--white-base)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-primary--success-bg--active)",
                     "color": "var(--white-base)"
                 )
             ),
@@ -168,13 +168,13 @@ $buttonsOnContrastingBg: (
                     "border-color": "var(--success-element)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--success-bg--hover)",
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--success-bg--hover)",
                 ),
                 "active":(
-                    "background-color": "hsla(#{$green--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-tertiary--success-bg--active)",
                 )
             ), 
             ".selected": ( 
@@ -188,22 +188,22 @@ $buttonsOnContrastingBg: (
                 )
             )
         ),
-        "warning-background": (       
+        "warning-bg": (       
             "secondary": (
                 "default":(
                     "color": "var(--warning-element)",
                     "border-color": "var(--warning-element)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-secondary--warning-bg--hover)",
                     "color": "var(--warning-text)"
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
-                    "color": "var(--warning-text)"
+                    "background-color": "var(--btn-secondary--warning-bg--hover)",
+                    "color": "var(--warning-element)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-secondary--warning-bg--active)",
                     "color": "var(--warning-text)"
                 )
             ),
@@ -214,15 +214,15 @@ $buttonsOnContrastingBg: (
                     "border": none
                 ),
                 "hover":(
-                    "background-color": "var(--warning-text)",
-                    "color": "var(--white-base)"
+                    "background-color": "var(--btn-primary--warning-bg--hover)",
+                    "color": "var(--warning-text)"
                 ),
                 "focus":(
-                    "background-color": "var(--warning-text)",
-                    "color": "var(--white-base)"
+                    "background-color": "var(--btn-primary--warning-bg--hover)",
+                    "color": "var(--white-text)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-primary--warning-bg--active)",
                     "color": "var(--white-base)"
                 )
             ),
@@ -232,13 +232,13 @@ $buttonsOnContrastingBg: (
                     "border-color": "var(--warning-element)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--warning-bg--hover)",
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--warning-bg--hover)",
                 ),
                 "active":(
-                    "background-color": "hsla(#{$yellow--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-tertiary--warning-bg--active)",
                 )
             ), 
             ".selected": ( 
@@ -252,22 +252,22 @@ $buttonsOnContrastingBg: (
                 )
             )
         ),
-        "error-background": (
+        "error-bg": (
             "secondary": (
                 "default":(
                     "color": "var(--error-element)",
                     "border-color": "var(--error-element)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-secondary--error-bg--hover)",
                     "color": "var(--error-text)"
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-focus--opacity})",
-                    "color": "var(--error-text)"
+                    "background-color": "var(--btn-secondary--error-bg--hover)",
+                    "color": "var(--error-element)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-secondary--error-bg--active)",
                     "color": "var(--error-text)"
                 )
             ),
@@ -278,15 +278,15 @@ $buttonsOnContrastingBg: (
                     "border": none
                 ),
                 "hover":(
-                    "background-color": "var(--error-text)",
-                    "color": "var(--white-base)"
+                    "background-color": "var(--btn-primary--error-bg--hover)",
+                    "color": "var(--error-text)"
                 ),
                 "focus":(
                     "background-color": "var(--error-text)",
                     "color": "var(--white-base)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-primary--error-bg--active)",
                     "color": "var(--white-base)"
                 )
             ),
@@ -296,13 +296,13 @@ $buttonsOnContrastingBg: (
                     "border-color": "var(--error-element)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-tertiary--error-bg--hover)",
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-tertiary--error-bg--hover)",
                 ),
                 "active":(
-                    "background-color": "hsla(#{$red--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-tertiary--error-bg--active)",
                 )
             ), 
             ".selected": ( 
@@ -316,22 +316,22 @@ $buttonsOnContrastingBg: (
                 )
             )
         ),
-        "info-background": (  
+        "info-bg": (  
             "secondary": (
                 "default":(
-                    "color": "var(--info-element)",
+                    "color": "var(--info-text)",
                     "border-color": "var(--info-element)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
-                    "color": "var(--sucinfo-text)"
+                    "background-color": "var(--btn-secondary--info-bg--hover)",
+                    "color": "var(--info-element)"
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-secondary--info-bg--hover)",
                     "color": "var(--info-text)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-secondary--info-bg--active)",
                     "color": "var(--info-text)"
                 )
             ),
@@ -342,15 +342,15 @@ $buttonsOnContrastingBg: (
                     "border": none
                 ),
                 "hover":(
-                    "background-color": "var(--info-text)",
-                    "color": "var(--white-base)"
+                    "background-color": "var(--btn-primary--info-bg--active)",
+                    "color": "var(--info-base)"
                 ),
                 "focus":(
                     "background-color": "var(--info-text)",
                     "color": "var(--white-base)"
                 ),
                 "active":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-primary--info-bg--active)",
                     "color": "var(--white-base)"
                 )
             ),
@@ -360,13 +360,13 @@ $buttonsOnContrastingBg: (
                     "border-color": "var(--info-element)"
                 ),
                 "hover":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--info-bg--hover)",
                 ),
                 "focus":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-focus--opacity})",
+                    "background-color": "var(--btn-tertiary--info-bg--hover)",
                 ),
                 "active":(
-                    "background-color": "hsla(#{$blue--base-hsl}, #{$btn-active--opacity})",
+                    "background-color": "var(--btn-tertiary--info-bg--active)",
                 )
             ), 
             ".selected": ( 

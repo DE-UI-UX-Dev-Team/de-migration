@@ -1,6 +1,7 @@
 @use "sass:map"; 
-
+ 
 @use '../abstracts/base/buttons-map' as *;
+@use '../abstracts/tokens/design-tokens' as *;
 @use '../abstracts/tokens/contextual-tokens' as *; 
 @use '../abstracts/mixins/buttons' as *;
 
@@ -37,6 +38,13 @@ label[type="reset"] {
     display: inline-block;
     cursor: pointer;
 }
+
+label[type="button"] > i,
+label[type="submit"] > i,
+label[type="reset"] > i {
+    color: inherit !important;
+} 
+
 
 label[type="button"] > input,
 label[type="submit"] > input,
@@ -118,8 +126,7 @@ button[class*=btn--tertiary],
 
     padding: 0; 
     min-width: unset;
-    border: none;
-
+    bordeg
     &:focus {
         outline: #{$outline--focus};
         outline-offset: #{$outline--focus-offset};
@@ -130,13 +137,54 @@ button[class*=btn--tertiary],
 /*--- Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/ 
 
 :root {
+ 
+    --btn-secondary--lgt-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});  
+    --btn-secondary--lgt-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity}); 
 
-    @include getButtonColorProps( "light-backgrounds" );
-    @include getButtonColorProps( "dark-backgrounds" ); 
-    @include getButtonColorProps( "success-background" ); 
-    @include getButtonColorProps( "warning-background" ); 
-    @include getButtonColorProps( "error-background" ); 
-    @include getButtonColorProps( "info-background" ); 
+    --btn-tertiary--lgt-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});  
+    --btn-tertiary--lgt-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity}); 
+
+    --btn-secondary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity}); 
+    --btn-secondary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity});  
+
+    --btn-tertiary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity}); 
+    --btn-tertiary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity}); 
+ 
+    --btn-secondary--success-bg--hover: hsla(#{$green--base-hsl}, #{$btn-focus--opacity}); 
+    --btn-secondary--success-bg--active: hsla(#{$green--base-hsl}, #{$btn-active--opacity}); 
+
+    --btn-primary--success-bg--hover: hsla(#{$green--base-hsl}, #{$btn-focus--opacity}); 
+    --btn-primary--success-bg--active: hsla(#{$green--base-hsl}, #{$btn-active--opacity}); 
+
+    --btn-tertiary--success-bg--hover: hsla(#{$green--base-hsl}, #{$btn-focus--opacity}); 
+    --btn-tertiary--success-bg--active: hsla(#{$green--base-hsl}, #{$btn-active--opacity});
+
+    --btn-secondary--warning-bg--hover: hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity});
+    --btn-secondary--warning-bg--active: hsla(#{$yellow--base-hsl}, #{$btn-active--opacity});
+
+    --btn-primary--warning-bg--hover: hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity});
+    --btn-primary--warning-bg--active: hsla(#{$yellow--base-hsl}, #{$btn-active--opacity});
+
+    --btn-tertiary--warning-bg--hover: hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity});
+    --btn-tertiary--warning-bg--active: hsla(#{$yellow--base-hsl}, #{$btn-active--opacity});
+
+    --btn-secondary--error-bg--hover: hsla(#{$red--base-hsl}, #{$btn-focus--opacity});
+    --btn-secondary--error-bg--active: hsla(#{$red--base-hsl}, #{$btn-active--opacity});
+
+    --btn-primary--error-bg--hover: hsla(#{$red--base-hsl}, #{$btn-focus--opacity});
+    --btn-primary--error-bg--active: hsla(#{$red--base-hsl}, #{$btn-active--opacity});
+
+    --btn-tertiary--error-bg--hover: hsla(#{$red--base-hsl}, #{$btn-active--opacity});
+    --btn-tertiary--error-bg--active: hsla(#{$red--base-hsl}, #{$btn-active--opacity});
+
+    --btn-secondary--info-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
+    --btn-secondary--info-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
+    
+    --btn-primary--info-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
+    --btn-primary--info-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
+
+    --btn-tertiary--info-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
+    --btn-tertiary--info-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
 
 }
 
@@ -150,9 +198,6 @@ button.selected,
     border: none;
 }
 
-@include getButtonsOnLightBg( "light-backgrounds" );
+@include getButtonsOnColorBg( "light-backgrounds" );
 @include getButtonsOnColorBg( "dark-backgrounds" );
-@include getButtonsOnAlertBg( "error-background" );
-@include getButtonsOnAlertBg( "warning-background" );
-@include getButtonsOnAlertBg( "success-background" );
-@include getButtonsOnAlertBg( "info-background" );
+@include getButtonsOnColorBg( "alert-backgrounds" );
