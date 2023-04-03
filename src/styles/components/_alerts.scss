@@ -1,0 +1,86 @@
+@use '../abstracts/mixins/' as *;
+
+
+[data-alert-message] { 
+	--alert-gutter: 1.5rem;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex: 0 1 100%;
+	padding: 0 var(--alert-gutter);
+	color: var(--primary-base);
+	margin-bottom: var(--alert-gutter);
+
+	>.message {	
+		color: var(--primary-base);
+		position: relative;
+		flex-grow: 1;
+	}
+
+	>.row {
+		flex-grow: 1;
+	}
+
+	.alert-msg{
+
+		@include mediaQuery( "mobile-only" ) {
+			flex: 0 1 90%;
+		}
+
+	}
+
+	.alert-cta{
+		display: flex;
+		align-items: center;
+	}
+
+	.alert-head{
+		font-weight: var(--font-weight--medium);
+	}
+
+	&:before{
+		font-family: "Font Awesome 6 Pro";
+		font-weight: var(--font-weight--regular); 
+		margin-right: var(--icon--margin--lg);
+		font-size: var(--icon--size--lg);
+		margin-top: 2rem;
+	}
+
+	.close-button {
+		color: var(--gray-dark-1);
+		min-width: 0;
+		font-size:  var(--icon--margin--lg);
+		font-weight: var(--font-weight--regular); 
+		position: absolute;
+		right: 0;
+		border:none;
+	}	
+}
+
+[data-alert-message]{
+	
+	&[data-message-type="warning"]:before{
+   		content: "\f06a"
+	}
+
+	&[data-message-type="error"]:before{
+		content: "\f057";
+	}
+
+	&[data-message-type="message"]:before{
+		content: "\f05a";
+	}
+	
+	&[data-message-type="success"]:before{
+		content: "\f058";
+	}
+}
+
+[data-alert-message]:not([data-status='active']) {
+	display: none;
+}
+
+[class*=bg--primary-light-3] [data-alert-message] h4,
+[class*=bg--primary-light-3] [data-alert-message] span{
+	color: var(--primary-base);
+}
