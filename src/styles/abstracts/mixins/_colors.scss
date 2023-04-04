@@ -71,7 +71,8 @@
         [class*=#{$bgClass}] menu,
         [class*=#{$bgClass}] dir,
         [class*=#{$bgClass}] address, 
-        [class*=#{$bgClass}] blockquote { 
+        [class*=#{$bgClass}] blockquote,
+        [class*=#{$bgClass}] div:before { 
             color: var(#{$customProp});
         }
 

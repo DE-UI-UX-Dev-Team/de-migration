@@ -70,7 +70,11 @@ $textOnColorBg : (
             "bg--secondary-light-2" : "--heading--on-dark-background",
             "bg--secondary-light-3" : "--heading--on-light-background",
             "bg--secondary-dark-1"  : "--heading--on-dark-background",
-            "bg--secondary-dark-2"  : "--heading--on-dark-background"
+            "bg--secondary-dark-2"  : "--heading--on-dark-background",
+            "bg--success-background" : "--heading--on-success-background", 
+            "bg--warning-background" : "--heading--on-warning-background", 
+            "bg--error-background"   : "--heading--on-error-background"
+         
         ),
         "body-text" : (
             "bg--primary-base"      : "--body-text--on-dark-background", 
@@ -85,7 +89,10 @@ $textOnColorBg : (
             "bg--secondary-light-2" : "--body-text--on-dark-background",
             "bg--secondary-light-3" : "--body-text--on-light-background",
             "bg--secondary-dark-1"  : "--body-text--on-dark-background",
-            "bg--secondary-dark-2"  : "--body-text--on-dark-background"
+            "bg--secondary-dark-2"  : "--body-text--on-dark-background",
+            "bg--success-background" : "--body-text--on-success-background", 
+            "bg--warning-background" : "--body-text--on-warning-background", 
+            "bg--error-background"   : "--body-text--on-error-background"
         ), 
         "body" : (
             "bg--primary-base"      : "--body-text--on-dark-background", 
@@ -100,7 +107,10 @@ $textOnColorBg : (
             "bg--secondary-light-2" : "--body-text--on-dark-background",
             "bg--secondary-light-3" : "--body-text--on-light-background",
             "bg--secondary-dark-1"  : "--body-text--on-dark-background",
-            "bg--secondary-dark-2"  : "--body-text--on-dark-background"
+            "bg--secondary-dark-2"  : "--body-text--on-dark-background",
+            "bg--success-background" : "--body-text--on-success-background", 
+            "bg--warning-background" : "--body-text--on-warning-background", 
+            "bg--error-background"   : "--body-text--on-error-background"
         ), 
         "section" : (
             "bg--primary-base"      : "--body-text--on-dark-background", 

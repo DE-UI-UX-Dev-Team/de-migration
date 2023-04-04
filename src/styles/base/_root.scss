@@ -173,6 +173,14 @@
     --heading--on-dark-background: var(--white-base);
     --body-text--on-dark-background: var(--white-base);
 
+    /*--- Default Properties - Text on alert color Backgrounds ---*/
+    --heading--on-warning-background: var(--warning-text);
+    --heading--on-error-background: var(--error-text);
+    --heading--on-success-background: var(--success-text);
+    --body-text--on-warning-background: var(--warning-text);
+    --body-text--on-error-background: var(--error-text);
+    --body-text--on-success-background: var(--success-text);
+
     /*--- Default Properties - Text on Light Backgrounds ---*/
 
     --heading--on-light-background: var(--primary-base);
