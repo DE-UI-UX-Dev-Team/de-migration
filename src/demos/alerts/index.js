@@ -9,7 +9,7 @@ window.triggerAlerts = function() {
                        </div>`;
     let messageTtl  = 100000; // Measured in seconds
     let parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    let customClassList = [ 'foo', 'bar', 'baz' , 'bg--primary-light-3' ];
+    let customClassList = [ 'bg--primary-light-3' ];
 
 
     BannerAlert.transmit( 
@@ -27,9 +27,7 @@ window.triggerAlerts = function() {
                             <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
                         </div>
                     </div>`;
-    messageTtl  = 100000; // Measured in seconds
-    parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    customClassList = [ 'foo', 'bar', 'baz', 'bg--error-background' ];
+    customClassList = [ 'bg--error-background' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -46,9 +44,7 @@ window.triggerAlerts = function() {
                             <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
                         </div>
                     </div>`;
-    messageTtl  = 100000; // Measured in seconds
-    parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    customClassList = [ 'foo', 'bar', 'baz', 'bg--warning-background' ];
+    customClassList = [ 'bg--warning-background' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -65,9 +61,7 @@ window.triggerAlerts = function() {
                             <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
                         </div>
                     </div>`;
-    messageTtl  = 100000; // Measured in seconds
-    parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    customClassList = [ 'foo', 'bar', 'baz', 'bg--success-background' ];
+    customClassList = [ 'bg--success-background' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -90,8 +84,8 @@ window.triggerAlertsWithButton = function() {
                             </div>
                        </div>`;
     let messageTtl  = 100000; // Measured in seconds
-    let parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    let customClassList = [ 'foo', 'bar', 'baz' , 'bg--primary-light-3' ];
+    let parentContainer = document.querySelector( '.cta-banner-alerts' ); // This container can be anywhere in the document
+    let customClassList = [ 'bg--primary-light-3' ];
 
 
     BannerAlert.transmit( 
@@ -111,9 +105,7 @@ window.triggerAlertsWithButton = function() {
                                 <button class="btn" href="#">sample Text</button>
                             </div>
                        </div>`;
-    messageTtl  = 100000; // Measured in seconds
-    parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    customClassList = [ 'foo', 'bar', 'baz' , 'bg--error-background' ];
+    customClassList = [ 'bg--error-background' ];
 
 
     BannerAlert.transmit( 
@@ -133,9 +125,7 @@ window.triggerAlertsWithButton = function() {
                                 <button class="btn" href="#">sample Text</button>
                             </div>
                        </div>`;
-    messageTtl  = 100000; // Measured in seconds
-    parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    customClassList = [ 'foo', 'bar', 'baz' , 'bg--warning-background' ];
+    customClassList = [ 'bg--warning-background' ];
 
 
     BannerAlert.transmit( 
@@ -155,10 +145,7 @@ window.triggerAlertsWithButton = function() {
                                 <button class="btn" href="#">sample Text</button>
                             </div>
                        </div>`;
-    messageTtl  = 100000; // Measured in seconds
-    parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    customClassList = [ 'foo', 'bar', 'baz' , 'bg--success-background' ];
-
+    customClassList = [ 'bg--success-background' ];
 
     BannerAlert.transmit( 
         messageType, 

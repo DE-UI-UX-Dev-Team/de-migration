@@ -13,28 +13,46 @@
 
 </head>
 <body>
-    <section>
-        <div class="container">  
-            <div class="row">   
+    <section class="bdr-bottom">
+        <div class="container bdr-clr--gray-disabled">  
+            <div class="row">    
                 <div class="col">
-                    <h2>Dismissable Banner Alerts</h2>
-                    <button class="btn--secondary mg-b--sm-30" onclick="window.triggerAlerts();">Trigger Alert</button>
-                    <button class="btn--primary" onclick="triggerAlertsWithButton();">Trigger Alerts w/ CTA</button>                    
+                    <h2>1. Dismissable Banner Alerts</h2>
+                </div>
+                <div class="col">
+                    <button class="btn--primary" onclick="window.triggerAlerts();">Trigger Alert</button>                
                 </div>
 
                 <div class="col">
                     <div class="banner-alerts"></div>
                 </div>
             </div> 
-            <hr>
+            
+        </div>
+    </section> 
+
+    <section class="bdr-bottom">
+        <div class="container bdr-clr--gray-disabled">  
+            <div class="row">    
+                <div class="col">
+                    <h2>2. Dismissable Banner Alerts w/ CTA</h2>
+                </div>
+                <div class="col">
+                    <button class="btn--primary" onclick="triggerAlertsWithButton();">Trigger Alerts w/ CTA</button>                    
+                </div>
+                <div class="col">
+                    <div class="cta-banner-alerts"></div>
+                </div>
+            </div> 
+            
         </div>
     </section>
 
-    <section>
-        <div class="container">
+    <section class="bdr-bottom">
+        <div class="container bdr-clr--gray-disabled">
            <div class="row">
                 <div class="col">
-                    <h2>Non-Dismissable Banner Alerts</h2>
+                    <h2>3. Non-Dismissable Banner Alerts</h2>
                 </div>
                 <div class="col">
                     <div class="banner-alerts">
@@ -87,13 +105,14 @@
                     </div>
                 </div>
            </div>
-          <hr>
         </div>
     </section>
 
     <section class="nonDismissable-alerts">
-        <div class="container">
-            <h2>Non-Dismissable Banner Alerts with CTA</h2>
+        <div class="container bdr-clr--gray-disabled">
+            <div class="col">
+                <h2>4. Non-Dismissable Banner Alerts w/ CTA</h2>
+            </div>
             <div class="banner-alerts">
                 <div class="foo bar baz bg--warning-background" data-ref="module_systemAlert_50119">
                     <div data-alert-message data-message-type="warning" data-status="active">
