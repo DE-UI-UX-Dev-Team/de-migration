@@ -1,1 +1,5 @@
 export FONTAWESOME_NPM_AUTH_TOKEN=********-****-****-****-***********
+export DEMO_REPOSITORY_SSH=git@github.com:***/****.git
+export DEMO_REPOSITORY_SITE=****.github.io
+export DEV_REPOSITORY_SSH=git@github.com:***/****.git
+export DEV_REPOSITORY_SITE=****.github.io
