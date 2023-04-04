@@ -1,26 +1,38 @@
 @use '../abstracts' as *;
 
-.grid-divider [class*='col-']{
+[class*='grid-divider'] [class*='col-'] {
+
   position: relative;
-}  
-  
-.grid-divider [class*='col-']:not(:last-child):after {
-  border-bottom: 1px solid var(--gray-disabled);
-  content: "";
-  display:block;  
-  top:0;
-  bottom: 0;
-  right: 0;
-  min-height: calc(var(--col-top-mg--sm));
- 
-  @media(min-width:576px){  
-      background: var(--gray-disabled);
-      width: 0.1rem;
-      content: "";
-      display:block;
+
+  &:not(:last-child):after{
+
+    border-bottom: 1px solid var(--gray-disabled);
+    content: "";
+    display:block;  
+    top:0;
+    bottom: 0;
+    right: 0;
+    min-height: calc(var(--col-top-mg--sm) + var(--col-btm-mg--sm));
+
+    @include mediaQuery( "tablet-up" ) {
+
       position: absolute;
-      top:0;
-      bottom: 0;
+      border-right: 1px solid var(--gray-disabled);
+  
+    }
+
+  }
+  
+}  
+
+.grid-divider-dashed [class*='col-']:not(:last-child):after{
+  
+  border-bottom: 1px dashed var(--gray-disabled);
+
+  @include mediaQuery( "tablet-up" ) {
+
+    border-right: 1px dashed var(--gray-disabled);
+
   }
 }
   
