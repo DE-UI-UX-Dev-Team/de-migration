@@ -220,7 +220,7 @@
     --border-radius-100: #{$border-radius-100};
 
     /*--- Default Properties - Icons on Various Backgrounds ---*/ 
- 
+    --icon--on-white-background: var(--primary-base);
     --icon--on-light-background: var(--gray-body);
     --icon--on-dark-background: var(--white-base);
     --icon--on-primary-light-background: var(--primary-base);
