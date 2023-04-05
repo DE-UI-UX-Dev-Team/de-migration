@@ -160,5 +160,5 @@ button.selected,
 
 /*--- Color Scheme - Buttons on Contrasting Backgrounds, Styles ---*/ 
 
-@include getButtonsOnColorBg( "light-backgrounds" );
-@include getButtonsOnColorBg( "dark-backgrounds" );
+@include colorize( "button", "light-backgrounds", #{$active-theme} );
+@include colorize( "button", "dark-backgrounds", #{$active-theme} );

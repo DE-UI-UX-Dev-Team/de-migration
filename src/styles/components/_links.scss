@@ -80,5 +80,5 @@ a[href^="tel:"] {
 
 /*--- Component - Anchors/Links on Contrasting Backgrounds, Styles ---*/ 
 
-@include getLinksOnColorBg( "light-backgrounds" );
-@include getLinksOnColorBg( "dark-backgrounds" ); 
+@include colorize( "links", "light-backgrounds", #{$active-theme} );
+@include colorize( "links", "dark-backgrounds", #{$active-theme} );
