@@ -231,16 +231,6 @@ $elevation-4: 0 16px 24px 0 rgba(0, 0, 0, 0.14),
 
 $transition--ease-25: all 0.4s ease;
 
-//-- Links
-$link-default--underline: underline solid "hsl(#{$blue--base-hsl})" 0.1rem;
-$link-hover--underline:underline solid "hsl(#{$blue--dark-1-hsl})" 0.1rem;
-$link-focus--underline: underline solid "hsl(#{$blue--dark-1-hsl})" 0.1rem;
-$link-visited--underline: underline solid "hsl(#{$blue--light-2-hsl})" 0.1rem;
-$link-disabled--underline: underline solid "hsl(#{$gray--light-3-hsl})" 0.1rem;
-$link-default--underline-darkBg: underline solid var(--white-base) 0.1rem;
-$link-focus--underline-darkBg: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
-$link-disabled--underline--darkBg: underline solid rgba(255, 255, 255, 0.4) 0.1rem;
-
 //--Toggles
 $toggle-track--height: 3.4rem;
 $toggle-track--width: 1.5rem;

@@ -1,221 +1,162 @@
 @use "sass:map"; 
+@use "sass:string";
 
 @use '../../abstracts/base' as *;
 @use '../../abstracts/tokens' as *;
+@use '../functions/string-replace.scss' as *;
 
-@mixin getLinksOnColorBg ( $LinksOnBackgrounds, $backgroundType ) {
+@mixin getLinksOnColorBg ( $targetBackgroundType ) { 
+     
+    $backgroundClasses: ();
 
-    @if($backgroundType== "lightBackgrounds"){
-        @each $link, $states in map.get($linksOnLightBg, #{$active-theme}) { 
-            @each $state, $properties in $states {
-                @if $link == "default-links" {
-                    @if $state == "default" {
-                        a, 
-                        a i {
-                            @each $property, $value in $properties{ 
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                }
-                            }
-                        }
-                    } 
-                    @else if $state == "disabled" {
-                        a[#{$state}] {
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                } 
-                            }
-                        }
-                    }
-                    @else{
-                        a:#{$state} {
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                } 
-                            }
-                        } 
-                    }
-                }
-                @if $link == "group-links"{
-                    @if $state == "default" {
-                        ol a,
-                        ul a,
-                        dl a {
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                }
-                            }
-                        } 
-                    }
-                    @else if $state == "disabled" {
-                        ol a[#{$state}],
-                        ul a[#{$state}],
-                        dl a[#{$state}] {
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                } 
-                            }
-                        }
-                    }
-                    @else{
-                        ol a:#{$state},
-                        li a:#{$state},
-                        dl a:#{$state}{
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                }
-                            }
-                        }
-                    }
-                }
-                @if $link == "email-phone-links"{
-                    @if $state == "default" {
-                        a[href^="mailto:"],
-                        a[href^="tel:"]{
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                }
-                            }
-                        } 
-                    }
-                    @else if $state == "disabled" {
-                        a[href^="mailto:"][#{$state}],
-                        a[href^="tel:"][#{$state}]{
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                }
-                            }
-                        } 
-                    }
-                    @else{
-                        a[href^="mailto:"]:#{$state},
-                        a[href^="tel:"]:#{$state}{
-                            @each $property, $value in $properties{
-                                @if $value != null {
-                                    #{$property}: var(--#{$link}-link-on-lgt-bg--#{$state}--#{$property});
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    } // end lightBackgrounds conditional
-
-    @if($backgroundType== "darkBackgrounds"){
-        @each $bgClass in $darkBackgroundClasses {
-            @each $link, $states in map.get($linksOnDarkBg, #{$active-theme}) { 
-                @each $state, $properties in $states {
-                    @if $link == "default-links" {
-                        @if $state == "default" {
-                            [class*=#{$bgClass}] a, 
-                            [class*=#{$bgClass}] a i {
-                                @each $property, $value in $properties{ 
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            } 
-                        }
-                        @else if $state == "disabled" {
-                            [class*=#{$bgClass}] a[#{$state}] {
-                                @each $property, $value in $properties{ 
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            } 
-                        }
-                        @else{
-                            [class*=#{$bgClass}] a:#{$state} {
-                                @each $property, $value in $properties{
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            } 
-                        }
-                    }
-                    @if $link == "group-links"{
-                        @if $state == "default" {
-                            [class*=#{$bgClass}] ol a,
-                            [class*=#{$bgClass}] ul a,
-                            [class*=#{$bgClass}] dl a,
-                            [class*=#{$bgClass}] ol a i,
-                            [class*=#{$bgClass}] ul a i,
-                            [class*=#{$bgClass}] dl a i  {
-                                @each $property, $value in $properties{
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            } 
-                        }
-                        @else if $state == "disabled" {
-                            [class*=#{$bgClass}] ol a[#{$state}],
-                            [class*=#{$bgClass}] li a[#{$state}],
-                            [class*=#{$bgClass}] dl a[#{$state}] {
-                                @each $property, $value in $properties{
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            }
-                        }
-                        @else{
-                            [class*=#{$bgClass}] ol a:#{$state},
-                            [class*=#{$bgClass}] li a:#{$state},
-                            [class*=#{$bgClass}] dl a:#{$state}{
-                                @each $property, $value in $properties{
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    @if $link == "email-phone-links"{
-                        @if $state == "default" {
-                            [class*=#{$bgClass}] a[href^="mailto:"],
-                            [class*=#{$bgClass}] a[href^="tel:"]{
-                                @each $property, $value in $properties{
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            } 
-                        }
-                        @else if $state == "disabled" {
-                            [class*=#{$bgClass}] a[href^="mailto:"][#{$state}],
-                            [class*=#{$bgClass}] a[href^="tel:"][#{$state}] {
-                                @each $property, $value in $properties{
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            }
-                        }
-                        @else{
-                            [class*=#{$bgClass}] a[href^="mailto:"]:#{$state},
-                            [class*=#{$bgClass}] a[href^="tel:"]:#{$state}{
-                                @each $property, $value in $properties{
-                                    @if $value != null {
-                                        #{$property}: var(--#{$link}-link-on-drk-bg--#{$state}--#{$property});
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        } // end darkBackgrounds conditional
+    @if( $targetBackgroundType == "dark-backgrounds" ) {  
+        $targetBackgroundType: "dark-bg";
+        $backgroundClasses: $darkBackgroundClasses;  
+    } 
+    @else if( $targetBackgroundType == "light-backgrounds" ) {
+        $targetBackgroundType: "light-bg";
+        $backgroundClasses: (""); // Placeholder because we only need the loop to run once
+    } 
+    @else {
+        $backgroundClasses: $alertBackgroundClasses; 
     }
-   
-}
+
+    @each $bgClass in $backgroundClasses { 
+        
+        $suffix: "drk-bg";  
+        $bgSelector: "[class*=#{$bgClass}] ";
+
+        @if $targetBackgroundType == "light-bg" { 
+            $suffix: "lgt-bg";  
+            $bgSelector: "";
+        }
+
+        @if $bgClass == "bg--success-background" or 
+            $bgClass == "bg--warning-background" or 
+            $bgClass == "bg--error-background" or 
+            $bgClass == "bg--info-background" 
+        {
+            $suffix: str-replace( str-replace($bgClass, "bg--", ""), "-background", "-bg" );  
+        }
+
+        @each $backgroundType, $palette in map.get($linksOnContrastingBg, #{$active-theme}) {   
+            @if( 
+                $backgroundType == $targetBackgroundType or
+                $backgroundType == $suffix
+            ) {
+
+                @each $link, $states in $palette { 
+                    @each $state, $properties in $states {
+                        @if $link == "default-links" {
+                            @if $state == "default" {
+                                #{$bgSelector}a, 
+                                #{$bgSelector}a i {
+                                    @each $property, $value in $properties{ 
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                } 
+                            }
+                            @else if $state == "disabled" {
+                                #{$bgSelector}a[#{$state}], 
+                                #{$bgSelector}a.#{$state} {
+                                    @each $property, $value in $properties{ 
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                } 
+                            }
+                            @else{
+                                #{$bgSelector}a:#{$state} {
+                                    @each $property, $value in $properties{
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                } 
+                            }
+                        }
+                        @if $link == "group-links"{
+                            @if $state == "default" {
+                                #{$bgSelector}ol a,
+                                #{$bgSelector}ul a,
+                                #{$bgSelector}dl a,
+                                #{$bgSelector}ol a i,
+                                #{$bgSelector}ul a i,
+                                #{$bgSelector}dl a i  {
+                                    @each $property, $value in $properties{
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                } 
+                            }
+                            @else if $state == "disabled" {
+                                #{$bgSelector}ol a[#{$state}],
+                                #{$bgSelector}li a[#{$state}],
+                                #{$bgSelector}dl a[#{$state}], 
+                                #{$bgSelector}ol a.#{$state},
+                                #{$bgSelector}li a.#{$state},
+                                #{$bgSelector}dl a.#{$state} {
+                                    @each $property, $value in $properties{
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                }
+                            }
+                            @else{
+                                #{$bgSelector}ol a:#{$state},
+                                #{$bgSelector}li a:#{$state},
+                                #{$bgSelector}dl a:#{$state}{
+                                    @each $property, $value in $properties{
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        @if $link == "email-phone-links"{
+                            @if $state == "default" {
+                                #{$bgSelector}a[href^="mailto:"],
+                                #{$bgSelector}a[href^="tel:"]{
+                                    @each $property, $value in $properties{
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                } 
+                            }
+                            @else if $state == "disabled" {
+                                #{$bgSelector}a[href^="mailto:"][#{$state}],
+                                #{$bgSelector}a[href^="tel:"][#{$state}], 
+                                #{$bgSelector}a[href^="mailto:"].#{$state},
+                                #{$bgSelector}a[href^="tel:"].#{$state} {
+                                    @each $property, $value in $properties{
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                }
+                            }
+                            @else{
+                                #{$bgSelector}a[href^="mailto:"]:#{$state},
+                                #{$bgSelector}a[href^="tel:"]:#{$state}{
+                                    @each $property, $value in $properties{
+                                        @if $value != null {
+                                            #{$property}: #{$value};
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } // End loop - properties
+
+                } // End loop - palette
+            } // End if - targetBackgroundType
+        } // End loop - $buttonsOnContrastingBg
+    } // End loop - backgroundClasses
+} // End mixin

@@ -2,42 +2,83 @@
 
 @use '../abstracts' as *;
 
-a {
-    cursor: pointer;
-}
+a { 
+
+    cursor: pointer; 
+    text-decoration: $link-default--underline;
+    font-weight: $font-weight--medium;  
+
+    i { 
+        color: inherit !important;
+        text-decoration: none;
+        font-weight: $font-weight--medium;  
+    }
+
+    &:hover, 
+    &:active {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline:  $outline--focus;
+        outline-offset:  $outline--focus-offset;
+        border-radius: $border-radius-25;
+    }
+
+    &.disabled, 
+    &[disabled] { 
+
+        text-decoration: none;
+        pointer-events: none;
+    }
+
+} 
  
-/*--- Color Scheme - Links on Contrasting Backgrounds ---*/ 
+ol a,
+ul a,
+dl a {
+ 
+    text-decoration: none;
+    font-weight: $font-weight--regular;
+    
+    &:hover, 
+    &:focus { 
+        text-decoration: $link-default--underline;
+        font-weight: $font-weight--medium;
+    }
 
-:root {
-    /*--- Default Properties - Anchor/Links on Light Backgrounds ---*/
+    &:focus {
+        outline:  $outline--focus;
+        outline-offset:  $outline--focus-offset;
+        border-radius: $border-radius-25;
+    }
 
-    @each $palette, $linksOnLightBg in map.get( $linksOnLightBg, #{$active-theme} ) {
-        @each $state, $properties in $linksOnLightBg { 
-            @each $property, $value in $properties { 
-                @if $value != null {
-                    --#{$palette}-link-on-lgt-bg--#{$state}--#{$property}: #{$value};
-                }
-            }
-        }
-    }  
+}  
 
-        /*--- Default Properties - Anchor Links, on Dark Backgrounds ---*/
+a[href^="mailto:"],
+a[href^="tel:"] {
 
-        @each $palette, $linksOnDarkBg in map.get( $linksOnDarkBg, #{$active-theme} ) {
-        @each $state, $properties in $linksOnDarkBg { 
-            @each $property, $value in $properties { 
-                @if $value != null {
-                    --#{$palette}-link-on-drk-bg--#{$state}--#{$property}: #{$value};
-                }
-            }
-        }
-    }  
-}
+    font-weight: $font-weight--regular;
+    text-decoration: $link-default--underline;
 
-/*--- Components - Links on Light Background ---*/ 
+    &:focus {
+        outline:  $outline--focus;
+        outline-offset: $outline--focus-offset;
+        border-radius: $border-radius-25;
+    }
 
-@include getLinksOnColorBg( $linksOnLightBg, "lightBackgrounds" );
+    &:hover, 
+    &:active {
+        font-weight: $font-weight--medium;
+    } 
 
-/*--- Components - Links on Dark Background ---*/ 
+    &:visited {
+        font-weight: $font-weight--regular;
+    }
 
-@include getLinksOnColorBg( $linksOnDarkBg, "darkBackgrounds" ); 
+} 
+
+/*--- Component - Anchors/Links on Contrasting Backgrounds, Styles ---*/ 
+
+@include getLinksOnColorBg( "light-backgrounds" );
+@include getLinksOnColorBg( "dark-backgrounds" ); 
