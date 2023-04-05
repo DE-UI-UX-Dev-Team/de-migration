@@ -13,4 +13,26 @@ section[class*=bg-] + section[class*=bg-] {
  
 section:not([class*=bg-]) + section.bg--white-base { 
     margin-top: 0; 
+} 
+
+section.bdr-bottom {  
+
+    .container { 
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        padding-bottom: calc(var(--sect--btm-pd--sm)); 
+    }
+    
+} 
+
+@include mediaQuery("laptop-up") {
+
+    section.bdr-bottom {  
+    
+        .container { 
+            padding-bottom: calc(var(--sect--btm-pd--lg)); 
+        }
+        
+    }
+
 }
