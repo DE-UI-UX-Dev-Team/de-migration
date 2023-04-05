@@ -1,9 +1,6 @@
 @use "sass:map"; 
  
-@use '../abstracts/base/buttons-map' as *;
-@use '../abstracts/tokens/design-tokens' as *;
-@use '../abstracts/tokens/contextual-tokens' as *; 
-@use '../abstracts/mixins/buttons' as *;
+@use '../abstracts/' as *;
 
 /*--- Components - Buttons ---*/
 
@@ -27,7 +24,7 @@ button,
     border-radius: var(--btn--corner-radius);
     text-align: center;
     text-transform: uppercase;
-
+    border: none;
 }
 
 /*--- Components - Buttons, Selected ---*/
@@ -126,12 +123,21 @@ button[class*=btn--tertiary],
 
     padding: 0; 
     min-width: unset;
-    bordeg
+    border: none;
+
     &:focus {
         outline: #{$outline--focus};
         outline-offset: #{$outline--focus-offset};
     }
 
+}
+
+button.selected,
+[class*=btn].selected,
+[type="button"].selected,
+[type="submit"].selected,
+[type="reset"].selected {
+    border: none;
 }
 
 /*--- Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/ 
@@ -149,55 +155,10 @@ button[class*=btn--tertiary],
 
     --btn-tertiary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity}); 
     --btn-tertiary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity}); 
- 
-    --btn-secondary--success-bg--hover: hsla(#{$green--base-hsl}, #{$btn-focus--opacity}); 
-    --btn-secondary--success-bg--active: hsla(#{$green--base-hsl}, #{$btn-active--opacity}); 
-
-    --btn-primary--success-bg--hover: hsla(#{$green--base-hsl}, #{$btn-focus--opacity}); 
-    --btn-primary--success-bg--active: hsla(#{$green--base-hsl}, #{$btn-active--opacity}); 
-
-    --btn-tertiary--success-bg--hover: hsla(#{$green--base-hsl}, #{$btn-focus--opacity}); 
-    --btn-tertiary--success-bg--active: hsla(#{$green--base-hsl}, #{$btn-active--opacity});
-
-    --btn-secondary--warning-bg--hover: hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity});
-    --btn-secondary--warning-bg--active: hsla(#{$yellow--base-hsl}, #{$btn-active--opacity});
-
-    --btn-primary--warning-bg--hover: hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity});
-    --btn-primary--warning-bg--active: hsla(#{$yellow--base-hsl}, #{$btn-active--opacity});
-
-    --btn-tertiary--warning-bg--hover: hsla(#{$yellow--base-hsl}, #{$btn-focus--opacity});
-    --btn-tertiary--warning-bg--active: hsla(#{$yellow--base-hsl}, #{$btn-active--opacity});
-
-    --btn-secondary--error-bg--hover: hsla(#{$red--base-hsl}, #{$btn-focus--opacity});
-    --btn-secondary--error-bg--active: hsla(#{$red--base-hsl}, #{$btn-active--opacity});
-
-    --btn-primary--error-bg--hover: hsla(#{$red--base-hsl}, #{$btn-focus--opacity});
-    --btn-primary--error-bg--active: hsla(#{$red--base-hsl}, #{$btn-active--opacity});
-
-    --btn-tertiary--error-bg--hover: hsla(#{$red--base-hsl}, #{$btn-active--opacity});
-    --btn-tertiary--error-bg--active: hsla(#{$red--base-hsl}, #{$btn-active--opacity});
-
-    --btn-secondary--info-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
-    --btn-secondary--info-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
-    
-    --btn-primary--info-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
-    --btn-primary--info-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
-
-    --btn-tertiary--info-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
-    --btn-tertiary--info-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
 
 }
 
 /*--- Color Scheme - Buttons on Contrasting Backgrounds, Styles ---*/ 
 
-button.selected,
-[class*=btn].selected,
-[type="button"].selected,
-[type="submit"].selected,
-[type="reset"].selected {
-    border: none;
-}
-
 @include getButtonsOnColorBg( "light-backgrounds" );
 @include getButtonsOnColorBg( "dark-backgrounds" );
-@include getButtonsOnColorBg( "alert-backgrounds" );

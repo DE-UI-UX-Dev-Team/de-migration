@@ -1,9 +1,8 @@
 @use "sass:map";  
 @use "sass:string";
  
-@use '../../abstracts/' as *;
-@use '../../abstracts/base/buttons-map' as *;
-@use '../../abstracts/tokens' as *; 
+@use '../../abstracts/base' as *;
+@use '../../abstracts/tokens' as *;
 @use '../functions/string-replace.scss' as *;
 
 @mixin getButtonsOnColorBg( $targetBackgroundType ) {
