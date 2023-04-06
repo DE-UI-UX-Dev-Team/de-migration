@@ -229,26 +229,13 @@ $elevation-4: 0 16px 24px 0 rgba(0, 0, 0, 0.14),
 
 //-- Transitions
 
-$transition--ease-25: all 0.4s ease;
+$transition--ease-10: all 100ms ease; 
+$transition--ease-15: all 175ms ease;
+$transition--ease-25: all 250ms ease;
+$transition--ease-40: all 400ms ease;
+$transition--ease-50: all 500ms ease;
 
-//--Toggles
-$toggle-track--height: 3.4rem;
-$toggle-track--width: 1.5rem;
-$toggle-track--radius: 34px;
-$toggle-thumb--height:2rem;
-$toggle-thumb--width: 2rem;
-$toggle-thumb--radius: 50%;
-$toggle-thumb--left: -0.2rem;
-$toggle-thumb--bottom: -0.2rem;
-$toggle--transition: .4s;
-$toggle-check--transform: translateX(1.8rem);
-$toggleOn-hover--shadow: 0 0 0 1.1rem "hsla(#{$blue--base-hsl}, 10%)";
-$toggleOff-hover--shadow: 0 0 0 1.1rem "hsla(#{$gray--light-2-hsl}, 10%)";
-$toggleOn-active--shadow: 0 0 0 1.1rem "hsla(#{$blue--base-hsl}, 25%)";
-$toggleOff-active--shadow: 0 0 0 1.1rem "hsla(#{$gray--light-2-hsl}, 25%)";
-$toggleOn-hover--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 10%)";
-$toggleOn-active--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 25%)";
+//-- Content Switcher
 
-//--Content Switcher
 $content-switcher--track-shadow-right: 3px 0 8px 0 "hsla(#{$blue--base-hsl}, 20%)";
 $content-switcher--track-shadow-left: -3px 0 8px 0 rgba(0, 0, 0, 0.2);

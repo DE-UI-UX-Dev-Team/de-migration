@@ -10,6 +10,7 @@
 @use '../../abstracts/mixins/_buttons' as *;
 @use '../../abstracts/mixins/_links' as *;
 @use '../../abstracts/mixins/_tables' as *; 
+@use '../../abstracts/mixins/_toggle-switch' as *; 
 
 @mixin colorize( $elemType, $targetBackgroundType, $theme ) {
 
@@ -18,7 +19,8 @@
     $colorConfigurations: (
         "button" : $buttonsOnContrastingBg, 
         "links"  : $linksOnContrastingBg, 
-        "tables" : $tablesOnContrastingBg
+        "tables" : $tablesOnContrastingBg, 
+        "toggles" : $togglesOnContrastingBg
     );
 
     $elemOnContrastingBg: map.get( $colorConfigurations, #{$elemType} );
@@ -70,6 +72,9 @@
                 } 
                 @else if( $elemType == "tables" ) {
                     @include getTablesOnColorBg( $palette, $bgSelector, $suffix );
+                }
+                @else if( $elemType == "toggles" ) {
+                    @include getTogglesOnColorBg( $palette, $bgSelector, $suffix );
                 }
 
             } // End if - targetBackgroundType
