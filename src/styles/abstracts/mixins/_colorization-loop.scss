@@ -8,7 +8,8 @@
 //-- Step 1. Include specific mixin for handling colors as needed --//
 
 @use '../../abstracts/mixins/_buttons' as *;
-@use '../../abstracts/mixins/_links' as *; 
+@use '../../abstracts/mixins/_links' as *;
+@use '../../abstracts/mixins/_tables' as *; 
 
 @mixin colorize( $elemType, $targetBackgroundType, $theme ) {
 
@@ -16,7 +17,8 @@
 
     $colorConfigurations: (
         "button" : $buttonsOnContrastingBg, 
-        "links"  : $linksOnContrastingBg
+        "links"  : $linksOnContrastingBg, 
+        "tables" : $tablesOnContrastingBg
     );
 
     $elemOnContrastingBg: map.get( $colorConfigurations, #{$elemType} );
@@ -61,11 +63,13 @@
                 //-- Step 3. Call mixin for handling color --//
 
                 @if( $elemType == "button" ) { 
-                    @debug $bgSelector;
                     @include getButtonsOnColorBg( $palette, $bgSelector, $suffix );
                 }  
                 @else if( $elemType == "links" ) {
                     @include getLinksOnColorBg( $palette, $bgSelector, $suffix );
+                } 
+                @else if( $elemType == "tables" ) {
+                    @include getTablesOnColorBg( $palette, $bgSelector, $suffix );
                 }
 
             } // End if - targetBackgroundType

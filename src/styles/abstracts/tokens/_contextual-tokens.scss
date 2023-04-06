@@ -21,4 +21,15 @@ $btn--button-padding: 1.6rem 2.4rem;
 
 //-- Links
 
-$link-default--underline: underline solid 0.1rem;
+$link-default--underline: underline solid 0.1rem; 
+
+//-- Tables
+
+$table--border-spacing: 15px;
+$table--border-width: 0.1rem;
+$table-heading--border-width: 0.2rem;
+$table-cell--padding: 1.6rem 1rem;    
+$table-head--font: #{$font-size--mob-lg-4}/#{$line-height--mob-lg-5} #{$font-stack--sans-serif};
+$table-body--font: #{$font-size--mob-lg-5}/#{$line-height--mob-lg-5} #{$font-stack--sans-serif};
+$table-head--line-height: $letter-spacing--mob-lg-5;
+$table-body--line-height: $letter-spacing--mob-sm-1;
