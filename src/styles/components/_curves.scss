@@ -21,11 +21,11 @@ section[class*=curv]:before {
     width: calc(100% + (var(--gutter-xl) * 8));
     background-image: url(/assets/images/de_main_curve.svg);
 }
-.bg-curv--primary-dark-1:after {
+.bg-curv--tertiary-dark-1:after {
     background-image: url(/assets/images/de_main_curve_blue.svg);
 }
 
-.bg-curv--secondary-dark-1:after {
+.bg-curv--primary-dark-1:after {
     background-image: url(/assets/images/de_main_curve_orange.svg);
 }
 

@@ -23,7 +23,7 @@ section:not([class*="bg--"]) + .customer-care:not([class*="bg--"]){
     padding-top: 0;
      
     & .container:before{
-        border-top: 1px solid var(--gray-disabled);
+        border-top: 1px solid var(--secondary-light-3);
         content: "";
         display:block;  
         top:0;
