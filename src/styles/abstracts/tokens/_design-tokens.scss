@@ -234,8 +234,3 @@ $transition--ease-15: all 175ms ease;
 $transition--ease-25: all 250ms ease;
 $transition--ease-40: all 400ms ease;
 $transition--ease-50: all 500ms ease;
-
-//-- Content Switcher
-
-$content-switcher--track-shadow-right: 3px 0 8px 0 "hsla(#{$blue--base-hsl}, 20%)";
-$content-switcher--track-shadow-left: -3px 0 8px 0 rgba(0, 0, 0, 0.2);
