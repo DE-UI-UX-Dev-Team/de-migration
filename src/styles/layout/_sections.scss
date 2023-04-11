@@ -20,7 +20,7 @@ section.bdr-bottom {
     .container { 
         border-bottom-width: 1px;
         border-bottom-style: solid;
-        padding-bottom: calc(var(--sect--btm-pd--sm)); 
+        padding-bottom: var(--sect--btm-pd--sm); 
     }
     
 } 
@@ -30,7 +30,7 @@ section.bdr-bottom {
     section.bdr-bottom {  
     
         .container { 
-            padding-bottom: calc(var(--sect--btm-pd--lg)); 
+            padding-bottom: var(--sect--btm-pd--lg); 
         }
         
     }

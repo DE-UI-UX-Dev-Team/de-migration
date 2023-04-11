@@ -4,67 +4,36 @@
 
 /*--- Utilities - Color Schemes (Foreground, Background, & Borders ) ---*/
 
-@each $palette, $colors in map.get( $colors, #{$active-theme} ) {
-    @each $color, $value in $colors { 
-        
-        // Foreground
-        .clr--#{$palette}-#{$color} {  
-            color: var(--#{$palette}-#{$color});
-        }
-
-        // Background
-        .bg--#{$palette}-#{$color} {  
-            background-color: var(--#{$palette}-#{$color});
-        } 
-
-        // Border
-        .bdr-#{$palette}-#{$color} {  
-            border: 1px solid var(--#{$palette}-#{$color});
-        }
-
-        // Border Color Only
-        .bdr-clr--#{$palette}-#{$color} {  
-            border-color: var(--#{$palette}-#{$color});
-        }
-
-        // table/table--transpose tdcolor only
-        table.bg--#{$palette}-#{$color} tr:nth-child(even),
-        table.bg--#{$palette}-#{$color} tr td:nth-child(even),
-        table.bg--#{$palette}-#{$color} .thead td,
-        table.table--transpose.bg--#{$palette}-#{$color} .thead td {
-            background-color: var(--#{$palette}-#{$color});
-        } 
-    }
-}   
+@include getColorUtilities();
 
 /*--- Utilities - Color Schemes (Gradients) ---*/
 
 // bg--[palette]-[color]--grad-[iteration]
 
-.bg--secondary-dark-1--grad-1 {
-    background-image: linear-gradient(-84deg, var(--secondary-dark-1), var(--secondary-base));
-}
-
-.bg--secondary-dark-2--grad-1 {
-    background-image: linear-gradient(135deg, var(--secondary-dark-2), var(--secondary-dark-1), var(--secondary-base));
-}
-
-.bg--secondary-dark-2--grad-2 {
-    background-image: linear-gradient(-82deg, var(--secondary-dark-2), var(--secondary-dark-1), var(--secondary-base));
-}
-
-.bg--primary-base--grad-1 {
-    background-image: linear-gradient(0deg, var(--primary-base), var(--primary-dark-2));
+.bg--primary-dark-1--grad-1 {
+    background-image: linear-gradient(-84deg, var(--primary-dark-1), var(--primary-base));
 }
 
 .bg--primary-dark-2--grad-1 {
-    background-image: linear-gradient(132deg, var(--primary-dark-2), var(--primary-light-1));
+    background-image: linear-gradient(135deg, var(--primary-dark-2), var(--primary-dark-1), var(--primary-base));
 }
 
-.bg--primary-light-4--grad-1 {
-    background-image: linear-gradient(180deg, var(--primary-light-4), var(--white-base));
+.bg--primary-dark-2--grad-2 {
+    background-image: linear-gradient(-82deg, var(--primary-dark-2), var(--primary-dark-1), var(--primary-base));
 }
 
-.bg--primary-light-4--grad-2 {
-    background-image: linear-gradient(180deg, var(--primary-light-4), var(--white-base) 68%);
+.bg--tertiary-base--grad-1 {
+    background-image: linear-gradient(0deg, var(--tertiary-base), var(--tertiary-dark-2));
+}
+
+.bg--tertiary-dark-2--grad-1 {
+    background-image: linear-gradient(132deg, var(--tertiary-dark-2), var(--tertiary-light-1));
+}
+
+.bg--tertiary-light-4--grad-1 {
+    background-image: linear-gradient(180deg, var(--tertiary-dark-2), var(--white-base));
+}
+
+.bg--tertiary-light-4--grad-2 {
+    background-image: linear-gradient(180deg, var(--tertiary-dark-2), var(--white-base) 68%);
 }
