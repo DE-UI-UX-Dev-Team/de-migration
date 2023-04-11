@@ -4,14 +4,16 @@
 @use '../../abstracts/tokens' as *;
 @use '../mixins/breakpoints' as *; 
 
-@mixin getTable() {
 
-    @each $breakpoint,$tableTypes in map.get($tables, #{$active-theme}) {
-        $tableTypeSelector: "";
-        //using mediaQuery mixin
-        @include mediaQuery( #{$breakpoint} ) { 
-            // defining table selector depending on the tableType
-            @each $tableType, $tableItems in $tableTypes {
+@mixin getTablesOnColorBg( $palette, $bgSelector, $suffix ) {
+    
+    $tableTypeSelector: "";
+
+    @each $targetViewPort, $states in $palette {   
+
+        @include mediaQuery( $targetViewPort ) {
+            @each $tableType, $tableItems in $states {   
+             
                 @if $tableType != "table--default"{
                     $tableTypeSelector: "table.#{$tableType}";
                 }
@@ -19,8 +21,17 @@
                     $tableTypeSelector: "table";
                 }
                 @each $tableItem, $tableSubItems in $tableItems {
+                     
+                    @if $tableItem =="table" {
+                        $properties: $tableSubItems; 
+                        #{$tableTypeSelector} {
+                            @each $property, $value in $properties {
+                                #{$property}: #{$value};
+                            }
+                        }
+                    }
                     //styles for thead tr, thead td
-                    @if $tableItem =="thead" {
+                    @else if $tableItem =="thead" {
                         @each $tableSubItem, $properties in $tableSubItems {
                             @if $tableSubItem=="tr" {
                                 #{$tableTypeSelector} #{$tableSubItem}.#{$tableItem} {
@@ -36,11 +47,10 @@
                                     }
                                 }
                             }
-
                         }
                     }
                      //styles for tbody tr, tbody td
-                    @if $tableItem =="tbody" {
+                    @else if $tableItem =="tbody" {
                         @each $tableSubItem, $properties in $tableSubItems {
                             #{$tableTypeSelector} #{$tableSubItem} {
                                 @each $property, $value in $properties {
@@ -52,6 +62,5 @@
                 }
             }
         }
-        
-    } 
-}
+    }
+} // End mixin

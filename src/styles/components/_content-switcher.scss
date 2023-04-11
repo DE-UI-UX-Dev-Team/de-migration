@@ -2,20 +2,14 @@
 
 @use '../abstracts' as *;
 
-
-.content-switcher--pill {
-    background-color: #{"hsl(#{$blue--light-3-hsl})"};
-    .content-switcher--slider{
-        background-color: #{"hsl(#{$white-hsl})"};
-    }
-    [data-content-switcher*=label] span{
-        color: #{"hsl(#{$gray--dark-1-hsl})"}; 
-    }
-} 
+/*-- Component - Content Switcher --*/
 
 .content-switcher {
+
     --switch-gutter: 4px; //padding for the pill
+
     position: relative;
+
     [data-content-switcher*=input] {
         position: absolute; top: -9999px; left: -9999px; 
     } 
@@ -58,7 +52,7 @@
 
     [data-content-switcher=input-left]:focus ~ .content-switcher--pill [data-content-switcher=label-left], 
     [data-content-switcher=input-right]:focus ~ .content-switcher--pill [data-content-switcher=label-right] {
-        outline: 3px solid var(--primary-light-2);
+        outline: #{$outline--focus};
     }
     
 }
@@ -81,16 +75,35 @@
     display: block;
 }
 
-// selected label color
-[data-content-switcher=input-right]:checked ~ .content-switcher--pill [data-content-switcher=label-left] span,
-[data-content-switcher=input-left]:checked ~ .content-switcher--pill [data-content-switcher=label-right] span{
-    color: #{"hsl(#{$blue--base-hsl})"};
- }
-
  //focus states of unchecked label
  [data-content-switcher=label-right]:not(:checked):focus ~ .content-switcher--pill [data-content-switcher=label-right],
  [data-content-switcher=label-left]:not(:checked):focus ~ .content-switcher--pill [data-content-switcher=label-left]{
     outline: #{$outline--focus};
     outline-offset: -4px;
     border-radius: $border-radius-25;
+}
+
+/*-- Color Scheme - Content Switcher --*/
+ 
+.content-switcher {
+
+    [data-content-switcher=input-right]:checked ~ .content-switcher--pill [data-content-switcher=label-left] span,
+    [data-content-switcher=input-left]:checked ~ .content-switcher--pill [data-content-switcher=label-right] span{
+        color: var(--tertiary-light-2);
+    }
+
+}
+
+.content-switcher--pill {
+    
+    background-color: var(--secondary-light-2);
+    
+    .content-switcher--slider{
+        background-color: var(--white-base);
+    }
+
+    [data-content-switcher*=label] span{
+        color: var(--secondary-dark-2);
+    }
+
 }

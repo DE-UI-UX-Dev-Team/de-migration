@@ -3,69 +3,88 @@
 
 /*--- Components - Toggle Switch ---*/
 
-.toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: $toggle-track--height;
-  height: $toggle-track--width;
-  margin: 3.2rem 2.4rem 0 2.4rem;
-}
+.toggle-switch { 
 
-.toggle-switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+    --toggle-on--hover--shadow: #{$toggle-on--hover--shadow}; 
+    --toggle-on--active--shadow: #{$toggle-on--active--shadow};
+    --toggle-off--hover--shadow: #{$toggle-off--hover--shadow};
+    --toggle-off--active--shadow: #{$toggle-off--active--shadow}; 
 
-/*--- Component- Toggle switch Track styling ---*/
+    position: relative;
+    display: inline-block; 
+    margin-bottom: $v-spacing--200;
+    cursor: pointer;
 
-.toggle-switch .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom:0;
-  background-color: var(--gray-disabled);
-  -webkit-transition: $toggle--transition;
-  transition: $toggle--transition;
-  border-radius: $toggle-track--radius;
-}
+    input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    } 
 
-/*--- Component- Toggle switch DIsabled Track styling ---*/ 
+    .label-text {
+        display: inline-block; 
+        margin-left: $h-spacing--300;
+        white-space: nowrap;
+    }
 
-.toggle-switch input:disabled + .slider{
-  background-color: rgba(193,197,198,0.45);
-}
+    .slide-container {
+        display: inline-block;
+      
+    }
 
-/*--- Component- Toggle switch Thumb styling ---*/
+    /*--- Components- Toggle switch Track styling ---*/
 
-.toggle-switch .slider:before {
-  position: absolute;
-  content: "";
-  height: $toggle-thumb--height;
-  width: $toggle-thumb--width;
-  left: $toggle-thumb--left;
-  bottom: $toggle-thumb--bottom;
-  -webkit-transition: $toggle--transition;
-  transition: $toggle--transition;
-  border-radius: $toggle-thumb--radius;
-  box-shadow: $elevation-1;
-}
+    .slider {
+        position: absolute;
+        height: $toggle-track--height;
+        width: $toggle-track--width;
+        top: 50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateY(-50%);
+        transition: $toggle--transition;
+        border-radius: $toggle-track--radius;
+    }
 
-/*--- Component- Toggle switch Checked thumb animation ---*/
+    /*--- Components- Toggle switch DIsabled Track styling ---*/ 
 
-.toggle-switch input:checked + .slider:before {
-  -webkit-transform: $toggle-check--transform;
-  -ms-transform: $toggle-check--transform;
-  transform: $toggle-check--transform;
+    input:disabled + .slider {
+        background-color: var(--secondary-light-2);
+    }
+    
+    input:not(:disabled):focus {
+        outline: $outline--focus;
+    }
+    
+    /*--- Components- Toggle switch Thumb styling ---*/
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: $toggle-thumb--height;
+        width: $toggle-thumb--width;
+        left: $toggle-thumb--left;
+        bottom: $toggle-thumb--bottom;
+        transition: $toggle--transition;
+        border-radius: $toggle-thumb--radius;
+        box-shadow: $elevation-1;
+    }
+
+    /*--- Components- Toggle switch Checked thumb animation ---*/
+
+    input:checked + .slider:before {
+        transform: $toggle-check--transform;
+        box-shadow: $elevation-1;
+    } 
+
+    input:not(:disabled):focus + .slider:before,
+    input:not(:disabled):checked:focus + .slider:before {
+        outline-offset: 0.9rem;
+    }
+
 }
 
 /*--- Components - Toggle-switch on Light backgrounds ---*/
 
-@include getToggleSwitch($toggleSwitchOnLightBg, "lightBackgrounds"); 
-
-
-/*--- Components - Toggle-switch on Dark backgrounds ---*/
-
-@include getToggleSwitch($toggleSwitchOnDarkBg, "darkBackgrounds"); 
+@include colorize( "toggles", "light-backgrounds", #{$active-theme} );

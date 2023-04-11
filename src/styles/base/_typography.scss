@@ -155,7 +155,30 @@ h6:last-child, .h-6:last-child {
     margin-bottom: 0;
 } 
 
-/*--- Base - Text Color Palette ---*/
+/*--- Color Scheme - Typography Default Properties ---*/
+
+:root {
+    --heading-color: var(--seconadary-base);
+    --heading--on-dark-background: var(--white-base);
+    --heading--on-light-background: var(--secondary-base);
+
+    --heading--on-error-background: var(--error-text);
+    --heading--on-success-background: var(--success-text);
+    --heading--on-info-background: var(--info-text);
+    --heading--on-warning-background: var(--warning-text);
+ 
+    --body-text--color: var(--secondary-base);
+    --body-text--light-color: var(--secondary-base);
+    --body-text--on-dark-background: var(--white-base);
+    --body-text--on-light-background: var(--secondary-base); 
+
+    --body-text--on-error-background: var(--error-text);
+    --body-text--on-success-background: var(--success-text);
+    --body-text--on-info-background: var(--info-text);
+    --body-text--on-warning-background: var(--warning-text);
+}
+ 
+/*--- Color Scheme - Type Color Palette ---*/
 
 body, 
 p, 
@@ -184,6 +207,6 @@ h2, .h-2 {
     background-color: var(--body-text--on-dark-background);
 }
  
-/*--- Base - Text on Colored Backgrounds ---*/
+/*--- Color Scheme - Type on Colored Backgrounds ---*/
 
-@include getTextOnBgColor();
+@include getTypeOnColorBg();
