@@ -68,7 +68,7 @@ table {
 
 }
 
-@include mediaQuery("laptop-up") {
+@include mediaQuery("desktop-up") {
 
     body,  
     p, 
@@ -103,7 +103,7 @@ table {
 
 } 
 
-@include mediaQuery("desktop-up") {
+@include mediaQuery("desktop-xl-up") {
 
     body,  
     p, 

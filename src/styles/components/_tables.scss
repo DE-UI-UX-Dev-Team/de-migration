@@ -38,7 +38,7 @@ table {
 
 }
 
-@include mediaQuery( 'laptop-up' ) {
+@include mediaQuery( 'desktop-up' ) {
     
     .table--layout-fixed {
         table-layout: fixed;

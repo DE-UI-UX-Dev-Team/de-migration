@@ -21,7 +21,7 @@ $col-multiplier: 2;
     }  
 }
 
-@include mediaQuery("laptop-up") {
+@include mediaQuery("desktop-up") {
     .container {
         padding-left: calc(#{$multiplier} * var(--container--gutter--lg)); 
         padding-right: calc(#{$multiplier} * var(--container--gutter--lg));
@@ -29,7 +29,7 @@ $col-multiplier: 2;
     }   
 }
 
-@include mediaQuery("desktop-up") {
+@include mediaQuery("desktop-xl-up") {
     .container {
         padding-left: calc(#{$multiplier} * var(--container--gutter--xl)); 
         padding-right: calc(#{$multiplier} * var(--container--gutter--xl));
