@@ -124,9 +124,10 @@ $filter :
     } 
 
     @each $bgClass, $customProp in map.get( $typeOnColorBg, #{$active-theme}, "icons" ) {
-        i[class*=#{$bgClass}] {
+        i[class*=#{$bgClass}],
+        [class*=#{$bgClass}] div:before {
             color: var(#{$customProp});
-        } 
+        }         
     }
 
 }

@@ -6,6 +6,7 @@ $multiplier: -1;
 $row-multiplier: -1; 
 $col-multiplier: 2; 
 
+
 .container {
     max-width: var(--max-content-width--xl);
     padding-left: calc(#{$multiplier} * var(--container--gutter--sm)); 
@@ -35,6 +36,10 @@ $col-multiplier: 2;
         padding-right: calc(#{$multiplier} * var(--container--gutter--xl));
         margin: calc(var(--gutter-sm) * ( #{$row-multiplier} * 2 )) auto;
     }   
+    .full-width > .container{
+        padding: 0;
+        max-width: none;
+    }
 }
   
 .container.max-width--sm { max-width: var(--max-content-width--sm); }
