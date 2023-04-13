@@ -9,6 +9,7 @@ $breakpoints: (
         "tablet-only"            : '(min-width: #{$tablet--min-width}) and (max-width: #{$tablet--max-width})',
         "desktop-only"           : '(min-width: #{$desktop--min-width}) and (max-width: #{$desktop--max-width})',
         "desktop-xl-only"        : '(min-width: #{$desktop-xl--min-width})', 
+        "large-handheld-devices-only" : '(min-width: #{$mobile-landscape--min-width}) and (max-width: #{$tablet--max-width})',
 
         "mobile-landscape-up"    : '(min-width: #{$mobile-landscape--min-width})',
         "mobile-up"              : '(min-width: #{$mobile--min-width})',

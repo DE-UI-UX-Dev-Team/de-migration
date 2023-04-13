@@ -109,7 +109,7 @@
     display: inline-block;
     float: none;
 
-    @include mediaQuery( "tablet-only" ) { 
+    @include mediaQuery( "large-handheld-devices-only" ) { 
       flex: 0 0 calc(100% / (2 + 1/4)); // showing 2 columns and 1/4th of 3rd column in tablet screen
 
     }

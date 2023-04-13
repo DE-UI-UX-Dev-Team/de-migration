@@ -42,7 +42,7 @@ em, .fs--italic { font-style: italic; }
 
 }
 
-@include mediaQuery("tablet-only") {
+@include mediaQuery("large-handheld-devices-only") {
 
   .fs--text-right--md { text-align: right; }
   .fs--text-left--md { text-align: left; }
