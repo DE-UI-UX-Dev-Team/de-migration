@@ -1,13 +1,13 @@
 //-- Breakpoints
  
-// Desktop XL
+// Desktop - xl
 $desktop-xl--min-width: 1900px;
  
-// Desktop
+// Desktop - lg
 $desktop--max-width: 1899.998px; 
 $desktop--min-width: 992px;
  
-// Tablet
+// Tablet - md
 $tablet--max-width: 991.998px;
 $tablet--min-width: 768px; 
 
@@ -15,7 +15,7 @@ $tablet--min-width: 768px;
 $mobile-landscape--max-width: 767.998px;
 $mobile-landscape--min-width: 576px;
 
-// Mobile
+// Mobile - sm
 $mobile--max-width: 575.998px;  
 $mobile--min-width: 0px;    
 
