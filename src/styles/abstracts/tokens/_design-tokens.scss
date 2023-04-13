@@ -1,20 +1,32 @@
 //-- Breakpoints
  
-// Desktop
-$desktop--min-width: 1440px;
+// Desktop XL
+$desktop-xl--min-width: 1900px;
  
-// Laptop
-$laptop--max-width: 1439.98px; 
-$laptop--min-width: 1236px;
+// Desktop
+$desktop--max-width: 1899.998px; 
+$desktop--min-width: 992px;
  
 // Tablet
-$tablet--max-width: 1235.98px;
-$tablet--min-width: 600px; 
+$tablet--max-width: 991.998px;
+$tablet--min-width: 768px; 
+
+// Mobile Landscape
+$mobile-landscape--max-width: 767.998px;
+$mobile-landscape--min-width: 576px;
 
 // Mobile
-$mobile--max-width: 599.98px;  
+$mobile--max-width: 575.998px;  
 $mobile--min-width: 0px;    
 
+
+//-- Content Width
+ 
+$content--full-width: 100%;
+$content--width-sm: 540px;
+$content--width-md: 800px;
+$content--width-lg: 1236px;
+$content--width-xl: 1440px; 
 
 //-- Color Schemes
   
@@ -192,14 +204,6 @@ $h-spacing--200: 3.2rem;
 $h-spacing--300: 4.8rem; 
 $h-spacing--400: 6.4rem; 
 $h-spacing--500: 8rem;   
-
-
-//-- Content Width
-
-$content--width-sm: 640px;
-$content--width-md: 800px;
-$content--width-lg: 960px;
-$content--width-xl: 1440px; 
 
 //-- Border-radius
 

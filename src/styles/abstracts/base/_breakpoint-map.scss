@@ -4,14 +4,22 @@
 
 $breakpoints: ( 
     "default-theme" : (
-        "mobile-only"  : '(max-width: #{$mobile--max-width})', 
-        "tablet-only"  : '(min-width: #{$tablet--min-width}) and (max-width: #{$tablet--max-width})',
-        "laptop-only"  : '(min-width: #{$laptop--min-width}) and (max-width: #{$laptop--max-width})',
-        "desktop-only" : '(min-width: #{$desktop--min-width})',
-        "mobile-up"    : '(min-width: #{$mobile--min-width})',
-        "tablet-up"    : '(min-width: #{$tablet--min-width})',
-        "laptop-up"    : '(min-width: #{$laptop--min-width})',
-        "desktop-up"   : '(min-width: #{$desktop--min-width})',
-        "tablet-below" :  '(max-width: #{$tablet--max-width})' 
+        "mobile-only"            : '(max-width: #{$mobile--max-width})',  
+        "mobile-landscape-only"  : '(min-width: #{$mobile-landscape--min-width}) and (max-width: #{$mobile-landscape--max-width})',
+        "tablet-only"            : '(min-width: #{$tablet--min-width}) and (max-width: #{$tablet--max-width})',
+        "desktop-only"           : '(min-width: #{$desktop--min-width}) and (max-width: #{$desktop--max-width})',
+        "desktop-xl-only"        : '(min-width: #{$desktop-xl--min-width})', 
+
+        "mobile-landscape-up"    : '(min-width: #{$mobile-landscape--min-width})',
+        "mobile-up"              : '(min-width: #{$mobile--min-width})',
+        "tablet-up"              : '(min-width: #{$tablet--min-width})',
+        "desktop-up"             : '(min-width: #{$desktop--min-width})',
+        "desktop-xl-up"          : '(min-width: #{$desktop-xl--min-width})',
+
+        "mobile-below"           : '(max-width: #{$mobile--max-width})',
+        "mobile-landscape-below" : '(max-width: #{$mobile-landscape--max-width})',
+        "tablet-below"           : '(max-width: #{$tablet--max-width})',  
+        "desktop-below"          : '(max-width: #{$desktop--max-width})', 
+        "desktop-xl-below"       : '(max-width: #{$desktop--max-width})'
     )
 );
