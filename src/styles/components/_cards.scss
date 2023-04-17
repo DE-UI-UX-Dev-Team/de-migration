@@ -109,7 +109,7 @@
     display: inline-block;
     float: none;
 
-    @include mediaQuery( "tablet-only" ) { 
+    @include mediaQuery( "large-handheld-devices-only" ) { 
       flex: 0 0 calc(100% / (2 + 1/4)); // showing 2 columns and 1/4th of 3rd column in tablet screen
 
     }
@@ -122,10 +122,10 @@
 }
 
 
-@include mediaQuery( "laptop-up" ) { 
+@include mediaQuery( "desktop-up" ) { 
   
   .row.card-group{
-    overflow-x: hidden; //remove the scrollable cards on laptop and higher screens
+    overflow-x: hidden; //remove the scrollable cards on desktop and higher screens
     margin-right: 0;
   }  
   

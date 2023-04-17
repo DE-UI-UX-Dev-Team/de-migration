@@ -8,30 +8,33 @@ $col-multiplier: 2;
 
 
 .container {
-    max-width: var(--max-content-width--xl);
+    max-width: var(--max-content-width--sm);
     padding-left: calc(#{$multiplier} * var(--container--gutter--sm)); 
     padding-right: calc(#{$multiplier} * var(--container--gutter--sm));
     margin: calc(var(--gutter-sm) * ( #{$row-multiplier} * 2 )) auto;
 }  
 
 @include mediaQuery("tablet-up") {
-    .container {
+    .container { 
+        max-width: var(--max-content-width--md);
         padding-left: calc(#{$multiplier} * var(--container--gutter--md)); 
         padding-right: calc(#{$multiplier} * var(--container--gutter--md));   
         margin: calc(var(--gutter-sm) * ( #{$row-multiplier} * 2 )) auto;
     }  
 }
 
-@include mediaQuery("laptop-up") {
-    .container {
+@include mediaQuery("desktop-up") {
+    .container { 
+        max-width: var(--max-content-width--lg);
         padding-left: calc(#{$multiplier} * var(--container--gutter--lg)); 
         padding-right: calc(#{$multiplier} * var(--container--gutter--lg));
         margin: calc(var(--gutter-sm) * ( #{$row-multiplier} * 2 )) auto;
     }   
 }
 
-@include mediaQuery("desktop-up") {
+@include mediaQuery("desktop-xl-up") {
     .container {
+        max-width: var(--max-content-width--xl);
         padding-left: calc(#{$multiplier} * var(--container--gutter--xl)); 
         padding-right: calc(#{$multiplier} * var(--container--gutter--xl));
         margin: calc(var(--gutter-sm) * ( #{$row-multiplier} * 2 )) auto;

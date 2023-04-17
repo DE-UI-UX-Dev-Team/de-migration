@@ -4,8 +4,8 @@
 
 @include getSectionSpacing( "mobile-up", "sm" );
 @include getSectionSpacing( "tablet-up", "md" );
-@include getSectionSpacing( "laptop-up", "lg" );
-@include getSectionSpacing( "desktop-up", "xl" ); 
+@include getSectionSpacing( "desktop-up", "lg" );
+@include getSectionSpacing( "desktop-xl-up", "xl" ); 
 
 section[class*=bg-] + section[class*=bg-] {
     margin-top: 0; 
@@ -25,7 +25,7 @@ section.bdr-bottom {
     
 } 
 
-@include mediaQuery("laptop-up") {
+@include mediaQuery("desktop-up") {
 
     section.bdr-bottom {  
     
