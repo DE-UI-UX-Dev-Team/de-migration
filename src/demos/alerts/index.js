@@ -10,7 +10,7 @@ window.triggerAlertsFullWidth = function() {
     let messageTtl  = 100000; // Measured in seconds
     let parentContainer = document.querySelector( '.full-width-dismissable-banner-alerts' ); // This container can be anywhere in the document
     let customClassList = [ 'alert-container','bg--info-background' ];
-    let buttonClassList = [ 'tertiary-btn' ];
+    let buttonClassList = [ 'btn--tertiary' ];
 
 
     BannerAlert.transmit( 
@@ -30,7 +30,7 @@ window.triggerAlertsFullWidth = function() {
                         </div>
                     </div>`;
     customClassList = [ 'alert-container','bg--error-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -49,7 +49,7 @@ window.triggerAlertsFullWidth = function() {
                         </div>
                     </div>`;
     customClassList = [ 'alert-container','bg--warning-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -68,7 +68,7 @@ window.triggerAlertsFullWidth = function() {
                         </div>
                     </div>`;
     customClassList = [ 'alert-container','bg--success-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -91,7 +91,7 @@ window.triggerAlerts = function() {
     let messageTtl  = 100000; // Measured in seconds
     let parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
     let customClassList = [ 'alert-container', 'bg--info-background' ];
-    let buttonClassList = [ 'tertiary-btn' ];
+    let buttonClassList = [ 'btn--tertiary' ];
 
 
     BannerAlert.transmit( 
@@ -111,7 +111,7 @@ window.triggerAlerts = function() {
                         </div>
                     </div>`;
     customClassList = [ 'alert-container','bg--error-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -130,7 +130,7 @@ window.triggerAlerts = function() {
                         </div>
                     </div>`;
     customClassList = [ 'alert-container','bg--warning-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -149,7 +149,7 @@ window.triggerAlerts = function() {
                         </div>
                     </div>`;
     customClassList = [ 'alert-container','bg--success-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
     BannerAlert.transmit( 
         messageType, 
@@ -175,7 +175,7 @@ window.triggerAlertsWithButton = function() {
     let messageTtl  = 100000; // Measured in seconds
     let parentContainer = document.querySelector( '.cta-banner-alerts' ); // This container can be anywhere in the document
     let customClassList = [ 'alert-container', 'bg--info-background' ];
-    let buttonClassList = [ 'tertiary-btn' ];
+    let buttonClassList = [ 'btn--tertiary' ];
 
 
     BannerAlert.transmit( 
@@ -197,7 +197,7 @@ window.triggerAlertsWithButton = function() {
                             </div>
                        </div>`;
     customClassList = [ 'alert-container','bg--error-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
 
     BannerAlert.transmit( 
@@ -219,7 +219,7 @@ window.triggerAlertsWithButton = function() {
                             </div>
                        </div>`;
     customClassList = [ 'alert-container','bg--warning-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
 
     BannerAlert.transmit( 
@@ -241,7 +241,7 @@ window.triggerAlertsWithButton = function() {
                             </div>
                        </div>`;
     customClassList = [ 'alert-container','bg--success-background' ];
-    buttonClassList = [ 'tertiary-btn' ];
+    buttonClassList = [ 'btn--tertiary' ];
 
     BannerAlert.transmit( 
         messageType, 
