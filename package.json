@@ -51,6 +51,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^6.3.0",
-    "banner-alert-js": "^1.0.1"
+    "banner-alert-js": "^1.1.0"
   }
 }
