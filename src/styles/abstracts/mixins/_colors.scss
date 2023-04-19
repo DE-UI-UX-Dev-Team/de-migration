@@ -2,98 +2,38 @@
 
 @use '../../abstracts/base' as *;
 @use '../../abstracts/tokens' as *; 
-
-@mixin getTextOnBgColor() {
  
-    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "body" ) {
-        body[class*=#{$bgClass}] {
-            color: var(#{$customProp});
+@mixin getColorCustomProperties() {
+    @each $palette, $colors in map.get( $colors, #{$active-theme} ) {
+        @each $color, $value in $colors {
+            --#{$palette}-#{$color}: hsl(#{$value});
         }
-    }
+    }  
+}
 
-    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "section" ) {
-        section[class*=#{$bgClass}] {
-            color: var(#{$customProp});
-        } 
-    }
-
-    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "headings" ) {
-        [class*=#{$bgClass}] h1, [class*=#{$bgClass}] .h-1,  
-        [class*=#{$bgClass}] h2, [class*=#{$bgClass}] .h-2 {
-            color: var(#{$customProp});
-        } 
-
-        h1[class*=#{$bgClass}], .h-1[class*=#{$bgClass}],
-        h2[class*=#{$bgClass}], .h-2[class*=#{$bgClass}] {
-            color: var(#{$customProp});
-        }
-    } 
-
-    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "icons" ) {
-        i[class*=#{$bgClass}] {
-            color: var(#{$customProp});
-        } 
-    }
-
-     @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "tables" ) {
-        table[class*=#{$bgClass}] {
-            color: var(#{$customProp});
-        } 
-        table[class*=#{$bgClass}] .thead {
-            border-color: var(#{$customProp});
-        } 
-    }
+@mixin getColorUtilities() {
+    @each $palette, $colors in map.get( $colors, #{$active-theme} ) {
+        @each $color, $value in $colors { 
+            
+            // Foreground
+            .clr--#{$palette}-#{$color} {  
+                color: var(--#{$palette}-#{$color});
+            }
     
-    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "thead" ) {
-        table[class*=#{$bgClass}] .thead {
-            color: var(#{$customProp});
-        } 
-        table[class*=#{$bgClass}].table--transpose .thead {
-            color: var(#{$customProp});
-        } 
-    }
-
-    @each $bgClass, $customProp in map.get( $textOnColorBg, #{$active-theme}, "body-text" ) {
-        [class*=#{$bgClass}] h3, [class*=#{$bgClass}] .h-3,
-        [class*=#{$bgClass}] h4, [class*=#{$bgClass}] .h-4,
-        [class*=#{$bgClass}] h5, [class*=#{$bgClass}] .h-5,
-        [class*=#{$bgClass}] h6, [class*=#{$bgClass}] .h-6,
-        [class*=#{$bgClass}] .p-1,
-        [class*=#{$bgClass}] .p-2,
-        [class*=#{$bgClass}] .p-3,
-        [class*=#{$bgClass}] p, 
-        [class*=#{$bgClass}] ol,
-        [class*=#{$bgClass}] ul,
-        [class*=#{$bgClass}] dl,
-        [class*=#{$bgClass}] dd,
-        [class*=#{$bgClass}] dt,
-        [class*=#{$bgClass}] pre, 
-        [class*=#{$bgClass}] menu,
-        [class*=#{$bgClass}] dir,
-        [class*=#{$bgClass}] address, 
-        [class*=#{$bgClass}] blockquote { 
-            color: var(#{$customProp});
+            // Background
+            .bg--#{$palette}-#{$color} {  
+                background-color: var(--#{$palette}-#{$color});
+            } 
+    
+            // Border
+            .bdr-#{$palette}-#{$color} {  
+                border: 1px solid var(--#{$palette}-#{$color});
+            }
+    
+            // Border Color Only
+            .bdr-clr--#{$palette}-#{$color} {  
+                border-color: var(--#{$palette}-#{$color});
+            }
         }
-
-        h3[class*=#{$bgClass}], .h-3[class*=#{$bgClass}],
-        h4[class*=#{$bgClass}], .h-4[class*=#{$bgClass}],
-        h5[class*=#{$bgClass}], .h-5[class*=#{$bgClass}],
-        h6[class*=#{$bgClass}], .h-6[class*=#{$bgClass}],
-        .p-1[class*=#{$bgClass}],
-        .p-2[class*=#{$bgClass}],
-        .p-3[class*=#{$bgClass}],
-        p[class*=#{$bgClass}], 
-        ol[class*=#{$bgClass}],
-        ul[class*=#{$bgClass}],
-        dl[class*=#{$bgClass}],
-        dt[class*=#{$bgClass}],
-        dd[class*=#{$bgClass}],
-        pre[class*=#{$bgClass}], 
-        menu[class*=#{$bgClass}],
-        dir[class*=#{$bgClass}],
-        address[class*=#{$bgClass}], 
-        blockquote[class*=#{$bgClass}] { 
-            color: var(#{$customProp});
-        }
-    }
+    }   
 }

@@ -2,284 +2,66 @@
 
 // Map used to create media query mixins
 
-$linksOnLightBg: (
-    "default-theme": (       
-        "default-links": (
-            "default":(
-                "color": "hsl(#{$blue--base-hsl})",
-                "text-decoration": $link-default--underline,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null, 
-                "font-weight": $font-weight--medium
+$linksOnContrastingBg: (
+    "default-theme": (
+        "light-bg": (        
+            "default-links": (
+                "default":(
+                    "color": "var(--tertiary-base)",
+                    "text-decoration-color": "var(--tertiary-base)"
+                ),
+                "hover":(
+                    "color": "var(--tertiary-dark-1)",
+                    "text-decoration-color": "var(--tertiary-dark-1)"
+                ),
+                "focus":(
+                    "color": "var(--tertiary-dark-1)",
+                    "text-decoration-color": "var(--tertiary-dark-1)"
+                ),
+                "active":(
+                    "color": "var(--tertiary-light-2)",
+                    "text-decoration-color": "var(--tertiary-light-2)"
+                ),
+                "visited":(
+                    "color": "var(--tertiary-light-2)",
+                ),
+                "disabled":(
+                    "color": "var(--secondary-light-3)",
+                    "text-decoration-color": "var(--secondary-light-3)"
+                )
             ),
-            "hover":(
-                "color": "hsl(#{$blue--dark-1-hsl})",
-                "text-decoration": $link-hover--underline,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "focus":(
-                "color": "hsl(#{$blue--dark-1-hsl})",
-                "text-decoration": $link-focus--underline,
-                "outline":  $outline--focus,
-                "outline-offset":  $outline--focus-offset,
-                "border-radius": $border-radius-25,
-                "opacity": null
-            ),
-            "active":(
-                "color": "hsl(#{$blue--light-2-hsl})",
-                "text-decoration": $link-visited--underline,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "visited":(
-                "color": "hsl(#{$blue--light-2-hsl})"
-            ),
-            "disabled":(
-                "color": "hsl(#{$gray--light-3-hsl})",
-                "text-decoration": $link-disabled--underline,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null, 
-                "pointer-events": none
-            )
-        ),
-        "group-links": (
-            "default":(
-                "color": "hsl(#{$blue--base-hsl})",
-                "text-decoration": none,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null, 
-                "font-weight": $font-weight--medium
-            ),
-            "hover":(
-                "color": "hsl(#{$blue--dark-1-hsl})",
-                "text-decoration": $link-hover--underline,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "focus":(
-                "color": "hsl(#{$blue--dark-1-hsl})",
-                "text-decoration": $link-focus--underline,
-                "outline":  $outline--focus,
-                "outline-offset":  $outline--focus-offset,
-                "border-radius": $border-radius-25,
-                "opacity": null
-            ),
-            "active":(
-                "color": "hsl(#{$blue--base-hsl})",
-                "text-decoration": none,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "visited":(
-                "color": "hsl(#{$blue--base-hsl})"
-            ),
-            "disabled":(
-                "color": "hsl(#{$gray--light-3-hsl})",
-                "text-decoration": none,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null, 
-                "pointer-events": none
-            )
-        ),
-        "email-phone-links":(
-            "default":(
-                "color": "hsl(#{$blue--base-hsl})",
-                "text-decoration": $link-default--underline,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null, 
-                "font-weight": $font-weight--medium
-            ),
-            "hover":(
-                "color": "hsl(#{$blue--dark-1-hsl})",
-                "text-decoration": $link-hover--underline,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "focus":(
-                "color": "hsl(#{$blue--dark-1-hsl})",
-                "text-decoration": $link-focus--underline,
-                "outline":  $outline--focus,
-                "outline-offset":  $outline--focus-offset,
-                "border-radius": $border-radius-25,
-                "opacity": null
-            ),
-            "active":(
-                "color": "hsl(#{$blue--base-hsl})",
-                "text-decoration": $link-default--underline,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "visited":(
-                "color": "hsl(#{$blue--base-hsl})"
-            ),
-            "disabled":(
-                "color": "hsl(#{$gray--light-3-hsl})",
-                "text-decoration": $link-disabled--underline,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null, 
-                "pointer-events": none
+            "email-phone-links":(
+                "active":(
+                    "color": "var(--tertiary-base)",
+                    "text-decoration-color": "var(--tertiary-base)"
+                )
             )
         ), 
-    
-    )
-);
-
-$linksOnDarkBg: (
-    "default-theme": (       
-        "default-links": (
-            "default":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-default--underline-darkBg,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null, 
-                "font-weight": $font-weight--medium
-            ),
-            "hover":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-focus--underline-darkBg,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": 75%
-            ),
-            "focus":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-focus--underline-darkBg,
-                "outline":  $outline--focus,
-                "outline-offset":  $outline--focus-offset,
-                "border-radius": $border-radius-25,
-                "opacity": 75%
-            ),
-            "active":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-default--underline-darkBg,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "disabled":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-disabled--underline--darkBg,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": 40%
-            )
-        ),
-        "group-links": (
-            "default":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": none,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null, 
-                "font-weight": $font-weight--medium
-            ),
-            "hover":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-focus--underline-darkBg,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": 75%
-            ),
-            "focus":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-focus--underline-darkBg,
-                "outline":  $outline--focus,
-                "outline-offset":  $outline--focus-offset,
-                "border-radius": $border-radius-25,
-                "opacity": 75%
-            ),
-            "active":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": none,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "disabled":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": none,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": 40%
-            )
-        ),
-        "email-phone-links": (
-            "default":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-default--underline-darkBg,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": null, 
-                "font-weight": $font-weight--medium
-            ),
-            "hover":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-focus--underline-darkBg,
-                "outline": null,
-                "outline-offset": null,
-                "border-radius": null,
-                "opacity": 75%
-            ),
-            "focus":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-focus--underline-darkBg,
-                "outline":  $outline--focus,
-                "outline-offset":  $outline--focus-offset,
-                "border-radius": $border-radius-25,
-                "opacity": 75%
-            ),
-            "active":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-default--underline-darkBg,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": null
-            ),
-            "disabled":(
-                "color": "hsl(#{$white-hsl})",
-                "text-decoration": $link-disabled--underline--darkBg,
-                "outline":  null,
-                "outline-offset":  null,
-                "border-radius": null,
-                "opacity": 40%
+        "dark-bg": (
+            "default-links": (
+                "default":(
+                    "color": "var(--white-base)",
+                    "text-decoration-color": "var(--white-base)",
+                ),
+                "hover":(
+                    "color": "var(--white-base)",
+                    "text-decoration-color": "var(--white-base)",
+                    "opacity": 75%
+                ),
+                "focus":(
+                    "color": "var(--white-base)",
+                    "text-decoration-color": "var(--white-base)",
+                    "opacity": 75%
+                ),
+                "active":(
+                    "color": "var(--white-base)",
+                    "text-decoration-color": "var(--white-base)",
+                ),
+                "disabled":(
+                    "color": "var(--white-base)",
+                    "text-decoration-color": "var(--white-base)",
+                )
             )
         )
     )
 );
-

@@ -1,59 +1,69 @@
 //-- Breakpoints
  
-// Desktop
-$desktop--min-width: 1440px;
+// Desktop - xl
+$desktop-xl--min-width: 1900px;
  
-// Laptop
-$laptop--max-width: 1439.98px; 
-$laptop--min-width: 1236px;
+// Desktop - lg
+$desktop--max-width: 1899.998px; 
+$desktop--min-width: 992px;
  
-// Tablet
-$tablet--max-width: 1235.98px;
-$tablet--min-width: 600px; 
+// Tablet - md
+$tablet--max-width: 991.998px;
+$tablet--min-width: 768px; 
 
-// Mobile
-$mobile--max-width: 599.98px;  
+// Mobile Landscape
+$mobile-landscape--max-width: 767.998px;
+$mobile-landscape--min-width: 576px;
+
+// Mobile - sm
+$mobile--max-width: 575.998px;  
 $mobile--min-width: 0px;    
 
+
+//-- Content Width
+ 
+$content--full-width: 100%;
+$content--width-sm: 540px;
+$content--width-md: 800px;
+$content--width-lg: 1236px;
+$content--width-xl: 1440px; 
 
 //-- Color Schemes
   
 $white-hsl: 0, 0%, 100%;
 $black-hsl: 0, 0%, 0%; 
 
-$blue--base-hsl    : 195.3, 100%, 23.1%;
-$blue--light-1-hsl : 194.8, 100%, 28.6%;
-$blue--light-2-hsl : 195, 100%, 39.2%;
-$blue--light-3-hsl : 200, 24.3%, 92.7%; 
-$blue--light-4-hsl : 194, 25%, 87%;
-$blue--dark-1-hsl  : 195.3, 100%, 11.6%;
-$blue--dark-2-hsl  : 195.2, 100%, 17.8%;
+$orange--base-hsl    : 19, 100%, 50%;
+$orange--light-1-hsl : 15, 75%, 97%;
+$orange--light-2-hsl : 19, 100%, 70%;
+$orange--light-3-hsl : 19, 100%, 61%;
+$orange--dark-1-hsl  : 19, 100%, 39%;
+$orange--dark-2-hsl  : 19, 100%, 30%;
 
-$orange--base-hsl    : 19.1, 100%, 50%;
-$orange--light-1-hsl : 18.8, 100%, 61.2%;
-$orange--light-2-hsl : 18.6, 100%, 69.6%;
-$orange--light-3-hsl : 18.9, 82.6%, 91%;
-$orange--dark-1-hsl  : 18.8, 100%, 38.8%;
-$orange--dark-2-hsl  : 18.6, 100%, 30.4%;
+$gray--base-hsl      : 0, 1%, 26%;
+$gray--light-1-hsl   : 0, 0%, 98%;
+$gray--light-2-hsl   : 0, 4%, 95%;
+$gray--light-3-hsl   : 0, 1%, 77%;
+$gray--dark-1-hsl    : 0, 0%, 58%;
+$gray--dark-2-hsl    : 0, 0%, 40%; 
 
-$gray--dark-1-hsl   : 196.7, 13.8%, 25.5%;
-$gray--medium-1-hsl : 198, 11.1%, 35.3%;
-$gray--light-1-hsl  : 196.7, 7.6%, 46.3%;
-$gray--light-2-hsl  : 200, 5.5%, 57.3%;
-$gray--light-3-hsl  : 192, 4.2%, 76.7%;
-$gray--light-4-hsl  : 0, 0%, 98%;
+$blue--base-hsl      : 195, 100%, 23%;
+$blue--light-1-hsl   : 200, 24%, 93%;
+$blue--light-2-hsl   : 195, 100%, 29%; 
+$blue--dark-1-hsl    : 195, 100%, 12%; 
+$blue--dark-2-hsl    : 195, 100%, 18%;
 
-$red--base-hsl      : 9.2, 100%, 37.1%;
-$red--light-1-hsl   : 354.5, 70.2%, 90.8%;
-$red--dark-1-hsl    : 354.4, 60.6%, 27.8%;
+$red--base-hsl       : 9, 100%, 37%;
+$red--dark-1-hsl     : 354, 61%, 28%;
+$red--light-1-hsl    : 355, 70%, 91%;
 
-$yellow--base-hsl    : 35, 97.3%, 56.9%;
-$yellow--light-1-hsl : 45.6, 100%, 90.2%;
-$yellow--dark-1-hsl  : 44.7, 94.2%, 26.9%;
+$yellow--base-hsl    : 35, 97%, 57%;
+$yellow--dark-1-hsl  : 45, 94%, 27%;
+$yellow--light-1-hsl : 46, 100%, 90%;
 
-$green--base-hsl    : 135.7, 100%, 27.1%;
-$green--light-1-hsl : 134.4, 41%, 88%;
-$green--dark-1-hsl  : 133.2, 60.8%, 19%;
+$green--base-hsl     : 140, 100%, 27%;
+$green--dark-1-hsl   : 133, 61%, 19%;
+$green--light-1-hsl  : 134, 41%, 88%;
 
 
 //-- Typography
@@ -195,14 +205,6 @@ $h-spacing--300: 4.8rem;
 $h-spacing--400: 6.4rem; 
 $h-spacing--500: 8rem;   
 
-
-//-- Content Width
-
-$content--width-sm: 640px;
-$content--width-md: 800px;
-$content--width-lg: 960px;
-$content--width-xl: 1440px; 
-
 //-- Border-radius
 
 $border-radius-25: 0.5rem; 
@@ -231,50 +233,8 @@ $elevation-4: 0 16px 24px 0 rgba(0, 0, 0, 0.14),
 
 //-- Transitions
 
-$transition--ease-25: all 0.4s ease;
-
-//-- Buttons 
-$outline--focus-offset: 0.2rem;
-$btn--border: 0.2rem solid "hsl(#{$blue--base-hsl})";
-$btn--border-disabled: 0.2rem solid "hsl(#{$gray--light-3-hsl})";
-$outline--focus: 0.3rem solid "hsl(#{$blue--light-2-hsl})";
-$btn-focus--opacity: 15%;
-$btn-active--opacity: 40%;  
-$btn--border-button-padding: 1.4rem 2.4rem; // Buttons with borders are the same default height as non-border buttons
-
-//-- Links
-$link-default--underline: underline solid "hsl(#{$blue--base-hsl})" 0.1rem;
-$link-hover--underline:underline solid "hsl(#{$blue--dark-1-hsl})" 0.1rem;
-$link-focus--underline: underline solid "hsl(#{$blue--dark-1-hsl})" 0.1rem;
-$link-visited--underline: underline solid "hsl(#{$blue--light-2-hsl})" 0.1rem;
-$link-disabled--underline: underline solid "hsl(#{$gray--light-3-hsl})" 0.1rem;
-$link-default--underline-darkBg: underline solid var(--white-base) 0.1rem;
-$link-focus--underline-darkBg: underline solid rgba(255, 255, 255, 0.75) 0.1rem;
-$link-disabled--underline--darkBg: underline solid rgba(255, 255, 255, 0.4) 0.1rem;
-
-//--Toggles
-$toggle-track--height: 3.4rem;
-$toggle-track--width: 1.5rem;
-$toggle-track--radius: 34px;
-$toggle-thumb--height:2rem;
-$toggle-thumb--width: 2rem;
-$toggle-thumb--radius: 50%;
-$toggle-thumb--left: -0.2rem;
-$toggle-thumb--bottom: -0.2rem;
-$toggle--transition: .4s;
-$toggle-check--transform: translateX(1.8rem);
-$toggleOn-hover--shadow: 0 0 0 1.1rem "hsla(#{$blue--base-hsl}, 10%)";
-$toggleOff-hover--shadow: 0 0 0 1.1rem "hsla(#{$gray--light-2-hsl}, 10%)";
-$toggleOn-active--shadow: 0 0 0 1.1rem "hsla(#{$blue--base-hsl}, 25%)";
-$toggleOff-active--shadow: 0 0 0 1.1rem "hsla(#{$gray--light-2-hsl}, 25%)";
-$toggleOn-hover--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 10%)";
-$toggleOn-active--shadow--darkbg: 0 0 0 1.1rem "hsla(#{$white-hsl}, 25%)";
-
-//--Content Switcher
-$content-switcher--track-shadow-right: 3px 0 8px 0 "hsla(#{$blue--base-hsl}, 20%)";
-$content-switcher--track-shadow-left: -3px 0 8px 0 rgba(0, 0, 0, 0.2);
-
-//--tables
-$table--border-spacing: 1.5rem;
-$table--border: 1px solid "hsl(#{$gray--light-3-hsl})";
-$table--td--border-right: 2px solid "hsl(#{$blue--base-hsl})";
+$transition--ease-10: all 100ms ease; 
+$transition--ease-15: all 175ms ease;
+$transition--ease-25: all 250ms ease;
+$transition--ease-40: all 400ms ease;
+$transition--ease-50: all 500ms ease;

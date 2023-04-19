@@ -44,3 +44,5 @@ import '../../assets/images/de_animated_curve_blue.svg';
 import '../../assets/images/alexa-button.png';
 import '../../assets/images/appstore-button.png';
 import '../../assets/images/playstore-button.png';
+import '../../assets/images/card-img.jpg';
+import '../../assets/images/card-placeholder-img.png';

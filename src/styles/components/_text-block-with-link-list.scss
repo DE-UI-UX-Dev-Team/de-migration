@@ -23,7 +23,7 @@
         .col--left {
             margin-bottom: 0;
             padding-bottom: var(--col-margin); 
-            border-bottom: 1px solid var(--gray-disabled); 
+            border-bottom: 1px solid var(--secondary-light-3); 
         } 
     
         .col--right {
@@ -40,7 +40,7 @@
     .text-block-with-link-list {
     
         .col--left {
-            border-right: 1px solid var(--gray-disabled); 
+            border-right: 1px solid var(--secondary-light-3); 
             flex: 0 1 calc((100%/12) * 9); 
             padding-right: calc((100%/12) * 0.5);
             margin-right: 0;
@@ -57,7 +57,7 @@
 
 }
 
-@include mediaQuery( "laptop-up" ) {
+@include mediaQuery( "desktop-up" ) {
 
     .text-block-with-link-list {
     

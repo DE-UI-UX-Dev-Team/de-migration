@@ -1,39 +1,37 @@
 @use '../../abstracts/tokens' as *;
- 
+@use "sass:map"; 
 // Map used to create utility classes & CSS variables
 
 $colors: (
     "default-theme" : (
         "primary" : (
-            "base": $blue--base-hsl, 
-            "light-1": $blue--light-1-hsl, 
-            "light-2": $blue--light-2-hsl,
-            "light-3": $blue--light-3-hsl, 
-            "light-4": $blue--light-4-hsl,
-            "dark-1": $blue--dark-1-hsl,
-            "dark-2" : $blue--dark-2-hsl
-        ), 
-        "secondary" : (
             "base": $orange--base-hsl,
             "light-1": $orange--light-1-hsl, 
             "light-2": $orange--light-2-hsl, 
             "light-3": $orange--light-3-hsl,
             "dark-1": $orange--dark-1-hsl,
             "dark-2": $orange--dark-2-hsl
+        ), 
+        "secondary" : (
+            "base": $gray--base-hsl, 
+            "light-1": $gray--light-1-hsl, 
+            "light-2": $gray--light-2-hsl, 
+            "light-3": $gray--light-3-hsl, 
+            "dark-1": $gray--dark-1-hsl, 
+            "dark-2": $gray--dark-2-hsl
+        ), 
+        "tertiary" : (
+            "base": $blue--base-hsl, 
+            "light-1": $blue--light-1-hsl, 
+            "light-2": $blue--light-2-hsl,
+            "dark-1": $blue--dark-1-hsl,
+            "dark-2" : $blue--dark-2-hsl
         ),
         "white" : (
             "base": $white-hsl
         ),
         "black" : (
             "base": $black-hsl
-        ),
-        "gray" : (
-            "medium-1": $gray--medium-1-hsl,
-            "dark-1": $gray--dark-1-hsl,
-            "body": $gray--dark-1-hsl,
-            "input": $gray--light-2-hsl,
-            "disabled": $gray--light-3-hsl,
-            "background": $gray--light-4-hsl
         ), 
         "success" : ( 
             "element": $green--base-hsl,
@@ -49,131 +47,44 @@ $colors: (
             "element": $red--base-hsl,
             "text": $red--dark-1-hsl,
             "background": $red--light-1-hsl
-        )
+        ), 
+        "info" : (
+            "element": $blue--base-hsl, 
+            "text": $blue--base-hsl,
+            "background": $blue--light-1-hsl
+        ) 
     )
 ); 
+ 
+// Map used to adjust/define how base elements interact with different colored backgrounds
 
-// Text on Background Color Based on compiled utility classes and custom CSS properties as variables
+$lightBackgroundClasses : (
+    "bg--primary-light-1", 
+    "bg--secondary-light-1", 
+    "bg--secondary-light-2", 
+    "bg--tertiary-light-1", 
+    "bg--white-base"
+);
 
-$textOnColorBg : (
-    "default-theme" : (  
-        "headings" :(
-            "bg--primary-base"      : "--heading--on-dark-background", 
-            "bg--primary-light-1"   : "--heading--on-dark-background",
-            "bg--primary-light-2"   : "--heading--on-dark-background",
-            "bg--primary-light-3"   : "--heading--on-light-background",
-            "bg--primary-light-4"   : "--heading--on-light-background",
-            "bg--primary-dark-1"    : "--heading--on-dark-background",
-            "bg--primary-dark-2"    : "--heading--on-dark-background",
-            "bg--secondary-base"    : "--heading--on-dark-background",
-            "bg--secondary-light-1" : "--heading--on-dark-background",
-            "bg--secondary-light-2" : "--heading--on-dark-background",
-            "bg--secondary-light-3" : "--heading--on-light-background",
-            "bg--secondary-dark-1"  : "--heading--on-dark-background",
-            "bg--secondary-dark-2"  : "--heading--on-dark-background"
-        ),
-        "body-text" : (
-            "bg--primary-base"      : "--body-text--on-dark-background", 
-            "bg--primary-light-1"   : "--body-text--on-dark-background",
-            "bg--primary-light-2"   : "--body-text--on-dark-background",
-            "bg--primary-light-3"   : "--body-text--on-light-background",
-            "bg--primary-light-4"   : "--body-text--on-light-background",
-            "bg--primary-dark-1"    : "--body-text--on-dark-background",
-            "bg--primary-dark-2"    : "--body-text--on-dark-background",
-            "bg--secondary-base"    : "--body-text--on-dark-background",
-            "bg--secondary-light-1" : "--body-text--on-dark-background",
-            "bg--secondary-light-2" : "--body-text--on-dark-background",
-            "bg--secondary-light-3" : "--body-text--on-light-background",
-            "bg--secondary-dark-1"  : "--body-text--on-dark-background",
-            "bg--secondary-dark-2"  : "--body-text--on-dark-background"
-        ), 
-        "body" : (
-            "bg--primary-base"      : "--body-text--on-dark-background", 
-            "bg--primary-light-1"   : "--body-text--on-dark-background",
-            "bg--primary-light-2"   : "--body-text--on-dark-background",
-            "bg--primary-light-3"   : "--body-text--on-light-background",
-            "bg--primary-light-4"   : "--body-text--on-light-background",
-            "bg--primary-dark-1"    : "--body-text--on-dark-background",
-            "bg--primary-dark-2"    : "--body-text--on-dark-background",
-            "bg--secondary-base"    : "--body-text--on-dark-background",
-            "bg--secondary-light-1" : "--body-text--on-dark-background",
-            "bg--secondary-light-2" : "--body-text--on-dark-background",
-            "bg--secondary-light-3" : "--body-text--on-light-background",
-            "bg--secondary-dark-1"  : "--body-text--on-dark-background",
-            "bg--secondary-dark-2"  : "--body-text--on-dark-background"
-        ), 
-        "section" : (
-            "bg--primary-base"      : "--body-text--on-dark-background", 
-            "bg--primary-light-1"   : "--body-text--on-dark-background",
-            "bg--primary-light-2"   : "--body-text--on-dark-background",
-            "bg--primary-light-3"   : "--body-text--on-light-background",
-            "bg--primary-light-4"   : "--body-text--on-light-background",
-            "bg--primary-dark-1"    : "--body-text--on-dark-background",
-            "bg--primary-dark-2"    : "--body-text--on-dark-background",
-            "bg--secondary-base"    : "--body-text--on-dark-background",
-            "bg--secondary-light-1" : "--body-text--on-dark-background",
-            "bg--secondary-light-2" : "--body-text--on-dark-background",
-            "bg--secondary-light-3" : "--body-text--on-light-background",
-            "bg--secondary-dark-1"  : "--body-text--on-dark-background",
-            "bg--secondary-dark-2"  : "--body-text--on-dark-background"
-        ), 
-        "icons" :(
-            "bg--primary-base"       : "--icon--on-dark-background", 
-            "bg--primary-light-1"    : "--icon--on-dark-background",
-            "bg--primary-light-2"    : "--icon--on-dark-background",
-            "bg--primary-light-3"    : "--icon--on-primary-light-background",
-            "bg--primary-light-4"    : "--icon--on-primary-light-background",
-            "bg--primary-dark-1"     : "--icon--on-dark-background",
-            "bg--primary-dark-2"     : "--icon--on-dark-background",
-            "bg--secondary-base"     : "--icon--on-dark-background",
-            "bg--secondary-light-1"  : "--icon--on-dark-background",
-            "bg--secondary-light-2"  : "--icon--on-dark-background",
-            "bg--secondary-light-3"  : "--icon--on-secondary-light-background",
-            "bg--secondary-dark-1"   : "--icon--on-dark-background",
-            "bg--secondary-dark-2"   : "--icon--on-dark-background", 
-            "bg--success-background" : "--icon--on-success-background", 
-            "bg--warning-background" : "--icon--on-warning-background", 
-            "bg--error-background"   : "--icon--on-error-background", 
-            "bg--gray-background"    : "--icon--on-light-background"
-        ),
-        "tables" :(
-            "bg--primary-base"       : "--table--on-dark-background", 
-            "bg--primary-light-1"    : "--table--on-dark-background",
-            "bg--primary-light-2"    : "--table--on-dark-background",
-            "bg--primary-light-3"    : "--table--on-primary-light-background",
-            "bg--primary-light-4"    : "--table--on-primary-light-background",
-            "bg--primary-dark-1"     : "--table--on-dark-background",
-            "bg--primary-dark-2"     : "--table--on-dark-background",
-            "bg--secondary-base"     : "--table--on-dark-background",
-            "bg--secondary-light-1"  : "--table--on-dark-background",
-            "bg--secondary-light-2"  : "--table--on-dark-background",
-            "bg--secondary-light-3"  : "--table--on-secondary-light-background",
-            "bg--secondary-dark-1"   : "--table--on-dark-background",
-            "bg--secondary-dark-2"   : "--table--on-dark-background", 
-            "bg--success-background" : "--table--on-success-background", 
-            "bg--warning-background" : "--table--on-warning-background", 
-            "bg--error-background"   : "--table--on-error-background", 
-            "bg--gray-background"    : "--table--on-light-background"
-        ),
-        "thead" :(
-            "bg--primary-base"       : "--thead--on-dark-background", 
-            "bg--primary-light-1"    : "--thead--on-dark-background",
-            "bg--primary-light-2"    : "--thead--on-dark-background",
-            "bg--primary-light-3"    : "--thead--on-primary-light-background",
-            "bg--primary-light-4"    : "--thead--on-primary-light-background",
-            "bg--primary-dark-1"     : "--thead--on-dark-background",
-            "bg--primary-dark-2"     : "--thead--on-dark-background",
-            "bg--secondary-base"     : "--thead--on-dark-background",
-            "bg--secondary-light-1"  : "--thead--on-dark-background",
-            "bg--secondary-light-2"  : "--thead--on-dark-background",
-            "bg--secondary-light-3"  : "--thead--on-secondary-light-background",
-            "bg--secondary-dark-1"   : "--thead--on-dark-background",
-            "bg--secondary-dark-2"   : "--thead--on-dark-background", 
-            "bg--success-background" : "--thead--on-success-background", 
-            "bg--warning-background" : "--thead--on-warning-background", 
-            "bg--error-background"   : "--thead--on-error-background", 
-            "bg--gray-background"    : "--thead--on-light-background"
-        )
+$darkBackgroundClasses : (
+    "bg--primary-base",
+    "bg--primary-light-2",
+    "bg--primary-light-3",
+    "bg--primary-dark-1", 
+    "bg--primary-dark-2", 
+    "bg--secondary-base",
+    "bg--secondary-light-3",
+    "bg--secondary-dark-1", 
+    "bg--secondary-dark-2", 
+    "bg--tertiary-base", 
+    "bg--tertiary-light-2", 
+    "bg--tertiary-dark-1", 
+    "bg--tertiary-dark-2"
+); 
 
-    )
+$alertBackgroundClasses: (
+    "bg--error-background", 
+    "bg--warning-background", 
+    "bg--success-background", 
+    "bg--info-background"
 );

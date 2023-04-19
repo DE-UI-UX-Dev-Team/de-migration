@@ -1,77 +1,65 @@
 @use '../../abstracts/tokens' as *;
 
-$tables: ( 
+$tablesOnContrastingBg: (
     "default-theme": (
-        // Transpose table map for  mobile and tablet screens
-        "tablet-below": (    
-            "table--transpose": (
-                "thead": (
-                    "tr": (
-                        "position": "sticky",
-                        "border-bottom": none,
-                        "left": "0",
-                        "display": "inline-block",
-                        "color": var(--thead--on-light-background),
-                        "border-right": 2px solid
+        "light-bg": (       
+            // Transpose table map for  mobile and tablet screens
+            "tablet-below": (    
+                "table--transpose": (
+                    "table": (
+                        "border-color": var(--secondary-light-3)
                     ),
-                    "td":(
-                        "display": "block",
-                        "background-color": var(--thead--bg-on-light-background)
-                    ),
-                    "td:nth-child(even)":(
-                        "background-color": var(--thead--bg-on-light-background)
-                    )
-                ),    
-                "tbody": (
-                    "tr": (
-                        "display": "inline-block",
-                        "border-bottom": "none",
-                    ),
-                    "tr:nth-child(even)":(
-                        "background-color": "transparent"
-                    ),
-                    "td":(
-                        "display": "block",
-                        "border-bottom": #{$table--border}
-                    ),
-                    "td:nth-child(even)":(
-                        "background-color": var(--gray-background)
-                    )
-                )    
-            )        
-        ),
+                    "thead": (
+                        "tr": (
+                            "color": var(--tertiary-base),
+                            "border-right-color": var(--tertiary-base)
+                        ),
+                        "td":(
+                            "background-color": var(--tertiary-light-1)
+                        ),
+                        "td:nth-child(even)":(
+                            "background-color": var(--tertiary-light-1)
+                        )
+                    ),    
+                    "tbody": (
+                        "td": (
+                            "border-bottom-color": var(--secondary-light-3)
+                        ),
+                        "tr:nth-child(even)":(
+                            "background-color": "transparent", 
+                        ),
+                        "td:nth-child(even)":(
+                            "background-color": var(--secondary-light-2)
+                        )
+                    )    
+                )        
+            ),
 
-        // default table  map for all screens
-        "mobile-up": (
-            "table--default": (
-                "thead": (
-                    "tr": (
-                        "position": "relative",
-                        "border-bottom": 2px solid,
-                        "color": var(--thead--on-light-background)
+            // Default table  map for all screens
+            "mobile-up": (
+                "table--default": ( 
+                    "table": (
+                        "border-color": var(--secondary-light-3)
                     ),
-                    "td": (
-                        "padding": #{$v-spacing--100} #{$h-spacing--60},
-                        "font":  #{$font-size--mob-lg-4}/#{$line-height--mob-lg-5} #{$font-stack--sans-serif},
-                        "letter-spacing": #{$letter-spacing--mob-lg-5},  
-                        "border-right": none,
-                        "background-color": var(--thead--bg-on-light-background)
-                    )
-                ),
-                "tbody": (
-                    "tr": (
-                        "border-bottom": #{$table--border},
+                    "thead": ( 
+                        "tr": (
+                            "color": var(--tertiary-base), 
+                            "border-bottom-color": var(--tertiary-base),
+                        ),
+                        "td": (
+                            "background-color": var(--tertiary-light-1)
+                        )
                     ),
-                    "td": (
-                        "padding": #{$v-spacing--100} #{$h-spacing--60},
-                        "font":  #{$font-size--mob-lg-5}/#{$line-height--mob-lg-5} #{$font-stack--sans-serif},
-                        "letter-spacing": #{$letter-spacing--mob-sm-1}
-                    ),
-                    "tr:nth-child(even)": (
-                        "background-color": var(--gray-background)
+                    "tbody": (
+                        "tr": (
+                            "border-bottom-color": var(--secondary-light-3),
+                        ),
+                        "tr:nth-child(even)": (
+                            "background-color": var(--secondary-light-1)
+                        ) 
                     )
                 )
-            )
-        )   
+            )   
+        )
     )
 )

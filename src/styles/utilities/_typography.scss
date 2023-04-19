@@ -4,8 +4,8 @@
 
 @include getTypeUtilities( "mobile-up", "sm" ); 
 @include getTypeUtilities( "tablet-up", "md" );
-@include getTypeUtilities( "laptop-up", "lg" );
-@include getTypeUtilities( "desktop-up", "xl" ); 
+@include getTypeUtilities( "desktop-up", "lg" );
+@include getTypeUtilities( "desktop-xl-up", "xl" ); 
 
 /*--- Utilities - Typography, Font Weights ---*/
 
@@ -42,14 +42,14 @@ em, .fs--italic { font-style: italic; }
 
 }
 
-@include mediaQuery("tablet-only") {
+@include mediaQuery("large-handheld-devices-only") {
 
   .fs--text-right--md { text-align: right; }
   .fs--text-left--md { text-align: left; }
   .fs--text-center--md { text-align: center; }
 
 }
-@include mediaQuery("laptop-only") {
+@include mediaQuery("desktop-only") {
 
   .fs--text-right--lg { text-align: right; }
   .fs--text-left--lg { text-align: left; }
@@ -57,7 +57,7 @@ em, .fs--italic { font-style: italic; }
 
 }
 
-@include mediaQuery("desktop-only") {
+@include mediaQuery("desktop-xl-only") {
 
   .fs--text-right--xl { text-align: right; }
   .fs--text-left--xl { text-align: left; }
@@ -104,7 +104,7 @@ ul.fs--link-list li:last-child {
 
 }
 
-@include mediaQuery("laptop-up") {
+@include mediaQuery("desktop-up") {
 
   ul.fs--link-list li { 
     margin-bottom: var(--list-item-spacing-m--lg); 
@@ -117,7 +117,7 @@ ul.fs--link-list li:last-child {
 
 }
 
-@include mediaQuery("desktop-up") {
+@include mediaQuery("desktop-xl-up") {
 
   ul.fs--link-list li { 
     margin-bottom: var(--list-item-spacing-m--xl); 

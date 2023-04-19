@@ -2,31 +2,88 @@
 
 @use '../abstracts' as *;
 
-//default table styles
+/*--- Components - Tables  ---*/ 
+
 table {
+    
     display: table;
-    border-spacing: 15px;
-    border: 1px solid #c1c5c6;
+    border-spacing: $table--border-spacing;
+    border-style: solid;
+    border-width: $table--border-width; 
     width: fit-content;
+
+    tr {
+        border-bottom-style: solid; 
+        border-bottom-width: $table--border-width; 
+
+        &.thead {
+            position: relative;
+            border-bottom-style: solid; 
+            border-bottom-width: $table-heading--border-width; 
+
+            td {
+                padding: $table-cell--padding;
+                font: $table-head--font;
+                letter-spacing: $table-head--line-height;
+                border-right: none;
+            }
+        }
+    }
+
+    td {
+        padding: $table-cell--padding;
+        font: $table-body--font;
+        letter-spacing: $table-body--line-height;
+    } 
+
 }
 
-//Evenly spaces table class on laptop and larger screens
-@media(min-width: 1235.98px) {
+@include mediaQuery( 'desktop-up' ) {
+    
     .table--layout-fixed {
         table-layout: fixed;
         width: 100%;
     }
+
 }
 
-//responsive table on mobile and tablet screens
-@media(max-width: 1235.98px) {
-    .table-responsive {
+@include mediaQuery( 'tablet-below' ) {
+
+    .table--responsive {
         width: 100%;
         overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
     }
+    
+    table.table--transpose {
+
+        tr.thead {
+            position: sticky;
+            border-bottom: none;
+            left: 0;
+            display: inline-block;
+            border-right-width: $table-heading--border-width; 
+            border-right-style: solid;
+
+            td {
+                display: block;
+            }
+        } 
+         
+        tr {
+            display: inline-block;
+            border-bottom: none; 
+        }
+
+        td {
+            display: block;
+            border-bottom-style: solid; 
+            border-bottom-width: $table--border-width; 
+        }
+
+    }
+
 }
 
-/*--- Components - Tables  ---*/
-@include getTable();
+@include colorize( "tables", "light-backgrounds", #{$active-theme} );

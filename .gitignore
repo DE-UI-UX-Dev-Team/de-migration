@@ -4,4 +4,5 @@ public/
 dist/
 deploy/config.json 
 .vscode/ 
-.bashrc
+/.bashrc
+deploy/demo-repo/
