@@ -392,9 +392,9 @@ fieldset[disabled] {
 
 .wrap--text-input { 
 
-    background-color: var(--primary-light-3);   
+    background-color: var(--secondary-light-2);   
     
-    span { color: gray; }
+    span { color: (var(--secondary-base)); }
      
     input {
         
