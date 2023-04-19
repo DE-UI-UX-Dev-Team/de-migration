@@ -1,256 +1,148 @@
 import { BannerAlert } from 'banner-alert-js/banner-alert.js';
-window.triggerAlertsFullWidth = function() {
-    let messageType = 'message'; // Can be any value
-    let message     = `<div class="row"> 
-                            <div class="alert-msg col--lg-12">
-                              <h4 class="alert-head">This is an alert headline</h4> 
-                              <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                            </div>
-                       </div>`;
-    let messageTtl  = 100000; // Measured in seconds
-    let parentContainer = document.querySelector( '.full-width-dismissable-banner-alerts' ); // This container can be anywhere in the document
-    let customClassList = [ 'alert-container','bg--info-background' ];
-    let buttonClassList = [ 'btn--tertiary' ];
-
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'error'; // Can be any value
-    message     = `<div class="row"> 
-                        <div class="alert-msg col--lg-12">
-                            <h4 class="alert-head">This is error alert headline</h4> 
-                            <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                        </div>
-                    </div>`;
-    customClassList = [ 'alert-container','bg--error-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'warning'; // Can be any value
-    message     = `<div class="row"> 
-                        <div class="alert-msg col--lg-12">
-                            <h4 class="alert-head">This is warning alert headline</h4> 
-                            <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                        </div>
-                    </div>`;
-    customClassList = [ 'alert-container','bg--warning-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'success'; // Can be any value
-    message     = `<div class="row"> 
-                        <div class="alert-msg col--lg-12">
-                            <h4 class="alert-head">This is success alert headline</h4> 
-                            <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                        </div>
-                    </div>`;
-    customClassList = [ 'alert-container','bg--success-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-}
-
-window.triggerAlerts = function() {
-    let messageType = 'message'; // Can be any value
-    let message     = `<div class="row"> 
-                            <div class="alert-msg col--lg-12">
-                              <h4 class="alert-head">This is an alert headline</h4> 
-                              <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                            </div>
-                       </div>`;
-    let messageTtl  = 100000; // Measured in seconds
-    let parentContainer = document.querySelector( '.banner-alerts' ); // This container can be anywhere in the document
-    let customClassList = [ 'alert-container', 'bg--info-background' ];
-    let buttonClassList = [ 'btn--tertiary' ];
-
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'error'; // Can be any value
-    message     = `<div class="row"> 
-                        <div class="alert-msg col--lg-12">
-                            <h4 class="alert-head">This is error alert headline</h4> 
-                            <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                        </div>
-                    </div>`;
-    customClassList = [ 'alert-container','bg--error-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'warning'; // Can be any value
-    message     = `<div class="row"> 
-                        <div class="alert-msg col--lg-12">
-                            <h4 class="alert-head">This is warning alert headline</h4> 
-                            <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                        </div>
-                    </div>`;
-    customClassList = [ 'alert-container','bg--warning-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'success'; // Can be any value
-    message     = `<div class="row"> 
-                        <div class="alert-msg col--lg-12">
-                            <h4 class="alert-head">This is success alert headline</h4> 
-                            <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                        </div>
-                    </div>`;
-    customClassList = [ 'alert-container','bg--success-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-}
-
-window.triggerAlertsWithButton = function() {
-    let messageType = 'message'; // Can be any value
-    let message     = `<div class="row"> 
-                            <div class="alert-msg col--lg-9">
-                              <h4 class="alert-head">This is an alert headline</h4> 
-                              <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span>
-                            </div>
-                            <div class="alert-cta col--lg-3">
-                                <button class="btn" href="#">sample Text</button>
-                            </div>
-                       </div>`;
-    let messageTtl  = 100000; // Measured in seconds
-    let parentContainer = document.querySelector( '.cta-banner-alerts' ); // This container can be anywhere in the document
-    let customClassList = [ 'alert-container', 'bg--info-background' ];
-    let buttonClassList = [ 'btn--tertiary' ];
-
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'error'; // Can be any value
-    message     = `<div class="row"> 
-                            <div class="alert-msg col--lg-9">
-                              <h4 class="alert-head">This is error alert headline</h4> 
-                              <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span></div>
-                            <div class="alert-cta col--lg-3">
-                                <button class="btn" href="#">sample Text</button>
-                            </div>
-                       </div>`;
-    customClassList = [ 'alert-container','bg--error-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'warning'; // Can be any value
-    message     = `<div class="row"> 
-                            <div class="alert-msg col--lg-9">
-                              <h4 class="alert-head">This is warning alert headline</h4> 
-                              <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span></div>
-                            <div class="alert-cta col--lg-3">
-                                <button class="btn" href="#">sample Text</button>
-                            </div>
-                       </div>`;
-    customClassList = [ 'alert-container','bg--warning-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-
-    messageType = 'message'; // Can be any value
-    message     = `<div class="row"> 
-                            <div class="alert-msg col--lg-9">
-                              <h4 class="alert-head">This is success alert headline</h4> 
-                              <span class="p-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl </span></div>
-                            <div class="alert-cta col--lg-3">
-                                <button class="btn" href="#">sample Text</button>
-                            </div>
-                       </div>`;
-    customClassList = [ 'alert-container','bg--success-background' ];
-    buttonClassList = [ 'btn--tertiary' ];
-
-    BannerAlert.transmit( 
-        messageType, 
-        message, 
-        parentContainer, 
-        messageTtl, 
-        customClassList,
-        buttonClassList
-    );	
-}
-      
  
+const Alerts = {
+    fullWidthAlerts: [
+        {
+            type: 'message',
+            headline: 'This is an alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container','bg--info-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'error',
+            headline: 'This is error alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container','bg--error-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'warning',
+            headline: 'This is warning alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container','bg--warning-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'success',
+            headline: 'This is success alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container','bg--success-background'],
+            buttonClassList: ['btn--tertiary']
+        }
+    ], 
+    basicAlerts: [
+        {
+            type: 'message',
+            headline: 'This is an alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container', 'bg--info-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'error',
+            headline: 'This is error alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container', 'bg--error-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'warning',
+            headline: 'This is warning alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container', 'bg--warning-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'success',
+            headline: 'This is success alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container', 'bg--success-background'],
+            buttonClassList: ['btn--tertiary']
+        }
+    ],
+    alertsWithButtons: [
+        {
+            type: 'message',
+            headline: 'This is an alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container', 'bg--info-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'error',
+            headline: 'This is error alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container', 'bg--error-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'warning',
+            headline: 'This is warning alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container', 'bg--warning-background'],
+            buttonClassList: ['btn--tertiary']
+        },
+        {
+            type: 'success',
+            headline: 'This is success alert headline',
+            message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
+            customClassList: ['alert-container', 'bg--success-background'],
+            buttonClassList: ['btn--tertiary']
+        }
+    ]
+}
+
+window.triggerAlertsFullWidth = () => {
+    const parentContainer = document.querySelector('.full-width-dismissable-banner-alerts');
+    const messageTtl = 100000;
+    const alerts = Alerts.fullWidthAlerts; 
+
+    alerts.forEach(alert => {
+        const message = `<div class="row"> 
+                            <div class="alert-msg col--lg-12">
+                              <h4 class="alert-head">${alert.headline}</h4> 
+                              <span class="p-2">${alert.message}</span>
+                            </div>
+                       </div>`;
+
+        BannerAlert.transmit(alert.type, message, parentContainer, messageTtl, alert.customClassList, alert.buttonClassList);
+    });
+}
+
+window.triggerAlerts = () => {
+    const parentContainer = document.querySelector('.banner-alerts');
+    const messageTtl = 100000;
+    const alerts = Alerts.basicAlerts; 
+
+    alerts.forEach(alert => {
+        const message = `<div class="row"> 
+                            <div class="alert-msg col--lg-12">
+                              <h4 class="alert-head">${alert.headline}</h4> 
+                              <span class="p-2">${alert.message}</span>
+                            </div>
+                       </div>`;
+
+        BannerAlert.transmit(alert.type, message, parentContainer, messageTtl, alert.customClassList, alert.buttonClassList);
+    });
+}
+ 
+window.triggerAlertsWithButton = () => {
+    const parentContainer = document.querySelector('.cta-banner-alerts');
+    const messageTtl = 100000;
+    const alerts = Alerts.alertsWithButtons; 
+
+    alerts.forEach(alert => {
+        const message = `<div class="row"> 
+                            <div class="alert-msg col--lg-9">
+                              <h4 class="alert-head">${alert.headline}</h4> 
+                              <span class="p-2">${alert.message}</span>
+                            </div>
+                            <div class="alert-cta col--lg-3">
+                                <button class="btn" href="#">sample Text</button>
+                            </div>
+                       </div>`;
+
+        BannerAlert.transmit(alert.type, message, parentContainer, messageTtl, alert.customClassList, alert.buttonClassList);
+    });
+}
