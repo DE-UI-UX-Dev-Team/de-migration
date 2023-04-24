@@ -1,15 +1,44 @@
 @use '../abstracts' as *;
+article{
+   --img--float-gutter-xl: #{$h-spacing--200};
+   --img--float-gutter-md: #{$h-spacing--100};
+
+   .img--float{
+      &-left{
+         
+         float: left;
+
+         @include mediaQuery("desktop-up") {
+            margin-right:  var(--img--float-gutter-xl);
+         }
+         
+         @include mediaQuery("tablet-only") {
+            margin-right:  var(--img--float-gutter-md);
+         }
+
+         @include mediaQuery("mobile-only") {
+            margin-bottom: var(--col-btm-mg--sm);
+         }
+
+      }
+
+      &-right{
+         float: right;
+
+         @include mediaQuery("desktop-up") {
+            margin-left:  var(--img--float-gutter-md);
+         }
+         
+         @include mediaQuery("tablet-only") {
+            margin-left:  var(--img--float-gutter-md);
+         }
+
+         @include mediaQuery("mobile-only") {
+            margin-bottom: var(--col-btm-mg--sm); 
+         }
+      }
+
+   }
+}
 
 
-.img--float-left{
-   float: left;
-   width: 450px;
-   height: 300px;
-   margin-right: 32px ;
-}
-.img--float-right{
-    float: right;
-   width: 450px;
-   height: 300px;
-   margin-left: 32px;
-}
