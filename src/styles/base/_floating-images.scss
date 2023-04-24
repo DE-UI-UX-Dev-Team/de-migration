@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+
+.img--float-left{
+   float: left;
+   width: 450px;
+   height: 300px;
+   margin-right: 32px ;
+}
+.img--float-right{
+    float: right;
+   width: 450px;
+   height: 300px;
+   margin-left: 32px;
+}
