@@ -17,11 +17,19 @@
    ```
 4. Start development & watch features  
    ```
-    $ npm run build
+    $ npm start
    ``` 
-5. Production build 
+5. Run Jest test in __test__ directory
+   ```
+    $ npm test
+   ``` 
+6. Production build 
    ```
     $ npm run dist
+   ``` 
+7. Develop Storybook Components
+   ```
+    $ npm run storybook
    ``` 
 
 Note: This project requires an implementtaion of (sh) and does not support command.exe at this time
@@ -61,7 +69,7 @@ export DEMO_REPOSITORY_SITE=my-demo-site.github.io.git
 ```
 5. To publish your demo and push a copy of your code to the DE-UI-UX-Dev-Team/de-migration repository, run: 
 ```
-npm run push-demo
+npm run deploy
 ```
 6. Once the command completes the URL for the GitHub Page will print. Be sure to include a link to your Demo in your Pull Request and add it to your Jira Task when it's ready for review.
 

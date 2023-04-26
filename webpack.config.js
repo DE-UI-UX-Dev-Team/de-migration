@@ -3,7 +3,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require( './deploy/config.json' );
  
-const htmlFileRegex = new RegExp(/(src\/demos\/)|(src\\demos\\)/, 'ig');
+const htmlFileRegex = new RegExp("(src/pages/|src\\\\pages\\\\)", "ig"); 
+
 let directories = config.entryPoints.pages.directory;
 
 let htmlFiles = [];
@@ -18,12 +19,25 @@ while (directories.length > 0) {
 }
  
 htmlFiles.map(file => { 
+   
     let name = file.replace( htmlFileRegex, "" ); 
+    const extensions = ['.jsx', '.js', '.tsx'];
+    const fileExtension = getFileExtension( file.replace( ".html", "" ), extensions ); 
     entryPoints[ name ] = path.resolve(
-      __dirname, file.replace( ".html", ".js" )
+      __dirname, file.replace( ".html", fileExtension )
     ); 
   }
-); 
+);  
+
+function getFileExtension(filename, extensions) {
+  for (let i = 0; i < extensions.length; i++) {
+    const filepath = filename + extensions[i];
+    if (fs.existsSync(filepath)) {
+      return extensions[i];
+    }
+  }
+  return null;
+}
 
 module.exports = ( env ) => {
 
@@ -33,8 +47,7 @@ module.exports = ( env ) => {
   const publicPath = target.publicPath; 
   const assetModuleFilename = target.assetModuleFilename; 
 
-  const watch = ( environment === 'dev' ) ? true : false;  
-  const clean = ( environment === 'dev' ) ? true : false;  
+  const clean = ( environment === 'dev' ) ? true : false; 
 
   return {
     stats: {
@@ -55,9 +68,14 @@ module.exports = ( env ) => {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: ["babel-loader"]
+        }, 
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/
         },
         {
-          test:/\.scss$/,
+          test: /\.scss|.css$/,
           type: "asset/resource",
           generator: {
             filename: "assets/styles/[name].css",
@@ -89,16 +107,10 @@ module.exports = ( env ) => {
       ],
     },
     resolve: {
-      extensions: [".js", ".jsx"],
-    },
-    watch: watch, 
-    watchOptions: {
-      aggregateTimeout: 200,
-      poll: 1000,
+      extensions: ['.tsx', '.ts', '.js', '.jsx'],
     },
     plugins: [
-      ...htmlFiles.map(htmlFile => { 
-          let javascriptFile = htmlFile.replace( ".html", ".html.js" ); 
+      ...htmlFiles.map(htmlFile => {  
           return new HtmlWebpackPlugin({
             template: htmlFile,
             filename: htmlFile.replace( htmlFileRegex, "" ), 
@@ -107,7 +119,10 @@ module.exports = ( env ) => {
           })
         }
       )
-    ]
+    ],
+    devServer: {
+      historyApiFallback: true,
+    }
   }
 
 }
