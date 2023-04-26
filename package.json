@@ -11,7 +11,9 @@
         "test": "jest",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "precommit": "lint-staged",
+        "prepare": "husky install"
     },
     "keywords": [],
     "author": "DE UI/UX Development Team <ethan.rahman@nrg.com>",
@@ -55,12 +57,10 @@
         "webpack-cli": "^5.0.2",
         "webpack-dev-server": "^4.13.3"
     },
-    "husky": {
-      "hooks": {
-        "pre-commit": "lint-staged"
-      }
-    },
     "lint-staged": {
-      "*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
+        "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+            "prettier --write",
+            "git add"
+        ]
     }
 }
