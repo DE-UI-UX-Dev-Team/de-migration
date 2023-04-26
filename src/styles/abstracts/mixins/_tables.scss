@@ -1,29 +1,23 @@
-@use "sass:map"; 
+@use 'sass:map';
 
 @use '../../abstracts/base' as *;
 @use '../../abstracts/tokens' as *;
-@use '../mixins/breakpoints' as *; 
+@use '../mixins/breakpoints' as *;
 
+@mixin getTablesOnColorBg($palette, $bgSelector, $suffix) {
+    $tableTypeSelector: '';
 
-@mixin getTablesOnColorBg( $palette, $bgSelector, $suffix ) {
-    
-    $tableTypeSelector: "";
-
-    @each $targetViewPort, $states in $palette {   
-
-        @include mediaQuery( $targetViewPort ) {
-            @each $tableType, $tableItems in $states {   
-             
-                @if $tableType != "table--default"{
-                    $tableTypeSelector: "table.#{$tableType}";
-                }
-                @else{
-                    $tableTypeSelector: "table";
+    @each $targetViewPort, $states in $palette {
+        @include mediaQuery($targetViewPort) {
+            @each $tableType, $tableItems in $states {
+                @if $tableType != 'table--default' {
+                    $tableTypeSelector: 'table.#{$tableType}';
+                } @else {
+                    $tableTypeSelector: 'table';
                 }
                 @each $tableItem, $tableSubItems in $tableItems {
-                     
-                    @if $tableItem =="table" {
-                        $properties: $tableSubItems; 
+                    @if $tableItem == 'table' {
+                        $properties: $tableSubItems;
                         #{$tableTypeSelector} {
                             @each $property, $value in $properties {
                                 #{$property}: #{$value};
@@ -31,17 +25,16 @@
                         }
                     }
                     //styles for thead tr, thead td
-                    @else if $tableItem =="thead" {
+                    @else if $tableItem == 'thead' {
                         @each $tableSubItem, $properties in $tableSubItems {
-                            @if $tableSubItem=="tr" {
+                            @if $tableSubItem== 'tr' {
                                 #{$tableTypeSelector} #{$tableSubItem}.#{$tableItem} {
                                     @each $property, $value in $properties {
                                         #{$property}: #{$value};
                                     }
                                 }
-                            }
-                            @else {
-                                #{$tableTypeSelector} .#{$tableItem} #{$tableSubItem}{
+                            } @else {
+                                #{$tableTypeSelector} .#{$tableItem} #{$tableSubItem} {
                                     @each $property, $value in $properties {
                                         #{$property}: #{$value};
                                     }
@@ -49,8 +42,8 @@
                             }
                         }
                     }
-                     //styles for tbody tr, tbody td
-                    @else if $tableItem =="tbody" {
+                    //styles for tbody tr, tbody td
+                    @else if $tableItem == 'tbody' {
                         @each $tableSubItem, $properties in $tableSubItems {
                             #{$tableTypeSelector} #{$tableSubItem} {
                                 @each $property, $value in $properties {

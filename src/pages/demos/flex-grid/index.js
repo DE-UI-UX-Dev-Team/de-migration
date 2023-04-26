@@ -1,1 +1,2 @@
-import '../../../styles/main.scss';import './grid-demo.scss';
+import '../../../styles/main.scss';
+import './grid-demo.scss';

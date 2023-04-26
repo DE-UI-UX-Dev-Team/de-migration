@@ -1,21 +1,21 @@
 @use '../abstracts' as *;
 
-/*--- Base - Typography ---*/ 
- 
-body,  
-p, 
+/*--- Base - Typography ---*/
+
+body,
+p,
 ol,
 ul,
 dl,
-pre, 
-menu, 
+pre,
+menu,
 dir,
-address, 
-blockquote { 
+address,
+blockquote {
     font: var(--p-1--sm);
-    letter-spacing: var(--p-1--ltr-spc--sm);  
+    letter-spacing: var(--p-1--ltr-spc--sm);
     margin-bottom: var(--p-1--spacing--sm);
-}  
+}
 
 menu,
 dir,
@@ -24,31 +24,30 @@ ul,
 dl,
 dd,
 pre,
-address, 
-blockquote { 
-  margin-left: var(--text-indent--sm);
-}  
+address,
+blockquote {
+    margin-left: var(--text-indent--sm);
+}
 
-table { 
+table {
     margin-bottom: var(--p-1--spacing--sm);
 }
 
-@include mediaQuery("tablet-up") {
-
-    body,  
-    p, 
+@include mediaQuery('tablet-up') {
+    body,
+    p,
     ol,
     ul,
     dl,
-    pre, 
-    menu, 
+    pre,
+    menu,
     dir,
-    address, 
-    blockquote { 
+    address,
+    blockquote {
         font: var(--p-1--sm);
-        letter-spacing: var(--p-1--ltr-spc--sm);  
+        letter-spacing: var(--p-1--ltr-spc--sm);
         margin-bottom: var(--p-1--spacing--sm);
-    }  
+    }
 
     menu,
     dir,
@@ -57,33 +56,31 @@ table {
     dl,
     dd,
     pre,
-    address, 
-    blockquote { 
-      margin-left: var(--text-indent--md);
-    } 
+    address,
+    blockquote {
+        margin-left: var(--text-indent--md);
+    }
 
-    table { 
+    table {
         margin-bottom: var(--p-1--spacing--md);
     }
-
 }
 
-@include mediaQuery("desktop-up") {
-
-    body,  
-    p, 
+@include mediaQuery('desktop-up') {
+    body,
+    p,
     ol,
     ul,
     dl,
-    pre, 
-    menu, 
+    pre,
+    menu,
     dir,
-    address, 
-    blockquote { 
+    address,
+    blockquote {
         font: var(--p-1--lg);
-        letter-spacing: var(--p-1--ltr-spc--lg);  
+        letter-spacing: var(--p-1--ltr-spc--lg);
         margin-bottom: var(--p-1--spacing--lg);
-    }   
+    }
 
     menu,
     dir,
@@ -92,33 +89,31 @@ table {
     dl,
     dd,
     pre,
-    address, 
-    blockquote { 
-      margin-left: var(--text-indent--lg);
-    } 
-
-    table { 
-        margin-bottom: var(--p-1--spacing--lg);
+    address,
+    blockquote {
+        margin-left: var(--text-indent--lg);
     }
 
-} 
+    table {
+        margin-bottom: var(--p-1--spacing--lg);
+    }
+}
 
-@include mediaQuery("desktop-xl-up") {
-
-    body,  
-    p, 
+@include mediaQuery('desktop-xl-up') {
+    body,
+    p,
     ol,
     ul,
     dl,
-    pre, 
-    menu, 
+    pre,
+    menu,
     dir,
-    address, 
-    blockquote { 
+    address,
+    blockquote {
         font: var(--p-1--xl);
-        letter-spacing: var(--p-1--ltr-spc--xl);  
+        letter-spacing: var(--p-1--ltr-spc--xl);
         margin-bottom: var(--p-1--spacing--xl);
-    }  
+    }
 
     menu,
     dir,
@@ -127,33 +122,44 @@ table {
     dl,
     dd,
     pre,
-    address, 
-    blockquote { 
-      margin-left: var(--text-indent--xl);
-    } 
+    address,
+    blockquote {
+        margin-left: var(--text-indent--xl);
+    }
 
-    table { 
+    table {
         margin-bottom: var(--p-1--spacing--xl);
     }
-    
-} 
- 
-/*--- Base - Typography (Misc) ---*/  
+}
 
-blockquote { margin-top: var(--p-1--spacing--sm); }  
+/*--- Base - Typography (Misc) ---*/
 
-dt { font-weight: 500; }
+blockquote {
+    margin-top: var(--p-1--spacing--sm);
+}
 
-ul li { list-style-position: inside; }
+dt {
+    font-weight: 500;
+}
 
-h1:last-child, .h-1:last-child,
-h2:last-child, .h-2:last-child,
-h3:last-child, .h-3:last-child,
-h4:last-child, .h-4:last-child,
-h5:last-child, .h-5:last-child, 
-h6:last-child, .h-6:last-child { 
+ul li {
+    list-style-position: inside;
+}
+
+h1:last-child,
+.h-1:last-child,
+h2:last-child,
+.h-2:last-child,
+h3:last-child,
+.h-3:last-child,
+h4:last-child,
+.h-4:last-child,
+h5:last-child,
+.h-5:last-child,
+h6:last-child,
+.h-6:last-child {
     margin-bottom: 0;
-} 
+}
 
 /*--- Color Scheme - Typography Default Properties ---*/
 
@@ -166,47 +172,53 @@ h6:last-child, .h-6:last-child {
     --heading--on-success-background: var(--success-text);
     --heading--on-info-background: var(--info-text);
     --heading--on-warning-background: var(--warning-text);
- 
+
     --body-text--color: var(--secondary-base);
     --body-text--light-color: var(--secondary-base);
     --body-text--on-dark-background: var(--white-base);
-    --body-text--on-light-background: var(--secondary-base); 
+    --body-text--on-light-background: var(--secondary-base);
 
     --body-text--on-error-background: var(--error-text);
     --body-text--on-success-background: var(--success-text);
     --body-text--on-info-background: var(--info-text);
     --body-text--on-warning-background: var(--warning-text);
 }
- 
+
 /*--- Color Scheme - Type Color Palette ---*/
 
-body, 
-p, 
+body,
+p,
 ol,
 ul,
 dl,
-pre, 
-menu, 
+pre,
+menu,
 dir,
-address, 
-blockquote { 
-  color: var(--body-text--color);
+address,
+blockquote {
+    color: var(--body-text--color);
 }
-  
-blockquote > * { color: var(--body-text--light-color); }
-dd { color: var(--body-text--light-color); }
 
-address, 
-h1, .h-1,  
-h2, .h-2 {
-  color: var(--heading-color);
-}  
- 
-[class*=bg--primary]:not([class*=light-]) hr,
-[class*=bg--secondary]:not([class*=light-]) hr {
+blockquote > * {
+    color: var(--body-text--light-color);
+}
+dd {
+    color: var(--body-text--light-color);
+}
+
+address,
+h1,
+.h-1,
+h2,
+.h-2 {
+    color: var(--heading-color);
+}
+
+[class*='bg--primary']:not([class*='light-']) hr,
+[class*='bg--secondary']:not([class*='light-']) hr {
     background-color: var(--body-text--on-dark-background);
 }
- 
+
 /*--- Color Scheme - Type on Colored Backgrounds ---*/
 
 @include getTypeOnColorBg();

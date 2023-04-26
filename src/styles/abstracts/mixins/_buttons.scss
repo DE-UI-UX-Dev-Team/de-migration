@@ -1,133 +1,125 @@
-@use "sass:map";  
-@use "sass:string";
- 
+@use 'sass:map';
+@use 'sass:string';
+
 @use '../../abstracts/base' as *;
 @use '../../abstracts/tokens' as *;
 @use '../functions/string-replace.scss' as *;
 
-@mixin getButtonsOnColorBg( $palette, $bgSelector, $suffix ) {
-
-    @each $button, $states in $palette { 
-        @each $state, $properties in $states {  
-
+@mixin getButtonsOnColorBg($palette, $bgSelector, $suffix) {
+    @each $button, $states in $palette {
+        @each $state, $properties in $states {
             // Primary Buttons
-            @if $button == "primary" { 
-                @if $state == "default" {
-                    #{$bgSelector}.btn--#{$button}, 
-                    #{$bgSelector}input[type="submit"], 
-                    #{$bgSelector}label[type="submit"] {
-                        @each $property, $value in $properties{
-                            @if $value != null {
-                                #{$property}: #{$value};
-                            }
-                        }
-                    } 
-                }
-                @else{
-                    #{$bgSelector}.btn--#{$button}:#{$state}, 
-                    #{$bgSelector}input[type="submit"]:#{$state}, 
-                    #{$bgSelector}label[type="submit"]:#{$state},
-                    #{$bgSelector}label[type="submit"]:#{$state} > input[type="submit"] {
-                        @each $property, $value in $properties{
+            @if $button == 'primary' {
+                @if $state == 'default' {
+                    #{$bgSelector}.btn--#{$button},
+                    #{$bgSelector}input[type='submit'],
+                    #{$bgSelector}label[type='submit'] {
+                        @each $property, $value in $properties {
                             @if $value != null {
                                 #{$property}: #{$value};
                             }
                         }
                     }
-                } 
-            }  
-            
-            // Secondary Button/HTML Button Elements
-            @else if $button == "secondary" {
-                @if $state == "default" {
-                    #{$bgSelector}button,
-                    #{$bgSelector}.btn, 
-                    #{$bgSelector}input[type="button"],
-                    #{$bgSelector}input[type="reset"], 
-                    #{$bgSelector}label[type="button"],
-                    #{$bgSelector}label[type="reset"], 
-                    #{$bgSelector}.btn--#{$button}{
-                        @each $property, $value in $properties{
+                } @else {
+                    #{$bgSelector}.btn--#{$button}:#{$state},
+                    #{$bgSelector}input[type='submit']:#{$state},
+                    #{$bgSelector}label[type='submit']:#{$state},
+                    #{$bgSelector}label[type='submit']:#{$state} > input[type='submit'] {
+                        @each $property, $value in $properties {
                             @if $value != null {
                                 #{$property}: #{$value};
                             }
                         }
-                    } 
-                }
-                @else{
-                    #{$bgSelector}button:#{$state},  
-                    #{$bgSelector}.btn:#{$state},
-                    #{$bgSelector}input[type="reset"]:#{$state}, 
-                    #{$bgSelector}input[type="button"]:#{$state},  
-                    #{$bgSelector}label[type="button"]:#{$state},
-                    #{$bgSelector}label[type="reset"]:#{$state},  
-                    #{$bgSelector}label[type="button"]:#{$state} > input[type="button"],
-                    #{$bgSelector}label[type="reset"]:#{$state} > input[type="reset"],
-                    #{$bgSelector}.btn--#{$button}:#{$state}{
-                        @each $property, $value in $properties{
-                            @if $value != null {
-                                #{$property}: #{$value};
-                            }
-                        }
-                    } 
-                }
-            } 
-
-            // Buttons with Classname
-            @else if string.index($button, '.') != null { 
-                $prop-prefix: str-replace($button, '.', '');
-                @if $state == "default" {
-                    #{$bgSelector}button#{$button},
-                    #{$bgSelector}[class*=btn]#{$button},
-                    #{$bgSelector}input[type="button"]#{$button},
-                    #{$bgSelector}input[type="reset"]#{$button} 
-                    #{$bgSelector}label[type="button"]#{$button},
-                    #{$bgSelector}label[type="reset"]#{$button} {
-                        @each $property, $value in $properties{ 
-                            @if $value != null {
-                                #{$property}: #{$value};
-                            }
-                        }
-                    } 
-                }
-                @else{
-                    #{$bgSelector}button#{$button}:#{$state},
-                    #{$bgSelector}[class*=btn]#{$button}:#{$state},
-                    #{$bgSelector}[type="button"]#{$button}:#{$state},
-                    #{$bgSelector}[type="reset"]#{$button}:#{$state}, 
-                    #{$bgSelector}label[type="button"]#{$button}:#{$state},
-                    #{$bgSelector}label[type="reset"]#{$button}:#{$state} {
-                        @each $property, $value in $properties{ 
-                            @if $value != null {
-                                #{$property}: #{$value};
-                            }
-                        }
-                    } 
+                    }
                 }
             }
-            
+
+            // Secondary Button/HTML Button Elements
+            @else if $button == 'secondary' {
+                @if $state == 'default' {
+                    #{$bgSelector}button,
+                    #{$bgSelector}.btn,
+                    #{$bgSelector}input[type='button'],
+                    #{$bgSelector}input[type='reset'],
+                    #{$bgSelector}label[type='button'],
+                    #{$bgSelector}label[type='reset'],
+                    #{$bgSelector}.btn--#{$button} {
+                        @each $property, $value in $properties {
+                            @if $value != null {
+                                #{$property}: #{$value};
+                            }
+                        }
+                    }
+                } @else {
+                    #{$bgSelector}button:#{$state},
+                    #{$bgSelector}.btn:#{$state},
+                    #{$bgSelector}input[type='reset']:#{$state},
+                    #{$bgSelector}input[type='button']:#{$state},
+                    #{$bgSelector}label[type='button']:#{$state},
+                    #{$bgSelector}label[type='reset']:#{$state},
+                    #{$bgSelector}label[type='button']:#{$state} > input[type='button'],
+                    #{$bgSelector}label[type='reset']:#{$state} > input[type='reset'],
+                    #{$bgSelector}.btn--#{$button}:#{$state} {
+                        @each $property, $value in $properties {
+                            @if $value != null {
+                                #{$property}: #{$value};
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Buttons with Classname
+            @else if string.index($button, '.') != null {
+                $prop-prefix: str-replace($button, '.', '');
+                @if $state == 'default' {
+                    #{$bgSelector}button#{$button},
+                    #{$bgSelector}[class*='btn']#{$button},
+                    #{$bgSelector}input[type='button']#{$button},
+                    #{$bgSelector}input[type='reset']#{$button} #{$bgSelector}label[type='button']#{$button},
+                    #{$bgSelector}label[type='reset']#{$button} {
+                        @each $property, $value in $properties {
+                            @if $value != null {
+                                #{$property}: #{$value};
+                            }
+                        }
+                    }
+                } @else {
+                    #{$bgSelector}button#{$button}:#{$state},
+                    #{$bgSelector}[class*='btn']#{$button}:#{$state},
+                    #{$bgSelector}[type='button']#{$button}:#{$state},
+                    #{$bgSelector}[type='reset']#{$button}:#{$state},
+                    #{$bgSelector}label[type='button']#{$button}:#{$state},
+                    #{$bgSelector}label[type='reset']#{$button}:#{$state} {
+                        @each $property, $value in $properties {
+                            @if $value != null {
+                                #{$property}: #{$value};
+                            }
+                        }
+                    }
+                }
+            }
+
             // Every other button type
             @else {
-                @if $state == "default" {
-                    #{$bgSelector}.btn--#{$button}{
-                        @each $property, $value in $properties{
+                @if $state == 'default' {
+                    #{$bgSelector}.btn--#{$button} {
+                        @each $property, $value in $properties {
                             @if $value != null {
                                 #{$property}: #{$value};
                             }
                         }
-                    } 
-                }
-                @else{
-                    #{$bgSelector}.btn--#{$button}:#{$state}{
-                        @each $property, $value in $properties{
+                    }
+                } @else {
+                    #{$bgSelector}.btn--#{$button}:#{$state} {
+                        @each $property, $value in $properties {
                             @if $value != null {
                                 #{$property}: #{$value};
                             }
                         }
-                    } 
+                    }
                 }
             }
         } // End loop - properties
-
     } // End loop - palette
 }

@@ -1,4 +1,4 @@
 import { initBackgroundToggle } from '../../../assets/demo-scripts/backgroundToggle';
-import "../../../styles/main.scss";
+import '../../../styles/main.scss';
 
 initBackgroundToggle();

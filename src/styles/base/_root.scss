@@ -1,51 +1,49 @@
-@use "sass:map"; 
+@use 'sass:map';
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 :root {
-      
     @include getColorCustomProperties();
 
     /*--- Default Properties - Dropshadows ---*/
 
-    @each $variant, $value in map.get( $dropshadows, #{$active-theme} ) {
+    @each $variant, $value in map.get($dropshadows, #{$active-theme}) {
         --dropshadow-#{$variant}: #{$value};
     }
 
     /*--- Default Properties - Spacing, Section ---*/
 
-    @each $type, $categories in map.get( $spacing, #{$active-theme}, "section" ) { 
-
+    @each $type, $categories in map.get($spacing, #{$active-theme}, 'section') {
         // String manipulation of CSS property name
-        $modType: "";
-        @if $type != "" {
+        $modType: '';
+        @if $type != '' {
             $modType: -#{$type};
         }
-         
-        @each $variant, $sizes in $categories { 
-            @each $size, $value in $sizes { 
+
+        @each $variant, $sizes in $categories {
+            @each $size, $value in $sizes {
                 --sect#{$modType}--#{$variant}--#{$size}: #{$value};
             }
         }
-    } 
+    }
 
-    /*--- Default Properties - Spacing, Gutters ---*/ 
+    /*--- Default Properties - Spacing, Gutters ---*/
 
-    @each $size, $value in map.get( $spacing, #{$active-theme}, "gutter" ) {
+    @each $size, $value in map.get($spacing, #{$active-theme}, 'gutter') {
         --gutter-#{$size}: #{$value};
     }
 
     /*--- Default Properties - Spacing, Columns ---*/
 
-    @each $type, $categories in map.get( $spacing, #{$active-theme}, "column" ) {
-        @each $size, $value in $categories { 
+    @each $type, $categories in map.get($spacing, #{$active-theme}, 'column') {
+        @each $size, $value in $categories {
             --col-#{$type}--#{$size}: #{$value};
         }
-    } 
- 
+    }
+
     /*--- Default Properties - Typography ---*/
 
-    @each $type, $categories in map.get( $typography, #{$active-theme }) {
+    @each $type, $categories in map.get($typography, #{$active-theme}) {
         @each $variant, $sizes in $categories {
             @each $size, $value in $sizes {
                 --#{$type}-#{$variant}--#{$size}: #{$value};
@@ -73,18 +71,18 @@
     --text-indent--md: #{$h-spacing--150};
     --text-indent--lg: #{$h-spacing--150};
     --text-indent--xl: #{$h-spacing--150};
-    
+
     /*--- Default Properties - Font Weights ---*/
 
     --font-weight--regular: #{$font-weight--regular};
     --font-weight--medium: #{$font-weight--medium};
-        
+
     /*--- Default Properties - Font Stack ---*/
 
     --font-stack: #{$font-stack--sans-serif};
 
     /*--- Default Properties - List Styles ---*/
-    
+
     --list-item-spacing-s--sm: #{$list-item-spacing-s--sm};
     --list-item-spacing-s--md: #{$list-item-spacing-s--md};
     --list-item-spacing-s--lg: #{$list-item-spacing-s--lg};
@@ -98,9 +96,9 @@
     --list-item-spacing-l--sm: #{$list-item-spacing-l--sm};
     --list-item-spacing-l--md: #{$list-item-spacing-l--md};
     --list-item-spacing-l--lg: #{$list-item-spacing-l--lg};
-    --list-item-spacing-l--xl: #{$list-item-spacing-l--xl}; 
+    --list-item-spacing-l--xl: #{$list-item-spacing-l--xl};
 
-    /*--- Default Properties - Border Radius ---*/ 
+    /*--- Default Properties - Border Radius ---*/
 
     --border-radius-25: #{$border-radius-25};
     --border-radius-50: #{$border-radius-50};
@@ -111,14 +109,13 @@
 
     --icon--margin--sm: 0.8rem;
     --icon--margin--md: 1rem;
-    --icon--margin--lg: 1.6rem; 
+    --icon--margin--lg: 1.6rem;
 
-    --icon--size--sm: 1.6rem; 
+    --icon--size--sm: 1.6rem;
     --icon--size--md: 2.4rem;
-    --icon--size--lg: 3.2rem; 
+    --icon--size--lg: 3.2rem;
 
     --icon--size-with-background--sm: calc(var(--icon--size--sm) * 2);
     --icon--size-with-background--md: calc(var(--icon--size--md) * 2);
-    --icon--size-with-background--lg: calc(var(--icon--size--lg) * 2); 
-
-}  
+    --icon--size-with-background--lg: calc(var(--icon--size--lg) * 2);
+}

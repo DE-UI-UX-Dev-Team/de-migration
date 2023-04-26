@@ -1,7 +1,17 @@
 /*--- Utilities - Border Radius ---*/
 
-.bdr-rad--0 { border-radius: 0; }
-.bdr-rad--25 { border-radius: var(--border-radius-25); }
-.bdr-rad--50 { border-radius: var(--border-radius-50); }
-.bdr-rad--75 { border-radius: var(--border-radius-75); }
-.bdr-rad--100 { border-radius: var(--border-radius-100); }
+.bdr-rad--0 {
+    border-radius: 0;
+}
+.bdr-rad--25 {
+    border-radius: var(--border-radius-25);
+}
+.bdr-rad--50 {
+    border-radius: var(--border-radius-50);
+}
+.bdr-rad--75 {
+    border-radius: var(--border-radius-75);
+}
+.bdr-rad--100 {
+    border-radius: var(--border-radius-100);
+}

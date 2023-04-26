@@ -1,16 +1,19 @@
 /*--- Components - Section Curves ---*/
- 
-section[class*=btm-curv] {
-    padding-bottom: 0; 
-} 
- 
-section[class*=curv]:after, 
-section[class*=curv]:before {
-    margin-left: calc(var(--gutter-xl) * -4); 
+
+section[class*='btm-curv'] {
+    padding-bottom: 0;
+}
+
+section[class*='curv']:after,
+section[class*='curv']:before {
+    margin-left: calc(var(--gutter-xl) * -4);
     margin-right: calc(var(--gutter-xl) * -4);
 }
 
-.bg-top-curv:before, .bg-btm-curv:after, .bg-top-curv-reverse:before, .bg-btm-curv-reverse:after {
+.bg-top-curv:before,
+.bg-btm-curv:after,
+.bg-top-curv-reverse:before,
+.bg-btm-curv-reverse:after {
     content: '';
     display: block;
     background-repeat: no-repeat;
@@ -37,7 +40,7 @@ section[class*=curv]:before {
     background-image: url(/assets/images/de_animated_curve_blue.svg);
 }
 
-section[class*=bg-top-curv] {
+section[class*='bg-top-curv'] {
     padding-top: 0;
 }
 
