@@ -52,6 +52,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^6.3.0",
     "html5-form-validation-js": "^0.11.1",
-    "banner-alert-js": "^1.1.0"
+    "banner-alert-js": "^1.1.0",
+    "modal-popups-js": "^0.10.1"
   }
 }
