@@ -56,16 +56,11 @@
         "webpack-dev-server": "^4.13.3"
     },
     "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
     },
     "lint-staged": {
-        "linters": {
-            "src/**/*.{js,jsx,tsx,scss,css,html,md}": [
-                "prettier --write",
-                "git add"
-            ]
-        }
+      "*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
     }
 }
