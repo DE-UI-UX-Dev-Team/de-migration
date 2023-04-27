@@ -13,7 +13,7 @@
   }, 
   "entryPoints" : {
     "pages" : {
-      "directory" : ["src/demos/"] 
+      "directory" : ["src/pages/"] 
     }
   }
 }

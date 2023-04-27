@@ -1,24 +1,23 @@
-@use "sass:map"; 
- 
+@use 'sass:map';
+
 @use '../abstracts/' as *;
 
 /*--- Components - Buttons ---*/
 
 button,
-[class*=btn],
-[type="button"],
-[type="submit"],
-[type="reset"] { 
-
+[class*='btn'],
+[type='button'],
+[type='submit'],
+[type='reset'] {
     /*--- Default Properties - Buttons ---*/
 
     --btn--font: #{$btn--font};
     --btn--min-width: #{$btn--min-width};
     --btn--corner-radius: #{$btn--corner-radius};
-    --btn--border-width: #{$btn--border-width}; 
+    --btn--border-width: #{$btn--border-width};
     --btn--padding: #{$btn--button-padding};
-    --btn--padding-w-border: #{$btn--border-button-padding}; 
- 
+    --btn--padding-w-border: #{$btn--border-button-padding};
+
     min-width: var(--btn--min-width);
     font: var(--btn--font);
     border-radius: var(--btn--corner-radius);
@@ -29,67 +28,65 @@ button,
 
 /*--- Components - Buttons, Selected ---*/
 
-[type="button"],
-[type="submit"], 
-[type="reset"], 
-label[type="button"],
-label[type="submit"],
-label[type="reset"] {
+[type='button'],
+[type='submit'],
+[type='reset'],
+label[type='button'],
+label[type='submit'],
+label[type='reset'] {
     display: inline-block;
     cursor: pointer;
 }
 
-label[type="button"] > i,
-label[type="submit"] > i,
-label[type="reset"] > i {
+label[type='button'] > i,
+label[type='submit'] > i,
+label[type='reset'] > i {
     color: inherit !important;
-} 
+}
 
-
-label[type="button"] > input,
-label[type="submit"] > input,
-label[type="reset"] > input, 
-label[type="button"] > input:hover,
-label[type="submit"] > input:hover,
-label[type="reset"] > input:hover, 
-label[type="button"] > input:focus,
-label[type="submit"] > input:focus,
-label[type="reset"] > input:focus,
-label[type="button"] > input:active,
-label[type="submit"] > input:active,
-label[type="reset"] > input:active {
-    background: transparent !important; 
-    border: none; 
+label[type='button'] > input,
+label[type='submit'] > input,
+label[type='reset'] > input,
+label[type='button'] > input:hover,
+label[type='submit'] > input:hover,
+label[type='reset'] > input:hover,
+label[type='button'] > input:focus,
+label[type='submit'] > input:focus,
+label[type='reset'] > input:focus,
+label[type='button'] > input:active,
+label[type='submit'] > input:active,
+label[type='reset'] > input:active {
+    background: transparent !important;
+    border: none;
     padding: 0;
     display: inline;
     min-width: auto;
     outline: none;
-} 
+}
 
 label[type]:focus {
     outline: 2px;
 }
 
-label[type="button"] > input + i,
-label[type="submit"] > input + i,
-label[type="reset"] > input+ i {
+label[type='button'] > input + i,
+label[type='submit'] > input + i,
+label[type='reset'] > input + i {
     display: inline;
 }
 
 button,
-.btn, 
-[type=button],
-[type=reset], 
-[type=submit],
-button[class*=btn--secondary],
-.btn[class*=btn--secondary], 
-[type=button][class*=btn--secondary],
-[type=reset][class*=btn--secondary], 
-[type=submit][class*=btn--secondary] { 
-
+.btn,
+[type='button'],
+[type='reset'],
+[type='submit'],
+button[class*='btn--secondary'],
+.btn[class*='btn--secondary'],
+[type='button'][class*='btn--secondary'],
+[type='reset'][class*='btn--secondary'],
+[type='submit'][class*='btn--secondary'] {
     padding: var(--btn--padding-w-border);
-    border-width: #{$btn--border-width}; 
-    border-style: solid; 
+    border-width: #{$btn--border-width};
+    border-style: solid;
 
     &:hover {
         outline: #{$outline--focus};
@@ -100,31 +97,27 @@ button[class*=btn--secondary],
         outline: #{$outline--focus};
         outline-offset: #{$outline--focus-offset};
     }
-
 }
 
-button[class*=btn--primary],
-.btn[class*=btn--primary], 
-[type=button][class*=btn--primary],
-[type=reset][class*=btn--primary], 
-[type=submit] { 
-
+button[class*='btn--primary'],
+.btn[class*='btn--primary'],
+[type='button'][class*='btn--primary'],
+[type='reset'][class*='btn--primary'],
+[type='submit'] {
     padding: var(--btn--padding);
-    
+
     &:focus {
         outline: #{$outline--focus};
         outline-offset: #{$outline--focus-offset};
     }
-
 }
- 
-button[class*=btn--tertiary],
-.btn[class*=btn--tertiary], 
-[type=button][class*=btn--tertiary],
-[type=reset][class*=btn--tertiary], 
-[type=submit][class*=btn--tertiary] { 
 
-    padding: 0; 
+button[class*='btn--tertiary'],
+.btn[class*='btn--tertiary'],
+[type='button'][class*='btn--tertiary'],
+[type='reset'][class*='btn--tertiary'],
+[type='submit'][class*='btn--tertiary'] {
+    padding: 0;
     min-width: unset;
     border: none;
 
@@ -132,36 +125,33 @@ button[class*=btn--tertiary],
         outline: #{$outline--focus};
         outline-offset: #{$outline--focus-offset};
     }
-
 }
 
 button.selected,
-[class*=btn].selected,
-[type="button"].selected,
-[type="submit"].selected,
-[type="reset"].selected {
+[class*='btn'].selected,
+[type='button'].selected,
+[type='submit'].selected,
+[type='reset'].selected {
     border: none;
 }
 
-/*--- Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/ 
+/*--- Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/
 
 :root {
- 
-    --btn-secondary--lgt-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});  
-    --btn-secondary--lgt-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity}); 
+    --btn-secondary--lgt-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
+    --btn-secondary--lgt-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
 
-    --btn-tertiary--lgt-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});  
-    --btn-tertiary--lgt-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity}); 
+    --btn-tertiary--lgt-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
+    --btn-tertiary--lgt-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
 
-    --btn-secondary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity}); 
-    --btn-secondary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity});  
+    --btn-secondary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity});
+    --btn-secondary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity});
 
-    --btn-tertiary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity}); 
-    --btn-tertiary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity}); 
-
+    --btn-tertiary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity});
+    --btn-tertiary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity});
 }
 
-/*--- Color Scheme - Buttons on Contrasting Backgrounds, Styles ---*/ 
+/*--- Color Scheme - Buttons on Contrasting Backgrounds, Styles ---*/
 
-@include colorize( "button", "light-backgrounds", #{$active-theme} );
-@include colorize( "button", "dark-backgrounds", #{$active-theme} );
+@include colorize('button', 'light-backgrounds', #{$active-theme});
+@include colorize('button', 'dark-backgrounds', #{$active-theme});

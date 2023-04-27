@@ -1,11 +1,11 @@
-@use "sass:map"; 
+@use 'sass:map';
 
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 /*--- Utilities - Dropshadows ---*/
 
-@each $variant, $value in map.get( $dropshadows, #{$active-theme} ) {
+@each $variant, $value in map.get($dropshadows, #{$active-theme}) {
     .dropshadow-#{$variant} {
-        box-shadow: var(--dropshadow-#{$variant})
+        box-shadow: var(--dropshadow-#{$variant});
     }
 }
