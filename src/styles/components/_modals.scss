@@ -1,5 +1,21 @@
 @use '../abstracts' as *;
 
+body > div.screen-overlay {
+    pointer-events: none;
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+body[data-overlay='active'] > div.screen-overlay {
+    background-color: #000;
+    opacity: 60%;
+    transition: $transition--ease-50;
+}
+
 .modal-containers {
     // base styles
     --modal-container--gutter--sm: 1.5rem;
@@ -13,7 +29,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 20;
     transform: translateY(0%);
 }
 
