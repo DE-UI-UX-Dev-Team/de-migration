@@ -88,11 +88,6 @@ button[class*='btn--secondary'],
     border-width: #{$btn--border-width};
     border-style: solid;
 
-    &:hover {
-        outline: #{$outline--focus};
-        outline-offset: #{$outline--focus-offset};
-    }
-
     &:focus {
         outline: #{$outline--focus};
         outline-offset: #{$outline--focus-offset};
