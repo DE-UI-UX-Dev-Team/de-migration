@@ -13,11 +13,11 @@
             padding-left: calc(var(--gutter-#{$screenSize}) * 4);
             padding-right: calc(var(--gutter-#{$screenSize}) * 4);
         }
-        section:first-child {
+        section:first-of-type {
             margin: 0;
             padding-top: var(--sect--top-pd--#{$screenSize});
         }
-        section:last-child {
+        section:last-of-type {
             padding-bottom: var(--sect--btm-pd--#{$screenSize});
         }
 
