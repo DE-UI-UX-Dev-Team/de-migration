@@ -1,8 +1,8 @@
 @use '../abstracts' as *;
 
-body > div.screen-overlay {
+body > .screen-overlay {
     pointer-events: none;
-    height: 100vh;
+    height: calc(100vh + 7.2rem);
     position: absolute;
     width: 100vw;
     z-index: 10;
@@ -10,7 +10,7 @@ body > div.screen-overlay {
     left: 0;
 }
 
-body[data-overlay='active'] > div.screen-overlay {
+body[data-overlay='active'] > .screen-overlay {
     background-color: #000;
     opacity: 60%;
     transition: $transition--ease-50;
@@ -41,6 +41,8 @@ body[data-overlay='active'] > div.screen-overlay {
     max-width: var(--modal--max-width);
     min-width: var(--modal--min-width);
     background-color: var(--white-base);
+    overflow-y: auto;
+    max-height: calc(100vh - 50px);
 
     > .row {
         margin: 0;
