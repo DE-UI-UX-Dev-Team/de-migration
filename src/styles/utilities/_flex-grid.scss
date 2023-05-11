@@ -111,11 +111,6 @@ $col-multiplier: 2;
 @include getColumnMgBtm('desktop-up', 'lg');
 @include getColumnMgBtm('desktop-xl-up', 'xl');
 
-[class*='col'] > [class*='col'],
-[class*='col--'] > [class*='col--'] {
-    margin-bottom: 0;
-}
-
 @include getColumns('mobile-up', 'sm-odd', 3);
 @include getColumns('mobile-up', 'sm', 4);
 @include getColumns('mobile-landscape-up', 'md-odd', 9);
