@@ -51,8 +51,8 @@
         padding: #{$v-spacing--50} #{$h-spacing--150};
     }
 
-    [data-content-switcher='input-left']:focus ~ .content-switcher--pill [data-content-switcher='label-left'],
-    [data-content-switcher='input-right']:focus ~ .content-switcher--pill [data-content-switcher='label-right'] {
+    [data-content-switcher='input-left']:focus ~ .content-switcher--pill [data-content-switcher='label-right'],
+    [data-content-switcher='input-right']:focus ~ .content-switcher--pill [data-content-switcher='label-left'] {
         outline: #{$outline--focus};
     }
 }
