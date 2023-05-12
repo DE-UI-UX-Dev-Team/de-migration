@@ -27,7 +27,7 @@ export const sliderLabelData: ContentSwitcherProps['contentSwitcherObject']['Sli
     },
     {
         forText: 'switch-right-1',
-        labelAttribute: 'label-eight',
+        labelAttribute: 'label-right',
         labelHead: 'Prepaid',
         labelSubhead: 'Business',
     },
