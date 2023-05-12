@@ -1,27 +1,18 @@
 import React from 'react';
+import { ContentSwitcherProps } from '../../interfaces/Props';
 
-export interface HiddenInputProps {
-    inputId: string;
-    inputName: string;
-    inputAttribute: string;
-    inputType: string;
-    inputChecked: boolean;
+export interface hiddenInputItemProps {
+    hiddenInputItem: ContentSwitcherProps['contentSwitcherObject']['hiddenInput'];
 }
 
-export const HiddenInput: React.FC<HiddenInputProps> = ({
-    inputId,
-    inputName,
-    inputAttribute,
-    inputType,
-    inputChecked,
-}) => {
+export const HiddenInput: React.FC<hiddenInputItemProps> = ({ hiddenInputItem }) => {
     return (
         <input
-            id={inputId}
-            name={inputName}
-            data-content-switcher={inputAttribute}
-            type={inputType}
-            checked={inputChecked}
+            id={hiddenInputItem.inputId}
+            name={hiddenInputItem.inputName}
+            data-content-switcher={hiddenInputItem.inputAttribute}
+            type={hiddenInputItem.inputType}
+            checked={hiddenInputItem.inputChecked}
         />
     );
 };

@@ -1,19 +1,18 @@
 import React from 'react';
+import { ContentSwitcherProps } from '../../interfaces/Props';
 
-export interface SwitcherContentProps {
-    contentAttribute: string;
-    contentHeading: string;
-    contentPara: string;
+export interface switcherContentItemProps {
+    switcherContentItem: ContentSwitcherProps['contentSwitcherObject']['SwitcherContent'];
 }
 
-export const SwitcherContent: React.FC<SwitcherContentProps> = ({ contentAttribute, contentHeading, contentPara }) => {
+export const SwitcherContent: React.FC<switcherContentItemProps> = ({ switcherContentItem }) => {
     return (
         <div
-            data-content-switcher={contentAttribute}
+            data-content-switcher={switcherContentItem.contentAttribute}
             className="content-switcher--content"
         >
-            <h3>{contentHeading}</h3>
-            <p>{contentPara}</p>
+            <h3>{switcherContentItem.contentHeading}</h3>
+            <p>{switcherContentItem.contentPara}</p>
         </div>
     );
 };

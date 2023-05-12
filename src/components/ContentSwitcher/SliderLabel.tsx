@@ -1,29 +1,27 @@
 import React from 'react';
+import { ContentSwitcherProps } from '../../interfaces/Props';
 
-export interface SliderLabelProps {
-    labelAttribute: string;
-    labelHead: string;
-    labelSubhead: string;
-    forText: string;
+export interface sliderLabelItemProps {
+    sliderLabelItem: ContentSwitcherProps['contentSwitcherObject']['SliderLabel'];
 }
 
-export const SliderLabel: React.FC<SliderLabelProps> = ({ labelAttribute, labelHead, labelSubhead, forText }) => {
+export const SliderLabel: React.FC<sliderLabelItemProps> = ({ sliderLabelItem }) => {
     return (
         <label
-            htmlFor={forText}
-            data-content-switcher={labelAttribute}
+            htmlFor={sliderLabelItem.forText}
+            data-content-switcher={sliderLabelItem.labelAttribute}
         >
             <div>
-                {labelHead ? (
+                {sliderLabelItem.labelHead ? (
                     <span className="h-4">
-                        {labelHead}
+                        {sliderLabelItem.labelHead}
                         <br />
                     </span>
                 ) : (
                     ''
                 )}
 
-                <span className="p-1">{labelSubhead}</span>
+                <span className="p-1">{sliderLabelItem.labelSubhead}</span>
             </div>
         </label>
     );
