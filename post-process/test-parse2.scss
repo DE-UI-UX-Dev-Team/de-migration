@@ -1,16 +1,14 @@
-/*--- Layout - Section Spacing ---*/
+/**
+ * Description: Styles for the footer section 
+ * @title Test 
+ * @description This is a test
+ * @filter-selector .row.even-3--sm 
+ * @filter-css-var --
+ * @filter-scss-var $
+ * 
+ */
 
 :root {
-    /**
-   * Description: Styles for the footer section
-   * @filter-selector .row.even-3--sm
-   * 
-   * @filter-css-var --
-   * @filter-scss-var $
-   *
-   * @author David Johnson
-   * @version 1.5
-   */
     --foo-bar: #fff;
     --green-bar: #fff;
 }

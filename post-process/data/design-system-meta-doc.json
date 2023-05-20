@@ -4,6 +4,14 @@
             "description": "Description: Styles for the footer section",
             "tags": [
                 {
+                    "tag": "title",
+                    "value": "Test"
+                },
+                {
+                    "tag": "description",
+                    "value": "This is a test"
+                },
+                {
                     "tag": "filter-selector",
                     "value": ".row.even-3--sm"
                 },
@@ -14,14 +22,6 @@
                 {
                     "tag": "filter-scss-var",
                     "value": "$"
-                },
-                {
-                    "tag": "author",
-                    "value": "David Johnson"
-                },
-                {
-                    "tag": "version",
-                    "value": "1.5"
                 }
             ],
             "styles": {
@@ -33,7 +33,7 @@
             },
             "scssVariables": {
                 "$deep-sea": "#fff",
-                "$makeshit": "{ 'value': 'x'}"
+                "$makeshit": "blue"
             },
             "cssVariables": {
                 "--foo-bar": "#fff",
