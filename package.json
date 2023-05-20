@@ -5,7 +5,7 @@
     "main": "src/pages/index.tsx",
     "scripts": {
         "start": "npm run build && webpack serve --mode development --env env=dev --open --hot",
-        "build": "webpack --mode development --env env=dev",
+        "build": "webpack --mode development --env env=dev && npm run parse-css-docs",
         "dist": "webpack --env env=prod --mode production && npm run build-storybook -- -o dist/storybook",
         "deploy": "deploy/deploy.sh",
         "test": "jest",
@@ -13,7 +13,9 @@
         "build-storybook": "storybook build",
         "format": "prettier --write .",
         "precommit": "lint-staged",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "parse-css-docs": "node post-process/commentParser.js public/assets/styles/main.css",
+        "watch": "webpack --mode development --env env=dev watch=true"
     },
     "keywords": [],
     "author": "DE UI/UX Development Team <ethan.rahman@nrg.com>",

@@ -1,0 +1,44 @@
+[
+    [
+        {
+            "description": "Description: Styles for the footer section",
+            "tags": [
+                {
+                    "tag": "filter-selector",
+                    "value": ".row.even-3--sm"
+                },
+                {
+                    "tag": "filter-css-var",
+                    "value": "--"
+                },
+                {
+                    "tag": "filter-scss-var",
+                    "value": "$"
+                },
+                {
+                    "tag": "author",
+                    "value": "David Johnson"
+                },
+                {
+                    "tag": "version",
+                    "value": "1.5"
+                }
+            ],
+            "styles": {
+                ".row.even-3--sm > [class*='col']": {
+                    "background-color": "#555",
+                    "color": "#fff",
+                    "padding": "var(--red-shift)"
+                }
+            },
+            "scssVariables": {
+                "$deep-sea": "#fff",
+                "$makeshit": "{ 'value': 'x'}"
+            },
+            "cssVariables": {
+                "--foo-bar": "#fff",
+                "--green-bar": "#fff"
+            }
+        }
+    ]
+]

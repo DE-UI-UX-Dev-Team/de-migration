@@ -1,0 +1,38 @@
+/*--- Layout - Section Spacing ---*/
+
+:root {
+    /**
+   * Description: Styles for the footer section
+   * @filter-selector .row.even-3--sm
+   * 
+   * @filter-css-var --
+   * @filter-scss-var $
+   *
+   * @author David Johnson
+   * @version 1.5
+   */
+    --foo-bar: #fff;
+    --green-bar: #fff;
+}
+
+$deep-sea: #fff;
+$makeshit: blue;
+
+.row.even-3--sm > [class*='col'] {
+    background-color: #555;
+    color: #fff;
+    padding: var(--red-shift);
+}
+
+.footer > .footer-container {
+    background-color: #555;
+    color: #fff;
+    padding: var(--red-shift);
+}
+
+.footer .footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*--- end ---*/
