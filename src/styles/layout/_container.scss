@@ -2,6 +2,20 @@
 
 /*--- Layout - Container ---*/
 
+/**
+ * .container
+ * @css-prefix .container 
+ * @doc-type css-framework
+ * @doc-category layout
+ * 
+ * @title Content Container
+ * @description Containers sit directly within a `section` tag helping content editors control the maximum horizontal width their content will be displayed.  
+ *
+ * @tags content-width, content, width, container, max-width, layout
+ *
+ * @uri-related-links [Section] #sections, [Row] #flex-grid---row, [Columns] #flex-grid---columns
+ */
+
 $multiplier: -1;
 $row-multiplier: -1;
 $col-multiplier: 2;
@@ -56,3 +70,5 @@ $col-multiplier: 2;
 .container.max-width--xl {
     max-width: var(--max-content-width--xl);
 }
+
+/*--- end ---*/
