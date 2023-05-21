@@ -5,8 +5,8 @@
     "main": "src/pages/index.tsx",
     "scripts": {
         "start": "npm run build && webpack serve --mode development --env env=dev --open --hot",
-        "build": "webpack --mode development --env env=dev && npm run parse-css-docs",
-        "dist": "webpack --env env=prod --mode production && npm run build-storybook -- -o dist/storybook",
+        "build": "webpack --mode development --env env=dev && npm run post-process",
+        "dist": "webpack --env env=prod --mode production && npm run build-storybook -- -o dist/storybook && npm run post-process",
         "deploy": "deploy/deploy.sh",
         "test": "jest",
         "storybook": "storybook dev -p 6006",
@@ -14,7 +14,7 @@
         "format": "prettier --write .",
         "precommit": "lint-staged",
         "prepare": "husky install",
-        "parse-css-docs": "node post-process/commentParser/commentParser.js public/assets/styles/main.css src/pages/docs/data",
+        "post-process": "node post-process/run-post-processes.js",
         "watch": "webpack --mode development --env env=dev watch=true"
     },
     "keywords": [],

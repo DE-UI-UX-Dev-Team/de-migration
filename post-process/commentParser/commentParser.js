@@ -178,11 +178,11 @@ function escapeRegex(string) {
 }
 
 // Usage
-const cssFilePath = process.argv[2]; // Get the file path from command line argument
+const cssFilePath = path.resolve(process.argv[2]); // Get the file path from command line argument
 const parsedData = parseCssChunks(cssFilePath);
 const output = JSON.stringify(parsedData, null, 2);
 
-const outputDirectory = process.argv[3] !== undefined ? process.argv[3] : './data';
+const outputDirectory = process.argv[3] !== undefined ? path.resolve(process.argv[3]) : path.resolve('./data');
 const outputFilePath = path.join(outputDirectory, 'design-system-meta-doc.json');
 
 try {
