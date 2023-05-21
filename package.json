@@ -14,7 +14,7 @@
         "format": "prettier --write .",
         "precommit": "lint-staged",
         "prepare": "husky install",
-        "parse-css-docs": "node post-process/commentParser.js public/assets/styles/main.css src/pages/docs/data",
+        "parse-css-docs": "node post-process/commentParser/commentParser.js public/assets/styles/main.css src/pages/docs/data",
         "watch": "webpack --mode development --env env=dev watch=true"
     },
     "keywords": [],
