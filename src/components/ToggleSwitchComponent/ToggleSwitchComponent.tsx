@@ -12,8 +12,9 @@ export const ToggleSwitchComponent: React.FC<ToggleSwitchComponentProps> = ({ sw
             {switches.map((switchItem) => (
                 <li>
                     <ToggleSwitchItem
-                        key={switchItem.id}
-                        switchItem={switchItem}
+                        disabled={switchItem.disabled}
+                        checked={switchItem.checked}
+                        toggleLabel={switchItem.toggleLabel}
                     />
                 </li>
             ))}
