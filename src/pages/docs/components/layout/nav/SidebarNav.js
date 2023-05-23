@@ -55,7 +55,7 @@ const SidebarNav = () => {
                             >
                                 <button
                                     data-expandable-trigger="click"
-                                    className="btn--tertiary icon-right h-5 fw--semibold mg-b--0"
+                                    className="btn--tertiary icon-right h-5 fw--semibold"
                                 >
                                     <i className="fa fa-angle-right"></i>
                                     {capitalizeWords(sectionTitle)}
@@ -64,13 +64,15 @@ const SidebarNav = () => {
                                     className="expandable-content"
                                     data-expandable-target={`example-target-${sectionTitle}`}
                                 >
-                                    <ul>
+                                    <ul className="mg-t--10">
                                         {sectionItems.map((item, index) => (
-                                            <li
-                                                className="mg-t--10"
-                                                key={index}
-                                            >
-                                                <a href={item.uri}>{capitalizeWords(item.title)}</a>
+                                            <li key={index}>
+                                                <a
+                                                    href={'/docs/' + sectionTitle + '/' + item.uri}
+                                                    className="mg-b--10 display-block"
+                                                >
+                                                    {capitalizeWords(item.title)}
+                                                </a>
                                             </li>
                                         ))}
                                     </ul>

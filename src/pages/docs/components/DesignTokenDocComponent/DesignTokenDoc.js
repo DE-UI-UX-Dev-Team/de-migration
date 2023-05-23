@@ -8,7 +8,7 @@ const DocumentationComponent = ({ docType, docMeta }) => {
     };
 
     const generateId = (title) => {
-        return title.toLowerCase().replace(/\s+/g, '-');
+        return title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     };
 
     return (
