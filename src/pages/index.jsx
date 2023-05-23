@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../styles/main.scss';
-import './docs/styles/doc-styles.scss';
+import SidebarNav from './docs/components/layout/nav/SidebarNav';
+import ExpandNavButton from './docs/components/layout/nav/ExpandNavButton';
 import AppWrapper from './docs/components/layout/AppWrapper';
+import './docs/styles/doc-styles.scss';
 
 ReactDOM.render(
     <React.StrictMode>
         <AppWrapper>
-            <aside id="sidebar">
-                <nav></nav>
-            </aside>
+            <SidebarNav />
             <main>
+                <ExpandNavButton />
                 <section className="bg--secondary-light-2">
                     <div className="container">
                         <div className="row">
