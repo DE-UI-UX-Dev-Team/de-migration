@@ -68,7 +68,21 @@ const SidebarNav = () => {
                                         {sectionItems.map((item, index) => (
                                             <li key={index}>
                                                 <a
-                                                    href={'/docs/' + sectionTitle + '/' + item.uri}
+                                                    href={
+                                                        sectionTitle === 'css-framework' ||
+                                                        sectionTitle === 'design-tokens' ||
+                                                        sectionTitle === 'demos'
+                                                            ? sectionTitle !== 'demos'
+                                                                ? '/docs/' + sectionTitle + '/' + item.uri
+                                                                : '/demos' + item.uri
+                                                            : item.uri
+                                                    }
+                                                    target={
+                                                        sectionTitle !== 'css-framework' &&
+                                                        sectionTitle !== 'design-tokens'
+                                                            ? '_blank'
+                                                            : ''
+                                                    }
                                                     className="mg-b--10 display-block"
                                                 >
                                                     {capitalizeWords(item.title)}
