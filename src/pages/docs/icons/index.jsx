@@ -16,7 +16,7 @@ ReactDOM.render(
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                                <h1>Font Awesome Icons</h1>
+                                <h1>Custom Font Awesome Kit</h1>
                             </div>
                         </div>
                     </div>

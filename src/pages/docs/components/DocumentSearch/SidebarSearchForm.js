@@ -37,7 +37,7 @@ const SearchForm = () => {
                     onChange={handleInputChange}
                 />
                 <i class="far fa-magnifying-glass icon-sm clr--primary-base"></i>
-                <span>Search</span>
+                <span>Search Site</span>
             </label>
         </form>
     );

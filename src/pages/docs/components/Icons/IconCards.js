@@ -28,16 +28,17 @@ const IconCards = () => {
                         >
                             <form className="">
                                 <label
-                                    className="wrap--text-input"
+                                    className="wrap--text-input has-lead-icon"
                                     htmlFor="searchTerm"
                                 >
                                     <input
                                         type="text"
-                                        placeholder="Search icons..."
+                                        placeholder="Enter Icon Name"
                                         value={searchText}
                                         onChange={handleInputChange}
                                     />
-                                    <span>Search Icons</span>
+                                    <i class="far fa-magnifying-glass icon-sm"></i>
+                                    <span>Filter Icons</span>
                                 </label>
                             </form>
                         </div>
