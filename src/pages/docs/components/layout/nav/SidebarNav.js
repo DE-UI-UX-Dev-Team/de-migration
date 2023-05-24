@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../../../../../assets/images/de-stacked-logo.svg';
 import '../../../../../assets/images/de-logomark.svg';
 import sidebarNavigationData from '../../../data/sidebar-navigation.json';
+import SearchForm from '../../DocumentSearch/SidebarSearchForm';
 
 const SidebarNav = () => {
     const capitalizeWords = (str) => {
@@ -42,6 +43,7 @@ const SidebarNav = () => {
                 alt="Logomark"
             />
             <nav>
+                <SearchForm />
                 <ul>
                     {Object.entries(sidebarNavigationData).map(([sectionTitle, sectionItems]) => (
                         <li

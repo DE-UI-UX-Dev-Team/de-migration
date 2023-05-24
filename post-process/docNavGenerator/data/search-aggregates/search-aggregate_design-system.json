@@ -1,0 +1,267 @@
+{
+    "/design-tokens/#dropshadows": [
+        {
+            "doc-type": "design-tokens"
+        },
+        {
+            "doc-category": "elevations"
+        },
+        {
+            "filter-css-var": "--dropshadow-"
+        },
+        {
+            "title": "Dropshadows"
+        },
+        {
+            "characteristic": "[None] Main Content"
+        },
+        {
+            "characteristic": "[Level 1] Cards"
+        },
+        {
+            "characteristic": "[Level 2] Menus, 1st level dropdowns"
+        },
+        {
+            "characteristic": "[Level 3] Menus, 2nd level dropdowns/nested dropdowns"
+        },
+        {
+            "characteristic": "[Level 4] Modals"
+        }
+    ],
+    "/design-tokens/#spacing-sections": [
+        {
+            "doc-type": "design-tokens"
+        },
+        {
+            "doc-category": "elevations"
+        },
+        {
+            "filter-css-var": "--sect"
+        },
+        {
+            "title": "Spacing, Sections"
+        },
+        {
+            "description": "Padding is intrinsically applied to the top and bottom of sections. This spacing accounts for sections that have classes for curves and/or background colors as well."
+        },
+        {
+            "characteristic": "[Mobile Responsive] Padding applied to section tags are responsive. Target screen-sizes using [sm|md|lg|xl]."
+        },
+        {
+            "characteristic": "[Background Colors] Values for [--sect-bg--] are applied to HTML sections that match the selector `section[class*=bg]`"
+        },
+        {
+            "characteristic": "[Curves] Values for [--sect-[top-curv|btm-curv]--] are applied to HTML sections that match the selector `section[class*=top-curv]` or `section[class*=btm-curv]`"
+        }
+    ],
+    "/design-tokens/#spacing-gutters": [
+        {
+            "doc-type": "design-tokens"
+        },
+        {
+            "doc-category": "layout"
+        },
+        {
+            "filter-css-var": "--gutter"
+        },
+        {
+            "title": "Spacing, Gutters"
+        },
+        {
+            "description": "Gutters are a layout mechanic that are most commonly applied to columns `col` within a grid system to keep the space left and right of an element consistent."
+        },
+        {
+            "characteristic": "[Mobile Responsive] Gutters are applied to columns `col` as margin left and right. This spacing scales with the viewport and is applied with [sm|md|lg|xl]"
+        }
+    ],
+    "/design-tokens/#spacing-columns": [
+        {
+            "doc-type": "design-tokens"
+        },
+        {
+            "doc-category": "layout"
+        },
+        {
+            "filter-css-var": "--col"
+        },
+        {
+            "title": "Spacing, Columns"
+        },
+        {
+            "description": "Margins are instrinsically applied to the top and bottom of columns."
+        },
+        {
+            "characteristic": "[Mobile Responsive] Margin top and bottom are applied to columns `col` and this spacing scales with the viewport"
+        }
+    ],
+    "/design-tokens/#typography-headings-and-body-text": [
+        {
+            "doc-type": "design-tokens"
+        },
+        {
+            "doc-category": "Typography"
+        },
+        {
+            "filter-css-var": "--"
+        },
+        {
+            "title": "Typography, Headings and Body Text"
+        },
+        {
+            "description": "Margins are instrinsically applied to the top and bottom of columns."
+        },
+        {
+            "characteristic": "[Mobile Responsive] Margin top and bottom are applied to columns `col` and this spacing scales with the viewport"
+        }
+    ],
+    "/css-framework/#sections": [
+        {
+            "doc-type": "css-framework"
+        },
+        {
+            "doc-category": "layout"
+        },
+        {
+            "title": "Sections"
+        },
+        {
+            "description": "The section tag, while not custom, is the base element of the framework. Sections provide intrinsic padding, denotes as external spacing, to visually separate sections of a page. Additionally, sections act as a base for background color and curves."
+        },
+        {
+            "characteristic": "[width] Sections span full-width of the viewport"
+        },
+        {
+            "characteristic": "[horizontal-spacing] Sections maintain a left and right gutter on all view ports, though it is most prominent on screen-sizes below the maximum container width"
+        },
+        {
+            "characteristic": "[vertical-spacing] Vertical spacing on a section and between two sections is affected by background-color, curves, and whether the section is first or the last of its type on the page"
+        },
+        {
+            "characteristic": "[background-color] When a background colors are applied to a section, the back"
+        },
+        {
+            "characteristic": "[curves] Curves can be applied to the top and bottom of a section individually or simultaneously"
+        },
+        {
+            "characteristic": "[border-bottom] A bottom border can be applied to a `container` within a `section` using .bdr-bottom on the section"
+        },
+        {
+            "uri-example-iframe": "/docs/iframes/sections/"
+        },
+        {
+            "uri-demo-page": "/demos/section-curves/"
+        },
+        {
+            "uri-related-links": "[Container] #content-container"
+        }
+    ],
+    "/css-framework/#content-container": [
+        {
+            "css-prefix": ".container"
+        },
+        {
+            "doc-type": "css-framework"
+        },
+        {
+            "doc-category": "layout"
+        },
+        {
+            "title": "Content Container"
+        },
+        {
+            "description": "Containers sit directly within a `section` tag helping content editors control the maximum horizontal width their content will be displayed."
+        },
+        {
+            "tags": "content-width, content, width, container, max-width, layout"
+        },
+        {
+            "uri-related-links": "[Section] #sections, [Row] #flex-grid---row, [Columns] #flex-grid---columns"
+        }
+    ],
+    "/css-framework/#flex-grid-row": [
+        {
+            "css-prefix": "null",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "doc-type": "css-framework",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "doc-category": "layout",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "title": "Flex Grid - Row",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "description": "Nested within a `.container` or a `.col` (column), rows are encapsulates columns for the purpose of negating the far left and far right padding or gutter of the first and last columns",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "filter-selector": ".row",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "characteristic": "[display] Rows by default use `display:flex;`",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "characteristic": "[horizontal-spacing] Rows have negative margins on the left and right",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "characteristic": "[vertical-spacing] By design rows do not have margins on the top or bottom. This is enforced by !important.",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "characteristic": "[background-color] When background colors are applied to a row margin left and right are set to 0",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "tags": "grid, row, column, flexbox",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "uri-demo-page": "/demos/flex-grid/",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        },
+        {
+            "uri-related-links": "[Container] #content-container, [Columns] #flex-grid---columns",
+            "styles": "{\".row\":{\"margin-left\":\"calc(var(--gutter-xl) * -1)\",\"margin-right\":\"calc(var(--gutter-xl) * -1)\",\"margin-bottom\":\"0 !important\",\"margin-top\":\"0 !important\",\"display\":\"flex\",\"flex-direction\":\"row\",\"flex-wrap\":\"wrap\"},\".row[class*=bg]\":{\"margin-left\":\"0\",\"margin-right\":\"0\"},\".row[class*=bg] .col\":{\"padding-left\":\"calc(var(--gutter-xl) * 2)\",\"padding-right\":\"calc(var(--gutter-xl) * 2)\"},\".row.even-3--sm > [class*=col]\":{\"flex\":\"0 1 33.3333333333%\"},\".row.even-4--sm > [class*=col]\":{\"flex\":\"0 1 25%\"},\".row.even-5--md > [class*=col]\":{\"flex\":\"0 1 20%\"},\".row.even-8--md > [class*=col]\":{\"flex\":\"0 1 12.5%\"},\".row.even-12--lg > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"},\".row.even-12--xl > [class*=col]\":{\"flex\":\"0 1 8.3333333333%\"}}"
+        }
+    ],
+    "/css-framework/#flex-grid-columns": [
+        {
+            "css-prefix": "null"
+        },
+        {
+            "doc-type": "css-framework"
+        },
+        {
+            "doc-category": "layout"
+        },
+        {
+            "title": "Flex Grid - Columns"
+        },
+        {
+            "description": "Nested within a `.row`, columns generally encapsulate all content and provide horizontal padding (gutters) which are permuted at various breakpoints: sm, md, lg, and xl"
+        },
+        {
+            "characteristic": "[horizontal-spacing] Columns possess padding left and right that is exactly half of the intended gutter width"
+        },
+        {
+            "characteristic": "[vertical-spacing] Margins and"
+        },
+        {
+            "tags": "grid, row, column, flexbox"
+        },
+        {
+            "uri-demo-page": "/demos/flex-grid/"
+        },
+        {
+            "uri-related-links": "[Row] #flex-grid---row"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import CharacteristicTable from './CharacteristicTable';
 import RelatedLinksList from './RelatedLinkList';
 import IframeControl from './IFrameControl';
@@ -13,7 +13,7 @@ const DocumentationComponent = ({ docType, docMeta }) => {
     };
 
     return (
-        <div>
+        <Fragment>
             {docMeta.map((section, index) => {
                 return (
                     findTag(section[0], 'doc-type').value === docType && (
@@ -88,7 +88,7 @@ const DocumentationComponent = ({ docType, docMeta }) => {
                     )
                 );
             })}
-        </div>
+        </Fragment>
     );
 };
 

@@ -37,9 +37,11 @@ aside#sidebar {
         margin-top: calc(var(--sidebar-offset-top) * 3);
         position: relative;
 
+        form {
+            display: none;
+        }
         ul {
             display: none;
-
             button.btn--tertiary {
                 padding: 5px;
 
@@ -47,6 +49,12 @@ aside#sidebar {
                     margin-top: 3px;
                 }
             }
+        }
+        > ul {
+            height: calc(100% - (var(--sidebar-offset-top) * 6) + 30px);
+            overflow-y: scroll;
+            margin-right: -20px;
+            padding-right: 10px;
         }
     }
 }
@@ -76,7 +84,8 @@ body.sidebar-expanded {
             opacity: 0;
         }
 
-        nav ul {
+        nav ul,
+        nav form {
             display: block;
         }
     }
