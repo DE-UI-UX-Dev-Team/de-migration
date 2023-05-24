@@ -408,5 +408,10 @@
         {
             "title": "Modals"
         }
+    ],
+    "/docs/icons/": [
+        {
+            "title": "Custom Kit"
+        }
     ]
 }

@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const util = require('util');
 
 // Get command-line arguments
 const searchType = process.argv[2];

@@ -58,8 +58,6 @@ const SearchComponent = () => {
         }
 
         setMatches(searchMatches);
-
-        console.log(searchMatches);
     };
 
     const handleInputChange = (e) => {

@@ -44,5 +44,11 @@
             "title": "Modals",
             "uri": "https://www.figma.com/proto/iycs77Ak1awlYSOlKHSjLZ/Direct-Energy---Design-System---Digital-3.0?node-id=7099-12308&scaling=min-zoom&page-id=521%3A34&starting-point-node-id=7099%3A12308&show-proto-sidebar=1"
         }
+    ],
+    "Font Awesome": [
+        {
+            "title": "Custom Kit",
+            "uri": "/docs/icons/"
+        }
     ]
 }

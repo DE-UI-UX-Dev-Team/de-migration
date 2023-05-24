@@ -37,7 +37,7 @@
         "script": "searchAggregate/search-aggregator.js",
         "parameters": [
             "domain-aggregate",
-            "./post-process/docNavGenerator/data/uri/uri-list_figma-guidelines.json",
+            "./post-process/docNavGenerator/data/uri/uri-list_additional-links.json",
             "./post-process/docNavGenerator/data/search-aggregates/",
             "search-aggregate_figma-guidelines.json"
         ]
@@ -48,5 +48,9 @@
             "./post-process/docNavGenerator/data/search-aggregates",
             "./src/pages/docs/data/searchable-cache.json"
         ]
+    },
+    {
+        "script": "utilities/scan-font-awesome-icons.js",
+        "parameters": ["fak", "public/assets/styles/custom-icons.css", "./src/pages/docs/data/", "custom-icons.json"]
     }
 ]
