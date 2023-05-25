@@ -81,7 +81,8 @@ const SidebarNav = () => {
                                                     }
                                                     target={
                                                         sectionTitle !== 'css-framework' &&
-                                                        sectionTitle !== 'design-tokens'
+                                                        sectionTitle !== 'design-tokens' &&
+                                                        sectionTitle !== 'Font Awesome'
                                                             ? '_blank'
                                                             : ''
                                                     }

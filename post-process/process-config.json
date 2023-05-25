@@ -12,6 +12,10 @@
         "parameters": ["src/pages/demos", "./post-process/docNavGenerator/data/uri"]
     },
     {
+        "script": "docNavGenerator/scan-storybook-json-for-uri.js",
+        "parameters": ["storybook-static/stories.json", "./post-process/docNavGenerator/data/uri"]
+    },
+    {
         "script": "utilities/merge-json.js",
         "parameters": ["./post-process/docNavGenerator/data/uri", "./src/pages/docs/data/sidebar-navigation.json"]
     },
@@ -40,6 +44,24 @@
             "./post-process/docNavGenerator/data/uri/uri-list_additional-links.json",
             "./post-process/docNavGenerator/data/search-aggregates/",
             "search-aggregate_figma-guidelines.json"
+        ]
+    },
+    {
+        "script": "searchAggregate/search-aggregator.js",
+        "parameters": [
+            "icon-aggregate",
+            "src/pages/docs/data/custom-icons.json",
+            "./post-process/docNavGenerator/data/search-aggregates/",
+            "search-aggregate_font-awesome-icons.json"
+        ]
+    },
+    {
+        "script": "searchAggregate/search-aggregator.js",
+        "parameters": [
+            "domain-aggregate",
+            "./post-process/docNavGenerator/data/uri/uri-list_storybook.json",
+            "./post-process/docNavGenerator/data/search-aggregates/",
+            "search-aggregate_storybook.json"
         ]
     },
     {

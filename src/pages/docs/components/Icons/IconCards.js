@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import customFontAwesomeIconNames from '../../data/custom-icons.json';
 
 const IconCards = () => {
@@ -11,6 +11,14 @@ const IconCards = () => {
     const filteredIcons = customFontAwesomeIconNames.filter((icon) =>
         icon.toLowerCase().includes(searchText.toLowerCase())
     );
+
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const iconFilter = urlParams.get('iconFilter');
+        if (iconFilter) {
+            setSearchText(iconFilter);
+        }
+    }, []);
 
     const handleCopyIcon = (icon) => {
         navigator.clipboard.writeText(icon);
@@ -37,7 +45,7 @@ const IconCards = () => {
                                         value={searchText}
                                         onChange={handleInputChange}
                                     />
-                                    <i class="far fa-magnifying-glass icon-sm"></i>
+                                    <i className="far fa-magnifying-glass icon-sm"></i>
                                     <span>Filter Icons</span>
                                 </label>
                             </form>

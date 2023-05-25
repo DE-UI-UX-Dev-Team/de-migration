@@ -35,6 +35,9 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
             case 'domain-aggregate':
                 outputJSON = domainAggregator(inputJSON);
                 break;
+            case 'icon-aggregate':
+                outputJSON = iconAggregator(inputJSON);
+                break;
         }
 
         const outputFilepath = path.join(outputFolder, outputFilename);
@@ -125,6 +128,16 @@ function domainAggregator(json) {
                 },
             ];
         });
+    });
+
+    return converted;
+}
+
+function iconAggregator(json) {
+    let converted = {};
+
+    json.map((item) => {
+        converted[`/docs/icons/?iconFilter=${item}`] = [{ title: item }];
     });
 
     return converted;
