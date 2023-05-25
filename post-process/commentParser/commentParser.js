@@ -7,7 +7,6 @@ function parseCssChunks(cssFilePath) {
     const cssContent = fs.readFileSync(cssFilePath, 'utf-8');
     const chunks = cssContent.split('/*--- end ---*/').slice(0, -1);
     const parsedData = [];
-
     chunks.forEach((chunk) => {
         let data = parseCssComments(chunk);
         if (data.length > 0) {
