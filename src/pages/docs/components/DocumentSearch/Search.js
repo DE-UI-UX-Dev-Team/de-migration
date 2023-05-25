@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import sidebarNavigationMeta from '../../data/searchable-cache.json';
 
 const jsonData = sidebarNavigationMeta;
@@ -39,9 +39,15 @@ const SearchComponent = () => {
 
     const handleSearch = (term) => {
         const searchMatches = {};
+        const termsToSearch = ['storybook', 'figma', 'demos', 'css-framework', 'design-token', 'icons'];
 
         for (const [link, metadata] of Object.entries(jsonData)) {
             if (link.includes(term)) {
+                for (const searchTerm of termsToSearch) {
+                    if (link.includes(searchTerm)) {
+                        metadata['linkType'] = searchTerm.toUpperCase();
+                    }
+                }
                 searchMatches[link] = metadata;
             } else {
                 for (const meta of metadata) {
@@ -65,61 +71,82 @@ const SearchComponent = () => {
     };
 
     return (
-        <section>
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <form onSubmit={handleSearch}>
-                            <label
-                                className="wrap--text-input mg-b--20"
-                                htmlFor="searchTerm"
-                            >
-                                <input
-                                    name="searchTerm"
-                                    type="text"
-                                    value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}
-                                    placeholder="Search Term"
-                                />
-                                <span>Enter search term here</span>
-                            </label>
-                            <input
-                                type="submit"
-                                value="Search"
-                            />
-                        </form>
-                    </div>
-                    <div className="col">
-                        {Object.entries(matches).map(([link, metadata]) => (
-                            <ul
-                                key={link}
-                                className="mg-b--20"
-                            >
-                                <li key={link}>
-                                    <a
-                                        href={link}
-                                        className="h-3 mg-b--10 display-block"
-                                        target={link.includes('http') || link.includes('/demos') ? '_blank' : ''}
-                                        rel={
-                                            link.includes('http') || link.includes('/demos')
-                                                ? 'noopener noreferrer'
-                                                : ''
-                                        }
+        <Fragment>
+            <section className="search">
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <form onSubmit={handleSearch}>
+                                <div className="row">
+                                    <div className="col">
+                                        <label
+                                            className="wrap--text-input mg-b--20"
+                                            htmlFor="searchTerm"
+                                        >
+                                            <input
+                                                name="searchTerm"
+                                                type="text"
+                                                value={searchTerm}
+                                                onChange={(e) => setSearchTerm(e.target.value)}
+                                                placeholder="Search Term"
+                                            />
+                                            <span>Enter search term here</span>
+                                        </label>
+                                    </div>
+                                    <div className="col">
+                                        <input
+                                            type="submit"
+                                            value="Search"
+                                        />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <hr className="mg-t--20 mg-b--20 bg--secondary-light-3" />
+                        <div className="col">
+                            {Object.entries(matches).length === 0 ? (
+                                <p className="h-3">No results found.</p>
+                            ) : (
+                                Object.entries(matches).map(([link, metadata]) => (
+                                    <ul
+                                        key={link}
+                                        className="mg-b--20"
                                     >
-                                        {metadata.some((meta) => meta.title)
-                                            ? metadata
-                                                  .find((meta) => meta.title)
-                                                  .title.charAt(0)
-                                                  .toUpperCase() + metadata.find((meta) => meta.title).title.slice(1)
-                                            : link}
-                                    </a>
-                                </li>
-                            </ul>
-                        ))}
+                                        <li key={link}>
+                                            {metadata.linkType && (
+                                                <span className="p-2 bg--primary-light-2 link-type">
+                                                    {metadata.linkType}
+                                                </span>
+                                            )}
+                                            <a
+                                                href={link}
+                                                className="h-3 mg-b--10"
+                                                target={
+                                                    link.includes('http') || link.includes('/demos') ? '_blank' : ''
+                                                }
+                                                rel={
+                                                    link.includes('http') || link.includes('/demos')
+                                                        ? 'noopener noreferrer'
+                                                        : ''
+                                                }
+                                            >
+                                                {metadata.some((meta) => meta.title)
+                                                    ? metadata
+                                                          .find((meta) => meta.title)
+                                                          .title.charAt(0)
+                                                          .toUpperCase() +
+                                                      metadata.find((meta) => meta.title).title.slice(1)
+                                                    : link}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                ))
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </Fragment>
     );
 };
 

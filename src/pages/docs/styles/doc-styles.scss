@@ -242,3 +242,11 @@ nav {
 i.fa-magnifying-glass {
     font-size: 18px !important;
 }
+
+section.search .link-type {
+    padding: 5px;
+    transform: translateY(-3px);
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+}
