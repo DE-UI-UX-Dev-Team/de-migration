@@ -68,7 +68,10 @@ const SidebarNav = () => {
                                 >
                                     <ul className="mg-t--10">
                                         {sectionItems.map((item, index) => (
-                                            <li key={index}>
+                                            <li
+                                                className="pd-r--20"
+                                                key={index}
+                                            >
                                                 <a
                                                     href={
                                                         sectionTitle === 'css-framework' ||

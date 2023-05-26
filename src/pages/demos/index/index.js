@@ -47,3 +47,4 @@ import '../../../assets/images/playstore-button.png';
 import '../../../assets/images/card-img.jpg';
 import '../../../assets/images/card-placeholder-img.png';
 import '../../../assets/images/favicon.ico';
+import '../../../assets/images/hero-image.svg';

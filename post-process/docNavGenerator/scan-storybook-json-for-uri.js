@@ -32,7 +32,7 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
                 outputJSON.storybook[urlPath] = [];
             }
 
-            outputJSON.storybook.push({ title: story.title, uri: urlPath });
+            outputJSON.storybook.push({ title: story.title + ', (' + story.name + ')', uri: urlPath });
         }
 
         // Create the output folder if it doesn't exist
