@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ContentSwitcherComponent } from '../../../components/ContentSwitcher/ContentSwitcherComponent';
 import { hiddenInputData, sliderLabelData, switcherContentData } from '../../../config/contentSwitcherData';
+import '../../../styles/main.scss';
 
 const App: React.FC = () => {
     return (
