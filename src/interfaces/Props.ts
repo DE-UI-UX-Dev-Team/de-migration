@@ -1,5 +1,4 @@
 export interface ToggleSwitchProps {
-    id: number;
     disabled: boolean;
     checked: boolean;
     toggleLabel: string;
@@ -28,4 +27,18 @@ export interface ContentSwitcherProps {
             contentPara: string;
         };
     };
+}
+
+export interface ButtonProps {
+    buttonType: string;
+    buttonLabel: string;
+    buttonIconLeft: string;
+    buttonIconRight: string;
+}
+
+export interface InputButtonProps {
+    inputButtonType: string;
+    inputButtonValue: string;
+    inputButtonIconLeft: string;
+    inputButtonIconRight: string;
 }
