@@ -8,14 +8,17 @@ const InputButtonItem: React.FC<InputButtonProps> = ({
     inputButtonIconRight,
 }) => {
     return (
-        <label>
+        <label
+            type={inputButtonType}
+            className={inputButtonIconRight ? 'icon-right' : ''}
+        >
             {inputButtonIconLeft ? <i className={inputButtonIconLeft}></i> : ''}
+            {inputButtonIconRight ? <i className={inputButtonIconRight}></i> : ''}
             <input
                 type={inputButtonType}
                 value={inputButtonValue}
                 className="center-block"
             />
-            {inputButtonIconRight ? <i className={inputButtonIconRight}></i> : ''}
         </label>
     );
 };
