@@ -8,6 +8,9 @@ $buttonsOnContrastingBg: (
                     'color': var(--tertiary-base),
                     'border-color': var(--tertiary-base),
                 ),
+                'visited': (
+                    'color': var(--tertiary-base),
+                ),
                 'hover': (
                     'background-color': var(--btn-secondary--lgt-bg--hover),
                 ),
@@ -22,6 +25,9 @@ $buttonsOnContrastingBg: (
             'primary': (
                 'default': (
                     'background-color': var(--primary-base),
+                    'color': var(--white-base),
+                ),
+                'visited': (
                     'color': var(--white-base),
                 ),
                 'hover': (
@@ -45,6 +51,9 @@ $buttonsOnContrastingBg: (
                 'default': (
                     'color': var(--tertiary-base),
                 ),
+                'visited': (
+                    'color': var(--tertiary-base),
+                ),
                 'hover': (
                     'background-color': var(--btn-tertiary--lgt-bg--hover),
                     'color': var(--tertiary-base),
@@ -66,6 +75,9 @@ $buttonsOnContrastingBg: (
                     'color': var(--white-base),
                     'background-color': var(--tertiary-base),
                 ),
+                'visited': (
+                    'color': var(--white-base),
+                ),
                 'hover': (
                     'color': var(--tertiary-base),
                     'background-color': var(--white-base),
@@ -77,6 +89,9 @@ $buttonsOnContrastingBg: (
                 'default': (
                     'color': var(--white-base),
                     'border-color': var(--white-base),
+                ),
+                'visited': (
+                    'color': var(--white-base),
                 ),
                 'hover': (
                     'background-color': var(--btn-secondary--drk-bg--hover),
@@ -101,6 +116,9 @@ $buttonsOnContrastingBg: (
             ),
             'tertiary': (
                 'default': (
+                    'color': var(--white-base),
+                ),
+                'visited': (
                     'color': var(--white-base),
                 ),
                 'hover': (

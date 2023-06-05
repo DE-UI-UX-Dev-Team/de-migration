@@ -5,6 +5,7 @@
 /*--- Components - Buttons ---*/
 
 button,
+a[class*='btn'],
 [class*='btn'],
 [type='button'],
 [type='submit'],
@@ -26,8 +27,24 @@ button,
     border: none;
 }
 
+a[class*='btn'] {
+    text-decoration: none;
+    border: var(--btn--border-width) solid;
+}
+
+a[class*='btn'] i {
+    margin-left: 0;
+    margin-right: var(--icon--margin--sm);
+}
+
+a[class*='btn'].icon-right i {
+    margin-left: var(--icon--margin--sm);
+    margin-right: 0;
+}
+
 /*--- Components - Buttons, Selected ---*/
 
+a[class*='btn'],
 [type='button'],
 [type='submit'],
 [type='reset'],
@@ -75,12 +92,13 @@ label[type='reset'] > input + i {
 }
 
 button,
-.btn,
+[class*='btn'],
 [type='button'],
 [type='reset'],
 [type='submit'],
 button[class*='btn--secondary'],
-.btn[class*='btn--secondary'],
+[class*='btn'][class*='btn--secondary'],
+[class*='btn'][class*='btn--secondary'],
 [type='button'][class*='btn--secondary'],
 [type='reset'][class*='btn--secondary'],
 [type='submit'][class*='btn--secondary'] {
@@ -95,11 +113,12 @@ button[class*='btn--secondary'],
 }
 
 button[class*='btn--primary'],
-.btn[class*='btn--primary'],
+[class*='btn'][class*='btn--primary'],
 [type='button'][class*='btn--primary'],
 [type='reset'][class*='btn--primary'],
 [type='submit'] {
     padding: var(--btn--padding);
+    border: none;
 
     &:focus {
         outline: #{$outline--focus};
@@ -108,7 +127,7 @@ button[class*='btn--primary'],
 }
 
 button[class*='btn--tertiary'],
-.btn[class*='btn--tertiary'],
+[class*='btn'][class*='btn--tertiary'],
 [type='button'][class*='btn--tertiary'],
 [type='reset'][class*='btn--tertiary'],
 [type='submit'][class*='btn--tertiary'] {
