@@ -1,0 +1,18 @@
+[
+    {
+        "script": "commentParser/commentParser.js",
+        "parameters": ["public/assets/styles/main.css", "src/pages/docs/data"]
+    },
+    {
+        "script": "docNavGenerator/scan-design-system-for-uri.js",
+        "parameters": ["src/pages/docs/data/design-system-meta-doc.json", "./post-process/docNavGenerator/data/uri"]
+    },
+    {
+        "script": "docNavGenerator/scan-subfolder-for-uri.js",
+        "parameters": ["src/pages/demos", "./post-process/docNavGenerator/data/uri"]
+    },
+    {
+        "script": "utilities/merge-json.js",
+        "parameters": ["./post-process/docNavGenerator/data/uri", "./src/pages/docs/data/sidebar-navigation.json"]
+    }
+]
