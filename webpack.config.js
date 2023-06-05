@@ -43,6 +43,7 @@ module.exports = (env) => {
     const assetModuleFilename = target.assetModuleFilename;
 
     const clean = environment === 'dev' ? true : false;
+    const watch = env.watch === 'true' ? true : false;
 
     return {
         stats: {
@@ -105,6 +106,11 @@ module.exports = (env) => {
         },
         resolve: {
             extensions: ['.tsx', '.ts', '.js', '.jsx'],
+        },
+        watch: watch,
+        watchOptions: {
+            aggregateTimeout: 200,
+            poll: 1000,
         },
         plugins: [
             ...htmlFiles.map((htmlFile) => {
