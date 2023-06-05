@@ -1,0 +1,56 @@
+{
+    "storybook": [
+        {
+            "title": "Example/Introduction, (Docs)",
+            "uri": "/storybook/?path=/docs/example-introduction--docs"
+        },
+        {
+            "title": "Example/Button, (Docs)",
+            "uri": "/storybook/?path=/docs/example-button--docs"
+        },
+        {
+            "title": "Example/Button, (Primary)",
+            "uri": "/storybook/?path=/docs/example-button--primary"
+        },
+        {
+            "title": "Example/Button, (Secondary)",
+            "uri": "/storybook/?path=/docs/example-button--secondary"
+        },
+        {
+            "title": "Example/Button, (Large)",
+            "uri": "/storybook/?path=/docs/example-button--large"
+        },
+        {
+            "title": "Example/Button, (Small)",
+            "uri": "/storybook/?path=/docs/example-button--small"
+        },
+        {
+            "title": "stories/ContentSwitcher, (Default Switcher)",
+            "uri": "/storybook/?path=/docs/stories-contentswitcher--default-switcher"
+        },
+        {
+            "title": "Example/Header, (Docs)",
+            "uri": "/storybook/?path=/docs/example-header--docs"
+        },
+        {
+            "title": "Example/Header, (Logged In)",
+            "uri": "/storybook/?path=/docs/example-header--logged-in"
+        },
+        {
+            "title": "Example/Header, (Logged Out)",
+            "uri": "/storybook/?path=/docs/example-header--logged-out"
+        },
+        {
+            "title": "Example/Page, (Logged Out)",
+            "uri": "/storybook/?path=/docs/example-page--logged-out"
+        },
+        {
+            "title": "Example/Page, (Logged In)",
+            "uri": "/storybook/?path=/docs/example-page--logged-in"
+        },
+        {
+            "title": "Example/SampleComponent, (Default)",
+            "uri": "/storybook/?path=/docs/example-samplecomponent--default"
+        }
+    ]
+}

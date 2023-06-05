@@ -14,7 +14,7 @@ $buttonsOnContrastingBg: (
                 'hover': (
                     'background-color': var(--btn-secondary--lgt-bg--hover),
                 ),
-                'focus': (
+                'focus-visible': (
                     'background-color': var(--btn-secondary--lgt-bg--hover),
                 ),
                 'active': (
@@ -34,7 +34,7 @@ $buttonsOnContrastingBg: (
                     'background-color': var(--primary-dark-1),
                     'color': var(--white-base),
                 ),
-                'focus': (
+                'focus-visible': (
                     'background-color': var(--primary-dark-1),
                     'color': var(--white-base),
                 ),
@@ -58,7 +58,7 @@ $buttonsOnContrastingBg: (
                     'background-color': var(--btn-tertiary--lgt-bg--hover),
                     'color': var(--tertiary-base),
                 ),
-                'focus': (
+                'focus-visible': (
                     'background-color': var(--btn-tertiary--lgt-bg--hover),
                     'color': var(--tertiary-base),
                 ),
@@ -98,7 +98,7 @@ $buttonsOnContrastingBg: (
                     'color': var(--white-base),
                     'border-color': var(--white-base),
                 ),
-                'focus': (
+                'focus-visible': (
                     'background-color': var(--btn-secondary--drk-bg--hover),
                     'color': var(--white-base),
                     'border-color': var(--white-base),
@@ -125,7 +125,7 @@ $buttonsOnContrastingBg: (
                     'background-color': var(--btn-tertiary--drk-bg--hover),
                     'color': var(--white-base),
                 ),
-                'focus': (
+                'focus-visible': (
                     'background-color': var(--btn-tertiary--drk-bg--hover),
                     'color': var(--white-base),
                 ),

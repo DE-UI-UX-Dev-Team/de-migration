@@ -24,7 +24,7 @@ select,
 .wrap--text-input > i,
 .wrap--text-input > button,
 .wrap--text-input > button:hover,
-.wrap--text-input > button:focus,
+.wrap--text-input > button:focus-visible,
 .wrap--text-input > button:active {
     background-color: transparent;
 }
@@ -57,7 +57,7 @@ select,
         padding: calc(var(--input--base-padding) * 2) var(--input--base-padding) var(--input--base-padding)
             var(--input--base-padding);
 
-        &:focus {
+        &:focus-visible {
             outline: none;
         }
 
@@ -150,14 +150,14 @@ select,
 
     &:hover input,
     input:hover,
-    input:focus,
+    input:focus-visible,
     input:not(:placeholder-shown) {
         font-size: var(--input--font-size--lg);
     }
 
     &:hover input ~ span,
     input:hover ~ span,
-    input:focus ~ span,
+    input:focus-visible ~ span,
     input:not(:placeholder-shown) ~ span {
         font-size: var(--input--font-size--sm);
         top: 0.4rem;
@@ -204,7 +204,7 @@ select,
         cursor: pointer;
     }
 
-    input:focus {
+    input:focus-visible {
         outline-style: solid;
         outline-width: 2px;
         outline-offset: 6px;
@@ -241,7 +241,7 @@ select,
         outline: none;
         cursor: pointer;
 
-        &:focus {
+        &:focus-visible {
             outline-style: solid;
             outline-width: 2px;
             outline-offset: 6px;
@@ -383,7 +383,7 @@ fieldset[disabled] {
         &:hover {
             border-color: orangered;
         }
-        &:focus {
+        &:focus-visible {
             border-color: blue;
         }
         &:disabled {
