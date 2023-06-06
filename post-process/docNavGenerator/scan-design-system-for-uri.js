@@ -63,6 +63,6 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
 
 function generateURI(title) {
     const lowercaseTitle = title.toLowerCase();
-    const replacedTitle = lowercaseTitle.replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+    const replacedTitle = lowercaseTitle.replace(/[^a-z0-9]+/g, '-');
     return replacedTitle;
 }

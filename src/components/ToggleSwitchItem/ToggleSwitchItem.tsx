@@ -1,19 +1,15 @@
 import React from 'react';
 import { ToggleSwitchProps } from '../../interfaces/Props';
 
-interface ToggleSwitchItemProps {
-    switchItem: ToggleSwitchProps;
-}
-
-const ToggleSwitchItem: React.FC<ToggleSwitchItemProps> = ({ switchItem }) => {
+const ToggleSwitchItem: React.FC<ToggleSwitchProps> = ({ disabled, checked, toggleLabel }) => {
     return (
         <label className="toggle-switch">
-            <span className="label-text">{switchItem.toggleLabel}</span>
+            <span className="label-text">{toggleLabel}</span>
             <span className="slide-container">
                 <input
                     type="checkbox"
-                    checked={switchItem.checked}
-                    disabled={switchItem.disabled}
+                    checked={checked}
+                    disabled={disabled}
                 />
                 <span className="slider"></span>
             </span>

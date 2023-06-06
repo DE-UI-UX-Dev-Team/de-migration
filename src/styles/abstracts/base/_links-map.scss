@@ -14,7 +14,7 @@ $linksOnContrastingBg: (
                     'color': 'var(--tertiary-dark-1)',
                     'text-decoration-color': 'var(--tertiary-dark-1)',
                 ),
-                'focus': (
+                'focus-visible': (
                     'color': 'var(--tertiary-dark-1)',
                     'text-decoration-color': 'var(--tertiary-dark-1)',
                 ),
@@ -48,7 +48,7 @@ $linksOnContrastingBg: (
                     'text-decoration-color': 'var(--white-base)',
                     'opacity': 75%,
                 ),
-                'focus': (
+                'focus-visible': (
                     'color': 'var(--white-base)',
                     'text-decoration-color': 'var(--white-base)',
                     'opacity': 75%,

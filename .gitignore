@@ -5,4 +5,7 @@ dist/
 deploy/config.json 
 .vscode/ 
 /.bashrc
-deploy/demo-repo/
+deploy/demo-repo/ 
+post-process/docNavGenerator/data/search-aggregates/*.json
+post-process/docNavGenerator/data/uri/*.json
+src/pages/docs/data/*.json
