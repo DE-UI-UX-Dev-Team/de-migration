@@ -23,10 +23,15 @@ import '../../../assets/fonts/roboto/roboto-regular-webfont.woff2';
 /*--- Webfont - Fontawesome ---*/
 
 import '../../../assets/fonts/fontawesome-kit-4aceee39de/custom-icons.woff2';
+import '../../../assets/fonts/fontawesome-kit-4aceee39de/custom-icons.ttf';
 import '@fortawesome/fontawesome-pro/webfonts/fa-regular-400.woff2';
 import '@fortawesome/fontawesome-pro/webfonts/fa-brands-400.woff2';
 import '@fortawesome/fontawesome-pro/webfonts/fa-solid-900.woff2';
 import '@fortawesome/fontawesome-pro/webfonts/fa-light-300.woff2';
+import '@fortawesome/fontawesome-pro/webfonts/fa-regular-400.ttf';
+import '@fortawesome/fontawesome-pro/webfonts/fa-brands-400.ttf';
+import '@fortawesome/fontawesome-pro/webfonts/fa-solid-900.ttf';
+import '@fortawesome/fontawesome-pro/webfonts/fa-light-300.ttf';
 import '@fortawesome/fontawesome-pro/scss/regular.scss';
 import '@fortawesome/fontawesome-pro/scss/brands.scss';
 import '@fortawesome/fontawesome-pro/scss/solid.scss';

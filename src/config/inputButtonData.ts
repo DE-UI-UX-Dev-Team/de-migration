@@ -1,24 +1,24 @@
 import { InputButtonProps } from '../interfaces/Props';
 
-const buttonData: InputButtonProps[] = [
+const inputButtonData: InputButtonProps[] = [
     {
         inputButtonType: 'submit',
         inputButtonValue: 'Submit Input',
-        inputButtonIconLeft: '',
+        inputButtonIconLeft: 'fa-solid fa-house',
         inputButtonIconRight: '',
     },
     {
         inputButtonType: 'reset',
         inputButtonValue: 'Reset Input',
         inputButtonIconLeft: '',
-        inputButtonIconRight: '',
+        inputButtonIconRight: 'fa-solid fa-mobile',
     },
     {
         inputButtonType: 'button',
         inputButtonValue: 'Button Input',
-        inputButtonIconLeft: '',
+        inputButtonIconLeft: 'fak fa-thumbs-up-solid',
         inputButtonIconRight: '',
     },
 ];
 
-export default buttonData;
+export default inputButtonData;

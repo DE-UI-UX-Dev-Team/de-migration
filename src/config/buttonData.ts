@@ -11,7 +11,13 @@ const buttonData: ButtonProps[] = [
         buttonType: 'btn--secondary',
         buttonLabel: 'Secondary Button',
         buttonIconLeft: '',
-        buttonIconRight: '',
+        buttonIconRight: 'fa-solid fa-image',
+    },
+    {
+        buttonType: 'btn--tertiary',
+        buttonLabel: 'Tertiary Button',
+        buttonIconLeft: '',
+        buttonIconRight: 'fa-solid fa-star',
     },
 ];
 

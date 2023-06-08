@@ -96,7 +96,7 @@ module.exports = (env) => {
                     },
                 },
                 {
-                    test: /\.(woff|woff2)$/,
+                    test: /\.(woff|woff2|ttf)$/,
                     type: 'asset/resource',
                     generator: {
                         filename: 'assets/webfonts/[name][ext]',
