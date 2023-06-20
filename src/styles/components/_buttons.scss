@@ -9,7 +9,10 @@ a[class*='btn'],
 [class*='btn'],
 [type='button'],
 [type='submit'],
-[type='reset'] {
+[type='reset'],
+[for='button'],
+[for='submit'],
+[for='reset'] {
     /*--- Default Properties - Buttons ---*/
 
     --btn--font: #{$btn--font};
@@ -48,31 +51,31 @@ a[class*='btn'],
 [type='button'],
 [type='submit'],
 [type='reset'],
-label[type='button'],
-label[type='submit'],
-label[type='reset'] {
+label[for='button'],
+label[for='submit'],
+label[for='reset'] {
     display: inline-block;
     cursor: pointer;
 }
 
-label[type='button'] > i,
-label[type='submit'] > i,
-label[type='reset'] > i {
+label[for='button'] > i,
+label[for='submit'] > i,
+label[for='reset'] > i {
     color: inherit !important;
 }
 
-label[type='button'] > input,
-label[type='submit'] > input,
-label[type='reset'] > input,
-label[type='button'] > input:hover,
-label[type='submit'] > input:hover,
-label[type='reset'] > input:hover,
-label[type='button'] > input:focus-visible,
-label[type='submit'] > input:focus-visible,
-label[type='reset'] > input:focus-visible,
-label[type='button'] > input:active,
-label[type='submit'] > input:active,
-label[type='reset'] > input:active {
+label[for='button'] > input,
+label[for='submit'] > input,
+label[for='reset'] > input,
+label[for='button'] > input:hover,
+label[for='submit'] > input:hover,
+label[for='reset'] > input:hover,
+label[for='button'] > input:focus-visible,
+label[for='submit'] > input:focus-visible,
+label[for='reset'] > input:focus-visible,
+label[for='button'] > input:active,
+label[for='submit'] > input:active,
+label[for='reset'] > input:active {
     background: transparent !important;
     border: none;
     padding: 0;
@@ -81,13 +84,9 @@ label[type='reset'] > input:active {
     outline: none;
 }
 
-label[type]:focus-visible {
-    outline: 2px;
-}
-
-label[type='button'] > input + i,
-label[type='submit'] > input + i,
-label[type='reset'] > input + i {
+label[for='button'] > input + i,
+label[for='submit'] > input + i,
+label[for='reset'] > input + i {
     display: inline;
 }
 
@@ -96,12 +95,18 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'],
+[for='button'],
+[for='reset'],
+[for='submit'],
 button[class*='btn--secondary'],
 [class*='btn'][class*='btn--secondary'],
 [class*='btn'][class*='btn--secondary'],
 [type='button'][class*='btn--secondary'],
 [type='reset'][class*='btn--secondary'],
-[type='submit'][class*='btn--secondary'] {
+[type='submit'][class*='btn--secondary'],
+[for='button'][class*='btn--secondary'],
+[for='reset'][class*='btn--secondary'],
+[for='submit'][class*='btn--secondary'] {
     padding: var(--btn--padding-w-border);
     border-width: #{$btn--border-width};
     border-style: solid;
@@ -116,7 +121,10 @@ button[class*='btn--primary'],
 [class*='btn'][class*='btn--primary'],
 [type='button'][class*='btn--primary'],
 [type='reset'][class*='btn--primary'],
-[type='submit'] {
+[type='submit'],
+[for='button'][class*='btn--primary'],
+[for='reset'][class*='btn--primary'],
+[for='submit'] {
     padding: var(--btn--padding);
     border: none;
 
@@ -130,7 +138,10 @@ button[class*='btn--tertiary'],
 [class*='btn'][class*='btn--tertiary'],
 [type='button'][class*='btn--tertiary'],
 [type='reset'][class*='btn--tertiary'],
-[type='submit'][class*='btn--tertiary'] {
+[type='submit'][class*='btn--tertiary'],
+[for='button'][class*='btn--tertiary'],
+[for='reset'][class*='btn--tertiary'],
+[for='submit'][class*='btn--tertiary'] {
     padding: 0;
     min-width: unset;
     border: none;
@@ -145,7 +156,10 @@ button.selected,
 [class*='btn'].selected,
 [type='button'].selected,
 [type='submit'].selected,
-[type='reset'].selected {
+[type='reset'].selected,
+[for='button'].selected,
+[for='submit'].selected,
+[for='reset'].selected {
     border: none;
 }
 

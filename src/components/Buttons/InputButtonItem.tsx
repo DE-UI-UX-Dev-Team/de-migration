@@ -9,7 +9,7 @@ const InputButtonItem: React.FC<InputButtonProps> = ({
 }) => {
     return (
         <label
-            type={inputButtonType}
+            htmlFor={inputButtonType}
             className={inputButtonIconRight ? 'icon-right' : ''}
         >
             {inputButtonIconLeft ? <i className={inputButtonIconLeft}></i> : ''}
