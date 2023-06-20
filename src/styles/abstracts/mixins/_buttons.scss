@@ -13,7 +13,7 @@
                 @if $state == 'default' {
                     #{$bgSelector}.btn--#{$button},
                     #{$bgSelector}input[type='submit'],
-                    #{$bgSelector}label[type='submit'] {
+                    #{$bgSelector}label[for='submit'] {
                         @each $property, $value in $properties {
                             @if $value != null {
                                 #{$property}: #{$value};
@@ -23,8 +23,8 @@
                 } @else {
                     #{$bgSelector}.btn--#{$button}:#{$state},
                     #{$bgSelector}input[type='submit']:#{$state},
-                    #{$bgSelector}label[type='submit']:#{$state},
-                    #{$bgSelector}label[type='submit']:#{$state} > input[type='submit'] {
+                    #{$bgSelector}label[for='submit']:#{$state},
+                    #{$bgSelector}label[for='submit']:#{$state} > input[type='submit'] {
                         @each $property, $value in $properties {
                             @if $value != null {
                                 #{$property}: #{$value};
@@ -41,8 +41,8 @@
                     #{$bgSelector}.btn,
                     #{$bgSelector}input[type='button'],
                     #{$bgSelector}input[type='reset'],
-                    #{$bgSelector}label[type='button'],
-                    #{$bgSelector}label[type='reset'],
+                    #{$bgSelector}label[for='button'],
+                    #{$bgSelector}label[for='reset'],
                     #{$bgSelector}.btn--#{$button} {
                         @each $property, $value in $properties {
                             @if $value != null {
@@ -55,10 +55,10 @@
                     #{$bgSelector}.btn:#{$state},
                     #{$bgSelector}input[type='reset']:#{$state},
                     #{$bgSelector}input[type='button']:#{$state},
-                    #{$bgSelector}label[type='button']:#{$state},
-                    #{$bgSelector}label[type='reset']:#{$state},
-                    #{$bgSelector}label[type='button']:#{$state} > input[type='button'],
-                    #{$bgSelector}label[type='reset']:#{$state} > input[type='reset'],
+                    #{$bgSelector}label[for='button']:#{$state},
+                    #{$bgSelector}label[for='reset']:#{$state},
+                    #{$bgSelector}label[for='button']:#{$state} > input[type='button'],
+                    #{$bgSelector}label[for='reset']:#{$state} > input[type='reset'],
                     #{$bgSelector}.btn--#{$button}:#{$state} {
                         @each $property, $value in $properties {
                             @if $value != null {
@@ -76,8 +76,8 @@
                     #{$bgSelector}button#{$button},
                     #{$bgSelector}[class*='btn']#{$button},
                     #{$bgSelector}input[type='button']#{$button},
-                    #{$bgSelector}input[type='reset']#{$button} #{$bgSelector}label[type='button']#{$button},
-                    #{$bgSelector}label[type='reset']#{$button} {
+                    #{$bgSelector}input[type='reset']#{$button} #{$bgSelector}label[for='button']#{$button},
+                    #{$bgSelector}label[for='reset']#{$button} {
                         @each $property, $value in $properties {
                             @if $value != null {
                                 #{$property}: #{$value};
@@ -89,8 +89,8 @@
                     #{$bgSelector}[class*='btn']#{$button}:#{$state},
                     #{$bgSelector}[type='button']#{$button}:#{$state},
                     #{$bgSelector}[type='reset']#{$button}:#{$state},
-                    #{$bgSelector}label[type='button']#{$button}:#{$state},
-                    #{$bgSelector}label[type='reset']#{$button}:#{$state} {
+                    #{$bgSelector}label[for='button']#{$button}:#{$state},
+                    #{$bgSelector}label[for='reset']#{$button}:#{$state} {
                         @each $property, $value in $properties {
                             @if $value != null {
                                 #{$property}: #{$value};
