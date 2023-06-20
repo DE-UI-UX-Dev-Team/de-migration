@@ -42,3 +42,8 @@ export interface InputButtonProps {
     inputButtonIconLeft: string;
     inputButtonIconRight: string;
 }
+
+export interface AccordionProps {
+    accordionTitle: React.ReactNode | string;
+    accordionContent: React.ReactNode;
+}
