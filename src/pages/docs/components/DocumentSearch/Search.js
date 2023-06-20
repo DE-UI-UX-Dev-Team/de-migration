@@ -119,7 +119,11 @@ const SearchComponent = () => {
                                                 </span>
                                             )}
                                             <a
-                                                href={link}
+                                                href={
+                                                    link.includes('css-framework') || link.includes('design-tokens')
+                                                        ? '/docs' + link
+                                                        : link
+                                                }
                                                 className="h-3 mg-b--10"
                                                 target={
                                                     link.includes('http') || link.includes('/demos') ? '_blank' : ''
