@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import CharacteristicTable from './CharacteristicTable';
 import RelatedLinksList from './RelatedLinkList';
+import ClassListing from './ClassListing';
 import IframeControl from './IFrameControl';
 
 const DocumentationComponent = ({ docType, docMeta }) => {
@@ -53,6 +54,15 @@ const DocumentationComponent = ({ docType, docMeta }) => {
                                                         characteristics={item.tags.filter(
                                                             (tag) => tag.tag === 'characteristic'
                                                         )}
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {item.styles && (
+                                                <div className="col">
+                                                    <ClassListing
+                                                        id={findTag(item, 'title').value}
+                                                        styles={item.styles}
                                                     />
                                                 </div>
                                             )}
