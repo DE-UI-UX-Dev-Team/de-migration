@@ -43,7 +43,8 @@
         flex-grow: 1;
 
         //making the button always align at bottom of card
-        button {
+        button,
+        [class*='btn'] {
             margin-top: auto;
             align-self: flex-start;
         }
