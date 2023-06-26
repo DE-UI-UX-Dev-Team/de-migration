@@ -14,6 +14,7 @@ const buttonIcons = [
 ];
 
 export default {
+    title: 'DE/Button',
     component: 'Buttons',
     parameters: {
         componentSubtitle: 'Button components',

@@ -2,6 +2,7 @@ import { ContentSwitcherComponent } from '../components/ContentSwitcher/ContentS
 import { hiddenInputData, sliderLabelData, switcherContentData } from '../config/contentSwitcherData';
 
 export default {
+    title: 'DE/ContentSwitcher',
     component: ContentSwitcherComponent,
     tags: ['autodocs'],
 };
