@@ -10,7 +10,7 @@ ReactDOM.render(
         <AppWrapper>
             <SidebarNav />
             <main>
-                <ExpandNavButton />
+                {/* <ExpandNavButton /> */}
                 <section className="bg--primary-light-1 bg-btm-curv">
                     <div className="container">
                         <div className="row">
