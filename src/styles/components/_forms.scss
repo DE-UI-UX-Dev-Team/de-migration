@@ -355,11 +355,11 @@ fieldset[disabled] {
 
 .validation-message,
 .validation-message:before {
-    color: red;
+    color: var(--error-element);
 }
 
 .input-error {
-    border-color: red;
+    border-color: var(--error-element);
 }
 
 .wrap--text-input {
@@ -370,51 +370,54 @@ fieldset[disabled] {
     }
 
     input {
-        border-color: lightgray;
-        outline-color: red;
+        border-color: var(--secondary-light-3);
+        outline-color: var(--error-element);
 
         &[required] ~ span:after {
-            color: red;
+            color: var(--error-element);
         }
 
         &:not(:placeholder-shown) {
-            border-color: black;
+            border-color: var(--secondary-base);
         }
         &:hover {
-            border-color: orangered;
+            border-color: var(--primary-base);
         }
         &:focus-visible {
-            border-color: blue;
+            border-color: var(--tertiary-light-3);
         }
         &:disabled {
-            border-color: lightgray;
+            border-color: var(--secondary-light-3);
         }
         &:disabled ~ span {
-            color: lightgray;
+            color: var(--secondary-light-3);
         }
         &:disabled ~ i {
-            color: lightgray;
+            color: var(--secondary-light-3);
         }
     }
 
     input.input-error:not(:placeholder-shown) {
-        border-color: red;
+        border-color: var(--error-element);
     }
 }
 
 .wrap--checkbox-input,
 .wrap--radio-input {
     input {
+        border-color: var(--secondary-dark-1);
+
         &:hover {
-            box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.2);
-            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: #{$checkbox-hover--shadow};
+            background-color: #{$checkbox-hover--background};
         }
     }
 }
 
 .wrap--checkbox-input {
     input:checked {
-        background-color: var(--gray-body);
+        background-color: var(--tertiary-base);
+        border-color: var(--tertiary-base);
 
         &:before {
             color: white;
@@ -422,37 +425,44 @@ fieldset[disabled] {
     }
 }
 
+.wrap--checkbox-input,
+.wrap--radio-input {
+    input:checked {
+        border-color: var(--tertiary-base);
+    }
+}
+
 fieldset[disabled] {
     .wrap--text-input {
         i {
-            color: lightgray;
+            color: var(--secondary-light-3);
         }
         span {
-            color: lightgray;
+            color: var(--secondary-light-3);
         }
         input {
-            border-color: lightgray;
+            border-color: var(--secondary-light-3);
         }
         input[required] ~ span:after {
-            color: lightgray;
+            color: var(--secondary-light-3);
         }
     }
 
     .wrap--radio-input,
     .wrap--checkbox-input {
         i {
-            color: lightgray;
+            color: var(--secondary-light-3);
         }
         span {
-            color: lightgray;
+            color: var(--secondary-light-3);
         }
         input {
-            border-color: lightgray;
+            border-color: var(--secondary-light-3);
             box-shadow: none;
             background-color: transparent;
         }
         input[required] ~ span:after {
-            color: lightgray;
+            color: var(--secondary-light-3);
         }
     }
 }

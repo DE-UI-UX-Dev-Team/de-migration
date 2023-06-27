@@ -55,3 +55,7 @@ $toggle-off--active--shadow: 0 0 0 1.1rem 'hsla(#{$gray--dark-2-hsl}, 25%)';
 
 $content-switcher--track-shadow-right: 3px 0 8px 0 'hsla(#{$blue--base-hsl}, 20%)';
 $content-switcher--track-shadow-left: -3px 0 8px 0 rgba(0, 0, 0, 0.2);
+
+//-- Checkboxes and Radio Buttons
+$checkbox-hover--shadow: 0 0 0 1rem 'hsla(#{$blue--base-hsl}, 10%)';
+$checkbox-hover--background: 'hsla(#{$blue--base-hsl}, 10%)';
