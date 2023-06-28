@@ -47,3 +47,33 @@ export interface AccordionProps {
     accordionTitle: React.ReactNode | string;
     accordionContent: React.ReactNode;
 }
+
+export interface CardProps {
+    imgSrc?: string;
+    alt?: string;
+    title: string;
+    description: string;
+    buttonClassName?: string;
+    cardDivClassName: string;
+    cardClassName: string;
+    // isTertiary?: string;
+    // columnSize: string;
+    // isOdd?: string;
+    // isHorizontal?: string;
+}
+
+/*
+
+export interface CardProps {
+    imgSrc?: string;
+    alt?: string;
+    title: string;
+    description: string;
+    isTertiary?: string;
+    columnSize: string;
+    isOdd?: string;
+    buttonClassName?: string;
+    isHorizontal?: string;
+}
+
+*/
