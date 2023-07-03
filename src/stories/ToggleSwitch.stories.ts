@@ -2,6 +2,7 @@ import ToggleSwitchItem from '../components/ToggleSwitchItem/ToggleSwitchItem';
 import toggleStates from '../config/toggleStates';
 
 export default {
+    title: 'DE/ToggleSwitch',
     component: ToggleSwitchItem,
     tags: ['autodocs'],
 };

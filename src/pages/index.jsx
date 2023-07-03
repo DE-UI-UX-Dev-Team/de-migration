@@ -10,7 +10,7 @@ ReactDOM.render(
         <AppWrapper>
             <SidebarNav />
             <main>
-                <ExpandNavButton />
+                {/* <ExpandNavButton /> */}
                 <section className="bg--primary-light-1 bg-btm-curv">
                     <div className="container">
                         <div className="row">
@@ -46,10 +46,11 @@ ReactDOM.render(
                                             allows you to tailo your plan to your needs.
                                         </p>
                                         <a
-                                            class="btn--tertiary display-inline"
+                                            className="btn--tertiary icon-right"
                                             target="_blank"
                                             href="https://www.figma.com/proto/iycs77Ak1awlYSOlKHSjLZ/Direct-Energy---Design-System---Digital-3.0?node-id=6110-10217&scaling=min-zoom&page-id=521%3A34&starting-point-node-id=6110%3A10217&show-proto-sidebar=1"
                                         >
+                                            <i class="fak fa-arrow-up-right-from-square-solid"></i>
                                             Learn More
                                         </a>
                                     </div>
@@ -70,10 +71,11 @@ ReactDOM.render(
                                             cum sunt quod ad.
                                         </p>
                                         <a
-                                            class="btn--tertiary"
+                                            className="btn--tertiary icon-right"
                                             target="_blank"
                                             href="/storybook/"
                                         >
+                                            <i class="fak fa-arrow-up-right-from-square-solid"></i>
                                             Explore
                                         </a>
                                     </div>
@@ -94,10 +96,11 @@ ReactDOM.render(
                                             facilis eum temporibus, consequatur quas voluptate maiores perferendis.
                                         </p>
                                         <a
-                                            class="btn--tertiary"
+                                            className="btn--tertiary icon-right"
                                             href="/docs/design-tokens/"
                                         >
-                                            Check This Out!
+                                            <i class="fak fa-arrow-up-right-from-square-solid"></i>
+                                            !Check This Out
                                         </a>
                                     </div>
                                 </div>
@@ -117,9 +120,10 @@ ReactDOM.render(
                                             error!
                                         </p>
                                         <a
-                                            class="btn--tertiary"
+                                            className="btn--tertiary icon-right"
                                             href="/docs/css-framework/"
                                         >
+                                            <i class="fak fa-arrow-up-right-from-square-solid"></i>
                                             Review Here
                                         </a>
                                     </div>
