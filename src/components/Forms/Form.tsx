@@ -76,7 +76,7 @@ export const SampleForm: React.FC = () => {
                             <div className="col--md-4">
                                 <CheckboxList
                                     checkboxes={CheckboxesSampleFormNested}
-                                    className="mg-l--0"
+                                    classNameDiv="mg-l--0"
                                 />
                             </div>
                             <div className="col">
@@ -123,7 +123,7 @@ export const DisabledForm: React.FC = () => {
                             <div className="col--md-4">
                                 <CheckboxList
                                     checkboxes={CheckboxesDisabledFormNested}
-                                    className="mg-l--0"
+                                    classNameDiv="mg-l--0"
                                 />
                             </div>
                         </div>
@@ -206,14 +206,14 @@ export const CheckboxesForm: React.FC = () => {
                                 <h3 className="h-4">Horizontal List</h3>
                                 <CheckboxList
                                     checkboxes={CheckboxesHorizontalNested}
-                                    className="display-flex mg-l--0"
+                                    classNameDiv="display-flex mg-l--0"
                                 />
                             </div>
                             <div className="col">
                                 <h3 className="h-4">Vertical List</h3>
                                 <CheckboxList
                                     checkboxes={CheckboxesVerticalNested}
-                                    className="mg-l--0"
+                                    classNameDiv="mg-l--0"
                                 />
                             </div>
                         </div>

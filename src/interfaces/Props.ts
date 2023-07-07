@@ -59,7 +59,6 @@ export interface CardProps {
 }
 
 // Forms
-
 export interface TextInputProps {
     id?: string;
     label: string;
@@ -94,7 +93,7 @@ export interface CheckboxProps {
     name: string;
     value: string;
     label: string;
-    className: string;
+    className?: string;
     checked?: boolean;
     nestedCheckboxes?: CheckboxProps[];
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -102,8 +101,7 @@ export interface CheckboxProps {
 
 export interface CheckboxListProps {
     checkboxes: CheckboxProps[];
-    className: string;
-    status?: number;
+    classNameDiv: string;
 }
 
 export interface FormbtnProps {
