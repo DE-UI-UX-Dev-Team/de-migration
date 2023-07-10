@@ -57,3 +57,56 @@ export interface CardProps {
     cardDivClassName: string;
     cardClassName: string;
 }
+
+// Forms
+export interface TextInputProps {
+    id?: string;
+    label: string;
+    name: string;
+    value?: string;
+    required?: boolean;
+    disabled?: boolean;
+    placeholder?: string;
+    pattern?: string;
+    errorMessage?: string;
+    showIcon?: boolean;
+    showResetButton?: boolean;
+    classNameDiv: string;
+    className: string;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface RadioInputProps {
+    id: string;
+    name: string;
+    value: string;
+    label: string;
+}
+
+export interface RadioInputGroupProps {
+    className: string;
+    radioData: RadioInputProps[];
+}
+
+export interface CheckboxProps {
+    id: string;
+    name: string;
+    value: string;
+    label: string;
+    className?: string;
+    checked?: boolean;
+    nestedCheckboxes?: CheckboxProps[];
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface CheckboxListProps {
+    checkboxes: CheckboxProps[];
+    classNameDiv: string;
+}
+
+export interface FormbtnProps {
+    type: string;
+    value: string;
+    classNameLabel?: string;
+    classNameInput?: string;
+}
