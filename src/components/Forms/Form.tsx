@@ -34,7 +34,7 @@ export const SampleForm: React.FC = () => {
     }>(initialFormValues);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        // e.preventDefault();
+        e.preventDefault();
     };
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

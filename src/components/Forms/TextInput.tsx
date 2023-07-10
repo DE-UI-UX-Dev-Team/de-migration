@@ -17,12 +17,10 @@ const TextInput: React.FC<TextInputProps> = ({
     onChange,
     value,
 }) => {
-    // const [inputValue, setInputValue] = useState(value || '');
     const [error, setError] = useState<string | undefined>(undefined);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
-        // setInputValue(inputValue);
 
         if (required && inputValue.trim() === '') {
             setError(errorMessage || 'Please fill out this field!!');
@@ -55,7 +53,6 @@ const TextInput: React.FC<TextInputProps> = ({
                     disabled={disabled}
                     onChange={handleInputChange}
                     value={value}
-                    // value={inputValue}
                 />
                 {showIcon && <i className="fak fa-location-dot-solid"></i>}
                 {error && <div className="validation-message">{error}</div>}
