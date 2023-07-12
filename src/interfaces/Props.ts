@@ -57,3 +57,9 @@ export interface CardProps {
     cardDivClassName: string;
     cardClassName: string;
 }
+
+export interface TabProps {
+    tabIcon: string;
+    tabTitle: React.ReactNode | string;
+    tabContent: React.ReactNode;
+}
