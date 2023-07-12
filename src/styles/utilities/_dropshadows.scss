@@ -3,9 +3,26 @@
 @use '../abstracts' as *;
 
 /*--- Utilities - Dropshadows ---*/
+/**
+ * .dropshadow
+ * @css-prefix null
+ * @doc-type css-framework
+ * @doc-category layout
+ *
+ * @title Dropshadows
+ * @description Nested within a `.row`, columns generally encapsulate all content and provide horizontal padding (gutters) which are permuted at various breakpoints: sm, md, lg, and xl
+ * @filter-selector .dropshadow
+ * @characteristic [None] Main Content
+ * @characteristic [Level 1] Cards
+ * @characteristic [Level 2] Menus, 1st level dropdowns
+ * @characteristic [Level 3	] Menus, 2nd level dropdowns/nested dropdowns
+ * @characteristic [Level 4	] Modals
+ *
+ */
 
 @each $variant, $value in map.get($dropshadows, #{$active-theme}) {
     .dropshadow-#{$variant} {
         box-shadow: var(--dropshadow-#{$variant});
     }
 }
+/*--- end ---*/
