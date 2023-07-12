@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { CheckboxListProps, CheckboxProps } from '../../interfaces/Props';
 
-const CheckboxList: React.FC<CheckboxListProps> = ({ checkboxes, classNameDiv }) => {
-    const [checkedMap, setCheckedMap] = useState<Record<string, boolean>>({});
-
+const CheckboxList: React.FC<CheckboxListProps> = ({
+    checkboxes,
+    classNameDiv,
+    reset,
+    checkedMap,
+    updateCheckedMap,
+}) => {
     useEffect(() => {
         const initialCheckedMap: Record<string, boolean> = {};
 
@@ -17,30 +21,33 @@ const CheckboxList: React.FC<CheckboxListProps> = ({ checkboxes, classNameDiv })
             }
         });
 
-        setCheckedMap(initialCheckedMap);
-    }, [checkboxes]);
+        if (updateCheckedMap) {
+            updateCheckedMap(initialCheckedMap);
+        }
+    }, [checkboxes, reset]);
 
     const handleNestedCheckboxChange = (
         id: string,
         nestedCheckboxes: CheckboxProps[] | undefined,
         checked: boolean
     ) => {
-        if (!nestedCheckboxes) return;
-
-        const updatedCheckedMap = { ...checkedMap, [id]: checked };
+        if (!nestedCheckboxes || !updateCheckedMap) return;
+        const updatedCheckedMap = { ...(checkedMap || {}), [id]: checked };
 
         nestedCheckboxes.forEach((nestedCheckbox) => {
             updatedCheckedMap[nestedCheckbox.id] = checked;
         });
 
-        setCheckedMap(updatedCheckedMap);
+        updateCheckedMap(updatedCheckedMap);
     };
 
-    const isCheckboxChecked = (id: string) => checkedMap[id] || false;
+    const isCheckboxChecked = (id: string) => (checkedMap ? checkedMap[id] || false : false);
 
     const handleCheckboxChange = (id: string, checked: boolean) => {
-        const updatedCheckedMap = { ...checkedMap, [id]: checked };
-        setCheckedMap(updatedCheckedMap);
+        if (!updateCheckedMap) return;
+
+        const updatedCheckedMap = { ...(checkedMap || {}), [id]: checked };
+        updateCheckedMap(updatedCheckedMap);
 
         const parentCheckbox = checkboxes.find((checkbox) =>
             checkbox.nestedCheckboxes?.some((nestedCheckbox) => nestedCheckbox.id === id)
@@ -52,7 +59,7 @@ const CheckboxList: React.FC<CheckboxListProps> = ({ checkboxes, classNameDiv })
             );
             if (anyNestedChecked !== undefined) {
                 const updatedParentCheckedMap = { ...updatedCheckedMap, [parentCheckbox.id]: anyNestedChecked };
-                setCheckedMap(updatedParentCheckedMap);
+                updateCheckedMap(updatedParentCheckedMap);
             }
         }
     };
