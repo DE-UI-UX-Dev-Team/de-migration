@@ -50,7 +50,6 @@ const TabsComponent: React.FC<TabsProps> = ({ tabs }) => {
     };
 
     const scrollTabs = (left: boolean) => {
-        console.log('test', tabListRef);
         if (tabListRef.current) {
             const tabListElement = tabListRef.current.querySelector(
                 '.tab-list-wrapper .react-tabs__tab-list'
