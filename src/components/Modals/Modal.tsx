@@ -1,18 +1,5 @@
-import React, { ReactNode } from 'react';
-
-interface ModalProps {
-    children: ReactNode;
-    header?: string;
-    containerClassName?: string;
-    columnClassName?: string;
-    btnprimary?: string;
-    btnsecondary?: string;
-    withCloseIcon?: boolean;
-    withexclamationIcon?: boolean;
-    isOpen?: boolean;
-    onClose?: () => void;
-    isdisabled?: boolean;
-}
+import React from 'react';
+import { ModalProps } from '../../interfaces/Props';
 
 export const ModalContainer: React.FC<ModalProps> = ({ children, containerClassName, isOpen, onClose }) => {
     if (!isOpen) {

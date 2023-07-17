@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { useMediaQuery } from 'react-responsive';
 import RadioInputGroup from '../../../components/Forms/RadioInput';
-import { moalTextInput, radioPaymentMethod, radioServiceLocation } from '../../../config/modalsData';
+import { moalTextInput, modalNames, radioPaymentMethod, radioServiceLocation } from '../../../config/modalsData';
 import { ModalColumn, ModalContainer } from '../../../components/Modals/Modal';
 import TextInput from '../../../components/Forms/TextInput';
 
@@ -36,28 +36,14 @@ const App: React.FC = () => {
                         </div>
                         <div className="col">
                             <div className="row">
-                                <div className="col--md-4 col--lg-4">
-                                    <button onClick={() => handleModalOpen(0)}>Basic Modal</button>
-                                </div>
-                                <div className="col--md-4 col--lg-4">
-                                    <button onClick={() => handleModalOpen(1)}>Payment Modal</button>
-                                </div>
-
-                                <div className="col--md-4 col--lg-4">
-                                    <button onClick={() => handleModalOpen(2)}>Form Modal</button>
-                                </div>
-
-                                <div className="col--md-4 col--lg-4">
-                                    <button onClick={() => handleModalOpen(3)}>Location Modal</button>
-                                </div>
-
-                                <div className="col--md-4 col--lg-4">
-                                    <button onClick={() => handleModalOpen(4)}>No Service Modal</button>
-                                </div>
-
-                                <div className="col--md-4 col--lg-4">
-                                    <button onClick={() => handleModalOpen(5)}>Auto Pay Modal</button>
-                                </div>
+                                {modalNames.map((name, index) => (
+                                    <div
+                                        key={index}
+                                        className="col--md-4 col--lg-4"
+                                    >
+                                        <button onClick={() => handleModalOpen(index)}>{name}</button>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>

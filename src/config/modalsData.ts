@@ -1,5 +1,15 @@
 import { RadioInputProps, TextInputProps } from '../interfaces/Props';
 
+//Modal Names
+export const modalNames = [
+    'Basic Modal',
+    'Payment Modal',
+    'Form Modal',
+    'Location Modal',
+    'No Service Modal',
+    'Auto Pay Modal',
+];
+
 // Modal Radio Data
 export const radioServiceLocation: RadioInputProps[] = [
     { id: 'radio-91', name: 'radio5', value: '1', label: 'Texas Postpaid (get a bill every month)' },
