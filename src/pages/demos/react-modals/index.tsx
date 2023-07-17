@@ -1,6 +1,7 @@
 import '../../../styles/main.scss';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import { useMediaQuery } from 'react-responsive';
 import RadioInputGroup from '../../../components/Forms/RadioInput';
 import { moalTextInput, radioPaymentMethod, radioServiceLocation } from '../../../config/modalsData';
 import { ModalColumn, ModalContainer } from '../../../components/Modals/Modal';
@@ -8,6 +9,7 @@ import TextInput from '../../../components/Forms/TextInput';
 
 const App: React.FC = () => {
     const [activeModal, setActiveModal] = useState<number | null>(null);
+    const isDesktopOrLaptop = useMediaQuery({ minWidth: 768 });
 
     const handleModalOpen = (index: number) => {
         setActiveModal(index);
@@ -83,6 +85,8 @@ const App: React.FC = () => {
                         header="Confirm Default Payment"
                         columnClassName="col--md-4 modal-col"
                         btnprimary="Continue"
+                        withCloseIcon={!isDesktopOrLaptop}
+                        onClose={handleModalClose}
                     >
                         <>
                             <h5>You have chosen: Live Brighter 27</h5>
@@ -93,7 +97,7 @@ const App: React.FC = () => {
                         header="Already a Customer?"
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
                         btnsecondary="Continue"
-                        withCloseIcon={true}
+                        withCloseIcon={isDesktopOrLaptop}
                         onClose={handleModalClose}
                     >
                         <p>
@@ -112,6 +116,8 @@ const App: React.FC = () => {
                         header="I'm a New Customer"
                         columnClassName="col--md-4 modal-col"
                         btnprimary="Continue"
+                        withCloseIcon={!isDesktopOrLaptop}
+                        onClose={handleModalClose}
                     >
                         <form>
                             <div className="row">
@@ -132,7 +138,7 @@ const App: React.FC = () => {
                         header="Already a Customer?"
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
                         btnsecondary="Continue"
-                        withCloseIcon={true}
+                        withCloseIcon={isDesktopOrLaptop}
                         onClose={handleModalClose}
                     >
                         <p>
@@ -177,6 +183,8 @@ const App: React.FC = () => {
                         btnprimary="RE-ENTER ZIP CODE"
                         btnsecondary="Go Back"
                         withexclamationIcon={true}
+                        withCloseIcon={!isDesktopOrLaptop}
+                        onClose={handleModalClose}
                     >
                         <p>We're sorry, the zip code you entered is not serviced by Direct Energy at this time.</p>
                     </ModalColumn>
@@ -184,7 +192,7 @@ const App: React.FC = () => {
                         header="Already a Customer?"
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
                         btnsecondary="Login"
-                        withCloseIcon={true}
+                        withCloseIcon={isDesktopOrLaptop}
                         onClose={handleModalClose}
                     >
                         <p>
