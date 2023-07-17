@@ -224,6 +224,10 @@ body:not([data-modal='active']) .modal-containers {
             width: 100%;
         }
 
+        button:disabled {
+            background-color: var(--secondary-light-3);
+        }
+
         button:not(:first-of-type) {
             margin-top: var(--col-top-mg--sm);
         }

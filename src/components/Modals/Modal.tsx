@@ -11,6 +11,7 @@ interface ModalProps {
     withexclamationIcon?: boolean;
     isOpen?: boolean;
     onClose?: () => void;
+    isdisabled?: boolean;
 }
 
 export const ModalContainer: React.FC<ModalProps> = ({ children, containerClassName, isOpen, onClose }) => {
@@ -46,6 +47,7 @@ export const ModalColumn: React.FC<ModalProps> = ({
     withCloseIcon,
     withexclamationIcon,
     onClose,
+    isdisabled = false,
 }) => {
     return (
         <div className={columnClassName}>
@@ -69,7 +71,14 @@ export const ModalColumn: React.FC<ModalProps> = ({
                 </div>
             </div>
             <div className="modal-footer">
-                {btnprimary && <button className="btn--primary">{btnprimary}</button>}
+                {btnprimary && (
+                    <button
+                        className="btn--primary"
+                        disabled={isdisabled}
+                    >
+                        {btnprimary}
+                    </button>
+                )}
                 {btnsecondary && <button className="btn--secondary">{btnsecondary}</button>}
             </div>
         </div>

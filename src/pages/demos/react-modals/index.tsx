@@ -9,6 +9,7 @@ import TextInput from '../../../components/Forms/TextInput';
 
 const App: React.FC = () => {
     const [activeModal, setActiveModal] = useState<number | null>(null);
+    const [radioSelected, setRadioSelected] = useState<boolean>(false);
     const isDesktopOrLaptop = useMediaQuery({ minWidth: 768 });
 
     const handleModalOpen = (index: number) => {
@@ -17,6 +18,11 @@ const App: React.FC = () => {
 
     const handleModalClose = () => {
         setActiveModal(null);
+        setRadioSelected(false);
+    };
+
+    const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setRadioSelected(e.target.value !== '');
     };
 
     return (
@@ -162,11 +168,13 @@ const App: React.FC = () => {
                         withCloseIcon={true}
                         onClose={handleModalClose}
                         withexclamationIcon={true}
+                        isdisabled={!radioSelected}
                     >
                         <form>
                             <RadioInputGroup
                                 className="mg-l--0"
                                 radioData={radioServiceLocation}
+                                onChange={handleRadioChange}
                             />
                         </form>
                     </ModalColumn>
@@ -214,6 +222,7 @@ const App: React.FC = () => {
                         btnsecondary="Cancel"
                         withCloseIcon={true}
                         onClose={handleModalClose}
+                        isdisabled={!radioSelected}
                     >
                         <>
                             <p>Select Payment Method</p>
@@ -221,6 +230,7 @@ const App: React.FC = () => {
                                 <RadioInputGroup
                                     className="mg-l--0"
                                     radioData={radioPaymentMethod}
+                                    onChange={handleRadioChange}
                                 />
                             </form>
 
