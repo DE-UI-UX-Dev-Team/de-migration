@@ -29,27 +29,25 @@ export const ModalColumn: React.FC<ModalProps> = ({
     header,
     children,
     columnClassName,
-    btnprimary,
-    btnsecondary,
-    withCloseIcon,
-    withexclamationIcon,
+    btnPrimary,
+    btnSecondary,
+    iconClassName,
+    withExclamationIcon,
     onClose,
-    isdisabled = false,
+    isDisabled = false,
 }) => {
     return (
         <div className={columnClassName}>
             <div className="modal-head">
                 <h4 className="header-with-icon">
                     <div>
-                        {withexclamationIcon && <i className="fa fa-exclamation-circle clr--error-element"></i>}
+                        {withExclamationIcon && <i className="fa fa-exclamation-circle clr--error-element"></i>}
                         {header}
                     </div>
-                    {withCloseIcon && (
-                        <i
-                            className="fa-regular fa-xmark fa-xl"
-                            onClick={onClose}
-                        ></i>
-                    )}
+                    <i
+                        className={`fa-regular fa-xmark fa-xl ${iconClassName}`}
+                        onClick={onClose}
+                    ></i>
                 </h4>
             </div>
             <div className="modal-body">
@@ -58,15 +56,15 @@ export const ModalColumn: React.FC<ModalProps> = ({
                 </div>
             </div>
             <div className="modal-footer">
-                {btnprimary && (
+                {btnPrimary && (
                     <button
                         className="btn--primary"
-                        disabled={isdisabled}
+                        disabled={isDisabled}
                     >
-                        {btnprimary}
+                        {btnPrimary}
                     </button>
                 )}
-                {btnsecondary && <button className="btn--secondary">{btnsecondary}</button>}
+                {btnSecondary && <button className="btn--secondary">{btnSecondary}</button>}
             </div>
         </div>
     );

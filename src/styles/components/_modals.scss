@@ -199,6 +199,26 @@ body:not([data-modal='active']) .modal-containers {
         .fa-xmark {
             cursor: pointer;
         }
+
+        @include mediaQuery('tablet-up') {
+            .close-icon-right {
+                display: block;
+            }
+
+            .close-icon-left {
+                display: none;
+            }
+        }
+
+        @include mediaQuery('mobile-landscape-below') {
+            .close-icon-right {
+                display: none;
+            }
+
+            .close-icon-left {
+                display: block;
+            }
+        }
     }
 
     .modal-head:after {

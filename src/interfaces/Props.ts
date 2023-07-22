@@ -128,11 +128,11 @@ export interface ModalProps {
     header?: string;
     containerClassName?: string;
     columnClassName?: string;
-    btnprimary?: string;
-    btnsecondary?: string;
-    withCloseIcon?: boolean;
-    withexclamationIcon?: boolean;
+    btnPrimary?: string;
+    btnSecondary?: string;
+    iconClassName?: string;
+    withExclamationIcon?: boolean;
     isOpen?: boolean;
     onClose?: () => void;
-    isdisabled?: boolean;
+    isDisabled?: boolean;
 }

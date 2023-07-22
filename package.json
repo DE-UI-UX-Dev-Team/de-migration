@@ -27,8 +27,7 @@
         "html5-form-validation-js": "^0.11.1",
         "modal-popups-js": "^0.10.1",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-responsive": "^9.0.2"
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
         "@storybook/addon-essentials": "^7.0.5",
