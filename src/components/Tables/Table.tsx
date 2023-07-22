@@ -1,7 +1,7 @@
 import React from 'react';
 import { TableCellProps, TableProps, TableRowProps } from '../../interfaces/Props';
 
-export const Table: React.FC<TableProps> = ({ children, tableClassName, title }) => {
+export const Table: React.FC<TableProps> = ({ children, tableClassName, title, tbodyClassName }) => {
     return (
         <section>
             <div className="container">
@@ -10,7 +10,7 @@ export const Table: React.FC<TableProps> = ({ children, tableClassName, title })
                         <h3>{title}</h3>
                         <div className="table--responsive">
                             <table className={tableClassName}>
-                                <tbody>{children}</tbody>
+                                <tbody className={tbodyClassName}>{children}</tbody>
                             </table>
                         </div>
                     </div>

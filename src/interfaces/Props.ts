@@ -127,6 +127,7 @@ export interface TableProps {
     children: ReactNode;
     title: string;
     tableClassName?: string;
+    tbodyClassName?: string;
 }
 
 export interface TableRowProps {

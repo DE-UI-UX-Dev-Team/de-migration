@@ -46,4 +46,28 @@ export const rows = [
         term: '24 months',
         rate: '10.89 cents/kWh',
     },
+    {
+        planName: 'Live Brighter 5',
+        region: 'Nicor',
+        term: '36 months',
+        rate: '10.89 cents/kWh',
+    },
+    {
+        planName: 'Live Brighter 3',
+        region: 'Peco Electricity',
+        term: '10 months',
+        rate: '10.89 cents/kWh',
+    },
+    {
+        planName: 'Free Power Weekends 12',
+        region: 'Nicor',
+        term: '12 months',
+        rate: '10.89 cents/kWh',
+    },
+    {
+        planName: 'Live Brighte On us 9',
+        region: 'Peco Electricity',
+        term: '18 months',
+        rate: '10.89 cents/kWh',
+    },
 ];

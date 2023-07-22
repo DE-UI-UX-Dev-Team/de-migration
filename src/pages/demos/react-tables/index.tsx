@@ -10,6 +10,7 @@ const App: React.FC = () => {
             <Table
                 tableClassName="table--layout-fixed"
                 title={evenlySpacedTitle}
+                tbodyClassName="header-frozen"
             >
                 <TableRow trClassName="thead">
                     {headers.map((header, i) => (
@@ -53,7 +54,10 @@ const App: React.FC = () => {
                 ))}
             </Table>
 
-            <Table title={tableTightlySpacedTitle}>
+            <Table
+                title={tableTightlySpacedTitle}
+                tbodyClassName="header-frozen"
+            >
                 <TableRow trClassName="thead">
                     {headers.map((header, i) => (
                         <TableCell
