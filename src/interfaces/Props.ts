@@ -1,3 +1,5 @@
+import React, { ReactNode } from 'react';
+
 export interface ToggleSwitchProps {
     disabled: boolean;
     checked: boolean;
@@ -118,4 +120,21 @@ export interface FormbtnProps {
     value: string;
     classNameLabel?: string;
     classNameInput?: string;
+}
+
+// Tables
+export interface TableProps {
+    children: ReactNode;
+    title: string;
+    tableClassName?: string;
+}
+
+export interface TableRowProps {
+    children: ReactNode;
+    trClassName?: string;
+}
+
+export interface TableCellProps {
+    tdTitle: string;
+    icon?: string;
 }
