@@ -30,6 +30,7 @@ const App: React.FC = () => {
     const noServiceModal = activeModal === 4;
     const autoPayModal = activeModal === 5;
     const withExclamationIcon = true;
+    const shouldNotCloseModal = false;
     const headerConfirm = 'Confirm Default Payment';
     const headerIsCustomer = 'Already a Customer?';
     const headerNewCustomer = "I'm a New Customer";
@@ -110,6 +111,7 @@ const App: React.FC = () => {
                         btnSecondary={btnContinue}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
+                        shouldCloseModal={shouldNotCloseModal}
                     >
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam
@@ -151,6 +153,7 @@ const App: React.FC = () => {
                         btnSecondary={btnContinue}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
+                        shouldCloseModal={shouldNotCloseModal}
                     >
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam
@@ -205,6 +208,7 @@ const App: React.FC = () => {
                         btnSecondary={btnLogin}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
+                        shouldCloseModal={shouldNotCloseModal}
                     >
                         <p>
                             If you have an account with us, please sign in to your account to get accurate pricing and

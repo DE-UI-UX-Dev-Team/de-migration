@@ -35,7 +35,10 @@ export const ModalColumn: React.FC<ModalProps> = ({
     withExclamationIcon,
     onClose,
     isDisabled = false,
+    shouldCloseModal = true,
 }) => {
+    const btnSecondaryOnClick = shouldCloseModal ? onClose : undefined;
+
     return (
         <div className={columnClassName}>
             <div className="modal-head">
@@ -64,7 +67,14 @@ export const ModalColumn: React.FC<ModalProps> = ({
                         {btnPrimary}
                     </button>
                 )}
-                {btnSecondary && <button className="btn--secondary">{btnSecondary}</button>}
+                {btnSecondary && (
+                    <button
+                        className="btn--secondary"
+                        onClick={btnSecondaryOnClick}
+                    >
+                        {btnSecondary}
+                    </button>
+                )}
             </div>
         </div>
     );

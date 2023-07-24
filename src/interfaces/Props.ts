@@ -135,4 +135,5 @@ export interface ModalProps {
     isOpen?: boolean;
     onClose?: () => void;
     isDisabled?: boolean;
+    shouldCloseModal?: boolean;
 }
