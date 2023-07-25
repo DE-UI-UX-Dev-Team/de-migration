@@ -31,6 +31,7 @@ export const ModalColumn: React.FC<ModalProps> = ({
     columnClassName,
     btnPrimary,
     btnSecondary,
+    btnCloseSecondary,
     iconClassName,
     withExclamationIcon,
     onClose,
@@ -44,7 +45,7 @@ export const ModalColumn: React.FC<ModalProps> = ({
             <div className="modal-head">
                 <h4 className="header-with-icon">
                     <div>
-                        {withExclamationIcon && <i className="fa fa-exclamation-circle clr--error-element"></i>}
+                        {withExclamationIcon}
                         {header}
                     </div>
                     <i
@@ -67,14 +68,15 @@ export const ModalColumn: React.FC<ModalProps> = ({
                         {btnPrimary}
                     </button>
                 )}
-                {btnSecondary && (
+                {btnCloseSecondary && (
                     <button
                         className="btn--secondary"
                         onClick={btnSecondaryOnClick}
                     >
-                        {btnSecondary}
+                        {btnCloseSecondary}
                     </button>
                 )}
+                {btnSecondary && <button className="btn--secondary">{btnSecondary}</button>}
             </div>
         </div>
     );

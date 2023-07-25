@@ -1,13 +1,13 @@
 import { RadioInputProps, TextInputProps } from '../interfaces/Props';
 
-//Modal Names
-export const modalNames = [
-    'Basic Modal',
-    'Payment Modal',
-    'Form Modal',
-    'Location Modal',
-    'No Service Modal',
-    'Auto Pay Modal',
+// Initial Modal
+export const initialModals = [
+    { name: 'basic Modal', isActive: false },
+    { name: 'payment Modal', isActive: false },
+    { name: 'form Modal', isActive: false },
+    { name: 'location Modal', isActive: false },
+    { name: 'no Service Modal', isActive: false },
+    { name: 'auto Pay Modal', isActive: false },
 ];
 
 // Modal Radio Data

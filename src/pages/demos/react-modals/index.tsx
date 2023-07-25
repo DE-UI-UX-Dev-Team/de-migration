@@ -2,20 +2,25 @@ import '../../../styles/main.scss';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import RadioInputGroup from '../../../components/Forms/RadioInput';
-import { moalTextInput, modalNames, radioPaymentMethod, radioServiceLocation } from '../../../config/modalsData';
+import { initialModals, moalTextInput, radioPaymentMethod, radioServiceLocation } from '../../../config/modalsData';
 import { ModalColumn, ModalContainer } from '../../../components/Modals/Modal';
 import TextInput from '../../../components/Forms/TextInput';
+import * as modal from '../../../local/en/modals/constants';
 
 const App: React.FC = () => {
-    const [activeModal, setActiveModal] = useState<number | null>(null);
+    const [modals, setModals] = useState(initialModals);
     const [radioSelected, setRadioSelected] = useState<boolean>(false);
 
-    const handleModalOpen = (index: number) => {
-        setActiveModal(index);
+    const handleModalOpen = (modalName: string) => {
+        setModals(
+            modals.map((modal) =>
+                modal.name === modalName ? { ...modal, isActive: true } : { ...modal, isActive: false }
+            )
+        );
     };
 
     const handleModalClose = () => {
-        setActiveModal(null);
+        setModals(modals.map((modal) => ({ ...modal, isActive: false })));
         setRadioSelected(false);
     };
 
@@ -23,28 +28,7 @@ const App: React.FC = () => {
         setRadioSelected(e.target.value !== '');
     };
 
-    const basicModal = activeModal === 0;
-    const paymentModal = activeModal === 1;
-    const formModal = activeModal === 2;
-    const locationModal = activeModal === 3;
-    const noServiceModal = activeModal === 4;
-    const autoPayModal = activeModal === 5;
-    const withExclamationIcon = true;
-    const shouldNotCloseModal = false;
-    const headerConfirm = 'Confirm Default Payment';
-    const headerIsCustomer = 'Already a Customer?';
-    const headerNewCustomer = "I'm a New Customer";
-    const headerSelectLocation = 'Please Select a Service Location';
-    const headerNoService = 'No Service Available';
-    const headerAutoPay = 'Add Auto Pay';
-    const btnConfirm = 'Confirm';
-    const btnCancel = 'Cancel';
-    const btnContinue = 'Continue';
-    const btnProceed = 'Proceed';
-    const btnLogin = 'Login';
-    const btnSubmit = 'Submit';
-    const btnZipcode = 'RE-ENTER ZIP CODE';
-    const btnBack = 'Go Back';
+    const getModal = (modalName: string) => modals.find((modal) => modal.name === modalName);
 
     return (
         <>
@@ -57,12 +41,12 @@ const App: React.FC = () => {
                         </div>
                         <div className="col">
                             <div className="row">
-                                {modalNames.map((name, index) => (
+                                {modals.map((modal, index) => (
                                     <div
                                         key={index}
                                         className="col--md-4 col--lg-4"
                                     >
-                                        <button onClick={() => handleModalOpen(index)}>{name}</button>
+                                        <button onClick={() => handleModalOpen(modal.name)}>{modal.name}</button>
                                     </div>
                                 ))}
                             </div>
@@ -73,15 +57,15 @@ const App: React.FC = () => {
 
             <div className="modal-box">
                 <ModalContainer
-                    containerClassName="modal-container-react container max-width--sm"
-                    isOpen={basicModal}
+                    containerClassName={`modal-container-react container max-width--sm`}
+                    isOpen={getModal('basic Modal')?.isActive}
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={headerConfirm}
+                        header={modal.headerConfirm}
                         columnClassName="col modal-col"
-                        btnPrimary={btnConfirm}
-                        btnSecondary={btnCancel}
+                        btnPrimary={modal.btnConfirm}
+                        btnCloseSecondary={modal.btnCancel}
                         onClose={handleModalClose}
                     >
                         <p>Make [Card Name] the new default payment method?</p>
@@ -89,14 +73,14 @@ const App: React.FC = () => {
                 </ModalContainer>
 
                 <ModalContainer
-                    containerClassName="modal-container-react"
-                    isOpen={paymentModal}
+                    containerClassName={`modal-container-react`}
+                    isOpen={getModal('payment Modal')?.isActive}
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={headerConfirm}
+                        header={modal.headerConfirm}
                         columnClassName="col--md-4 modal-col"
-                        btnPrimary={btnContinue}
+                        btnPrimary={modal.btnContinue}
                         iconClassName="close-icon-left"
                         onClose={handleModalClose}
                     >
@@ -106,12 +90,11 @@ const App: React.FC = () => {
                         </>
                     </ModalColumn>
                     <ModalColumn
-                        header={headerIsCustomer}
+                        header={modal.headerIsCustomer}
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
-                        btnSecondary={btnContinue}
+                        btnSecondary={modal.btnContinue}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
-                        shouldCloseModal={shouldNotCloseModal}
                     >
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam
@@ -121,14 +104,14 @@ const App: React.FC = () => {
                 </ModalContainer>
 
                 <ModalContainer
-                    containerClassName="modal-container-react"
-                    isOpen={formModal}
+                    containerClassName={`modal-container-react`}
+                    isOpen={getModal('form Modal')?.isActive}
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={headerNewCustomer}
+                        header={modal.headerNewCustomer}
                         columnClassName="col--md-4 modal-col"
-                        btnPrimary={btnContinue}
+                        btnPrimary={modal.btnContinue}
                         iconClassName="close-icon-left"
                         onClose={handleModalClose}
                     >
@@ -148,12 +131,11 @@ const App: React.FC = () => {
                         </form>
                     </ModalColumn>
                     <ModalColumn
-                        header={headerIsCustomer}
+                        header={modal.headerIsCustomer}
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
-                        btnSecondary={btnContinue}
+                        btnSecondary={modal.btnContinue}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
-                        shouldCloseModal={shouldNotCloseModal}
                     >
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam
@@ -163,17 +145,17 @@ const App: React.FC = () => {
                 </ModalContainer>
 
                 <ModalContainer
-                    containerClassName="modal-container-react container max-width--sm"
-                    isOpen={locationModal}
+                    containerClassName={`modal-container-react container max-width--sm`}
+                    isOpen={getModal('location Modal')?.isActive}
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={headerSelectLocation}
+                        header={modal.headerSelectLocation}
                         columnClassName="col modal-col"
-                        btnPrimary={btnProceed}
-                        btnSecondary={btnCancel}
+                        btnPrimary={modal.btnProceed}
+                        btnCloseSecondary={modal.btnCancel}
                         onClose={handleModalClose}
-                        withExclamationIcon={withExclamationIcon}
+                        withExclamationIcon={<i className="fa fa-exclamation-circle clr--error-element"></i>}
                         isDisabled={!radioSelected}
                     >
                         <form>
@@ -187,28 +169,27 @@ const App: React.FC = () => {
                 </ModalContainer>
 
                 <ModalContainer
-                    containerClassName="modal-container-react"
-                    isOpen={noServiceModal}
+                    containerClassName={`modal-container-react`}
+                    isOpen={getModal('no Service Modal')?.isActive}
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={headerNoService}
+                        header={modal.headerNoService}
                         columnClassName="col--md-4 modal-col"
-                        btnPrimary={btnZipcode}
-                        btnSecondary={btnBack}
-                        withExclamationIcon={withExclamationIcon}
+                        btnPrimary={modal.btnZipcode}
+                        btnCloseSecondary={modal.btnBack}
+                        withExclamationIcon={<i className="fa fa-exclamation-circle clr--error-element"></i>}
                         iconClassName="close-icon-left"
                         onClose={handleModalClose}
                     >
                         <p>We're sorry, the zip code you entered is not serviced by Direct Energy at this time.</p>
                     </ModalColumn>
                     <ModalColumn
-                        header={headerIsCustomer}
+                        header={modal.headerIsCustomer}
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
-                        btnSecondary={btnLogin}
+                        btnSecondary={modal.btnLogin}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
-                        shouldCloseModal={shouldNotCloseModal}
                     >
                         <p>
                             If you have an account with us, please sign in to your account to get accurate pricing and
@@ -218,15 +199,15 @@ const App: React.FC = () => {
                 </ModalContainer>
 
                 <ModalContainer
-                    containerClassName="modal-container-react container max-width--sm"
-                    isOpen={autoPayModal}
+                    containerClassName={`modal-container-react container max-width--sm`}
+                    isOpen={getModal('auto Pay Modal')?.isActive}
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={headerAutoPay}
+                        header={modal.headerAutoPay}
                         columnClassName="col modal-col"
-                        btnPrimary={btnSubmit}
-                        btnSecondary={btnCancel}
+                        btnPrimary={modal.btnSubmit}
+                        btnCloseSecondary={modal.btnCancel}
                         onClose={handleModalClose}
                         isDisabled={!radioSelected}
                     >

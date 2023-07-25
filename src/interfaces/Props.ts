@@ -130,8 +130,9 @@ export interface ModalProps {
     columnClassName?: string;
     btnPrimary?: string;
     btnSecondary?: string;
+    btnCloseSecondary?: string;
     iconClassName?: string;
-    withExclamationIcon?: boolean;
+    withExclamationIcon?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
     isDisabled?: boolean;
