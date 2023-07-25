@@ -119,3 +119,14 @@ export interface FormbtnProps {
     classNameLabel?: string;
     classNameInput?: string;
 }
+
+// Dropdown
+export interface DropdownOption {
+    value: string;
+    label: string;
+}
+
+export interface DropdownProps {
+    options: DropdownOption[];
+    onSelectOption: (selectedOption: DropdownOption) => void;
+}
