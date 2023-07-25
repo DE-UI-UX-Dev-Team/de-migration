@@ -15,9 +15,8 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onSelectOption }) => {
         onSelectOption(option);
     };
 
-    console.log(selectedOption);
     return (
-        <div className={`dropdown ${isOpen ? 'open' : ''}`}>
+        <div className={`dropdown ${isOpen ? 'open' : ''}${selectedOption ? 'completed' : ''}`}>
             <div
                 className="selected-option"
                 onClick={handleDropdownClick}
