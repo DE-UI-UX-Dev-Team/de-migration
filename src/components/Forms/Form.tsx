@@ -83,7 +83,7 @@ export const SampleForm: React.FC = () => {
                                 <h2 className="h-3 mg-b--5">Sample Form</h2>
                                 <h3 className="h-5">With Input Validation Plugin</h3>
                             </div>
-                            {inputSampleForm.map((input) => (
+                            {inputSampleForm.map((input: any) => (
                                 <TextInput
                                     key={input.id}
                                     {...input}
@@ -141,7 +141,7 @@ export const DisabledForm: React.FC = () => {
                             <div className="col">
                                 <h2 className="h-3">Disabled Form/Read-only</h2>
                             </div>
-                            {inputDisabledForm.map((input) => (
+                            {inputDisabledForm.map((input: any) => (
                                 <TextInput
                                     key={input.id}
                                     {...input}
@@ -180,7 +180,7 @@ export const TextInputForm: React.FC = () => {
                                 <h3 className="h-5">With Decorative Icons & Field Resets</h3>
                             </div>
 
-                            {inputTextInput.map((input) => (
+                            {inputTextInput.map((input: any) => (
                                 <TextInput
                                     key={input.id}
                                     {...input}
@@ -268,7 +268,7 @@ export const InputButtonsForm: React.FC = () => {
                             <div className="col">
                                 <h2 className="h-3 mg-b--5">Input Buttons</h2>
                             </div>
-                            {buttonsData.map((button, index) => (
+                            {buttonsData.map((button: any, index: any) => (
                                 <Formbtn
                                     key={index}
                                     type={button.type}
