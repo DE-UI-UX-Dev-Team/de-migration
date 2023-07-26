@@ -1,10 +1,8 @@
 import React from 'react';
-
 import { FormbtnProps } from '../../interfaces/Props';
 
 const Formbtn: React.FC<FormbtnProps> = ({ type, value, classNameLabel, classNameInput }) => {
     const containsIconClass = classNameLabel?.includes('icon') || classNameInput?.includes('icon');
-
     return (
         <div className="col--md-odd-1">
             {containsIconClass ? (
@@ -16,7 +14,6 @@ const Formbtn: React.FC<FormbtnProps> = ({ type, value, classNameLabel, classNam
                         className="fak fa-pen-solid"
                         aria-hidden="true"
                     ></i>
-
                     <input
                         type={type}
                         value={value}

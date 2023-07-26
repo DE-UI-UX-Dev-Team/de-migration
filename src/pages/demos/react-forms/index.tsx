@@ -1,9 +1,6 @@
 import '../../../styles/main.scss';
-
 import React from 'react';
-
 import ReactDOM from 'react-dom';
-
 import {
     CheckboxesForm,
     DisabledForm,
@@ -28,10 +25,8 @@ const App: React.FC = () => {
                             </button>
                         </p>
                     </div>
-
                     <div className="col">
                         <h1>Form Components</h1>
-
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae commodi incidunt quis
                             deserunt maiores ipsam quisquam, tempore hic eveniet illo, ut quia expedita? Molestias
@@ -39,18 +34,12 @@ const App: React.FC = () => {
                         </p>
                     </div>
                 </div>
-
                 <>
                     <SampleForm />
-
                     <DisabledForm />
-
                     <TextInputForm />
-
                     <RadioButtonsForm />
-
                     <CheckboxesForm />
-
                     <InputButtonsForm />
                 </>
             </div>
@@ -62,6 +51,5 @@ ReactDOM.render(
     <React.StrictMode>
         <App />
     </React.StrictMode>,
-
     document.getElementById('root')
 );
