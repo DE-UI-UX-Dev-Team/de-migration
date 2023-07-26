@@ -122,10 +122,38 @@ export interface FormbtnProps {
     classNameInput?: string;
 }
 
-export interface TabProps {
+export interface TabProps<tabContentType> {
     tabIcon: string;
-    tabTitle: React.ReactNode | string;
-    tabContent: React.ReactNode;
+    tabTitle?: React.ReactNode | string;
+    tabContent?: tabContentType;
+}
+
+export interface ImageContentProps {
+    imgSrc?: string;
+    imgDesc?: string;
+    contentHeading?: string;
+    contentSubHeading?: string;
+    contentPara?: string;
+}
+export interface TabImageContentProps {
+    tabContent: ImageContentProps[];
+}
+
+export interface TabColumnProps {
+    imgSrc?: string;
+    imgDesc?: string;
+    contentHeading?: string;
+    phone?: string;
+    phoneRef?: string;
+}
+export interface Tab4ColumnProps {
+    tabContent: TabColumnProps[];
+}
+export interface ParaProps {
+    text: string;
+}
+export interface ParaGroupProps {
+    tabContent: ParaProps[];
 }
 // Modals
 export interface ModalProps {
