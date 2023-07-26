@@ -13,9 +13,9 @@
         overflow-x: scroll;
         overflow-y: hidden;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: #{$v-spacing--150} 0;
-        border-bottom: 2px solid var(--secondary-light-3);
+        border-bottom: 1px solid var(--black-base);
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
 
@@ -64,8 +64,7 @@
         cursor: pointer;
         text-transform: uppercase;
         font-weight: #{$font-weight--bold};
-        border-radius: #{$border-radius-25};
-        color: var(--secondary-dark-2);
+        color: var(--black-base);
 
         @include mediaQuery('tablet-below') {
             flex: 0 0 calc(100% / 3); // showing 3 menu items at a time in tablet screen
@@ -81,8 +80,7 @@
         }
 
         &--selected {
-            border-bottom: 3px solid var(--tertiary-base);
-            color: var(--tertiary-base);
+            border-bottom: 4px solid var(--primary-base);
         }
 
         &:focus {
@@ -105,18 +103,22 @@
         .react-tabs {
             display: flex;
 
+            .tab-list-wrapper {
+                flex: 0 0 calc(100% / 4);
+            }
+
             &__tab-list {
                 display: flex;
                 flex-direction: column;
-                flex: 0 0 calc(100% / 4);
                 border-bottom: none;
+                border-left: 1px solid var(--black-base);
             }
 
             &__tab {
                 width: auto;
                 min-height: 65px;
                 background-size: cover;
-                border-bottom: 1px solid #ccc;
+                border-bottom: none;
                 flex-direction: row;
                 justify-content: flex-start;
 
@@ -126,8 +128,7 @@
                 }
 
                 &--selected {
-                    border-left: 3px solid var(--tertiary-base);
-                    color: var(--tertiary-base);
+                    border-left: 4px solid var(--primary-base);
                 }
             }
 
