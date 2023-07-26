@@ -1,12 +1,16 @@
+// TabsComponent.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { TabProps } from '../../interfaces/Props';
+import TabScrollIndicators from './TabScrollIndicators';
+import { scrollTabs, handleTabScroll } from './TabScrollHelpers'; // Import the functions directly
 
-interface TabsProps {
-    tabs: TabProps[];
+interface TabsProps<T> {
+    tabs: TabProps<T>[]; // Make the interface generic and use the type argument T
+    tabContent: React.FC<T>; // Pass the component as a prop
 }
 
-const TabsComponent: React.FC<TabsProps> = ({ tabs }) => {
+const TabsComponent: React.FC<TabsProps<any>> = ({ tabs, tabContent: TabContent }) => {
     const [tabIndex, setTabIndex] = useState(0);
     const [tabState, setTabState] = useState({
         showLeft: true,
@@ -17,55 +21,13 @@ const TabsComponent: React.FC<TabsProps> = ({ tabs }) => {
 
     let tabListRef = useRef<HTMLDivElement | null>(null);
 
-    const handleTabScroll = () => {
-        if (tabListRef.current) {
-            const tabListElement = tabListRef.current.querySelector('.react-tabs__tab-list') as HTMLElement;
-            if (tabListElement) {
-                const menuWrapperSize = tabListElement.offsetWidth;
-                let menuPosition = tabListElement.scrollLeft;
-                menuPosition = menuPosition ? menuPosition : 0;
-                const itemElement = tabListElement.querySelector('li.react-tabs__tab') as HTMLLIElement;
-                const itemSize = itemElement?.offsetWidth;
-                const menuSize: number = tabs.length * itemSize;
-                let menuInvisibleSize: number = menuSize - (menuWrapperSize ? menuWrapperSize : 0);
-                const menuEndOffset = menuInvisibleSize - 20;
-                let showLeft = false;
-                let showRight = false;
-                if (menuPosition <= 20) {
-                    showLeft = false;
-                    showRight = true;
-                } else if (menuPosition < menuEndOffset) {
-                    showLeft = true;
-                    showRight = true;
-                } else if (menuPosition >= menuEndOffset) {
-                    showLeft = true;
-                    showRight = false;
-                }
-                setTabState({
-                    showLeft,
-                    showRight,
-                });
-            }
-        }
-    };
+    // Call the handleTabScroll function with the required arguments
+    useEffect(() => {
+        handleTabScroll(tabs, tabListRef, setTabState); // Call the handleTabScroll function directly
+    }, [tabs]);
 
-    const scrollTabs = (left: boolean) => {
-        if (tabListRef.current) {
-            const tabListElement = tabListRef.current.querySelector(
-                '.tab-list-wrapper .react-tabs__tab-list'
-            ) as HTMLElement;
-            if (tabListElement && tabListElement.offsetWidth) {
-                const menuPosition = tabListElement.scrollLeft;
-                const menuWrapperSize = tabListElement.offsetWidth || 0;
-                const targetScrollLeft = menuPosition + (left ? -menuWrapperSize : +menuWrapperSize);
-                if (menuWrapperSize) {
-                    tabListElement.scrollTo({
-                        left: targetScrollLeft,
-                        behavior: 'smooth',
-                    });
-                }
-            }
-        }
+    const handleScrollTabs = (left: boolean) => {
+        scrollTabs(tabListRef, left); // Call the scrollTabs function directly
     };
 
     return (
@@ -77,38 +39,27 @@ const TabsComponent: React.FC<TabsProps> = ({ tabs }) => {
                 className="tab-list-wrapper"
                 ref={tabListRef}
             >
-                <TabList onScrollCapture={() => handleTabScroll()}>
+                <TabList onScrollCapture={() => handleTabScroll(tabs, tabListRef, setTabState)}>
                     {tabs.map((tabItem, index) => (
                         <Tab key={index}>
                             <i className={tabItem.tabIcon}></i>
                             <span>{tabItem.tabTitle}</span>
                         </Tab>
                     ))}
-                    <div className="indicators">
-                        <a
-                            className={
-                                tabState.showLeft ? 'indicator indicator--left' : 'indicator indicator--left hidden'
-                            }
-                            onClick={() => scrollTabs(true)}
-                        >
-                            <i className="icon-md fa-solid fa-chevron-left"></i>
-                        </a>
-
-                        <a
-                            className={
-                                tabState.showRight ? 'indicator indicator--right' : 'indicator indicator--right hidden'
-                            }
-                            onClick={() => scrollTabs(false)}
-                        >
-                            <i className="icon-md fa-solid fa-chevron-right"></i>
-                        </a>
-                    </div>
+                    <TabScrollIndicators
+                        showLeft={tabState.showLeft}
+                        showRight={tabState.showRight}
+                        onScrollTabs={handleScrollTabs}
+                    />
                 </TabList>
             </div>
-
-            {tabs.map((tabPanelItem, index) => (
-                <TabPanel key={index}>{tabPanelItem.tabContent}</TabPanel>
-            ))}
+            <div className="tab-panel-wrapper">
+                {tabs.map((tabPanelItem, index) => (
+                    <TabPanel key={index}>
+                        <TabContent tabContent={tabPanelItem.tabContent} />
+                    </TabPanel>
+                ))}
+            </div>
         </Tabs>
     );
 };
