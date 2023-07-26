@@ -1,5 +1,5 @@
 import { AccordionProps } from '../interfaces/Props';
-import ParaComponent from '../components/ParaComponent';
+import ParaComponent from '../components/ParaComponent/ParaComponent';
 
 const accordionTCData: AccordionProps[] = [
     {

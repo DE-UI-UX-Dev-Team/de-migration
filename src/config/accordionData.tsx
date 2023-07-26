@@ -1,7 +1,7 @@
 import { AccordionProps } from '../interfaces/Props';
 import ToggleSwitchComponent from '../components/ToggleSwitchComponent/ToggleSwitchComponent';
 import toggleStates from '../config/toggleStates';
-import ParaComponent from '../components/ParaComponent';
+import ParaComponent from '../components/ParaComponent/ParaComponent';
 import buttonData from './buttonData';
 import ButtonItem from '../components/Buttons/ButtonItem';
 
