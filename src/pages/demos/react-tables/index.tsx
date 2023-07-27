@@ -2,14 +2,15 @@ import '../../../styles/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Table, TableRow, TableCell } from '../../../components/Tables/Table';
-import { evenlySpacedTitle, headers, rows, tableTightlySpacedTitle, transposedTitle } from '../../../config/tablesData';
+import { headers, rows } from '../../../config/tablesData';
+import { titles } from '../../../local/en/Table/constants';
 
 const App: React.FC = () => {
     return (
         <>
             <Table
                 tableClassName="table--layout-fixed"
-                title={evenlySpacedTitle}
+                title={titles.evenlySpacedTitle}
                 tbodyClassName="header-frozen"
             >
                 <TableRow trClassName="thead">
@@ -17,7 +18,7 @@ const App: React.FC = () => {
                         <TableCell
                             key={i}
                             icon={header.icon}
-                            tdTitle={header.title}
+                            tdTitle={header.tdTitle}
                         />
                     ))}
                 </TableRow>
@@ -33,14 +34,14 @@ const App: React.FC = () => {
 
             <Table
                 tableClassName="table--layout-fixed table--transpose"
-                title={transposedTitle}
+                title={titles.transposedTitle}
             >
                 <TableRow trClassName="thead">
                     {headers.map((header, i) => (
                         <TableCell
                             key={i}
                             icon={header.icon}
-                            tdTitle={header.title}
+                            tdTitle={header.tdTitle}
                         />
                     ))}
                 </TableRow>
@@ -55,14 +56,14 @@ const App: React.FC = () => {
             </Table>
 
             <Table
-                title={tableTightlySpacedTitle}
+                title={titles.tableTightlySpacedTitle}
                 tbodyClassName="header-frozen"
             >
                 <TableRow trClassName="thead">
                     {headers.map((header, i) => (
                         <TableCell
                             key={i}
-                            tdTitle={header.title}
+                            tdTitle={header.tdTitle}
                         />
                     ))}
                 </TableRow>
