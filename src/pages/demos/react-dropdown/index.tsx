@@ -5,20 +5,34 @@ import Dropdown from '../../../components/Dropdown/Dropdown';
 import { DropdownOption } from '../../../interfaces/Props';
 
 const options: DropdownOption[] = [
-    { value: 'option1', label: 'Option 1' },
+    { value: 'option1', label: 'Long Text Label' },
     { value: 'option2', label: 'Option 2' },
     { value: 'option3', label: 'Option 3' },
     { value: 'option4', label: 'Option 4' },
     { value: 'option5', label: 'Option 5' },
+    { value: 'option6', label: 'Option 6' },
+    { value: 'option7', label: 'Option 7' },
 ];
 
 const App: React.FC = () => {
     const [selectedOptionBasic, setSelectedOptionBasic] = useState<DropdownOption | null>(null);
     const [selectedOptionRequired, setSelectedOptionRequired] = useState<DropdownOption | null>(null);
+    const [selectedOptionEllipsisIcon, setSelectedOptionEllipsisIcon] = useState<DropdownOption | null>(null);
+    const [selectedOptionCircleIcon, setSelectedOptionCircleIcon] = useState<DropdownOption | null>(null);
     const [error, setError] = useState(false);
 
     const handleSelectOptionBasic = (selectedOption: DropdownOption) => {
         setSelectedOptionBasic(selectedOption);
+        setError(false);
+    };
+
+    const handleSelectOptionEllipsisIcon = (selectedOption: DropdownOption) => {
+        setSelectedOptionEllipsisIcon(selectedOption);
+        setError(false);
+    };
+
+    const handleSelectOptionCircleIcon = (selectedOption: DropdownOption) => {
+        setSelectedOptionCircleIcon(selectedOption);
         setError(false);
     };
 
@@ -41,6 +55,8 @@ const App: React.FC = () => {
     const handleReset = () => {
         setSelectedOptionBasic(null);
         setSelectedOptionRequired(null);
+        setSelectedOptionEllipsisIcon(null);
+        setSelectedOptionCircleIcon(null);
         setError(false);
     };
 
@@ -64,6 +80,22 @@ const App: React.FC = () => {
                                     onSelectOption={handleSelectOptionRequired}
                                 />
                                 {error && <div className="validation-message">Field is required </div>}
+                                <div>
+                                    <Dropdown
+                                        options={options}
+                                        selectedOption={selectedOptionCircleIcon}
+                                        onSelectOption={handleSelectOptionCircleIcon}
+                                        dropdownIcon={<i className="fa-solid fa-circle-info fa-lg"></i>}
+                                    />
+                                </div>
+                                <div>
+                                    <Dropdown
+                                        options={options}
+                                        selectedOption={selectedOptionEllipsisIcon}
+                                        onSelectOption={handleSelectOptionEllipsisIcon}
+                                        dropdownIcon={<i className="fa-regular fa-ellipsis-vertical fa-lg"></i>}
+                                    />
+                                </div>
                                 <div className="col">
                                     <button
                                         type="submit"

@@ -1,3 +1,5 @@
+import React, { ReactNode } from 'react';
+
 export interface ToggleSwitchProps {
     disabled: boolean;
     checked: boolean;
@@ -130,4 +132,5 @@ export interface DropdownProps {
     options: DropdownOption[];
     onSelectOption: (selectedOption: DropdownOption) => void;
     selectedOption?: DropdownOption | null;
+    dropdownIcon?: ReactNode;
 }
