@@ -122,6 +122,23 @@ export interface FormbtnProps {
     classNameInput?: string;
 }
 
+// Modals
+export interface ModalProps {
+    children: ReactNode;
+    header?: string;
+    containerClassName?: string;
+    columnClassName?: string;
+    btnPrimary?: string;
+    btnSecondary?: string;
+    btnCloseSecondary?: string;
+    iconClassName?: string;
+    withExclamationIcon?: ReactNode;
+    isOpen?: boolean;
+    onClose?: () => void;
+    isDisabled?: boolean;
+    shouldCloseModal?: boolean;
+}
+
 // Tables
 export interface TableProps {
     children: ReactNode;
