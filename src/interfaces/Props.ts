@@ -138,3 +138,23 @@ export interface ModalProps {
     isDisabled?: boolean;
     shouldCloseModal?: boolean;
 }
+
+
+// Tables
+export interface TableProps {
+    children: ReactNode;
+    title: string;
+    tableClassName?: string;
+    tbodyClassName?: string;
+}
+
+export interface TableRowProps {
+    children: ReactNode;
+    trClassName?: string;
+}
+
+export interface TableCellProps {
+    tdTitle: string;
+    icon?: string;
+}
+
