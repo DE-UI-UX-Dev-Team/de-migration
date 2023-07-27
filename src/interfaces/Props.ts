@@ -139,6 +139,7 @@ export interface ModalProps {
     shouldCloseModal?: boolean;
 }
 
+
 // Tables
 export interface TableProps {
     children: ReactNode;
@@ -156,3 +157,4 @@ export interface TableCellProps {
     tdTitle: string;
     icon?: string;
 }
+
