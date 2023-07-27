@@ -1,3 +1,5 @@
+import React, { ReactNode } from 'react';
+
 export interface ToggleSwitchProps {
     disabled: boolean;
     checked: boolean;
@@ -66,6 +68,7 @@ export interface TextInputProps {
     value?: string;
     required?: boolean;
     disabled?: boolean;
+    reset?: boolean;
     placeholder?: string;
     pattern?: string;
     errorMessage?: string;
@@ -81,11 +84,15 @@ export interface RadioInputProps {
     name: string;
     value: string;
     label: string;
+    reset?: boolean;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface RadioInputGroupProps {
     className: string;
     radioData: RadioInputProps[];
+    reset?: boolean;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface CheckboxProps {
@@ -95,6 +102,7 @@ export interface CheckboxProps {
     label: string;
     className?: string;
     checked?: boolean;
+    reset?: boolean;
     nestedCheckboxes?: CheckboxProps[];
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -102,6 +110,9 @@ export interface CheckboxProps {
 export interface CheckboxListProps {
     checkboxes: CheckboxProps[];
     classNameDiv: string;
+    reset?: boolean;
+    checkedMap?: Record<string, boolean>;
+    updateCheckedMap?: (newCheckedMap: Record<string, boolean>) => void;
 }
 
 export interface FormbtnProps {
@@ -109,4 +120,21 @@ export interface FormbtnProps {
     value: string;
     classNameLabel?: string;
     classNameInput?: string;
+}
+
+// Modals
+export interface ModalProps {
+    children: ReactNode;
+    header?: string;
+    containerClassName?: string;
+    columnClassName?: string;
+    btnPrimary?: string;
+    btnSecondary?: string;
+    btnCloseSecondary?: string;
+    iconClassName?: string;
+    withExclamationIcon?: ReactNode;
+    isOpen?: boolean;
+    onClose?: () => void;
+    isDisabled?: boolean;
+    shouldCloseModal?: boolean;
 }

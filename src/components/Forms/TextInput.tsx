@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TextInputProps } from '../../interfaces/Props';
 
 const TextInput: React.FC<TextInputProps> = ({
@@ -15,25 +15,48 @@ const TextInput: React.FC<TextInputProps> = ({
     classNameDiv,
     className,
     onChange,
-    value,
+    reset,
 }) => {
-    const [error, setError] = useState<string | undefined>(undefined);
+    const [inputValue, setInputValue] = useState<string | ''>('');
+    const [message, setMessage] = useState<string | undefined>(undefined);
+    const [error, setError] = useState<boolean>(false);
+    const [success, setSuccess] = useState<boolean>(false);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
+        setInputValue(inputValue);
 
         if (required && inputValue.trim() === '') {
-            setError(errorMessage || 'Please fill out this field!!');
+            setError(true);
+            setMessage('Missing input');
+            setSuccess(false);
         } else if (pattern && !new RegExp(pattern).test(inputValue)) {
-            setError(errorMessage || 'Invalid input');
+            setError(true);
+            setMessage(errorMessage || 'Invalid input');
+            setSuccess(false);
         } else {
-            setError(undefined);
+            setError(false);
+            setMessage(undefined);
+            setSuccess(true);
         }
 
         if (onChange) {
             onChange(e);
         }
     };
+
+    const resetInput = () => {
+        setInputValue('');
+        setMessage(undefined);
+        setSuccess(false);
+        setError(false);
+    };
+
+    useEffect(() => {
+        if (reset) {
+            resetInput();
+        }
+    }, [reset]);
 
     return (
         <div
@@ -52,13 +75,18 @@ const TextInput: React.FC<TextInputProps> = ({
                     required={required}
                     disabled={disabled}
                     onChange={handleInputChange}
-                    value={value}
+                    value={inputValue}
+                    className={error ? 'input-error' : success ? 'input-success' : ''}
                 />
                 {showIcon && <i className="fak fa-location-dot-solid"></i>}
-                {error && <div className="validation-message">{error}</div>}
+                {error && <div className="validation-message ">{message}</div>}
+                {success && <div className="clr--success-element">Entry Successful</div>}
                 <span>{label}</span>
                 {showResetButton && (
-                    <button className="btn--tertiary">
+                    <button
+                        className="btn--tertiary"
+                        onClick={resetInput}
+                    >
                         <i className="fak fa-circle-xmark-solid"></i>
                     </button>
                 )}

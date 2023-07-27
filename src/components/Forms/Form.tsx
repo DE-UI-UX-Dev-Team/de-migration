@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TextInput from './TextInput';
 import RadioInputGroup from './RadioInput';
 import CheckboxList from './CheckboxInput';
@@ -19,30 +19,55 @@ import {
 import Formbtn from './Formbtn';
 
 export const SampleForm: React.FC = () => {
-    const initialFormValues = {
-        firstname: '',
-        lastname: '',
-        date: '',
-        address: '',
+    const [reset, setReset] = useState(false);
+    const [radioSelectedValue, setRadioSelectedValue] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [checkboxError, setCheckboxError] = useState(false);
+    const [checkedMap, setCheckedMap] = useState({});
+
+    const updateCheckedMap = (newCheckedMap: Record<string, boolean>) => {
+        setCheckedMap(newCheckedMap);
     };
-    const [values, setValues] = useState<{
-        [key: string]: string;
-        firstname: string;
-        lastname: string;
-        date: string;
-        address: string;
-    }>(initialFormValues);
+
+    const areAllValuesFalse = Object.values(checkedMap).every((value) => value === false);
+
+    useEffect(() => {
+        if (areAllValuesFalse && checkboxError) {
+            setCheckboxError(true);
+        } else {
+            setCheckboxError(false);
+        }
+
+        if (reset) {
+            setReset(false);
+        }
+    }, [checkedMap, checkboxError, reset]);
+
+    const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setRadioSelectedValue(event.target.value);
+        setErrorMessage('');
+    };
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-    };
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValues({ ...values, [e.target.name]: e.target.value });
+        if (radioSelectedValue === '') {
+            setErrorMessage('Select one item from the list below');
+            return;
+        }
+
+        if (areAllValuesFalse) {
+            setCheckboxError(true);
+        } else {
+            setCheckboxError(false);
+        }
     };
 
     const handleReset = () => {
-        setValues(initialFormValues);
+        setReset(true);
+        setCheckboxError(false);
+        setRadioSelectedValue('');
+        setErrorMessage('');
     };
 
     return (
@@ -62,21 +87,30 @@ export const SampleForm: React.FC = () => {
                                 <TextInput
                                     key={input.id}
                                     {...input}
-                                    value={values[input.name]}
-                                    onChange={onChange}
+                                    reset={reset}
                                 />
                             ))}
 
                             <div className="col--md-4">
+                                {errorMessage && <span className="error-message">{errorMessage}</span>}
+
                                 <RadioInputGroup
                                     className="mg-l--0"
                                     radioData={radioSampleForm}
+                                    reset={reset}
+                                    onChange={handleRadioChange}
                                 />
                             </div>
                             <div className="col--md-4">
+                                {checkboxError && (
+                                    <span className="error-message">Please select at least one checkbox.</span>
+                                )}
                                 <CheckboxList
                                     checkboxes={CheckboxesSampleFormNested}
                                     classNameDiv="mg-l--0"
+                                    reset={reset}
+                                    checkedMap={checkedMap}
+                                    updateCheckedMap={updateCheckedMap}
                                 />
                             </div>
                             <div className="col">

@@ -118,22 +118,33 @@ select,
 
     // Error Status
 
-    .validation-message {
+    .validation-message,
+    .clr--success-element {
         position: absolute;
         font-size: var(--input--font-size--md);
         bottom: calc(var(--input--base-padding) * -1.5);
     }
 
-    &.has-lead-icon .validation-message {
+    &.has-lead-icon .validation-message,
+    .has-lead-icon .clr--success-element {
         margin-left: calc(var(--input--base-padding) * -1.5);
     }
 
-    &.has-lead-icon .validation-message:before {
+    &.has-lead-icon .validation-message:before,
+    .has-lead-icon .clr--success-element:before {
         font-size: var(--input--font-size--md);
     }
 
     .validation-message:before {
         content: '\e16b';
+    }
+
+    .clr--success-element:before {
+        content: '\e158';
+    }
+
+    .validation-message:before,
+    .clr--success-element:before {
         padding-right: calc(var(--input--base-padding) / 2);
         font-size: var(--input--font-size--md);
         line-height: var(--input--font-size--md);
@@ -308,6 +319,28 @@ select,
     }
 }
 
+//CheckLists error message
+
+.error-message,
+.error-message:before {
+    color: var(--error-element);
+    font-size: var(--input--font-size--md);
+    bottom: calc(var(--input--base-padding) * -1.5);
+}
+.error-message:before {
+    content: '\e16b';
+    padding-right: calc(var(--input--base-padding) / 2);
+    font-size: var(--input--font-size--md);
+    line-height: var(--input--font-size--md);
+    font-family: 'Font Awesome Kit';
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+}
+
 // Form Lists
 
 form {
@@ -362,6 +395,10 @@ fieldset[disabled] {
     border-color: var(--error-element);
 }
 
+.input-success {
+    border-color: var(--success-element);
+}
+
 .wrap--text-input {
     background-color: var(--secondary-light-2);
 
@@ -399,6 +436,10 @@ fieldset[disabled] {
 
     input.input-error:not(:placeholder-shown) {
         border-color: var(--error-element);
+    }
+
+    input.input-success:not(:placeholder-shown) {
+        border-color: var(--success-element);
     }
 }
 
