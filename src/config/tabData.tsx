@@ -1,6 +1,6 @@
-import { TabImageContentProps, TabProps, TabColumnGroupProps, ParaGroupProps } from '../interfaces/Props';
+import { ImageContentGroupProps, TabProps, ColContentGroupProps } from '../interfaces/Props';
 
-export const tabData: TabProps<TabImageContentProps['tabContent']>[] = [
+export const tabData: TabProps<ImageContentGroupProps['tabContent']>[] = [
     {
         tabIcon: '',
         tabTitle: 'Step1',
@@ -96,12 +96,13 @@ export const tabData: TabProps<TabImageContentProps['tabContent']>[] = [
     },
 ];
 
-export const tabDataWithIcon: TabProps<TabImageContentProps['tabContent']>[] = [
+export const tabDataWithIcon: TabProps<ImageContentGroupProps['tabContent']>[] = [
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
         tabTitle: 'Step1',
         tabContent: [
             {
+                colReverse: true,
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_protect_mainenance_calculate.png',
                 contentHeading: 'What is the Sample?',
                 contentSubHeading: 'Sample',
@@ -141,6 +142,7 @@ export const tabDataWithIcon: TabProps<TabImageContentProps['tabContent']>[] = [
         tabTitle: 'Energy',
         tabContent: [
             {
+                colReverse: true,
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 contentHeading: 'What is the Internet of Things?',
                 contentSubHeading: 'IoT',
@@ -191,19 +193,26 @@ export const tabDataWithIcon: TabProps<TabImageContentProps['tabContent']>[] = [
     },
 ];
 
-export const tabDataWithBlock: TabProps<ParaGroupProps['tabContent']>[] = [
+export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
         tabTitle: 'Step1',
         tabContent: [
             {
-                text: 'Annual Energy Usage: 1200 kWh',
+                divColClassName: 'col',
+                contentPara: 'Annual Energy Usage: 1200 kWh',
             },
             {
-                text: 'TDU Charges (both fixed and usage-based: $5.00/month',
+                divColClassName: 'col',
+                contentPara: 'Unpaid Balance (if applicable): $50.00',
             },
             {
-                text: 'Energy Rate Per kWh: $0.10',
+                divColClassName: 'col',
+                contentPara: 'Energy Rate Per kWh: $0.10',
+            },
+            {
+                divColClassName: 'col',
+                contentPara: 'Unpaid Balance (if applicable): $50.00',
             },
         ],
     },
@@ -212,16 +221,13 @@ export const tabDataWithBlock: TabProps<ParaGroupProps['tabContent']>[] = [
         tabTitle: 'Step2',
         tabContent: [
             {
-                text: 'TDU Charges (both fixed and usage-based: $5.00/month',
+                divColClassName: 'col',
+                contentPara: 'Annual Energy Usage: 1200 kWh',
             },
+
             {
-                text: 'Unpaid Balance (if applicable): $60.00',
-            },
-            {
-                text: 'Energy Rate Per kWh: $0.20',
-            },
-            {
-                text: 'Annual Energy Usage: 1500 kWh',
+                divColClassName: 'col',
+                contentPara: 'Energy Rate Per kWh: $0.10',
             },
         ],
     },
@@ -230,16 +236,16 @@ export const tabDataWithBlock: TabProps<ParaGroupProps['tabContent']>[] = [
         tabTitle: 'Step3',
         tabContent: [
             {
-                text: 'Annual Energy Usage: 1200 kWh',
+                divColClassName: 'col',
+                contentPara: 'Annual Energy Usage: 1200 kWh',
             },
             {
-                text: 'Unpaid Balance (if applicable): $50.00',
+                divColClassName: 'col',
+                contentPara: 'Unpaid Balance (if applicable): $50.00',
             },
             {
-                text: 'Energy Rate Per kWh: $0.10',
-            },
-            {
-                text: 'Annual Energy Usage: 1500 kWh',
+                divColClassName: 'col',
+                contentPara: 'Energy Rate Per kWh: $0.10',
             },
         ],
     },
@@ -248,13 +254,16 @@ export const tabDataWithBlock: TabProps<ParaGroupProps['tabContent']>[] = [
         tabTitle: 'Step4',
         tabContent: [
             {
-                text: 'Annual Energy Usage: 1200 kWh',
+                divColClassName: 'col',
+                contentPara: 'Annual Energy Usage: 1200 kWh',
             },
             {
-                text: 'Unpaid Balance (if applicable): $50.00',
+                divColClassName: 'col',
+                contentPara: 'Unpaid Balance (if applicable): $50.00',
             },
             {
-                text: 'Energy Rate Per kWh: $0.10',
+                divColClassName: 'col',
+                contentPara: 'Energy Rate Per kWh: $0.10',
             },
         ],
     },
@@ -263,25 +272,28 @@ export const tabDataWithBlock: TabProps<ParaGroupProps['tabContent']>[] = [
         tabTitle: 'Step5',
         tabContent: [
             {
-                text: 'Annual Energy Usage: 1200 kWh',
+                divColClassName: 'col',
+                contentPara: 'Annual Energy Usage: 1200 kWh',
             },
             {
-                text: 'Unpaid Balance (if applicable): $50.00',
+                divColClassName: 'col',
+                contentPara: 'Unpaid Balance (if applicable): $50.00',
             },
             {
-                text: 'Energy Rate Per kWh: $0.10',
+                divColClassName: 'col',
+                contentPara: 'Energy Rate Per kWh: $0.10',
             },
         ],
     },
 ];
 
-export const tabDataWithBlockColumns: TabProps<TabColumnGroupProps['tabContent']>[] = [
+export const tabDataColumns: TabProps<ColContentGroupProps['tabContent']>[] = [
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
         tabTitle: 'Electric Utilities',
         tabContent: [
             {
-                divColClassName: 'col--md-4 col--lg-3',
+                divColClassName: 'col--md-4 col--lg-3 fs--text-center',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Utility Company Name',
@@ -289,7 +301,7 @@ export const tabDataWithBlockColumns: TabProps<TabColumnGroupProps['tabContent']
                 phoneRef: 'tel:123-335-3333',
             },
             {
-                divColClassName: 'col--md-4 col--lg-3',
+                divColClassName: 'col--md-4 col--lg-3 fs--text-center',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Utility Company Name',
@@ -297,7 +309,7 @@ export const tabDataWithBlockColumns: TabProps<TabColumnGroupProps['tabContent']
                 phoneRef: 'tel:123-335-3333',
             },
             {
-                divColClassName: 'col--md-4 col--lg-3',
+                divColClassName: 'col--md-4 col--lg-3 fs--text-center',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Utility Company Name',
@@ -305,7 +317,7 @@ export const tabDataWithBlockColumns: TabProps<TabColumnGroupProps['tabContent']
                 phoneRef: 'tel:123-335-3333',
             },
             {
-                divColClassName: 'col--md-4 col--lg-3',
+                divColClassName: 'col--md-4 col--lg-3 fs--text-center',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Utility Company Name',
@@ -319,7 +331,7 @@ export const tabDataWithBlockColumns: TabProps<TabColumnGroupProps['tabContent']
         tabTitle: 'Natural Gas Utilities',
         tabContent: [
             {
-                divColClassName: 'col--md-4 col--lg-3',
+                divColClassName: 'col--md-4 col--lg-3 fs--text-center',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Natural Gas Company Name',
@@ -327,14 +339,14 @@ export const tabDataWithBlockColumns: TabProps<TabColumnGroupProps['tabContent']
                 phoneRef: 'tel:123-335-3333',
             },
             {
-                divColClassName: 'col--md-4 col--lg-3',
+                divColClassName: 'col--md-4 col--lg-3 fs--text-center',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Natural Gas Company Name',
                 phone: '123-335-3333',
             },
             {
-                divColClassName: 'col--md-4 col--lg-3',
+                divColClassName: 'col--md-4 col--lg-3 fs--text-center',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Natural Gas Company Name',
@@ -342,7 +354,7 @@ export const tabDataWithBlockColumns: TabProps<TabColumnGroupProps['tabContent']
                 phoneRef: 'tel:123-335-3333',
             },
             {
-                divColClassName: 'col--md-4 col--lg-3',
+                divColClassName: 'col--md-4 col--lg-3 fs--text-center',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Natural Gas Company Name',

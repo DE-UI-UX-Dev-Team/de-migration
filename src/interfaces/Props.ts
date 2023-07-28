@@ -258,32 +258,34 @@ export interface TabProps<tabContentType> {
 }
 
 export interface ImageContentProps {
+    colReverse?: boolean;
     imgSrc?: string;
     imgDesc?: string;
     contentHeading?: string;
     contentSubHeading?: string;
     contentPara?: string;
 }
-export interface TabImageContentProps {
+
+export interface ImageContentGroupProps {
     tabContent: ImageContentProps[];
 }
 
-export interface TabColumnProps {
+export interface ColContentProps {
     divColClassName?: string;
     imgSrc?: string;
     imgDesc?: string;
     contentHeading?: string;
+    contentPara?: string;
     phone?: string;
     phoneRef?: string;
 }
-export interface TabColumnGroupProps {
-    tabContent: TabColumnProps[];
+
+export interface ColContentGroupProps {
+    tabContent: ColContentProps[];
 }
-export interface ParaProps {
+
+export interface SampleTextProps {
     text: string;
-}
-export interface ParaGroupProps {
-    tabContent: ParaProps[];
 }
 
 // Tables
