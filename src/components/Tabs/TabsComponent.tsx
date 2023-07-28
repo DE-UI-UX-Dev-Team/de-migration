@@ -56,7 +56,14 @@ const TabsComponent: React.FC<TabsProps<any>> = ({ tabs, tabContent: TabContent 
             <div className="tab-panel-wrapper">
                 {tabs.map((tabPanelItem, index) => (
                     <TabPanel key={index}>
-                        <TabContent tabContent={tabPanelItem.tabContent} />
+                        <div className="row">
+                            {tabPanelItem.tabContent.map((tabContentItem: any, tabContentindex: any) => (
+                                <TabContent
+                                    key={tabContentindex}
+                                    {...tabContentItem}
+                                />
+                            ))}
+                        </div>
                     </TabPanel>
                 ))}
             </div>
