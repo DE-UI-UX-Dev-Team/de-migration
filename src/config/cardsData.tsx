@@ -140,7 +140,7 @@ export const cardsbodyright: CardProps[] = [
         title,
         description: `${descriptionShort}`,
         cardDivClassName: 'col--lg-4 card-container',
-        cardClassName: 'card',
+        cardClassName: 'card ',
         buttonClassName: 'btn--tertiary',
     },
     {
@@ -148,7 +148,7 @@ export const cardsbodyright: CardProps[] = [
         title,
         description: `${descriptionMedium}`,
         cardDivClassName: 'col--lg-4 card-container',
-        cardClassName: 'card',
+        cardClassName: 'card ',
         buttonClassName: 'btn--tertiary',
     },
     {
@@ -156,7 +156,7 @@ export const cardsbodyright: CardProps[] = [
         title,
         description: `${descriptionLong}`,
         cardDivClassName: 'col--lg-4 card-container',
-        cardClassName: 'card',
+        cardClassName: 'card ',
         buttonClassName: 'btn--tertiary',
     },
 ];
