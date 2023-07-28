@@ -285,3 +285,21 @@ export interface ParaProps {
 export interface ParaGroupProps {
     tabContent: ParaProps[];
 }
+
+// Tables
+export interface TableProps {
+    children: ReactNode;
+    title: string;
+    tableClassName?: string;
+    tbodyClassName?: string;
+}
+
+export interface TableRowProps {
+    children: ReactNode;
+    trClassName?: string;
+}
+
+export interface TableCellProps {
+    tdTitle: string;
+    icon?: string;
+}
