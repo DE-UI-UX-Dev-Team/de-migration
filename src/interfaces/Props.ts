@@ -269,13 +269,14 @@ export interface TabImageContentProps {
 }
 
 export interface TabColumnProps {
+    divColClassName?: string;
     imgSrc?: string;
     imgDesc?: string;
     contentHeading?: string;
     phone?: string;
     phoneRef?: string;
 }
-export interface Tab4ColumnProps {
+export interface TabColumnGroupProps {
     tabContent: TabColumnProps[];
 }
 export interface ParaProps {

@@ -1,4 +1,4 @@
-import { TabImageContentProps, TabProps, Tab4ColumnProps, ParaGroupProps } from '../interfaces/Props';
+import { TabImageContentProps, TabProps, TabColumnGroupProps, ParaGroupProps } from '../interfaces/Props';
 
 export const tabData: TabProps<TabImageContentProps['tabContent']>[] = [
     {
@@ -275,12 +275,13 @@ export const tabDataWithBlock: TabProps<ParaGroupProps['tabContent']>[] = [
     },
 ];
 
-export const tabDataWithBlockColumns: TabProps<Tab4ColumnProps['tabContent']>[] = [
+export const tabDataWithBlockColumns: TabProps<TabColumnGroupProps['tabContent']>[] = [
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
         tabTitle: 'Electric Utilities',
         tabContent: [
             {
+                divColClassName: 'col--md-4 col--lg-3',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Utility Company Name',
@@ -288,6 +289,7 @@ export const tabDataWithBlockColumns: TabProps<Tab4ColumnProps['tabContent']>[] 
                 phoneRef: 'tel:123-335-3333',
             },
             {
+                divColClassName: 'col--md-4 col--lg-3',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Utility Company Name',
@@ -295,6 +297,7 @@ export const tabDataWithBlockColumns: TabProps<Tab4ColumnProps['tabContent']>[] 
                 phoneRef: 'tel:123-335-3333',
             },
             {
+                divColClassName: 'col--md-4 col--lg-3',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Utility Company Name',
@@ -302,6 +305,7 @@ export const tabDataWithBlockColumns: TabProps<Tab4ColumnProps['tabContent']>[] 
                 phoneRef: 'tel:123-335-3333',
             },
             {
+                divColClassName: 'col--md-4 col--lg-3',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Utility Company Name',
@@ -315,6 +319,7 @@ export const tabDataWithBlockColumns: TabProps<Tab4ColumnProps['tabContent']>[] 
         tabTitle: 'Natural Gas Utilities',
         tabContent: [
             {
+                divColClassName: 'col--md-4 col--lg-3',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Natural Gas Company Name',
@@ -322,12 +327,14 @@ export const tabDataWithBlockColumns: TabProps<Tab4ColumnProps['tabContent']>[] 
                 phoneRef: 'tel:123-335-3333',
             },
             {
+                divColClassName: 'col--md-4 col--lg-3',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Natural Gas Company Name',
                 phone: '123-335-3333',
             },
             {
+                divColClassName: 'col--md-4 col--lg-3',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Natural Gas Company Name',
@@ -335,6 +342,7 @@ export const tabDataWithBlockColumns: TabProps<Tab4ColumnProps['tabContent']>[] 
                 phoneRef: 'tel:123-335-3333',
             },
             {
+                divColClassName: 'col--md-4 col--lg-3',
                 imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
                 imgDesc: 'sd',
                 contentHeading: 'Natural Gas Company Name',

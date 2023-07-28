@@ -1,9 +1,16 @@
 import React from 'react';
 import { TabProps, TabColumnProps } from '../../interfaces/Props';
 
-const TabContentColumn: React.FC<TabColumnProps> = ({ imgSrc, imgDesc, contentHeading, phone, phoneRef }) => {
+const TabContentColumn: React.FC<TabColumnProps> = ({
+    divColClassName,
+    imgSrc,
+    imgDesc,
+    contentHeading,
+    phone,
+    phoneRef,
+}) => {
     return (
-        <div className="col--md-4 col--lg-3">
+        <div className={divColClassName}>
             <img
                 src={imgSrc}
                 className="img-xs"

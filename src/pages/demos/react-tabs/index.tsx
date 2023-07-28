@@ -1,14 +1,9 @@
-import $ from 'jquery';
 import React, { useEffect } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ReactDOM from 'react-dom';
 import TabsComponent from '../../../components/Tabs/TabsComponent';
 import { tabData, tabDataWithIcon, tabDataWithBlockColumns, tabDataWithBlock } from '../../../config/tabData';
-import ImageLeftContentRight from '../../../components/ImageContent/ImageLeftContentRight';
-
 import '../../../styles/main.scss';
-import TabContent4Column from '../../../components/TabContent4Column/TabContent4Column';
-import TabContentColumn from '../../../components/TabContent4Column/TabContentColumn';
+import TabContentColumnGroup from '../../../components/TabContent4Column/TabContentColumnGroup';
 import ImageLeftContentRightGroup from '../../../components/ImageContent/ImageLeftContentRightGroup';
 import ParaGroup from '../../../components/ParaComponent/ParaGroup';
 
@@ -64,7 +59,7 @@ const App: React.FC = () => {
                         <div>
                             <TabsComponent
                                 tabs={tabDataWithBlockColumns}
-                                tabContent={TabContent4Column}
+                                tabContent={TabContentColumnGroup}
                             />
                             ;
                         </div>
