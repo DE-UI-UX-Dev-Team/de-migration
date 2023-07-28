@@ -1,35 +1,45 @@
 // Modal open & close functions
 
-function openModal(modalId) {
-    const modalDiv = document.getElementById('modal-containers');
+const openModalIds = [
+    'basic-modal',
+    'confirm-modal',
+    'form-modal',
+    'location-modal',
+    'no-service-modal',
+    'autopay-modal',
+];
+
+const closeModalIds = ['basic-modal', 'location-modal', 'autopay-modal'];
+
+const modalDiv = document.getElementById('modal-containers');
+
+function setModalValues(modalId, modalValue) {
     const modal = document.getElementById(modalId);
-    modalDiv.style.display = 'block';
-    modal.style.display = 'block';
+    modalDiv.style.display = modalValue;
+    modal.style.display = modalValue;
+}
+
+function openModal(modalId) {
+    setModalValues(modalId, 'block');
 }
 
 function closeModal(modalId) {
-    const modalDiv = document.getElementById('modal-containers');
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'none';
-    modalDiv.style.display = 'none';
+    setModalValues(modalId, 'none');
 }
 
-document.querySelectorAll('[data-modal]').forEach((button) => {
-    button.addEventListener('click', function () {
-        const modalId = this.getAttribute('data-modal');
-        openModal(modalId);
+function setModalAction(action) {
+    document.querySelectorAll('[data-modal]').forEach((button) => {
+        button.addEventListener('click', function () {
+            const modalId = this.getAttribute('data-modal');
+            action(modalId);
+        });
     });
-});
+}
 
-document.querySelectorAll('[data-modal]').forEach((button) => {
-    button.addEventListener('click', function () {
-        const modalId = this.getAttribute('data-modal');
-        closeModal(modalId);
-    });
-});
+setModalAction(openModal);
+setModalAction(closeModal);
 
 document.addEventListener('click', function (event) {
-    const modalDiv = document.getElementById('modal-containers');
     const openButtons = Array.from(document.querySelectorAll('[data-modal]'));
     const openButtonIds = openButtons.map((button) => button.id);
 
@@ -42,36 +52,22 @@ document.addEventListener('click', function (event) {
             !openButtonIds.includes(event.target.id) &&
             modal.style.display !== 'none'
         ) {
-            modal.style.display = 'none';
-            modalDiv.style.display = 'none';
+            setModalValues(modalId, 'none');
         }
     });
 });
 
-const openModalIds = [
-    'basic-modal',
-    'confirm-modal',
-    'form-modal',
-    'location-modal',
-    'no-service-modal',
-    'autopay-modal',
-];
+function toggleModal(ids, action, attribute) {
+    ids.forEach((id) => {
+        const button = document.querySelector(`[${attribute}="${id}"]`);
+        if (button) {
+            button.addEventListener('click', () => action(id));
+        }
+    });
+}
 
-openModalIds.forEach((id) => {
-    const openButton = document.querySelector(`[data-modal="${id}"]`);
-    if (openButton) {
-        openButton.addEventListener('click', () => openModal(id));
-    }
-});
-
-const closeModalIds = ['basic-modal', 'location-modal', 'autopay-modal'];
-
-closeModalIds.forEach((id) => {
-    const closeButton = document.querySelector(`[data-modal-close="${id}"]`);
-    if (closeButton) {
-        closeButton.addEventListener('click', () => closeModal(id));
-    }
-});
+toggleModal(openModalIds, openModal, 'data-modal');
+toggleModal(closeModalIds, closeModal, 'data-modal-close');
 
 // Form Validation
 
