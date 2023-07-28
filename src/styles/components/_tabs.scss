@@ -13,7 +13,7 @@
         overflow-x: scroll;
         overflow-y: hidden;
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: #{$v-spacing--150} 0;
         border-bottom: 1px solid var(--black-base);
         -webkit-overflow-scrolling: touch;
@@ -43,6 +43,7 @@
 
         @include mediaQuery('desktop-up') {
             overflow-x: hidden; //remove the scrollable cards on desktop and higher screens
+            justify-content: space-around;
 
             .indicators {
                 display: none;
