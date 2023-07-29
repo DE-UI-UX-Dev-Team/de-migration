@@ -1,7 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { DropdownOption, DropdownProps } from '../../interfaces/Props';
 
-const Dropdown: React.FC<DropdownProps> = ({ options, onSelectOption, selectedOption, dropdownIcon }) => {
+const Dropdown: React.FC<DropdownProps> = ({
+    options,
+    onSelectOption,
+    selectedOption,
+    dropdownIcon,
+    dropdownInput,
+}) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -36,19 +42,25 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onSelectOption, selectedOp
             <p>Square Feet</p>
             <div
                 ref={dropdownRef}
-                className={`dropdown ${dropdownIcon ? 'dropdown-icon' : ''} ${isOpen ? 'open' : ''}${
-                    selectedOption ? 'completed' : ''
-                }`}
+                className={` ${dropdownIcon ? 'dropdown-icon' : dropdownInput ? 'dropdown-input' : 'dropdown'}`}
             >
                 {dropdownIcon ? (
                     <div onClick={handleDropdownClick}>{dropdownIcon}</div>
+                ) : dropdownInput ? (
+                    <div onClick={handleDropdownClick}>{dropdownInput}</div>
                 ) : (
                     <div
-                        className="selected-option"
+                        className={`selected-option ${isOpen ? 'open' : ''} ${selectedOption ? 'completed' : ''}`}
                         onClick={handleDropdownClick}
                     >
-                        <div> {selectedOption ? selectedOption.label : 'Select Option'}</div>
-                        <i className="fa-regular fa-angle-up fa-lg"></i>
+                        <div className="completed-option">
+                            {selectedOption ? selectedOption.label : 'Select Option'}
+                        </div>
+                        {isOpen ? (
+                            <i className="fa-regular fa-angle-down fa-lg"></i>
+                        ) : (
+                            <i className="fa-regular fa-angle-up fa-lg"></i>
+                        )}
                     </div>
                 )}
                 {isOpen && (
@@ -59,7 +71,8 @@ const Dropdown: React.FC<DropdownProps> = ({ options, onSelectOption, selectedOp
                                 className={`option ${selectedOption === option ? 'selected' : ''}`}
                                 onClick={() => handleOptionClick(option)}
                             >
-                                {option.label}
+                                <div>{option.label}</div>
+                                {selectedOption === option && <i className="fa-regular fa-check "></i>}
                             </li>
                         ))}
                     </ul>
