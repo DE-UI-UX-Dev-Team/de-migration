@@ -1,4 +1,5 @@
-export const mainTitle = ['1. Dropdowns - BG Light', '2. Dropdowns - BG Dark'];
+export const mainTitle = { titleLight: '1. Dropdowns - BG Light', titleDark: '2. Dropdowns - BG Dark' };
+
 export const btnInput = 'Dropdown Button';
 export const btnSubmit = 'Submit';
 export const btnReset = 'Reset';
