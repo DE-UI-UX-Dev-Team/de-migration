@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { DropdownOption, DropdownProps } from '../../interfaces/Props';
+import { dropdownLabel, selectContent } from '../../local/en/dropdowns/constants';
 
 const Dropdown: React.FC<DropdownProps> = ({
     options,
@@ -39,7 +40,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
     return (
         <>
-            <p>Square Feet</p>
+            <p>{dropdownLabel}</p>
             <div
                 ref={dropdownRef}
                 className={` ${dropdownIcon ? 'dropdown-icon' : dropdownInput ? 'dropdown-input' : 'dropdown'}`}
@@ -54,7 +55,7 @@ const Dropdown: React.FC<DropdownProps> = ({
                         onClick={handleDropdownClick}
                     >
                         <div className="completed-option">
-                            {selectedOption ? selectedOption.label : 'Select Option'}
+                            {selectedOption ? selectedOption.label : `${selectContent}`}
                         </div>
                         {isOpen ? (
                             <i className="fa-regular fa-angle-down fa-lg"></i>

@@ -2,222 +2,124 @@ import '../../../styles/main.scss';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Dropdown from '../../../components/Dropdowns/Dropdown';
-import { DropdownOption } from '../../../interfaces/Props';
-
-const optionsLong: DropdownOption[] = [
-    { value: 'option1', label: 'Long Text Label' },
-    { value: 'option2', label: 'Option 2' },
-    { value: 'option3', label: 'Option 3' },
-    { value: 'option4', label: 'Option 4' },
-    { value: 'option5', label: 'Option 5' },
-    { value: 'option6', label: 'Option 6' },
-    { value: 'option7', label: 'Option 7' },
-];
-
-const optionsShort: DropdownOption[] = [
-    { value: 'option1', label: 'option1' },
-    { value: 'option2', label: 'Option 2' },
-    { value: 'option3', label: 'Option 3' },
-];
+import { DropdownOption, DropdownOptions } from '../../../interfaces/Props';
+import { btnInput, btnReset, btnSubmit, mainTitle } from '../../../local/en/dropdowns/constants';
+import { optionsLong, optionsShort } from '../../../config/dropdownData';
 
 const App: React.FC = () => {
-    const [selectedOptionBasic, setSelectedOptionBasic] = useState<DropdownOption | null>(null);
-    const [selectedOptionRequired, setSelectedOptionRequired] = useState<DropdownOption | null>(null);
-    const [selectedOptionEllipsisIcon, setSelectedOptionEllipsisIcon] = useState<DropdownOption | null>(null);
-    const [selectedOptionCircleIcon, setSelectedOptionCircleIcon] = useState<DropdownOption | null>(null);
+    const [dropdownOptions, setDropdownOptions] = useState<DropdownOptions>({
+        basic: null,
+        required: null,
+        ellipsisIcon: null,
+        circleIcon: null,
+    });
+
     const [error, setError] = useState(false);
 
-    const handleSelectOptionBasic = (selectedOption: DropdownOption) => {
-        setSelectedOptionBasic(selectedOption);
-        setError(false);
-    };
-
-    const handleSelectOptionEllipsisIcon = (selectedOption: DropdownOption) => {
-        setSelectedOptionEllipsisIcon(selectedOption);
-        setError(false);
-    };
-
-    const handleSelectOptionCircleIcon = (selectedOption: DropdownOption) => {
-        setSelectedOptionCircleIcon(selectedOption);
-        setError(false);
-    };
-
-    const handleSelectOptionRequired = (selectedOption: DropdownOption | null) => {
-        if (!selectedOption) {
-            setError(true);
-        } else {
-            setError(false);
-            setSelectedOptionRequired(selectedOption);
-        }
+    const handleSelectOption = (type: keyof DropdownOptions, selectedOption: DropdownOption | null) => {
+        setDropdownOptions((prevOptions) => ({ ...prevOptions, [type]: selectedOption }));
+        setError(type === 'required' && !selectedOption);
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if (!selectedOptionRequired) {
+        if (!dropdownOptions.required) {
             setError(true);
         }
     };
 
     const handleReset = () => {
-        setSelectedOptionBasic(null);
-        setSelectedOptionRequired(null);
-        setSelectedOptionEllipsisIcon(null);
-        setSelectedOptionCircleIcon(null);
+        setDropdownOptions({
+            basic: null,
+            required: null,
+            ellipsisIcon: null,
+            circleIcon: null,
+        });
         setError(false);
     };
 
     return (
         <>
-            <section>
-                <h2 className="fs--text-center">1. Dropdowns - BG Light</h2>
-                <div className="container max-width--md">
-                    <form
-                        onSubmit={handleSubmit}
-                        onReset={handleReset}
-                    >
-                        <div className="row">
-                            <div className="dropdown-basic col--md-4">
-                                <Dropdown
-                                    options={optionsLong}
-                                    selectedOption={selectedOptionBasic}
-                                    onSelectOption={handleSelectOptionBasic}
-                                />
-                            </div>
-                            <div className="dropdown-requried col--md-4">
-                                <Dropdown
-                                    options={optionsLong}
-                                    selectedOption={selectedOptionRequired}
-                                    onSelectOption={handleSelectOptionRequired}
-                                />
-                                {error && <div className="validation-message">Field is required </div>}
-                            </div>
+            {mainTitle.map((headerText, index) => (
+                <section
+                    key={index}
+                    className={index === 1 ? 'bg--tertiary-base' : ''}
+                >
+                    <h2 className="fs--text-center">{headerText}</h2>
+                    <div className="container max-width--md">
+                        <form
+                            onSubmit={handleSubmit}
+                            onReset={handleReset}
+                        >
+                            <div className="row">
+                                <div className="dropdown-basic col--md-4">
+                                    <Dropdown
+                                        options={optionsLong}
+                                        selectedOption={dropdownOptions.basic}
+                                        onSelectOption={(option) => handleSelectOption('basic', option)}
+                                    />
+                                </div>
+                                <div className="dropdown-requried col--md-4">
+                                    <Dropdown
+                                        options={optionsLong}
+                                        selectedOption={dropdownOptions.required}
+                                        onSelectOption={(option) => handleSelectOption('required', option)}
+                                    />
+                                    {error && <div className="validation-message">Field is required </div>}
+                                </div>
 
-                            <div className="dropdown-input-button col--md-odd-3 ">
-                                <Dropdown
-                                    options={optionsShort}
-                                    selectedOption={selectedOptionEllipsisIcon}
-                                    onSelectOption={handleSelectOptionEllipsisIcon}
-                                    dropdownInput={
-                                        <input
-                                            className="btn--tertiary"
-                                            type="button"
-                                            value="Dropdown Button"
-                                        />
-                                    }
-                                />
-                            </div>
-                            <div className="dropdown-icon-button col--md-odd-3 col--sm-2">
-                                <Dropdown
-                                    options={optionsShort}
-                                    selectedOption={selectedOptionCircleIcon}
-                                    onSelectOption={handleSelectOptionCircleIcon}
-                                    dropdownIcon={<i className="fa-circle-info-solid fak "></i>}
-                                />
-                            </div>
-                            <div className="dropdown-icon-button col--md-odd-3 col--sm-2">
-                                <Dropdown
-                                    options={optionsLong}
-                                    selectedOption={selectedOptionEllipsisIcon}
-                                    onSelectOption={handleSelectOptionEllipsisIcon}
-                                    dropdownIcon={<i className="fa-regular fa-ellipsis-vertical"></i>}
-                                />
-                            </div>
+                                <div className="dropdown-input-button col--md-odd-3 ">
+                                    <Dropdown
+                                        options={optionsShort}
+                                        selectedOption={dropdownOptions.ellipsisIcon}
+                                        onSelectOption={(option) => handleSelectOption('ellipsisIcon', option)}
+                                        dropdownInput={
+                                            <input
+                                                className="btn--tertiary"
+                                                type="button"
+                                                value={btnInput}
+                                            />
+                                        }
+                                    />
+                                </div>
+                                <div className="dropdown-icon-button col--md-odd-3 col--sm-2">
+                                    <Dropdown
+                                        options={optionsShort}
+                                        selectedOption={dropdownOptions.circleIcon}
+                                        onSelectOption={(option) => handleSelectOption('circleIcon', option)}
+                                        dropdownIcon={<i className="fa-circle-info-solid fak "></i>}
+                                    />
+                                </div>
+                                <div className="dropdown-icon-button col--md-odd-3 col--sm-2">
+                                    <Dropdown
+                                        options={optionsLong}
+                                        selectedOption={dropdownOptions.ellipsisIcon}
+                                        onSelectOption={(option) => handleSelectOption('ellipsisIcon', option)}
+                                        dropdownIcon={<i className="fa-regular fa-ellipsis-vertical"></i>}
+                                    />
+                                </div>
 
-                            <div className="col fs--text-center">
-                                <div>
-                                    <button
-                                        type="submit"
-                                        className="btn--primary"
-                                    >
-                                        Submit
-                                    </button>
-                                    <button
-                                        type="reset"
-                                        onClick={handleReset}
-                                    >
-                                        Reset
-                                    </button>
+                                <div className="col fs--text-center">
+                                    <>
+                                        <button
+                                            type="submit"
+                                            className="btn--primary"
+                                        >
+                                            {btnSubmit}
+                                        </button>
+                                        <button
+                                            type="reset"
+                                            onClick={handleReset}
+                                        >
+                                            {btnReset}
+                                        </button>
+                                    </>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <section className="bg--tertiary-base">
-                <h2 className="fs--text-center">2. Dropdowns - BG Dark</h2>
-                <div className="container max-width--md">
-                    <form
-                        onSubmit={handleSubmit}
-                        onReset={handleReset}
-                    >
-                        <div className="row">
-                            <div className="dropdown-basic col--md-4">
-                                <Dropdown
-                                    options={optionsLong}
-                                    selectedOption={selectedOptionBasic}
-                                    onSelectOption={handleSelectOptionBasic}
-                                />
-                            </div>
-                            <div className="dropdown-requried col--md-4">
-                                <Dropdown
-                                    options={optionsLong}
-                                    selectedOption={selectedOptionRequired}
-                                    onSelectOption={handleSelectOptionRequired}
-                                />
-                                {error && <div className="validation-message">Field is required </div>}
-                            </div>
-
-                            <div className="dropdown-input-button col--md-odd-3">
-                                <Dropdown
-                                    options={optionsShort}
-                                    selectedOption={selectedOptionEllipsisIcon}
-                                    onSelectOption={handleSelectOptionEllipsisIcon}
-                                    dropdownInput={
-                                        <input
-                                            className="btn--tertiary"
-                                            type="button"
-                                            value="Dropdown Button"
-                                        />
-                                    }
-                                />
-                            </div>
-                            <div className="dropdown-icon-button col--md-odd-3 col--sm-2">
-                                <Dropdown
-                                    options={optionsShort}
-                                    selectedOption={selectedOptionCircleIcon}
-                                    onSelectOption={handleSelectOptionCircleIcon}
-                                    dropdownIcon={<i className="fa-circle-info-solid fak "></i>}
-                                />
-                            </div>
-                            <div className="dropdown-icon-button col--md-odd-3 col--sm-2">
-                                <Dropdown
-                                    options={optionsLong}
-                                    selectedOption={selectedOptionEllipsisIcon}
-                                    onSelectOption={handleSelectOptionEllipsisIcon}
-                                    dropdownIcon={<i className="fa-regular fa-ellipsis-vertical"></i>}
-                                />
-                            </div>
-
-                            <div className="col fs--text-center">
-                                <div>
-                                    <button
-                                        type="submit"
-                                        className="btn--primary"
-                                    >
-                                        Submit
-                                    </button>
-                                    <button
-                                        type="reset"
-                                        onClick={handleReset}
-                                    >
-                                        Reset
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
+                        </form>
+                    </div>
+                </section>
+            ))}
         </>
     );
 };

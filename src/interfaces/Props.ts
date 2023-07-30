@@ -135,3 +135,10 @@ export interface DropdownProps {
     dropdownIcon?: ReactNode;
     dropdownInput?: ReactNode;
 }
+
+export interface DropdownOptions {
+    basic: DropdownOption | null;
+    required: DropdownOption | null;
+    ellipsisIcon: DropdownOption | null;
+    circleIcon: DropdownOption | null;
+}
