@@ -51,9 +51,9 @@ const TabsComponent: React.FC<TabsGroupProps<any>> = ({ tabs, tabContent: TabCon
                     <TabPanel key={index}>
                         <div className="row">
                             {Array.isArray(tabPanelItem.tabContent) ? (
-                                tabPanelItem.tabContent.map((tabContentItem, tabContentindex) => (
+                                tabPanelItem.tabContent.map((tabContentItem, tabContentIndex) => (
                                     <TabContent
-                                        key={tabContentindex}
+                                        key={tabContentIndex}
                                         {...tabContentItem}
                                     />
                                 ))
