@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { mainTitle } from '../../../local/en/dropdowns/constants';
 import { DropdownGroup } from '../../../components/Dropdowns/DropdownGroup';
 
 const App: React.FC = () => {
     return (
         <>
             <section>
-                <h2 className="fs--text-center">{mainTitle.titleLight}</h2>
+                <h2 className="fs--text-center ">1. Dropdowns - BG Light</h2>
                 <DropdownGroup />
             </section>
-
             <section className="bg--tertiary-base">
-                <h2 className="fs--text-center">{mainTitle.titleDark}</h2>
+                <h2 className="fs--text-center">2. Dropdowns - BG Dark</h2>
                 <DropdownGroup />
             </section>
         </>

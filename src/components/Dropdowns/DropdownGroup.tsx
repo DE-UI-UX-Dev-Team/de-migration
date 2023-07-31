@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { DropdownOption, DropdownOptions } from '../../interfaces/Props';
 import Dropdown from './Dropdown';
 import { optionsLong, optionsShort } from '../../config/dropdownData';
-import { btnInput, btnReset, btnSubmit } from '../../local/en/dropdowns/constants';
+import { btns, fieldRequired } from '../../local/en/dropdowns/constants';
 
 export const DropdownGroup: React.FC = () => {
     const [dropdownOptions, setDropdownOptions] = useState<DropdownOptions>({
@@ -56,7 +56,7 @@ export const DropdownGroup: React.FC = () => {
                             selectedOption={dropdownOptions.required}
                             onSelectOption={(option) => handleSelectOption('required', option)}
                         />
-                        {error && <div className="validation-message">Field is required </div>}
+                        {error && <div className="validation-message">{fieldRequired}</div>}
                     </div>
 
                     <div className="dropdown-input-button col--md-odd-3 ">
@@ -68,7 +68,7 @@ export const DropdownGroup: React.FC = () => {
                                 <input
                                     className="btn--tertiary"
                                     type="button"
-                                    value={btnInput}
+                                    value={btns.btnInput}
                                 />
                             }
                         />
@@ -90,21 +90,14 @@ export const DropdownGroup: React.FC = () => {
                         />
                     </div>
 
-                    <div className="col fs--text-center">
-                        <>
-                            <button
-                                type="submit"
-                                className="btn--primary"
-                            >
-                                {btnSubmit}
-                            </button>
-                            <button
-                                type="reset"
-                                onClick={handleReset}
-                            >
-                                {btnReset}
-                            </button>
-                        </>
+                    <div className="col dropdown-buttons">
+                        <button
+                            type="submit"
+                            className="btn--primary"
+                        >
+                            {btns.btnSubmit}
+                        </button>
+                        <button type="reset">{btns.btnReset}</button>
                     </div>
                 </div>
             </form>

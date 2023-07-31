@@ -8,7 +8,7 @@
     }
 
     &.selected {
-        background-color: #005876;
+        background-color: var(--tertiary-base);
         color: var(--white-base);
         display: flex;
         justify-content: space-between;
@@ -21,7 +21,6 @@
 }
 
 .options-shared {
-    position: absolute;
     top: 100%;
     width: 100%;
     max-height: 264px;
@@ -32,7 +31,7 @@
     padding: 12px 0;
     margin: 8px 0 0 0;
     z-index: 1;
-    border-radius: 4px;
+    border-radius: var(--border-radius-25);
     box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12),
         0px 5px 5px -3px rgba(0, 0, 0, 0.2);
 
@@ -77,7 +76,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-radius: 4px;
+        border-radius: var(--border-radius-25);
         border-bottom: 3px solid var(--secondary-light-3);
         background: var(--tertiary-light-1);
 
@@ -111,13 +110,13 @@
 
 .dropdown-icon {
     i {
-        font-size: 24px;
         margin-right: 0;
         cursor: pointer;
     }
 
     .options {
         @extend .options-shared;
+        position: absolute;
         width: max-content;
         right: 0;
         display: flex;
@@ -153,15 +152,18 @@
 
 h2 {
     &.fs--text-center {
-        margin-bottom: var(--sect--top-pd--sm);
+        margin-bottom: var(--sect--top-pd--lg);
     }
 }
 
-.col,
 .row {
-    &.fs--text-center,
+    .dropdown-buttons {
+        margin-top: var(--sect--top-pd--sm);
+        margin-bottom: var(--sect--top-pd--lg);
+    }
     .col--md-odd-3 {
         margin-top: var(--sect--top-pd--sm);
+        margin-bottom: var(--sect--top-pd--sm);
     }
 }
 

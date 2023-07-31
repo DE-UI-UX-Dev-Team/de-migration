@@ -1,9 +1,10 @@
-export const mainTitle = { titleLight: '1. Dropdowns - BG Light', titleDark: '2. Dropdowns - BG Dark' };
+export const btns = {
+    btnInput: 'Dropdown Button',
+    btnSubmit: 'Submit',
+    btnReset: 'Reset',
+};
 
-export const btnInput = 'Dropdown Button';
-export const btnSubmit = 'Submit';
-export const btnReset = 'Reset';
-
+export const fieldRequired = 'Field is required';
 export const selectContent = 'Select Option';
 export const dropdownLabel = 'Square Feet';
 
