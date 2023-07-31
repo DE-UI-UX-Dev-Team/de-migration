@@ -171,7 +171,7 @@ export interface ColContentProps {
     imgSrc?: string;
     imgDesc?: string;
     contentHeading?: string;
-    contentPara?: string;
+    content?: string;
     phone?: string;
     phoneRef?: string;
 }

@@ -154,19 +154,19 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
         tabContent: [
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab1.para1,
+                content: tabBillingContent.tab1.para1,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab1.para2,
+                content: tabBillingContent.tab1.para2,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab1.para3,
+                content: tabBillingContent.tab1.para3,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab1.para4,
+                content: tabBillingContent.tab1.para4,
             },
         ],
     },
@@ -176,15 +176,15 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
         tabContent: [
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab2.para1,
+                content: tabBillingContent.tab2.para1,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab2.para2,
+                content: tabBillingContent.tab2.para2,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab2.para3,
+                content: tabBillingContent.tab2.para3,
             },
         ],
     },
@@ -194,11 +194,11 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
         tabContent: [
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab3.para1,
+                content: tabBillingContent.tab3.para1,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab3.para2,
+                content: tabBillingContent.tab3.para2,
             },
         ],
     },
@@ -208,19 +208,19 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
         tabContent: [
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab4.para1,
+                content: tabBillingContent.tab4.para1,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab4.para2,
+                content: tabBillingContent.tab4.para2,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab4.para3,
+                content: tabBillingContent.tab4.para3,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab4.para4,
+                content: tabBillingContent.tab4.para4,
             },
         ],
     },
@@ -230,15 +230,15 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
         tabContent: [
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab5.para1,
+                content: tabBillingContent.tab5.para1,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab5.para2,
+                content: tabBillingContent.tab5.para2,
             },
             {
                 colClass: 'col',
-                contentPara: tabBillingContent.tab5.para3,
+                content: tabBillingContent.tab5.para3,
             },
         ],
     },

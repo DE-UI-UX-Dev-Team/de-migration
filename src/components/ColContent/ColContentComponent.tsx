@@ -6,7 +6,7 @@ const ColContentComponent: React.FC<ColContentProps> = ({
     imgSrc,
     imgDesc,
     contentHeading,
-    contentPara,
+    content,
     phone,
     phoneRef,
 }) => {
@@ -25,7 +25,7 @@ const ColContentComponent: React.FC<ColContentProps> = ({
                     <a href={phoneRef}>{phone}</a>
                 </p>
             )}
-            {contentPara && <p>{contentPara}</p>}
+            {content && <p>{content}</p>}
         </div>
     );
 };
