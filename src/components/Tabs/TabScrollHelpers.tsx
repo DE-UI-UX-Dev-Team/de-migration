@@ -23,10 +23,12 @@ export const scrollTabs = (tabListRef: React.MutableRefObject<HTMLDivElement | n
 export const handleTabScroll = (
     tabs: TabProps<any>[],
     tabListRef: React.MutableRefObject<HTMLDivElement | null>,
+
     setTabState: React.Dispatch<React.SetStateAction<{ showLeft: boolean; showRight: boolean }>>
 ) => {
     if (tabListRef.current) {
         const tabListElement = tabListRef.current.querySelector('.react-tabs__tab-list') as HTMLElement;
+        const tabMenuOffset: number = 20;
         if (tabListElement) {
             const menuWrapperSize = tabListElement.offsetWidth;
             let menuPosition = tabListElement.scrollLeft;
@@ -36,10 +38,10 @@ export const handleTabScroll = (
             const menuSize: number = tabs.length * itemSize;
 
             let menuInvisibleSize: number = menuSize - (menuWrapperSize ? menuWrapperSize : 0);
-            const menuEndOffset = menuInvisibleSize - 20;
+            const menuEndOffset = menuInvisibleSize - tabMenuOffset;
             let showLeft = false;
             let showRight = false;
-            if (menuPosition <= 20) {
+            if (menuPosition <= tabMenuOffset) {
                 showRight = true;
             } else if (menuPosition < menuEndOffset) {
                 showLeft = true;

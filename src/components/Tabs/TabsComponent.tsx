@@ -1,23 +1,16 @@
 // TabsComponent.tsx
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { TabProps } from '../../interfaces/Props';
+import { TabsGroupProps, ImageContentProps, ColContentProps, ColContentGroupProps } from '../../interfaces/Props';
 import TabScrollIndicators from './TabScrollIndicators';
 import { scrollTabs, handleTabScroll } from './TabScrollHelpers'; // Import the functions directly
 
-interface TabsProps<T> {
-    tabs: TabProps<T>[]; // Make the interface generic and use the type argument T
-    tabContent: React.FC<T>; // Pass the component as a prop
-}
-
-const TabsComponent: React.FC<TabsProps<any>> = ({ tabs, tabContent: TabContent }) => {
+const TabsComponent: React.FC<TabsGroupProps<any>> = ({ tabs, tabContent: TabContent }) => {
     const [tabIndex, setTabIndex] = useState(0);
     const [tabState, setTabState] = useState({
         showLeft: true,
         showRight: true,
     });
-
-    const scrollDuration: number = 300;
 
     let tabListRef = useRef<HTMLDivElement | null>(null);
 
@@ -57,12 +50,18 @@ const TabsComponent: React.FC<TabsProps<any>> = ({ tabs, tabContent: TabContent 
                 {tabs.map((tabPanelItem, index) => (
                     <TabPanel key={index}>
                         <div className="row">
-                            {tabPanelItem.tabContent.map((tabContentItem: any, tabContentindex: any) => (
-                                <TabContent
-                                    key={tabContentindex}
-                                    {...tabContentItem}
-                                />
-                            ))}
+                            {Array.isArray(tabPanelItem.tabContent) ? (
+                                tabPanelItem.tabContent.map((tabContentItem, tabContentindex) => (
+                                    <TabContent
+                                        key={tabContentindex}
+                                        {...tabContentItem}
+                                    />
+                                ))
+                            ) : (
+                                // Handle the case when tabContent is not an array.
+
+                                <TabContent {...tabPanelItem.tabContent} />
+                            )}
                         </div>
                     </TabPanel>
                 ))}

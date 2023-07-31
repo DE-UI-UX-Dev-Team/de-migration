@@ -2,7 +2,7 @@ import React from 'react';
 import { ColContentProps } from '../../interfaces/Props';
 
 const ColContentComponent: React.FC<ColContentProps> = ({
-    divColClassName,
+    colClass,
     imgSrc,
     imgDesc,
     contentHeading,
@@ -11,7 +11,7 @@ const ColContentComponent: React.FC<ColContentProps> = ({
     phoneRef,
 }) => {
     return (
-        <div className={divColClassName}>
+        <div className={colClass}>
             {imgSrc && (
                 <img
                     src={imgSrc}

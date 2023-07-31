@@ -5,7 +5,7 @@ import { tabData, tabDataWithIcon, tabDataBilling, tabDataColumns } from '../../
 import '../../../styles/main.scss';
 import ColContentComponent from '../../../components/ColContent/ColContentComponent';
 import ImageContentComponent from '../../../components/ImageContent/ImageContentComponent';
-import { tabTitles, tabBlockContent } from '../../../local/Tabs/constants';
+import { tabBlockContent } from '../../../local/en/Tabs/constants';
 
 const App: React.FC = () => {
     return (
@@ -14,7 +14,7 @@ const App: React.FC = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col fs--text-center">
-                            <h2> 1. {tabTitles.TabHorizontal1}</h2>
+                            <h2> 1. HorizontalTabs With Icon </h2>
                         </div>
                     </div>
                     <div>
@@ -30,7 +30,7 @@ const App: React.FC = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col fs--text-center">
-                            <h2> 2. {tabTitles.TabHorizontal2} </h2>
+                            <h2> 2. HorizontalTabs Without Icon </h2>
                         </div>
                     </div>
                     <div>
@@ -46,7 +46,7 @@ const App: React.FC = () => {
                 <div className="container">
                     <div className="row accordion--faq accordion--border-btm">
                         <div className="col fs--text-center">
-                            <h2> 3. {tabTitles.TabVertical1}</h2>
+                            <h2> 3. Vertical Tabs Without Icon</h2>
                         </div>
                     </div>
                     <div className="tabs--vertical">
@@ -62,7 +62,7 @@ const App: React.FC = () => {
                 <div className="container">
                     <div className="row accordion--faq accordion--border-btm">
                         <div className="col fs--text-center">
-                            <h2> 4. {tabTitles.TabVertical2}</h2>
+                            <h2> 4. Vertical Tabs With Icon</h2>
                         </div>
                     </div>
                     <div className="tabs--vertical">
@@ -78,7 +78,7 @@ const App: React.FC = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col fs--text-center">
-                            <h2> 5. {tabTitles.TabColumns}</h2>
+                            <h2> 5. Tab with Column Content and TextBlock</h2>
                         </div>
                     </div>
                     <div className="tabs--block bg-inner--white-base">
@@ -123,7 +123,7 @@ const App: React.FC = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col fs--text-center">
-                            <h2> 6. {tabTitles.TabBilling}</h2>
+                            <h2> 6. Tab with Billing Content and TextBlock</h2>
                         </div>
                     </div>
                     <div className="tabs--block">

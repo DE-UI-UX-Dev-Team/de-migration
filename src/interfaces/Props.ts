@@ -140,10 +140,21 @@ export interface ModalProps {
 }
 
 //Tabs
-export interface TabProps<tabContentType> {
+export interface TabProps<T> {
     tabIcon: string;
-    tabTitle?: React.ReactNode | string;
-    tabContent?: tabContentType;
+    tabTitle?: string;
+    tabContent: T | T[];
+}
+
+export interface TabsGroupProps<T> {
+    tabs: TabProps<T>[]; // Make the interface generic and use the type argument T
+    tabContent: React.FC<T>; // Pass the component as a prop
+}
+
+export interface TabIndicatorsProps {
+    showLeft: boolean;
+    showRight: boolean;
+    onScrollTabs: (left: boolean) => void;
 }
 
 export interface ImageContentProps {
@@ -155,12 +166,8 @@ export interface ImageContentProps {
     contentPara?: string;
 }
 
-export interface ImageContentGroupProps {
-    tabContent: ImageContentProps[];
-}
-
 export interface ColContentProps {
-    divColClassName?: string;
+    colClass?: string;
     imgSrc?: string;
     imgDesc?: string;
     contentHeading?: string;

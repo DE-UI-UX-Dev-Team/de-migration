@@ -1,12 +1,7 @@
 import React from 'react';
+import { TabIndicatorsProps } from '../../interfaces/Props';
 
-interface IndicatorsProps {
-    showLeft: boolean;
-    showRight: boolean;
-    onScrollTabs: (left: boolean) => void;
-}
-
-const TabScrollIndicators: React.FC<IndicatorsProps> = ({ showLeft, showRight, onScrollTabs }) => {
+const TabScrollIndicators: React.FC<TabIndicatorsProps> = ({ showLeft, showRight, onScrollTabs }) => {
     return (
         <div className="indicators">
             <a
