@@ -16,7 +16,9 @@ table {
         border-bottom-width: $table--border-width;
 
         &.thead {
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1;
             border-bottom-style: solid;
             border-bottom-width: $table-heading--border-width;
 
@@ -34,12 +36,29 @@ table {
         font: $table-body--font;
         letter-spacing: $table-body--line-height;
     }
+
+    .header-frozen {
+        max-height: 286px; // Set the max height for the table body
+        overflow-y: auto; // Enable header frozen
+    }
 }
 
 @include mediaQuery('desktop-up') {
     .table--layout-fixed {
         table-layout: fixed;
         width: 100%;
+
+        tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+    }
+
+    tbody {
+        max-height: 286px;
+        overflow-y: auto;
+        display: block;
     }
 }
 
@@ -49,6 +68,10 @@ table {
         overflow-x: auto;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
+    }
+
+    .header-frozen {
+        display: block;
     }
 
     table.table--transpose {
