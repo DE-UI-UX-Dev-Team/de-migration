@@ -54,6 +54,7 @@ export const tabContent = {
 
 export const tabColumnContent = {
     tab1: {
+        tabTitle: 'Electricity Utilities',
         col1: {
             imgDesc: 'image1',
             contentHead: 'Utility Company Name',
@@ -72,6 +73,7 @@ export const tabColumnContent = {
         },
     },
     tab2: {
+        tabTitle: 'Natural Gas Utilities',
         col1: {
             imgDesc: 'image1',
             contentHead: 'Utility Company Name',
@@ -93,22 +95,26 @@ export const tabColumnContent = {
 
 export const tabBillingContent = {
     tab1: {
+        tabTitle: 'Step 1',
         para1: 'Annual Energy Usage: 1200 kWh',
         para2: 'Unpaid Balance (if applicable): $50.00',
         para3: 'Energy Rate Per kWh: $0.10',
         para4: 'Unpaid Balance (if applicable): $50.00',
     },
     tab2: {
+        tabTitle: 'Step 2',
         para1: 'Annual Energy Usage: 1200 kWh',
         para2: 'Unpaid Balance (if applicable): $50.00',
         para3: 'Energy Rate Per kWh: $0.10',
     },
     tab3: {
+        tabTitle: 'Step 3',
         para1: 'Unpaid Balance (if applicable): $50.00',
         para2: 'Energy Rate Per kWh: $0.10',
     },
 
     tab4: {
+        tabTitle: 'Step 4',
         para1: 'Annual Energy Usage: 1200 kWh',
         para2: 'Unpaid Balance (if applicable): $50.00',
         para3: 'Energy Rate Per kWh: $0.10',
@@ -116,6 +122,7 @@ export const tabBillingContent = {
     },
 
     tab5: {
+        tabTitle: 'Step 5',
         para1: 'Annual Energy Usage: 1200 kWh',
         para2: 'Unpaid Balance (if applicable): $50.00',
         para3: 'Energy Rate Per kWh: $0.10',

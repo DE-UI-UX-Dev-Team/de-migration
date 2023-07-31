@@ -3,7 +3,6 @@ import { tabContent, tabBillingContent, tabColumnContent } from '../local/en/Tab
 
 export const tabData: TabProps<ImageContentProps>[] = [
     {
-        tabIcon: '',
         tabTitle: tabContent.tab1.title,
         tabContent: {
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
@@ -13,7 +12,6 @@ export const tabData: TabProps<ImageContentProps>[] = [
         },
     },
     {
-        tabIcon: '',
         tabTitle: tabContent.tab2.title,
         tabContent: {
             imgSrc: 'https://i.imgur.com/QnaYnJe.png',
@@ -23,7 +21,6 @@ export const tabData: TabProps<ImageContentProps>[] = [
         },
     },
     {
-        tabIcon: '',
         tabTitle: tabContent.tab3.title,
         tabContent: {
             imgSrc: 'https://i.imgur.com/8rin3WG.png',
@@ -33,7 +30,6 @@ export const tabData: TabProps<ImageContentProps>[] = [
         },
     },
     {
-        tabIcon: '',
         tabTitle: tabContent.tab4.title,
         tabContent: {
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_smart_home.png',
@@ -43,7 +39,6 @@ export const tabData: TabProps<ImageContentProps>[] = [
         },
     },
     {
-        tabIcon: '',
         tabTitle: tabContent.tab5.title,
         tabContent: {
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_smart_meter.png',
@@ -53,7 +48,6 @@ export const tabData: TabProps<ImageContentProps>[] = [
         },
     },
     {
-        tabIcon: '',
         tabTitle: tabContent.tab6.title,
         tabContent: {
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
@@ -63,7 +57,6 @@ export const tabData: TabProps<ImageContentProps>[] = [
         },
     },
     {
-        tabIcon: '',
         tabTitle: tabContent.tab7.title,
         tabContent: {
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_protect_mainenance_calculate.png',
@@ -150,7 +143,7 @@ export const tabDataWithIcon: TabProps<ImageContentProps>[] = [
 export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
-        tabTitle: 'Step1',
+        tabTitle: tabBillingContent.tab1.tabTitle,
         tabContent: [
             {
                 colClass: 'col',
@@ -172,7 +165,7 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
     },
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
-        tabTitle: 'Step2',
+        tabTitle: tabBillingContent.tab2.tabTitle,
         tabContent: [
             {
                 colClass: 'col',
@@ -190,7 +183,7 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
     },
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
-        tabTitle: 'Step3',
+        tabTitle: tabBillingContent.tab3.tabTitle,
         tabContent: [
             {
                 colClass: 'col',
@@ -204,7 +197,7 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
     },
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
-        tabTitle: 'Step4',
+        tabTitle: tabBillingContent.tab4.tabTitle,
         tabContent: [
             {
                 colClass: 'col',
@@ -226,7 +219,7 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
     },
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
-        tabTitle: 'Step5',
+        tabTitle: tabBillingContent.tab5.tabTitle,
         tabContent: [
             {
                 colClass: 'col',
@@ -247,7 +240,7 @@ export const tabDataBilling: TabProps<ColContentGroupProps['tabContent']>[] = [
 export const tabDataColumns: TabProps<ColContentGroupProps['tabContent']>[] = [
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
-        tabTitle: 'Electric Utilities',
+        tabTitle: tabColumnContent.tab1.tabTitle,
         tabContent: [
             {
                 colClass: 'col--md-4 col--lg-3 fs--text-center',
@@ -285,7 +278,7 @@ export const tabDataColumns: TabProps<ColContentGroupProps['tabContent']>[] = [
     },
     {
         tabIcon: 'icon-md fak fa-circle-check-light',
-        tabTitle: 'Natural Gas Utilities',
+        tabTitle: tabColumnContent.tab2.tabTitle,
         tabContent: [
             {
                 colClass: 'col--md-4 col--lg-3 fs--text-center',

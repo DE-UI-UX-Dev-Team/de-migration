@@ -141,7 +141,7 @@ export interface ModalProps {
 
 //Tabs
 export interface TabProps<T> {
-    tabIcon: string;
+    tabIcon?: string;
     tabTitle?: string;
     tabContent: T | T[];
 }
