@@ -8,6 +8,14 @@
 
 /*--- Utilities - Color Schemes (Gradients) ---*/
 
+.bg-outer--tertiary-base {
+    background-color: var(--tertiary-base);
+}
+
+.bg-inner--white-base {
+    background-color: var(--white-base);
+}
+
 // bg--[palette]-[color]--grad-[iteration]
 
 .bg--primary-dark-1--grad-1 {
