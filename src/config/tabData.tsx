@@ -8,7 +8,7 @@ export const tabData: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
             contentHeading: tabContent.tab1.head,
             contentSubHeading: tabContent.tab1.subHead,
-            contentPara: tabContent.tab1.para,
+            content: tabContent.tab1.para,
         },
     },
     {
@@ -17,7 +17,7 @@ export const tabData: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://i.imgur.com/QnaYnJe.png',
             contentHeading: tabContent.tab2.head,
             contentSubHeading: tabContent.tab2.subHead,
-            contentPara: tabContent.tab2.para,
+            content: tabContent.tab2.para,
         },
     },
     {
@@ -26,7 +26,7 @@ export const tabData: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://i.imgur.com/8rin3WG.png',
             contentHeading: tabContent.tab3.head,
             contentSubHeading: tabContent.tab3.subHead,
-            contentPara: tabContent.tab3.para,
+            content: tabContent.tab3.para,
         },
     },
     {
@@ -35,7 +35,7 @@ export const tabData: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_smart_home.png',
             contentHeading: tabContent.tab4.head,
             contentSubHeading: tabContent.tab4.subHead,
-            contentPara: tabContent.tab4.para,
+            content: tabContent.tab4.para,
         },
     },
     {
@@ -44,7 +44,7 @@ export const tabData: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_smart_meter.png',
             contentHeading: tabContent.tab5.head,
             contentSubHeading: tabContent.tab5.subHead,
-            contentPara: tabContent.tab5.para,
+            content: tabContent.tab5.para,
         },
     },
     {
@@ -53,7 +53,7 @@ export const tabData: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
             contentHeading: tabContent.tab6.head,
             contentSubHeading: tabContent.tab6.subHead,
-            contentPara: tabContent.tab6.para,
+            content: tabContent.tab6.para,
         },
     },
     {
@@ -62,7 +62,7 @@ export const tabData: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_protect_mainenance_calculate.png',
             contentHeading: tabContent.tab7.head,
             contentSubHeading: tabContent.tab7.subHead,
-            contentPara: tabContent.tab7.para,
+            content: tabContent.tab7.para,
         },
     },
 ];
@@ -75,7 +75,7 @@ export const tabDataWithIcon: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
             contentHeading: tabContent.tab1.head,
             contentSubHeading: tabContent.tab1.subHead,
-            contentPara: tabContent.tab1.para,
+            content: tabContent.tab1.para,
         },
     },
     {
@@ -85,7 +85,7 @@ export const tabDataWithIcon: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://i.imgur.com/QnaYnJe.png',
             contentHeading: tabContent.tab2.head,
             contentSubHeading: tabContent.tab2.subHead,
-            contentPara: tabContent.tab2.para,
+            content: tabContent.tab2.para,
         },
     },
     {
@@ -95,7 +95,7 @@ export const tabDataWithIcon: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://i.imgur.com/8rin3WG.png',
             contentHeading: tabContent.tab3.head,
             contentSubHeading: tabContent.tab3.subHead,
-            contentPara: tabContent.tab3.para,
+            content: tabContent.tab3.para,
         },
     },
     {
@@ -105,7 +105,7 @@ export const tabDataWithIcon: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_smart_home.png',
             contentHeading: tabContent.tab4.head,
             contentSubHeading: tabContent.tab4.subHead,
-            contentPara: tabContent.tab4.para,
+            content: tabContent.tab4.para,
         },
     },
     {
@@ -115,7 +115,7 @@ export const tabDataWithIcon: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_smart_meter.png',
             contentHeading: tabContent.tab5.head,
             contentSubHeading: tabContent.tab5.subHead,
-            contentPara: tabContent.tab5.para,
+            content: tabContent.tab5.para,
         },
     },
     {
@@ -125,7 +125,7 @@ export const tabDataWithIcon: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/photos/ls_computer_O_02.png',
             contentHeading: tabContent.tab6.head,
             contentSubHeading: tabContent.tab6.subHead,
-            contentPara: tabContent.tab6.para,
+            content: tabContent.tab6.para,
         },
     },
     {
@@ -135,7 +135,7 @@ export const tabDataWithIcon: TabProps<ImageContentProps>[] = [
             imgSrc: 'https://d38suhqqynrvtl.cloudfront.net/images/illustrations/lg_protect_mainenance_calculate.png',
             contentHeading: tabContent.tab7.head,
             contentSubHeading: tabContent.tab7.subHead,
-            contentPara: tabContent.tab7.para,
+            content: tabContent.tab7.para,
         },
     },
 ];

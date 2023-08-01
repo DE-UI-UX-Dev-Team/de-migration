@@ -7,7 +7,7 @@ const ImageContentComponent: React.FC<ImageContentProps> = ({
     imgDesc,
     contentHeading,
     contentSubHeading,
-    contentPara,
+    content,
 }) => {
     return (
         <>
@@ -16,7 +16,7 @@ const ImageContentComponent: React.FC<ImageContentProps> = ({
                     <div className="col--lg-6">
                         {contentHeading && <h3>{contentHeading}</h3>}
                         {contentSubHeading && <h4>{contentSubHeading}</h4>}
-                        {contentPara && <p>{contentPara}</p>}
+                        {content && <p>{content}</p>}
                     </div>
                     <div className="col--lg-6">
                         <img
@@ -38,7 +38,7 @@ const ImageContentComponent: React.FC<ImageContentProps> = ({
                     <div className="col--lg-6">
                         {contentHeading && <h3>{contentHeading}</h3>}
                         {contentSubHeading && <h4>{contentSubHeading}</h4>}
-                        {contentPara && <p>{contentPara}</p>}
+                        {content && <p>{content}</p>}
                     </div>
                 </>
             )}

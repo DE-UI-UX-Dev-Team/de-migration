@@ -163,7 +163,7 @@ export interface ImageContentProps {
     imgDesc?: string;
     contentHeading?: string;
     contentSubHeading?: string;
-    contentPara?: string;
+    content?: string;
 }
 
 export interface ColContentProps {
