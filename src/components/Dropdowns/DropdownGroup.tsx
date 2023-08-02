@@ -59,21 +59,7 @@ export const DropdownGroup: React.FC = () => {
                         {error && <div className="validation-message">{fieldRequired}</div>}
                     </div>
 
-                    <div className="dropdown-input-button col--md-odd-3 ">
-                        <Dropdown
-                            options={optionsShort}
-                            selectedOption={dropdownOptions.ellipsisIcon}
-                            onSelectOption={(option) => handleSelectOption('ellipsisIcon', option)}
-                            dropdownInput={
-                                <input
-                                    className="btn--tertiary"
-                                    type="button"
-                                    value={btns.btnInput}
-                                />
-                            }
-                        />
-                    </div>
-                    <div className="dropdown-icon-button col--md-odd-3 col--sm-2">
+                    <div className="dropdown-icon-button col--sm-2">
                         <Dropdown
                             options={optionsShort}
                             selectedOption={dropdownOptions.circleIcon}
@@ -81,7 +67,7 @@ export const DropdownGroup: React.FC = () => {
                             dropdownIcon={<i className="fa-circle-info-solid fak "></i>}
                         />
                     </div>
-                    <div className="dropdown-icon-button col--md-odd-3 col--sm-2">
+                    <div className="dropdown-icon-button  col--sm-2">
                         <Dropdown
                             options={optionsLong}
                             selectedOption={dropdownOptions.ellipsisIcon}

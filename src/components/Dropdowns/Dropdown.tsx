@@ -2,13 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { DropdownOption, DropdownProps } from '../../interfaces/Props';
 import { dropdownLabel, selectContent } from '../../local/en/dropdowns/constants';
 
-const Dropdown: React.FC<DropdownProps> = ({
-    options,
-    onSelectOption,
-    selectedOption,
-    dropdownIcon,
-    dropdownInput,
-}) => {
+const Dropdown: React.FC<DropdownProps> = ({ options, onSelectOption, selectedOption, dropdownIcon }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -43,12 +37,10 @@ const Dropdown: React.FC<DropdownProps> = ({
             <p>{dropdownLabel}</p>
             <div
                 ref={dropdownRef}
-                className={` ${dropdownIcon ? 'dropdown-icon' : dropdownInput ? 'dropdown-input' : 'dropdown'}`}
+                className={` ${dropdownIcon ? 'dropdown-icon' : 'dropdown'}`}
             >
                 {dropdownIcon ? (
                     <div onClick={handleDropdownClick}>{dropdownIcon}</div>
-                ) : dropdownInput ? (
-                    <div onClick={handleDropdownClick}>{dropdownInput}</div>
                 ) : (
                     <div
                         className={`selected-option ${isOpen ? 'open' : ''} ${selectedOption ? 'completed' : ''}`}
@@ -58,9 +50,9 @@ const Dropdown: React.FC<DropdownProps> = ({
                             {selectedOption ? selectedOption.label : `${selectContent}`}
                         </div>
                         {isOpen ? (
-                            <i className="fa-regular fa-angle-down fa-lg"></i>
-                        ) : (
                             <i className="fa-regular fa-angle-up fa-lg"></i>
+                        ) : (
+                            <i className="fa-regular fa-angle-down fa-lg"></i>
                         )}
                     </div>
                 )}

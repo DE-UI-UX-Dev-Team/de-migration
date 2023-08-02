@@ -133,7 +133,6 @@ export interface DropdownProps {
     onSelectOption: (selectedOption: DropdownOption) => void;
     selectedOption?: DropdownOption | null;
     dropdownIcon?: ReactNode;
-    dropdownInput?: ReactNode;
 }
 
 export interface DropdownOptions {
