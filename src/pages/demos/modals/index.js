@@ -1,3 +1,5 @@
+import { errorMessage } from '../../../local/en/modals/constants';
+
 // Modal open & close functions
 
 const openModalIds = [
@@ -13,6 +15,9 @@ const closeModalIds = ['basic-modal', 'location-modal', 'autopay-modal'];
 
 const modalDiv = document.getElementById('modal-containers');
 
+const DISPLAY_BLOCK = 'block';
+const DISPLAY_NONE = 'none';
+
 function setModalValues(modalId, modalValue) {
     const modal = document.getElementById(modalId);
     modalDiv.style.display = modalValue;
@@ -20,11 +25,11 @@ function setModalValues(modalId, modalValue) {
 }
 
 function openModal(modalId) {
-    setModalValues(modalId, 'block');
+    setModalValues(modalId, DISPLAY_BLOCK);
 }
 
 function closeModal(modalId) {
-    setModalValues(modalId, 'none');
+    setModalValues(modalId, DISPLAY_NONE);
 }
 
 function setModalAction(action) {
@@ -80,10 +85,10 @@ function validateForm() {
         const input = inputs[i];
         if (input.hasAttribute('required') && input.value === '') {
             isValid = false;
-            displayErrorMessage(input, 'Field required');
+            displayErrorMessage(input, `${errorMessage.fieldRequired}`);
         } else if (input.hasAttribute('pattern') && !input.checkValidity()) {
             isValid = false;
-            displayErrorMessage(input, 'Invalid input');
+            displayErrorMessage(input, `${errorMessage.invalidInput}`);
         } else {
             removeValidationMessage(input);
         }
