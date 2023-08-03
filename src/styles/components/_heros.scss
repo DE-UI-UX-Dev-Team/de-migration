@@ -1,0 +1,54 @@
+.hero {
+    position: relative;
+    width: 100%;
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .hero-left {
+            flex: 1;
+            z-index: 2;
+            padding: 80px 23px 80px 118px;
+            background: var(--brand-2023-primary-amber-ffa-440, #ffa440);
+        }
+
+        .hero-image {
+            position: relative;
+            flex: 1;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .wave-svg {
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                width: 100%;
+                z-index: 3;
+                transform: scaleX(-1);
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: 768px) {
+//   .hero-content {
+//       flex-direction: column;
+
+//       .hero-text {
+//           order: 1;
+//       }
+
+//       .hero-image {
+//           order: 2;
+//           margin-bottom: 20px;
+//       }
+//   }
+// }
