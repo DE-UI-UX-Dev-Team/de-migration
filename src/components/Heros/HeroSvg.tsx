@@ -1,6 +1,6 @@
 export const DesktopSvg: React.FC = () => (
     <svg
-        className="desktop-svg"
+        className="desktop-svg   desktop-svg-style-two"
         viewBox="0 0 1440 810"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export const DesktopSvg: React.FC = () => (
 
 export const TabletSvg: React.FC = () => (
     <svg
-        className="tablet-svg"
+        className="tablet-svg  tablet-svg-style-two"
         viewBox="0 0 432 768"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ export const TabletSvg: React.FC = () => (
 
 export const MobileSvg: React.FC = () => (
     <svg
-        className="mobile-svg"
+        className="mobile-svg  mobile-svg-style-two"
         viewBox="0 0 180 320"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
