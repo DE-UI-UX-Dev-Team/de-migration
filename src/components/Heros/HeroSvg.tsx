@@ -5,7 +5,7 @@ export const DesktopSvg: React.FC = () => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <g clip-path="url(#clip0_12642_14115)">
+        <g clipPath="url(#clip0_12642_14115)">
             <mask
                 id="mask0_12642_14115"
                 maskUnits="userSpaceOnUse"
@@ -39,8 +39,8 @@ export const DesktopSvg: React.FC = () => (
                 <path
                     d="M1254.86 -24.7996C1275.87 1.57644 1307.21 53.0047 1318.69 80.9444C1476.74 465.478 924.978 604.487 887.553 846.151"
                     stroke="#FFFFBD"
-                    stroke-width="8"
-                    stroke-miterlimit="10"
+                    strokeWidth="8"
+                    strokeMiterlimit="10"
                 />
             </g>
         </g>
@@ -63,7 +63,7 @@ export const TabletSvg: React.FC = () => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <g clip-path="url(#clip0_12980_11691)">
+        <g clipPath="url(#clip0_12980_11691)">
             <mask
                 id="mask0_12980_11691"
                 maskUnits="userSpaceOnUse"
@@ -97,8 +97,8 @@ export const TabletSvg: React.FC = () => (
                 <path
                     d="M-13.2266 669.259C0.840637 680.465 28.269 697.178 43.1702 703.303C248.255 787.596 322.393 493.323 451.28 473.362"
                     stroke="#FFFFBD"
-                    stroke-width="5"
-                    stroke-miterlimit="10"
+                    strokeWidth="5"
+                    strokeMiterlimit="10"
                 />
             </g>
         </g>
@@ -122,7 +122,7 @@ export const MobileSvg: React.FC = () => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <g clip-path="url(#clip0_12980_11703)">
+        <g clipPath="url(#clip0_12980_11703)">
             <mask
                 id="mask0_12980_11703"
                 maskUnits="userSpaceOnUse"
@@ -156,8 +156,8 @@ export const MobileSvg: React.FC = () => (
                 <path
                     d="M-5.51172 278.857C0.349614 283.526 11.7781 290.49 17.9869 293.042C103.439 328.164 134.33 205.55 188.033 197.233"
                     stroke="#FFFFBD"
-                    stroke-width="3"
-                    stroke-miterlimit="10"
+                    strokeWidth="3"
+                    strokeMiterlimit="10"
                 />
             </g>
         </g>
@@ -181,7 +181,7 @@ export const OptionTwoSvg: React.FC = () => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <g clip-path="url(#clip0_12642_14115)">
+        <g clipPath="url(#clip0_12642_14115)">
             <mask
                 id="mask0_12642_14115"
                 maskUnits="userSpaceOnUse"
@@ -215,8 +215,8 @@ export const OptionTwoSvg: React.FC = () => (
                 <path
                     d="M1254.86 -24.7996C1275.87 1.57644 1307.21 53.0047 1318.69 80.9444C1476.74 465.478 924.978 604.487 887.553 846.151"
                     stroke="#FFFFBD"
-                    stroke-width="8"
-                    stroke-miterlimit="10"
+                    strokeWidth="8"
+                    strokeMiterlimit="10"
                 />
             </g>
         </g>
