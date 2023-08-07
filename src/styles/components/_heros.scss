@@ -1,12 +1,16 @@
 .hero {
     .hero-content {
+        overflow: hidden;
         .hero-left {
             z-index: 10;
-            height: 100%;
             margin-top: 0;
             margin-bottom: 0;
             padding: 80px 23px 80px 118px;
             background: var(--brand-2023-primary-amber-ffa-440, #ffa440);
+
+            form {
+                max-width: 737px;
+            }
 
             .new-h1 {
                 color: var(--black-base);
@@ -54,8 +58,6 @@
                 letter-spacing: 0.15px;
             }
             .new-span {
-                // margin-bottom: 0;
-                // margin-top: 0;
                 color: var(--black-base);
                 font-family: Inter;
                 font-weight: 700;
@@ -63,11 +65,14 @@
 
                 .underlined-text {
                     text-decoration: underline;
+                    margin-right: 8px;
                 }
             }
 
             .wrap--text-input {
                 width: 100%;
+                min-width: 224px;
+
                 input {
                     border-radius: 4px;
                     border: 2px solid var(--brand-2023-grayscale-blackout-000000, #000);
@@ -87,6 +92,7 @@
 
             button {
                 width: 100%;
+                min-width: 224px;
                 color: var(--brand-2023-typography-blackout-000000, #000);
                 font-family: Inter;
                 border-radius: 4px;
@@ -117,12 +123,12 @@
                 height: 100%;
                 top: 0;
                 bottom: 0;
-                left: -8%;
+                left: -7.2%;
             }
         }
     }
 
-    @media screen and (min-width: 767.9px) and (max-width: 992px) {
+    @media screen and (min-width: 767.9px) and (max-width: 992.1px) {
         .hero-content {
             flex-direction: column;
 
@@ -130,7 +136,6 @@
                 order: 2;
                 z-index: 4;
                 padding: 118px 15px 48px 15px;
-                height: 100vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -256,11 +261,14 @@
 
         .hero-left-style-two {
             z-index: 10;
-            height: 100%;
             margin-top: 0;
             margin-bottom: 0;
             padding: 80px 23px 80px 118px;
             background: var(--brand-2023-primary-amber-ffa-440, #ffa440);
+
+            form {
+                max-width: 737px;
+            }
 
             .new-h1 {
                 color: var(--black-base);
@@ -357,7 +365,6 @@
                 order: 2;
                 z-index: 4;
                 padding: 12rem 1.5rem 4.8rem 1.5rem;
-                height: 100vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -391,10 +398,10 @@
                     transform: rotate(90deg) scaleY(-1);
                     z-index: 10;
                     position: absolute;
-                    width: 189%;
+                    width: 194%;
                     height: auto;
-                    bottom: 240px;
-                    left: -374px;
+                    bottom: 270px;
+                    left: -410px;
                 }
             }
         }
@@ -452,10 +459,10 @@
                     transform: rotate(90deg) scaleY(-1);
                     z-index: 10;
                     position: absolute;
-                    width: 183%;
+                    width: 200%;
                     height: auto;
-                    bottom: 150px;
-                    left: -240px;
+                    bottom: 224px;
+                    left: -320px;
                 }
             }
         }

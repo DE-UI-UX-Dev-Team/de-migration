@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
     }, []);
 
     const isMobileScreen = windowWidth < 768;
-    const isTabletScreen = windowWidth < 992;
+    const isTabletScreen = windowWidth <= 992;
 
     return (
         <div className="hero ">
