@@ -201,3 +201,43 @@ export interface TableCellProps {
     tdTitle: string;
     icon?: string;
 }
+
+//Link Lists
+export interface LinkProps {
+    class?: string;
+    iconClass?: string;
+    href?: string;
+    name?: string;
+}
+export interface LinkListProps {
+    containerClass?: string;
+    linkListHead?: string;
+    li: LinkProps[];
+}
+
+export interface LinkListBasicProps {
+    linkListHead?: string;
+    li: LinkProps[];
+}
+
+export interface LinkListGroupProps {
+    containerClass?: string;
+    linkListGroup: LinkListBasicProps[] | LinkListBasicProps;
+}
+
+export interface FooterProps {
+    footerSectionClass?: string;
+    linkListArray: LinkListGroupProps[];
+    disclaimer?: string;
+}
+export interface ButtonImageProps {
+    href?: string;
+    title?: string;
+    target?: string;
+    class?: string;
+    imgSrc?: string;
+    imgAlt?: string;
+}
+export interface ButtonImageGroup {
+    buttonImageArray: ButtonImageProps[];
+}
