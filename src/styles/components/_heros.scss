@@ -128,55 +128,7 @@
         }
     }
 
-    @media screen and (min-width: 767.9px) and (max-width: 992.1px) {
-        .hero-content {
-            flex-direction: column;
-
-            .hero-left {
-                order: 2;
-                z-index: 4;
-                padding: 118px 15px 48px 15px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                form {
-                    max-width: 597px;
-                    h1,
-                    p,
-                    .new-span {
-                        text-align: center;
-                    }
-                }
-
-                .wrap--text-input {
-                    max-width: 224px;
-                    margin-left: 6rem;
-                }
-                button {
-                    max-width: 224px;
-                }
-            }
-
-            .hero-right {
-                order: 1;
-
-                .hero-img {
-                    width: 100%;
-                }
-
-                .tablet-svg {
-                    z-index: 10;
-                    position: absolute;
-
-                    width: 100%;
-                    bottom: -12rem;
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width: 767.9px) {
+    @media screen and (max-width: 767.998px) {
         .hero-content {
             flex-direction: column;
 
@@ -231,6 +183,54 @@
 
                     width: 100%;
                     bottom: -5.4rem;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 991.998px) {
+        .hero-content {
+            flex-direction: column;
+
+            .hero-left {
+                order: 2;
+                z-index: 4;
+                padding: 118px 15px 48px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                form {
+                    max-width: 597px;
+                    h1,
+                    p,
+                    .new-span {
+                        text-align: center;
+                    }
+                }
+
+                .wrap--text-input {
+                    max-width: 224px;
+                    margin-left: 6rem;
+                }
+                button {
+                    max-width: 224px;
+                }
+            }
+
+            .hero-right {
+                order: 1;
+
+                .hero-img {
+                    width: 100%;
+                }
+
+                .tablet-svg {
+                    z-index: 10;
+                    position: absolute;
+
+                    width: 100%;
+                    bottom: -12rem;
                 }
             }
         }
@@ -357,7 +357,7 @@
         }
     }
 
-    @media screen and (min-width: 767.9px) and (max-width: 992px) {
+    @media screen and (min-width: 768px) and (max-width: 991.998px) {
         .hero-content-style-two {
             flex-direction: column;
 
@@ -398,29 +398,29 @@
                     transform: rotate(90deg) scaleY(-1);
                     z-index: 10;
                     position: absolute;
-                    width: 194%;
+                    width: 198%;
                     height: auto;
-                    bottom: 270px;
-                    left: -410px;
+                    bottom: 290px;
+                    left: -426px;
                 }
             }
         }
     }
 
-    @media screen and (min-width: 500px) and (max-width: 767.8px) {
+    @media screen and (min-width: 576px) and (max-width: 767.998px) {
         .hero-content-style-two {
             flex-direction: column;
 
             .hero-left-style-two {
                 order: 2;
                 z-index: 4;
-                padding: 88px 0 48px 0;
+                padding: 88px 15px 48px 15px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
 
                 form {
-                    max-width: 290px;
+                    max-width: 477px;
 
                     .new-h1 {
                         font-size: 34px;
@@ -461,14 +461,14 @@
                     position: absolute;
                     width: 200%;
                     height: auto;
-                    bottom: 224px;
-                    left: -320px;
+                    bottom: 254px;
+                    left: -332px;
                 }
             }
         }
     }
 
-    @media screen and (max-width: 499.9px) {
+    @media screen and (max-width: 575.998px) {
         .hero-content-style-two {
             flex-direction: column;
 
@@ -516,10 +516,67 @@
                     transform: rotate(90deg) scaleY(-1);
                     z-index: 10;
                     position: absolute;
-                    width: 185%;
+                    width: 186%;
                     height: auto;
                     bottom: 110px;
                     left: -180px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 575.998px) {
+        .hero-content-style-two {
+            flex-direction: column;
+
+            .hero-left-style-two {
+                order: 2;
+                z-index: 4;
+                padding: 48px 0 48px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .new-h1 {
+                    font-size: 34px;
+                    line-height: 40px;
+                }
+
+                form {
+                    max-width: 290px;
+
+                    .new-p {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                    h1,
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                button {
+                    width: 290px;
+                }
+            }
+
+            .hero-right-style-two {
+                order: 1;
+                max-width: 100%;
+
+                .hero-img-style-two {
+                    width: 100%;
+                }
+
+                .svg-two {
+                    transform: rotate(90deg) scaleY(-1);
+                    z-index: 10;
+                    position: absolute;
+                    width: 188%;
+                    height: auto;
+                    bottom: 120px;
+                    left: -170px;
                 }
             }
         }
