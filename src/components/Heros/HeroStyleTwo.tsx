@@ -1,5 +1,4 @@
 import React from 'react';
-import { OptionTwoSvg } from './HeroSvg';
 
 const HeroStyleTwo: React.FC = () => {
     return (
@@ -36,7 +35,6 @@ const HeroStyleTwo: React.FC = () => {
                         src="/assets/images/hero-img.jpg"
                         alt="Hero"
                     />
-                    {/* <OptionTwoSvg /> */}
                 </div>
             </div>
         </div>
