@@ -13,7 +13,6 @@ const HeroStyleTwo: React.FC = () => {
                                     Power <span className="highlight-primary">Your Life</span> with
                                     <span className="highlight-secondary">&nbsp;Custom</span> Electricity Plans
                                 </h1>
-
                                 <p className="new-p">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna.
@@ -37,7 +36,7 @@ const HeroStyleTwo: React.FC = () => {
                         src="/assets/images/hero-img.jpg"
                         alt="Hero"
                     />
-                    <OptionTwoSvg />
+                    {/* <OptionTwoSvg /> */}
                 </div>
             </div>
         </div>
