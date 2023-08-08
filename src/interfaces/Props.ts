@@ -241,3 +241,18 @@ export interface ButtonImageProps {
 export interface ButtonImageGroup {
     buttonImageArray: ButtonImageProps[];
 }
+
+//  Image props
+export interface ImageProps {
+    src: string;
+    alt: string;
+    srcSet?: string;
+    sizes?: string;
+    width?: string;
+    height?: string;
+    className?: string;
+    align?: string;
+    border?: string;
+    borderRadius?: string;
+    onClick?: (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => void;
+}
