@@ -2,7 +2,9 @@ import React from 'react';
 import { FooterProps } from '../../interfaces/Props';
 import LinkList from '../LinkList/LinkList';
 import ButtonImage from '../ButtonImageComponent/ButtonImage';
+import SocialIcons from '../SocialComponent/SocialIcons';
 import footerButtonsData from '../../config/footerButtons';
+import socialIconsData from '../../config/socialIconsData';
 const Footer: React.FC<FooterProps> = ({ footerSectionClass, disclaimer, linkListArray }) => {
     return (
         <footer className={footerSectionClass}>
@@ -15,6 +17,10 @@ const Footer: React.FC<FooterProps> = ({ footerSectionClass, disclaimer, linkLis
                             linkListGroup={linkListGroup.linkListGroup}
                         />
                     ))}
+                    <SocialIcons
+                        containerClass={socialIconsData.containerClass}
+                        linkListGroup={socialIconsData.linkListGroup}
+                    />
                 </div>
                 <div className="row">
                     <div className="col mg-t--35 mg-b--35">
