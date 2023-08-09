@@ -139,6 +139,50 @@ export interface ModalProps {
     shouldCloseModal?: boolean;
 }
 
+//Tabs
+export interface TabProps<T> {
+    tabIcon?: string;
+    tabTitle?: string;
+    tabContent: T | T[];
+}
+
+export interface TabsGroupProps<T> {
+    tabs: TabProps<T>[]; // Make the interface generic and use the type argument T
+    tabContent: React.FC<T>; // Pass the component as a prop
+}
+
+export interface TabIndicatorsProps {
+    showLeft: boolean;
+    showRight: boolean;
+    onScrollTabs: (left: boolean) => void;
+}
+
+export interface ImageContentProps {
+    colReverse?: boolean;
+    imgSrc?: string;
+    imgDesc?: string;
+    contentHeading?: string;
+    contentSubHeading?: string;
+    content?: string;
+}
+
+export interface ColContentProps {
+    colClass?: string;
+    imgSrc?: string;
+    imgDesc?: string;
+    contentHeading?: string;
+    content?: string;
+    phone?: string;
+    phoneRef?: string;
+}
+
+export interface ColContentGroupProps {
+    tabContent: ColContentProps[];
+}
+
+export interface SampleTextProps {
+    text: string;
+}
 
 // Tables
 export interface TableProps {
@@ -157,6 +201,7 @@ export interface TableCellProps {
     tdTitle: string;
     icon?: string;
 }
+
 
 
 // Dropdown
@@ -179,5 +224,6 @@ export interface DropdownOptions {
     ellipsisIcon: DropdownOption | null;
     circleIcon: DropdownOption | null;
 }
+
 
 

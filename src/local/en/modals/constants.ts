@@ -12,3 +12,8 @@ export const btnLogin = 'Login';
 export const btnSubmit = 'Submit';
 export const btnZipcode = 'RE-ENTER ZIP CODE';
 export const btnBack = 'Go Back';
+
+export const errorMessage = {
+    fieldRequired: 'Field required',
+    invalidInput: 'Invalid input',
+};

@@ -26,11 +26,10 @@
             rel="stylesheet"
             href="../../assets/styles/regular.css"
         />
-        <link rel="icon" href="../../assets/images/favicon.ico">
-        <script
-            src="../../demos/forms/index.html.js"
-            defer
-        ></script>
+        <link
+            rel="icon"
+            href="../../assets/images/favicon.ico"
+        />
         <script
             src="../../demos/modals/index.html.js"
             defer
@@ -50,56 +49,26 @@
                     <div class="col">
                         <div class="row">
                             <div class="col--md-4 col--lg-4">
-                                <button
-                                    data-modal-trigger
-                                    data-modal-target="basic-modal"
-                                >
-                                    Basic Modal
-                                </button>
+                                <button data-modal="basic-modal"> Basic Modal </button>
                             </div>
                             <div class="col--md-4 col--lg-4">
-                                <button
-                                    data-modal-trigger
-                                    data-modal-target="confirm-modal"
-                                >
-                                    Payment Modal
-                                </button>
+                                <button data-modal="confirm-modal"> Payment Modal </button>
                             </div>
 
                             <div class="col--md-4 col--lg-4">
-                                <button
-                                    data-modal-trigger
-                                    data-modal-target="form-modal"
-                                >
-                                    Form Modal
-                                </button>
+                                <button data-modal="form-modal"> Form Modal </button>
                             </div>
 
                             <div class="col--md-4 col--lg-4">
-                                <button
-                                    data-modal-trigger
-                                    data-modal-target="location-modal"
-                                >
-                                    Location Modal
-                                </button>
+                                <button data-modal="location-modal"> Location Modal </button>
                             </div>
 
                             <div class="col--md-4 col--lg-4">
-                                <button
-                                    data-modal-trigger
-                                    data-modal-target="no-service-modal"
-                                >
-                                    No Service Modal
-                                </button>
+                                <button data-modal="no-service-modal"> No Service Modal </button>
                             </div>
 
                             <div class="col--md-4 col--lg-4">
-                                <button
-                                    data-modal-trigger
-                                    data-modal-target="autopay-modal"
-                                >
-                                    Auto Pay Modal
-                                </button>
+                                <button data-modal="autopay-modal"> Auto Pay Modal </button>
                             </div>
                         </div>
                     </div>
@@ -107,11 +76,13 @@
             </div>
         </section>
 
-        <div class="modal-containers">
+        <div
+            class="modal-containers"
+            id="modal-containers"
+        >
             <div
                 class="modal-container container max-width--sm"
-                data-modal-container="hidden"
-                data-modal-target="basic-modal"
+                id="basic-modal"
             >
                 <div class="modal-head">
                     <h4>Confirm Default Payment</h4>
@@ -124,14 +95,10 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button
-                        class="btn--primary"
-                        data-close-modal="basic-modal"
-                        >Confirm</button
-                    >
+                    <button class="btn--primary">Confirm</button>
                     <button
                         class="btn--secondary"
-                        data-close-modal="basic-modal"
+                        data-modal-close="basic-modal"
                         >Cancel</button
                     >
                 </div>
@@ -139,8 +106,7 @@
 
             <div
                 class="modal-container"
-                data-modal-container="hidden"
-                data-modal-target="confirm-modal"
+                id="confirm-modal"
             >
                 <div class="row">
                     <div class="col--md-4 modal-col">
@@ -156,11 +122,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button
-                                class="btn--primary"
-                                data-close-modal="confirm-modal"
-                                >Continue</button
-                            >
+                            <button class="btn--primary">Continue</button>
                         </div>
                     </div>
                     <div class="col--md-4 modal-col bg--tertiary-light-1">
@@ -179,11 +141,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button
-                                class="btn--secondary"
-                                data-close-modal="confirm-modal"
-                                >Continue</button
-                            >
+                            <button class="btn--secondary">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -191,8 +149,7 @@
 
             <div
                 class="modal-container"
-                data-modal-container="hidden"
-                data-modal-target="form-modal"
+                id="form-modal"
             >
                 <div class="row">
                     <div class="col--md-4 modal-col">
@@ -200,7 +157,7 @@
                             <h4>I'm a New Customer</h4>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form id="myForm">
                                 <div class="row">
                                     <div class="col">
                                         <h5>You have chosen: Live Brighter 27</h5>
@@ -217,6 +174,7 @@
                                                 placeholder=" "
                                                 required
                                             />
+
                                             <span>Street Address</span>
                                         </label>
                                     </div>
@@ -229,7 +187,6 @@
                                                 name="apt"
                                                 type="text"
                                                 placeholder=" "
-                                                required
                                             />
                                             <span>Apt</span>
                                         </label>
@@ -243,7 +200,8 @@
                                                 name="zip-code"
                                                 type="text"
                                                 placeholder=" "
-                                                pattern="/^[0-9]{5}(?:-[0-9]{4})?$/"
+                                                pattern="^([0-9]{5}(?:-[0-9]{4})?)?$"
+                                                required
                                             />
                                             <span>Zip Code</span>
                                         </label>
@@ -254,7 +212,7 @@
                         <div class="modal-footer">
                             <button
                                 class="btn--primary"
-                                data-close-modal="form-modal"
+                                id="formValidationButton"
                                 >Continue</button
                             >
                         </div>
@@ -275,11 +233,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button
-                                class="btn--secondary"
-                                data-close-modal="form-modal"
-                                >Continue</button
-                            >
+                            <button class="btn--secondary">Continue</button>
                         </div>
                     </div>
                 </div>
@@ -287,8 +241,7 @@
 
             <div
                 class="modal-container container max-width--sm"
-                data-modal-container="hidden"
-                data-modal-target="location-modal"
+                id="location-modal"
             >
                 <div class="row">
                     <div class="col modal-col">
@@ -366,14 +319,10 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button
-                                class="btn--primary"
-                                data-close-modal="location-modal"
-                                >Proceed</button
-                            >
+                            <button class="btn--primary">Proceed</button>
                             <button
                                 class="btn--secondary"
-                                data-close-modal="location-modal"
+                                data-modal-close="location-modal"
                                 >Cancel</button
                             >
                         </div>
@@ -383,8 +332,7 @@
 
             <div
                 class="modal-container"
-                data-modal-container="hidden"
-                data-modal-target="no-service-modal"
+                id="no-service-modal"
             >
                 <div class="row">
                     <div class="col--md-4 modal-col">
@@ -402,16 +350,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button
-                                class="btn--primary"
-                                data-close-modal="no-service-modal"
-                                >RE-ENTER ZIP CODE</button
-                            >
-                            <button
-                                class="btn--secondary"
-                                data-close-modal="no-service-modal"
-                                >Go Back</button
-                            >
+                            <button class="btn--primary">RE-ENTER ZIP CODE</button>
+                            <button class="btn--secondary">Go Back</button>
                         </div>
                     </div>
                     <div class="col--md-4 modal-col bg--tertiary-light-1">
@@ -429,11 +369,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button
-                                class="btn--secondary"
-                                data-close-modal="no-service-modal"
-                                >Login</button
-                            >
+                            <button class="btn--secondary">Login</button>
                         </div>
                     </div>
                 </div>
@@ -441,8 +377,7 @@
 
             <div
                 class="modal-container container max-width--sm"
-                data-modal-container="hidden"
-                data-modal-target="autopay-modal"
+                id="autopay-modal"
             >
                 <div class="row">
                     <div class="col modal-col">
@@ -520,14 +455,10 @@
                         <div class="modal-footer">
                             <p class="p-2">By clicking submit, you agree with our Terms and Conditions.</p>
                             <p class="p-2">To add or delete a payment method, visit the Payment Method page.</p>
-                            <button
-                                class="btn--primary"
-                                data-close-modal="autopay-modal"
-                                >Submit</button
-                            >
+                            <button class="btn--primary">Submit</button>
                             <button
                                 class="btn--secondary"
-                                data-close-modal="autopay-modal"
+                                data-modal-close="autopay-modal"
                                 >Cancel</button
                             >
                         </div>
@@ -535,7 +466,5 @@
                 </div>
             </div>
         </div>
-
-        <div class="screen-overlay"> </div>
     </body>
 </html>
