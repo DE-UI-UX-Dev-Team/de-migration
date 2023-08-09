@@ -5,7 +5,7 @@ export interface SampleComponentProps {
 }
 
 export const SampleComponent: React.FC<SampleComponentProps> = ({ text }) => {
-    return <h1 className="sample-component">{text}</h1>;
+    return <p className="sample-component">{text}</p>;
 };
 
 export default SampleComponent;
