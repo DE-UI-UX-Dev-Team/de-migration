@@ -1,10 +1,11 @@
 import React from 'react';
-import { LinkListProps, FooterProps, ButtonImageGroup } from '../../interfaces/Props';
+import { FooterProps } from '../../interfaces/Props';
 import LinkList from '../LinkList/LinkList';
-import ButtonImageGroupData from '../../config/footerButtons';
+import ButtonImage from '../ButtonImageComponent/ButtonImage';
+import footerButtonsData from '../../config/footerButtons';
 const Footer: React.FC<FooterProps> = ({ footerSectionClass, disclaimer, linkListArray }) => {
     return (
-        <section className={footerSectionClass}>
+        <footer className={footerSectionClass}>
             <div className="container">
                 <div className="row">
                     {linkListArray.map((linkListGroup, index) => (
@@ -17,19 +18,16 @@ const Footer: React.FC<FooterProps> = ({ footerSectionClass, disclaimer, linkLis
                 </div>
                 <div className="row">
                     <div className="col mg-t--35 mg-b--35">
-                        {ButtonImageGroupData.buttonImageArray.map((buttonImage, index) => (
-                            <a
+                        {footerButtonsData.buttonImageArray.map((buttonImage, index) => (
+                            <ButtonImage
                                 key={index}
                                 href={buttonImage.href}
                                 title={buttonImage.title}
-                                className={buttonImage.class}
+                                className={buttonImage.className}
                                 target={buttonImage.target}
-                            >
-                                <img
-                                    src={buttonImage.imgSrc}
-                                    alt={buttonImage.imgAlt}
-                                />
-                            </a>
+                                imgSrc={buttonImage.imgSrc}
+                                imgAlt={buttonImage.imgAlt}
+                            />
                         ))}
                     </div>
                     <div className="col">
@@ -37,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ footerSectionClass, disclaimer, linkLis
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
     );
 };
 

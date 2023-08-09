@@ -32,7 +32,8 @@
                 $count: 0;
                 // Output styles for padding top and bottom for sections
                 // at screen sizes "sm," "md," "lg," and "xl"
-                section[class*='#{$type}'] {
+                section[class*='#{$type}'],
+                footer[class*='#{$type}'] {
                     @each $variant, $sizes in $categories {
                         @each $size, $value in $sizes {
                             @if $size == #{$screenSize} {
