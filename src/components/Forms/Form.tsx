@@ -17,6 +17,7 @@ import {
     radioVertical,
 } from '../../config/formsData';
 import Formbtn from './Formbtn';
+import { formHelpMessage, formInfo } from '../../local/en/forms/constants';
 
 export const SampleForm: React.FC = () => {
     const [reset, setReset] = useState(false);
@@ -52,7 +53,7 @@ export const SampleForm: React.FC = () => {
         e.preventDefault();
 
         if (radioSelectedValue === '') {
-            setErrorMessage('Select one item from the list below');
+            setErrorMessage(`${formHelpMessage.radioInputError}`);
             return;
         }
 
@@ -103,7 +104,7 @@ export const SampleForm: React.FC = () => {
                             </div>
                             <div className="col--md-4">
                                 {checkboxError && (
-                                    <span className="error-message">Please select at least one checkbox.</span>
+                                    <span className="error-message">{formHelpMessage.checkboxError}</span>
                                 )}
                                 <CheckboxList
                                     checkboxes={CheckboxesSampleFormNested}
@@ -116,11 +117,11 @@ export const SampleForm: React.FC = () => {
                             <div className="col">
                                 <input
                                     type="submit"
-                                    value="Submit"
+                                    value={formInfo.submitBtn}
                                 />
                                 <input
                                     type="reset"
-                                    value="Reset"
+                                    value={formInfo.resetBtn}
                                 />
                             </div>
                         </div>

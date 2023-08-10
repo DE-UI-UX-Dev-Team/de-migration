@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { TextInputProps } from '../../interfaces/Props';
+import { formHelpMessage } from '../../local/en/forms/constants';
 
 const TextInput: React.FC<TextInputProps> = ({
     id,
@@ -28,11 +29,11 @@ const TextInput: React.FC<TextInputProps> = ({
 
         if (required && inputValue.trim() === '') {
             setError(true);
-            setMessage('Missing input');
+            setMessage(`${formHelpMessage.inputMissingError}`);
             setSuccess(false);
         } else if (pattern && !new RegExp(pattern).test(inputValue)) {
             setError(true);
-            setMessage(errorMessage || 'Invalid input');
+            setMessage(errorMessage || `${formHelpMessage.inputInvalidError}`);
             setSuccess(false);
         } else {
             setError(false);
@@ -80,7 +81,7 @@ const TextInput: React.FC<TextInputProps> = ({
                 />
                 {showIcon && <i className="fak fa-location-dot-solid"></i>}
                 {error && <div className="validation-message ">{message}</div>}
-                {success && <div className="clr--success-element">Entry Successful</div>}
+                {success && <div className="clr--success-element">{formHelpMessage.inputSuccess}</div>}
                 <span>{label}</span>
                 {showResetButton && (
                     <button

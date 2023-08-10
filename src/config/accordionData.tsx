@@ -4,18 +4,15 @@ import toggleStates from '../config/toggleStates';
 import SampleComponent from '../components/SampleComponent';
 import buttonData from './buttonData';
 import ButtonItem from '../components/Buttons/ButtonItem';
+import { accordionInfo } from '../local/en/accordions/constants';
 
 const accordionData: AccordionProps[] = [
     {
-        accordionTitle:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua? ',
-        accordionContent: (
-            <SampleComponent text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum " />
-        ),
+        accordionTitle: `${accordionInfo.titleOne}`,
+        accordionContent: <SampleComponent text={accordionInfo.contentOne} />,
     },
     {
-        accordionTitle:
-            'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum?',
+        accordionTitle: `${accordionInfo.titleTwo}`,
         accordionContent: (
             <div className="col fs--text-center">
                 {buttonData.map((buttonDataItems) => (
@@ -32,14 +29,11 @@ const accordionData: AccordionProps[] = [
         ),
     },
     {
-        accordionTitle:
-            'enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur?',
-        accordionContent: (
-            <SampleComponent text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum " />
-        ),
+        accordionTitle: `${accordionInfo.titleThree}`,
+        accordionContent: <SampleComponent text={accordionInfo.contentOne} />,
     },
     {
-        accordionTitle: 'How Would Average Billing Help You?',
+        accordionTitle: `${accordionInfo.titleFour}`,
         accordionContent: (
             <div className="col fs--text-center">
                 <ul className="fs--link-list">

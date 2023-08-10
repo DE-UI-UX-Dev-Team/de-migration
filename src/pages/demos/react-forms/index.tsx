@@ -9,6 +9,7 @@ import {
     SampleForm,
     TextInputForm,
 } from '../../../components/Forms/Form';
+import { formDesc } from '../../../local/en/forms/constants';
 
 const App: React.FC = () => {
     return (
@@ -27,11 +28,7 @@ const App: React.FC = () => {
                     </div>
                     <div className="col">
                         <h1>Form Components</h1>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae commodi incidunt quis
-                            deserunt maiores ipsam quisquam, tempore hic eveniet illo, ut quia expedita? Molestias
-                            quibusdam ipsum eos laborum. Voluptatem, at?
-                        </p>
+                        <p>{formDesc}</p>
                     </div>
                 </div>
                 <>

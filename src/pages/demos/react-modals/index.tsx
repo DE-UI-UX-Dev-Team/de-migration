@@ -5,7 +5,7 @@ import RadioInputGroup from '../../../components/Forms/RadioInput';
 import { initialModals, moalTextInput, radioPaymentMethod, radioServiceLocation } from '../../../config/modalsData';
 import { ModalColumn, ModalContainer } from '../../../components/Modals/Modal';
 import TextInput from '../../../components/Forms/TextInput';
-import * as modal from '../../../local/en/modals/constants';
+import { modalContent } from '../../../local/en/modals/constants';
 
 const App: React.FC = () => {
     const [modals, setModals] = useState(initialModals);
@@ -62,13 +62,13 @@ const App: React.FC = () => {
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={modal.headerConfirm}
+                        header={modalContent.header.confirm}
                         columnClassName="col modal-col"
-                        btnPrimary={modal.btnConfirm}
-                        btnCloseSecondary={modal.btnCancel}
+                        btnPrimary={modalContent.btn.confirm}
+                        btnCloseSecondary={modalContent.btn.cancel}
                         onClose={handleModalClose}
                     >
-                        <p>Make [Card Name] the new default payment method?</p>
+                        <p>{modalContent.info.paymentMethod}</p>
                     </ModalColumn>
                 </ModalContainer>
 
@@ -78,28 +78,25 @@ const App: React.FC = () => {
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={modal.headerConfirm}
+                        header={modalContent.header.confirm}
                         columnClassName="col--md-4 modal-col"
-                        btnPrimary={modal.btnContinue}
+                        btnPrimary={modalContent.btn.continue}
                         iconClassName="close-icon-left"
                         onClose={handleModalClose}
                     >
                         <>
-                            <h5>You have chosen: Live Brighter 27</h5>
-                            <p>Please provide your complete service address.</p>
+                            <h5>{modalContent.info.plan}</h5>
+                            <p>{modalContent.info.paymentAddress}</p>
                         </>
                     </ModalColumn>
                     <ModalColumn
-                        header={modal.headerIsCustomer}
+                        header={modalContent.header.isCustomer}
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
-                        btnSecondary={modal.btnContinue}
+                        btnSecondary={modalContent.btn.continue}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
                     >
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam
-                            erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
-                        </p>
+                        <p>{modalContent.info.description}</p>
                     </ModalColumn>
                 </ModalContainer>
 
@@ -109,17 +106,17 @@ const App: React.FC = () => {
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={modal.headerNewCustomer}
+                        header={modalContent.header.newCustomer}
                         columnClassName="col--md-4 modal-col"
-                        btnPrimary={modal.btnContinue}
+                        btnPrimary={modalContent.btn.continue}
                         iconClassName="close-icon-left"
                         onClose={handleModalClose}
                     >
                         <form>
                             <div className="row">
                                 <div className="col">
-                                    <h5>You have chosen: Live Brighter 27</h5>
-                                    <p>Please provide your complete service address.</p>
+                                    <h5>{modalContent.info.plan}</h5>
+                                    <p>{modalContent.info.paymentAddress}</p>
                                 </div>
                                 {moalTextInput.map((input) => (
                                     <TextInput
@@ -131,16 +128,13 @@ const App: React.FC = () => {
                         </form>
                     </ModalColumn>
                     <ModalColumn
-                        header={modal.headerIsCustomer}
+                        header={modalContent.header.isCustomer}
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
-                        btnSecondary={modal.btnContinue}
+                        btnSecondary={modalContent.btn.continue}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
                     >
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam
-                            erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
-                        </p>
+                        <p>{modalContent.info.description}</p>
                     </ModalColumn>
                 </ModalContainer>
 
@@ -150,10 +144,10 @@ const App: React.FC = () => {
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={modal.headerSelectLocation}
+                        header={modalContent.header.selectLocation}
                         columnClassName="col modal-col"
-                        btnPrimary={modal.btnProceed}
-                        btnCloseSecondary={modal.btnCancel}
+                        btnPrimary={modalContent.btn.proceed}
+                        btnCloseSecondary={modalContent.btn.cancel}
                         onClose={handleModalClose}
                         withExclamationIcon={<i className="fa fa-exclamation-circle clr--error-element"></i>}
                         isDisabled={!radioSelected}
@@ -174,27 +168,24 @@ const App: React.FC = () => {
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={modal.headerNoService}
+                        header={modalContent.header.noService}
                         columnClassName="col--md-4 modal-col"
-                        btnPrimary={modal.btnZipcode}
-                        btnCloseSecondary={modal.btnBack}
+                        btnPrimary={modalContent.btn.zipcode}
+                        btnCloseSecondary={modalContent.btn.back}
                         withExclamationIcon={<i className="fa fa-exclamation-circle clr--error-element"></i>}
                         iconClassName="close-icon-left"
                         onClose={handleModalClose}
                     >
-                        <p>We're sorry, the zip code you entered is not serviced by Direct Energy at this time.</p>
+                        <p>{modalContent.info.incorrectZipcode}</p>
                     </ModalColumn>
                     <ModalColumn
-                        header={modal.headerIsCustomer}
+                        header={modalContent.header.isCustomer}
                         columnClassName="col--md-4 modal-col bg--tertiary-light-1"
-                        btnSecondary={modal.btnLogin}
+                        btnSecondary={modalContent.btn.login}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
                     >
-                        <p>
-                            If you have an account with us, please sign in to your account to get accurate pricing and
-                            availability.
-                        </p>
+                        <p>{modalContent.info.signInAccount}</p>
                     </ModalColumn>
                 </ModalContainer>
 
@@ -204,15 +195,15 @@ const App: React.FC = () => {
                     onClose={handleModalClose}
                 >
                     <ModalColumn
-                        header={modal.headerAutoPay}
+                        header={modalContent.header.autoPay}
                         columnClassName="col modal-col"
-                        btnPrimary={modal.btnSubmit}
-                        btnCloseSecondary={modal.btnCancel}
+                        btnPrimary={modalContent.btn.submit}
+                        btnCloseSecondary={modalContent.btn.cancel}
                         onClose={handleModalClose}
                         isDisabled={!radioSelected}
                     >
                         <>
-                            <p>Select Payment Method</p>
+                            <p>{modalContent.info.paymentSelect}</p>
                             <form>
                                 <RadioInputGroup
                                     className="mg-l--0"
@@ -222,8 +213,8 @@ const App: React.FC = () => {
                             </form>
 
                             <div className="helper-text">
-                                <p className="p-2">By clicking submit, you agree with our Terms and Conditions.</p>
-                                <p className="p-2">To add or delete a payment method, visit the Payment Method page.</p>
+                                <p className="p-2">{modalContent.info.termsSubmit}</p>
+                                <p className="p-2">{modalContent.info.paymentPage}</p>
                             </div>
                         </>
                     </ModalColumn>
