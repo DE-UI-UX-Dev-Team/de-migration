@@ -1,4 +1,3 @@
-import HiddenInput from '../components/ContentSwitcher/HiddenInput';
 import { ContentSwitcherProps } from '../interfaces/Props';
 import { contentSwitcherInfo } from '../local/en/content-switcher/constants';
 
