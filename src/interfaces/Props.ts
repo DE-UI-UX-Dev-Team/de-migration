@@ -234,7 +234,7 @@ export interface ButtonImageProps {
     href?: string;
     title?: string;
     target?: string;
-    class?: string;
+    className?: string;
     imgSrc?: string;
     imgAlt?: string;
 }

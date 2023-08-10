@@ -48,7 +48,8 @@ $filter: 'h-1', 'h-2', 'h-3', 'h-4', 'h-5', 'h-6', 'p-1', 'p-2', 'p-3';
 @mixin getTypeOnColorBg() {
     @each $bgClass, $customProp in map.get($typeOnColorBg, #{$active-theme}, 'body-text') {
         body[class*='#{$bgClass}'],
-        section[class*='#{$bgClass}'] {
+        section[class*='#{$bgClass}'],
+        footer[class*='#{$bgClass}'] {
             color: var(#{$customProp});
         }
 
