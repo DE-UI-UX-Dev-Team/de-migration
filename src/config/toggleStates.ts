@@ -1,25 +1,26 @@
 import { ToggleSwitchProps } from '../interfaces/Props';
+import { toggleLabel } from '../local/en/toggle/constants';
 
 const toggleStates: ToggleSwitchProps[] = [
     {
         disabled: false,
         checked: true,
-        toggleLabel: 'Switch On',
+        toggleLabel: `${toggleLabel.switchOn}`,
     },
     {
         disabled: false,
         checked: false,
-        toggleLabel: 'Switch Off',
+        toggleLabel: `${toggleLabel.switchOff}`,
     },
     {
         disabled: true,
         checked: true,
-        toggleLabel: 'Switch On - Disabled',
+        toggleLabel: `${toggleLabel.switchOnDisabled}`,
     },
     {
         disabled: true,
         checked: false,
-        toggleLabel: 'Switch Off - Disabled',
+        toggleLabel: `${toggleLabel.switchOffDisabled}`,
     },
 ];
 

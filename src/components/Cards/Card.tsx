@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardProps } from '../../interfaces/Props';
+import { buttonName } from '../../local/en/cards/constants';
 
 const Card: React.FC<CardProps> = ({
     imgSrc,
@@ -27,7 +28,7 @@ const Card: React.FC<CardProps> = ({
                         {title}
                     </h4>
                     <p>{description}</p>
-                    <button className={buttonClassName}>Button</button>
+                    <button className={buttonClassName}>{buttonName}</button>
                 </div>
             </div>
         </div>

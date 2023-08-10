@@ -11,6 +11,7 @@ import {
     cardsleft,
     cardsright,
 } from '../../../config/cardsData';
+import { cardGroupDesc } from '../../../local/en/cards/constants';
 
 const App: React.FC = () => {
     return (
@@ -59,10 +60,7 @@ const App: React.FC = () => {
                     <div className="card-outer--horizontal">
                         <div className="card-outer--body">
                             <h2>Cards group inside Horizontal Card w/ Image on right</h2>
-                            <p>
-                                Whether you go from Free Weekends or Free Nights, with Direct Energy, there’s no worry
-                                about wholesale power price swings.
-                            </p>
+                            <p>{cardGroupDesc}</p>
                             <CardGroup
                                 cards={cardsright}
                                 className="card-group"
@@ -83,10 +81,7 @@ const App: React.FC = () => {
                     <div className="card-outer--horizontal">
                         <div className="card-outer--body">
                             <h2>Cards group inside Horizontal Card w/ Image on right</h2>
-                            <p>
-                                Whether you go from Free Weekends or Free Nights, with Direct Energy, there’s no worry
-                                about wholesale power price swings.
-                            </p>
+                            <p>{cardGroupDesc}</p>
                             <CardGroup
                                 cards={cardsbodyright}
                                 className="card-group"
@@ -113,10 +108,7 @@ const App: React.FC = () => {
                         </div>
                         <div className="card-outer--body">
                             <h2>Cards group inside Horizontal Card w/ Image on left</h2>
-                            <p>
-                                Whether you go from Free Weekends or Free Nights, with Direct Energy, there’s no worry
-                                about wholesale power price swings.
-                            </p>
+                            <p>{cardGroupDesc}</p>
                             <CardGroup
                                 cards={cardsleft}
                                 className="card-group"

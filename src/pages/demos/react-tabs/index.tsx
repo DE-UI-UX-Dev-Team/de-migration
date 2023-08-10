@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import TabsComponent from '../../../components/Tabs/TabsComponent';
 import { tabData, tabDataWithIcon, tabDataBilling, tabDataColumns } from '../../../config/tabData';

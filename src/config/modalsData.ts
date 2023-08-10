@@ -1,28 +1,29 @@
 import { RadioInputProps, TextInputProps } from '../interfaces/Props';
+import { modalInfo } from '../local/en/modals/constants';
 
 // Initial Modal
 export const initialModals = [
-    { name: 'basic Modal', isActive: false },
-    { name: 'payment Modal', isActive: false },
-    { name: 'form Modal', isActive: false },
-    { name: 'location Modal', isActive: false },
-    { name: 'no Service Modal', isActive: false },
-    { name: 'auto Pay Modal', isActive: false },
+    { name: `${modalInfo.names.basic}`, isActive: false },
+    { name: `${modalInfo.names.payment}`, isActive: false },
+    { name: `${modalInfo.names.form}`, isActive: false },
+    { name: `${modalInfo.names.location}`, isActive: false },
+    { name: `${modalInfo.names.noService}`, isActive: false },
+    { name: `${modalInfo.names.autoPay}`, isActive: false },
 ];
 
 // Modal Radio Data
 export const radioServiceLocation: RadioInputProps[] = [
-    { id: 'radio-91', name: 'radio5', value: '1', label: 'Texas Postpaid (get a bill every month)' },
-    { id: 'radio-92', name: 'radio5', value: '2', label: 'Texas Prepaid (pay as you go)' },
-    { id: 'radio-93', name: 'radio5', value: '3', label: 'Alberta' },
-    { id: 'radio-94', name: 'radio5', value: '4', label: 'Other' },
+    { id: 'radio-91', name: 'radio5', value: '1', label: `${modalInfo.radioLabels.locationOne}` },
+    { id: 'radio-92', name: 'radio5', value: '2', label: `${modalInfo.radioLabels.locationTwo}` },
+    { id: 'radio-93', name: 'radio5', value: '3', label: `${modalInfo.radioLabels.locationThree}` },
+    { id: 'radio-94', name: 'radio5', value: '4', label: `${modalInfo.radioLabels.locationFour}` },
 ];
 
 export const radioPaymentMethod: RadioInputProps[] = [
-    { id: 'radio-191', name: 'radio5', value: '1', label: 'Visa ****9876' },
-    { id: 'radio-192', name: 'radio5', value: '2', label: 'VISA ****1234' },
-    { id: 'radio-193', name: 'radio5', value: '3', label: 'ACH - Bank x1051' },
-    { id: 'radio-194', name: 'radio5', value: '4', label: 'Other' },
+    { id: 'radio-191', name: 'radio5', value: '1', label: `${modalInfo.radioLabels.paymentOne}` },
+    { id: 'radio-192', name: 'radio5', value: '2', label: `${modalInfo.radioLabels.paymentTwo}` },
+    { id: 'radio-193', name: 'radio5', value: '3', label: `${modalInfo.radioLabels.paymentThree}` },
+    { id: 'radio-194', name: 'radio5', value: '4', label: `${modalInfo.radioLabels.paymentFour}` },
 ];
 
 // Modal input data
@@ -30,17 +31,17 @@ export const radioPaymentMethod: RadioInputProps[] = [
 export const moalTextInput: TextInputProps[] = [
     {
         id: '239m',
-        label: 'Street Address',
+        label: `${modalInfo.inputLabels.address}`,
         name: 'street-address',
         placeholder: ' ',
-        errorMessage: 'Please fill out this filed',
+        errorMessage: `${modalInfo.errorMessage.required}`,
         required: true,
         className: 'wrap--text-input has-reset-button',
         classNameDiv: 'col',
     },
     {
         id: '240m',
-        label: 'Apt',
+        label: `${modalInfo.inputLabels.apt}`,
         name: 'apt',
         placeholder: ' ',
         className: 'wrap--text-input',
@@ -48,10 +49,10 @@ export const moalTextInput: TextInputProps[] = [
     },
     {
         id: '241m',
-        label: 'Zip Code',
+        label: `${modalInfo.inputLabels.zipcode}`,
         name: 'zip-code',
         required: true,
-        errorMessage: 'Incorrect Zipcode',
+        errorMessage: `${modalInfo.errorMessage.invalid}`,
         placeholder: ' ',
         pattern: '^[0-9]{5}(?:-[0-9]{4})?$',
         className: 'wrap--text-input',
