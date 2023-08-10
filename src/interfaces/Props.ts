@@ -202,8 +202,6 @@ export interface TableCellProps {
     icon?: string;
 }
 
-
-
 // Dropdown
 export interface DropdownOption {
     value: string;
@@ -218,11 +216,8 @@ export interface DropdownProps {
 }
 
 export interface DropdownOptions {
-    basic: DropdownOption | null;
-    required: DropdownOption | null;
-    ellipsisIcon: DropdownOption | null;
-    circleIcon: DropdownOption | null;
+    basicStyle: DropdownOption | null;
+    requiredStyle: DropdownOption | null;
+    rightAlignedStyleOne: DropdownOption | null;
+    rightAlignedStyleTwo: DropdownOption | null;
 }
-
-
-

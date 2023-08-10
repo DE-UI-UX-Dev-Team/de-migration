@@ -6,32 +6,32 @@ import { btns, fieldRequired } from '../../local/en/dropdowns/constants';
 
 export const DropdownGroup: React.FC = () => {
     const [dropdownOptions, setDropdownOptions] = useState<DropdownOptions>({
-        basic: null,
-        required: null,
-        ellipsisIcon: null,
-        circleIcon: null,
+        basicStyle: null,
+        requiredStyle: null,
+        rightAlignedStyleOne: null,
+        rightAlignedStyleTwo: null,
     });
 
     const [error, setError] = useState(false);
 
     const handleSelectOption = (type: keyof DropdownOptions, selectedOption: DropdownOption | null) => {
         setDropdownOptions((prevOptions) => ({ ...prevOptions, [type]: selectedOption }));
-        setError(type === 'required' && !selectedOption);
+        setError(type === 'requiredStyle' && !selectedOption);
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if (!dropdownOptions.required) {
+        if (!dropdownOptions.requiredStyle) {
             setError(true);
         }
     };
 
     const handleReset = () => {
         setDropdownOptions({
-            basic: null,
-            required: null,
-            ellipsisIcon: null,
-            circleIcon: null,
+            basicStyle: null,
+            requiredStyle: null,
+            rightAlignedStyleOne: null,
+            rightAlignedStyleTwo: null,
         });
         setError(false);
     };
@@ -46,15 +46,15 @@ export const DropdownGroup: React.FC = () => {
                     <div className="dropdown-basic col--md-4">
                         <Dropdown
                             options={optionsLong}
-                            selectedOption={dropdownOptions.basic}
-                            onSelectOption={(option) => handleSelectOption('basic', option)}
+                            selectedOption={dropdownOptions.basicStyle}
+                            onSelectOption={(option) => handleSelectOption('basicStyle', option)}
                         />
                     </div>
                     <div className="dropdown-requried col--md-4">
                         <Dropdown
                             options={optionsLong}
-                            selectedOption={dropdownOptions.required}
-                            onSelectOption={(option) => handleSelectOption('required', option)}
+                            selectedOption={dropdownOptions.requiredStyle}
+                            onSelectOption={(option) => handleSelectOption('requiredStyle', option)}
                         />
                         {error && <div className="validation-message">{fieldRequired}</div>}
                     </div>
@@ -62,16 +62,16 @@ export const DropdownGroup: React.FC = () => {
                     <div className="dropdown-icon-button col--sm-2">
                         <Dropdown
                             options={optionsShort}
-                            selectedOption={dropdownOptions.circleIcon}
-                            onSelectOption={(option) => handleSelectOption('circleIcon', option)}
+                            selectedOption={dropdownOptions.rightAlignedStyleTwo}
+                            onSelectOption={(option) => handleSelectOption('rightAlignedStyleTwo', option)}
                             dropdownIcon={<i className="fa-circle-info-solid fak "></i>}
                         />
                     </div>
                     <div className="dropdown-icon-button  col--sm-2">
                         <Dropdown
                             options={optionsLong}
-                            selectedOption={dropdownOptions.ellipsisIcon}
-                            onSelectOption={(option) => handleSelectOption('ellipsisIcon', option)}
+                            selectedOption={dropdownOptions.rightAlignedStyleOne}
+                            onSelectOption={(option) => handleSelectOption('rightAlignedStyleOne', option)}
                             dropdownIcon={<i className="fa-regular fa-ellipsis-vertical"></i>}
                         />
                     </div>
