@@ -1,0 +1,6 @@
+@use '../abstracts/mixins/' as *;
+@use '../abstracts' as *;
+
+.cursor-pointer {
+    cursor: pointer;
+}
