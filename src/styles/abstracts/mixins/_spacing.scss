@@ -8,7 +8,8 @@
     // Print media query
     @include mediaQuery(#{$mediaQuery}) {
         // Fixed Output
-        section {
+        section,
+        footer {
             margin-top: var(--sect--top-pd--#{$screenSize});
             padding-left: calc(var(--gutter-#{$screenSize}) * 4);
             padding-right: calc(var(--gutter-#{$screenSize}) * 4);
@@ -17,7 +18,8 @@
             margin: 0;
             padding-top: var(--sect--top-pd--#{$screenSize});
         }
-        section:last-of-type {
+        section:last-of-type,
+        footer {
             padding-bottom: var(--sect--btm-pd--#{$screenSize});
         }
 

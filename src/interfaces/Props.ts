@@ -241,3 +241,22 @@ export interface ButtonImageProps {
 export interface ButtonImageGroup {
     buttonImageArray: ButtonImageProps[];
 }
+
+export interface CallUsProps {
+    colClass?: string;
+    iconClass?: string;
+    textClass?: string;
+    text?: string;
+    callUsClass?: string;
+    callUsText?: string;
+    phoneHref?: string;
+    phoneNum?: string;
+    hoursClass?: string;
+    hours?: string;
+    days?: string;
+}
+
+export interface CustomerCareProps {
+    className?: string;
+    callUs: CallUsProps[];
+}
