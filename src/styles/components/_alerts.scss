@@ -86,6 +86,10 @@ section.full-width .alert-container {
         content: '\f05a';
     }
 
+    &[data-message-type='info']:before {
+        content: '\f05a';
+    }
+
     &[data-message-type='success']:before {
         content: '\f058';
     }
@@ -93,4 +97,14 @@ section.full-width .alert-container {
 
 [data-alert-message]:not([data-status='active']) {
     display: none;
+}
+
+.alert-group,
+.alert-group-three,
+.alert-group-four {
+    display: none;
+
+    &.displayed {
+        display: block;
+    }
 }
