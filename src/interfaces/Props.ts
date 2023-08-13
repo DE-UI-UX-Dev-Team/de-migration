@@ -241,3 +241,11 @@ export interface ButtonImageProps {
 export interface ButtonImageGroup {
     buttonImageArray: ButtonImageProps[];
 }
+
+// alerts
+export interface AlertProps {
+    alertType: string;
+    desc?: string;
+    ctaText?: string;
+    closeButton?: string;
+}

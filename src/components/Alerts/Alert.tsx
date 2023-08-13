@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-
-interface AlertProps {
-    alertType: string;
-    desc?: string;
-    ctaText?: string;
-    closeButton?: string;
-}
+import { AlertProps } from '../../interfaces/Props';
+import { header } from '../../local/en/alert/constants';
 
 const Alert: React.FC<AlertProps> = ({ alertType, desc, ctaText, closeButton }) => {
     const [isActive, setIsActive] = useState(true);
@@ -28,7 +23,9 @@ const Alert: React.FC<AlertProps> = ({ alertType, desc, ctaText, closeButton }) 
                 >
                     <div className="row">
                         <div className="alert-msg col--lg-9">
-                            <h4 className="alert-head">This is an {alertType} alert headline</h4>
+                            <h4 className="alert-head">
+                                {header.left} {alertType} {header.right}
+                            </h4>
                             <span className="p-2">{desc}</span>
                         </div>
                         {ctaText && (
