@@ -28,7 +28,7 @@
         "modal-popups-js": "^0.10.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-tabs": "^6.0.1"
+        "react-tabs": "^6.0.2"
     },
     "devDependencies": {
         "@storybook/addon-essentials": "^7.0.5",
