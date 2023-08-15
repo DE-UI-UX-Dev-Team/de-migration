@@ -202,6 +202,26 @@ export interface TableCellProps {
     icon?: string;
 }
 
+
+// Dropdown
+export interface DropdownOption {
+    value: string;
+    label: string;
+}
+
+export interface DropdownProps {
+    options: DropdownOption[];
+    onSelectOption: (selectedOption: DropdownOption) => void;
+    selectedOption?: DropdownOption | null;
+    dropdownIcon?: ReactNode;
+}
+
+export interface DropdownOptions {
+    basicStyle: DropdownOption | null;
+    requiredStyle: DropdownOption | null;
+    rightAlignedStyleOne: DropdownOption | null;
+    rightAlignedStyleTwo: DropdownOption | null;
+
 //Link Lists
 export interface LinkProps {
     class?: string;
@@ -240,4 +260,5 @@ export interface ButtonImageProps {
 }
 export interface ButtonImageGroup {
     buttonImageArray: ButtonImageProps[];
+
 }
