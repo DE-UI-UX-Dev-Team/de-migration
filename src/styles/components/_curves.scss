@@ -55,3 +55,7 @@ section[class*='bg-top-curv'] {
 .bg-top-curv-reverse:before {
     transform: scaleX(-1) scaleY(-1);
 }
+
+.position-swap {
+    order: 1;
+}

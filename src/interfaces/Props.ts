@@ -241,3 +241,36 @@ export interface ButtonImageProps {
 export interface ButtonImageGroup {
     buttonImageArray: ButtonImageProps[];
 }
+
+// section curves
+
+export interface SectionProps {
+    sectionClassName: string;
+    imgClassName: string;
+    imgDivClassName?: string;
+    contentDivClassName?: string;
+    imgSrc: string;
+    imgAlt: string;
+    title: string;
+    content: string;
+    contentSecond?: string;
+    btnPrimary?: string;
+    btnSecondary?: string;
+}
+
+export interface CareInfoProps {
+    title: string;
+    phoneNumber?: string;
+    loginlink?: string;
+    newUserLink?: string;
+    hours?: string;
+}
+
+export interface Link {
+    title: string;
+    url: string;
+}
+
+export interface LinksProps {
+    links: Link[];
+}
