@@ -1,5 +1,72 @@
 @use '../../abstracts/tokens' as *;
 
+// $tablesOnContrastingBg: (
+//   "default-theme": (
+//     "light-bg": (
+//       // Transpose table map for  mobile and tablet screens
+//         "tablet-below":
+//         (
+//           "table--transpose": (
+//             "table": (
+//               "border-color": var(--secondary-light-3),
+//             ),
+//             "thead": (
+//               "tr": (
+//                 "color": var(--tertiary-base),
+//                 "border-right-color": var(--tertiary-base),
+//               ),
+//               "td": (
+//                 "background-color": var(--tertiary-light-1),
+//               ),
+//               "td:nth-child(even)": (
+//                 "background-color": var(--tertiary-light-1),
+//               ),
+//             ),
+//             "tbody": (
+//               "td": (
+//                 "border-bottom-color": var(--secondary-light-3),
+//               ),
+//               "tr:nth-child(even)": (
+//                 "background-color": "transparent",
+//               ),
+//               "td:nth-child(even)": (
+//                 "background-color": var(--secondary-light-2),
+//               ),
+//             ),
+//           ),
+//         ),
+//       // Default table  map for all screens
+//         "mobile-up":
+//         (
+//           "table--default": (
+//             "table": (
+//               "border-color": var(--secondary-light-3),
+//             ),
+//             "thead": (
+//               "tr": (
+//                 "color": var(--tertiary-base),
+//                 "border-bottom-color": var(--tertiary-base),
+//               ),
+//               "td": (
+//                 "background-color": var(--tertiary-light-1),
+//               ),
+//             ),
+//             "tbody": (
+//               "tr": (
+//                 "border-bottom-color": var(--secondary-light-3),
+//               ),
+//               "tr:nth-child(even)": (
+//                 "background-color": var(--secondary-light-1),
+//               ),
+//             ),
+//           ),
+//         ),
+//     ),
+//   ),
+// );
+
+// new table map color
+
 $tablesOnContrastingBg: (
     'default-theme': (
         'light-bg': (
@@ -8,56 +75,122 @@ $tablesOnContrastingBg: (
                 (
                     'table--transpose': (
                         'table': (
-                            'border-color': var(--secondary-light-3),
+                            'border-color': var(--grayscale-900),
                         ),
                         'thead': (
                             'tr': (
-                                'color': var(--tertiary-base),
-                                'border-right-color': var(--tertiary-base),
+                                'color': var(--grayscale-900),
+                                'border-right-color': var(--grayscale-900),
                             ),
                             'td': (
-                                'background-color': var(--tertiary-light-1),
+                                'background-color': var(--grayscale-300),
                             ),
                             'td:nth-child(even)': (
-                                'background-color': var(--tertiary-light-1),
+                                'background-color': var(--grayscale-300),
                             ),
                         ),
                         'tbody': (
                             'td': (
-                                'border-bottom-color': var(--secondary-light-3),
+                                'border-bottom-color': var(--grayscale-900),
                             ),
                             'tr:nth-child(even)': (
                                 'background-color': 'transparent',
                             ),
                             'td:nth-child(even)': (
-                                'background-color': var(--secondary-light-2),
+                                'background-color': var(--grayscale-300),
                             ),
                         ),
                     ),
                 ),
-
             // Default table  map for all screens
             'mobile-up':
                 (
                     'table--default': (
                         'table': (
-                            'border-color': var(--secondary-light-3),
+                            'border-color': var(--grayscale-900),
                         ),
                         'thead': (
                             'tr': (
-                                'color': var(--tertiary-base),
-                                'border-bottom-color': var(--tertiary-base),
+                                'color': var(--grayscale-900),
+                                'border-bottom-color': var(--grayscale-900),
+                                'background-color': var(--grayscale-000),
                             ),
                             'td': (
-                                'background-color': var(--tertiary-light-1),
+                                'background-color': var(--grayscale-300),
                             ),
                         ),
                         'tbody': (
                             'tr': (
-                                'border-bottom-color': var(--secondary-light-3),
+                                'border-bottom-color': var(--grayscale-900),
+                                'background-color': var(--grayscale-000),
+                                'color': var(--grayscale-900),
                             ),
                             'tr:nth-child(even)': (
-                                'background-color': var(--secondary-light-1),
+                                'background-color': var(--grayscale-300),
+                            ),
+                        ),
+                    ),
+                ),
+        ),
+    ),
+    'dark-theme': (
+        'light-bg': (
+            // Transpose table map for  mobile and tablet screens
+            'tablet-below':
+                (
+                    'table--transpose': (
+                        'table': (
+                            'border-color': var(--grayscale-900),
+                        ),
+                        'thead': (
+                            'tr': (
+                                'color': var(--grayscale-000),
+                                'border-right-color': var(--grayscale-900),
+                            ),
+                            'td': (
+                                'background-color': var(--grayscale-300),
+                            ),
+                            'td:nth-child(even)': (
+                                'background-color': var(--grayscale-300),
+                            ),
+                        ),
+                        'tbody': (
+                            'td': (
+                                'border-bottom-color': var(--grayscale-900),
+                            ),
+                            'tr:nth-child(even)': (
+                                'background-color': 'transparent',
+                            ),
+                            'td:nth-child(even)': (
+                                'background-color': var(--grayscale-900),
+                            ),
+                        ),
+                    ),
+                ),
+            // Default table  map for all screens
+            'mobile-up':
+                (
+                    'table--default': (
+                        'table': (
+                            'border-color': var(--grayscale-900),
+                        ),
+                        'thead': (
+                            'tr': (
+                                'color': var(--grayscale-000),
+                                'border-bottom-color': var(--grayscale-900),
+                            ),
+                            'td': (
+                                'background-color': var(--grayscale-900),
+                            ),
+                        ),
+                        'tbody': (
+                            'tr': (
+                                'border-bottom-color': var(--grayscale-900),
+                                'background-color': var(--grayscale-600),
+                                'color': var(--grayscale-000),
+                            ),
+                            'tr:nth-child(even)': (
+                                'background-color': var(--grayscale-900),
                             ),
                         ),
                     ),

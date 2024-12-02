@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import '../../../../../assets/images/de-stacked-logo.svg';
+import React, { useState, useEffect } from 'react';
+import '../../../../../assets/images/mlogo.svg';
 import '../../../../../assets/images/de-logomark.svg';
 import sidebarNavigationData from '../../../data/sidebar-navigation.json';
 import SearchForm from '../../DocumentSearch/SidebarSearchForm';
@@ -11,6 +11,22 @@ const SidebarNav = () => {
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
     };
+
+    // State for the selected theme
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'default-theme');
+
+    // Update the theme when the dropdown changes
+    const handleThemeChange = (event) => {
+        const selectedTheme = event.target.value;
+        setTheme(selectedTheme);
+        document.documentElement.setAttribute('data-theme', selectedTheme);
+        localStorage.setItem('theme', selectedTheme);
+    };
+
+    // Load the saved theme on initial render
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
 
     useEffect(() => {
         const currentPath = window.location.pathname;
@@ -30,11 +46,11 @@ const SidebarNav = () => {
     return (
         <aside
             id="sidebar"
-            className="bg--primary-base"
+            className="bg--primary-darker"
         >
             <img
                 className="logo"
-                src="/assets/images/de-stacked-logo.svg"
+                src="/assets/images/mlogo.svg"
                 alt="Stacked Logo"
             />
             <img
@@ -43,6 +59,18 @@ const SidebarNav = () => {
                 alt="Logomark"
             />
             <nav>
+                <div className="mg-b--30 mg-l--25">
+                    <label htmlFor="theme-switcher">Choose Theme:</label>
+                    <select
+                        id="theme-switcher"
+                        value={theme}
+                        onChange={handleThemeChange}
+                        className="theme-dropdown"
+                    >
+                        <option value="default-theme">Default Theme</option>
+                        <option value="dark-theme">Dark Theme</option>
+                    </select>
+                </div>
                 <SearchForm />
                 <ul>
                     {Object.entries(sidebarNavigationData).map(([sectionTitle, sectionItems]) => (

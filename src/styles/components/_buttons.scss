@@ -27,7 +27,7 @@ a[class*='btn'],
     border-radius: var(--btn--corner-radius);
     text-align: center;
     text-transform: uppercase;
-    border: none;
+    // border: none;
 }
 
 a[class*='btn'] {
@@ -77,7 +77,7 @@ label[for='button'] > input:active,
 label[for='submit'] > input:active,
 label[for='reset'] > input:active {
     background: transparent !important;
-    border: none;
+    // border: none;
     padding: 0;
     display: inline;
     min-width: auto;
@@ -126,7 +126,7 @@ button[class*='btn--primary'],
 [for='reset'][class*='btn--primary'],
 [for='submit'] {
     padding: var(--btn--padding);
-    border: none;
+    // border: none;
 
     &:focus-visible {
         outline: #{$outline--focus};
@@ -146,10 +146,10 @@ button[class*='btn--tertiary'],
     min-width: unset;
     border: none;
 
-    &:focus-visible {
-        outline: #{$outline--focus};
-        outline-offset: #{$outline--focus-offset};
-    }
+    // &:focus-visible {
+    //   outline: #{$outline--focus};
+    //   outline-offset: #{$outline--focus-offset};
+    // }
 }
 
 button.selected,
@@ -160,26 +160,82 @@ button.selected,
 [for='button'].selected,
 [for='submit'].selected,
 [for='reset'].selected {
-    border: none;
+    // border: none;
 }
 
 /*--- Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/
 
+// :root {
+//   --btn-secondary--lgt-bg--hover: rgba(
+//     #{$blue--base-hsl},
+//     #{$btn-focus--opacity}
+//   );
+//   --btn-secondary--lgt-bg--active: rgba(
+//     #{$blue--base-hsl},
+//     #{$btn-active--opacity}
+//   );
+
+//   --btn-tertiary--lgt-bg--hover: rgba(
+//     #{$blue--base-hsl},
+//     #{$btn-focus--opacity}
+//   );
+//   --btn-tertiary--lgt-bg--active: rgba(
+//     #{$blue--base-hsl},
+//     #{$btn-active--opacity}
+//   );
+
+//   --btn-secondary--drk-bg--hover: rgba(#{$white-hsl}, #{$btn-focus--opacity});
+//   --btn-secondary--drk-bg--active: rgba(#{$white-hsl}, #{$btn-active--opacity});
+
+//   --btn-tertiary--drk-bg--hover: rgba(#{$white-hsl}, #{$btn-focus--opacity});
+//   --btn-tertiary--drk-bg--active: rgba(#{$white-hsl}, #{$btn-active--opacity});
+// }
+
+/*--- New Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/
 :root {
-    --btn-secondary--lgt-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
-    --btn-secondary--lgt-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
+    --btn-secondary--lgt-bg--hover: rgba(#{$radiant}, $btn-focus--opacity);
+    --btn-secondary--lgt-bg--active: rgba(#{$radiant}, $btn-active--opacity);
 
-    --btn-tertiary--lgt-bg--hover: hsla(#{$blue--base-hsl}, #{$btn-focus--opacity});
-    --btn-tertiary--lgt-bg--active: hsla(#{$blue--base-hsl}, #{$btn-active--opacity});
+    --btn-tertiary--lgt-bg--hover: rgba(#{$radiant}, $btn-focus--opacity);
+    --btn-tertiary--lgt-bg--active: rgba(#{$radiant}, $btn-active--opacity);
 
-    --btn-secondary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity});
-    --btn-secondary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity});
+    --btn-secondary--drk-bg--hover: rgba(#{$pure-white}, $btn-focus--opacity);
+    --btn-secondary--drk-bg--active: rgba(#{$pure-white}, $btn-active--opacity);
 
-    --btn-tertiary--drk-bg--hover: hsla(#{$white-hsl}, #{$btn-focus--opacity});
-    --btn-tertiary--drk-bg--active: hsla(#{$white-hsl}, #{$btn-active--opacity});
+    --btn-tertiary--drk-bg--hover: rgba(#{$pure-white}, $btn-focus--opacity);
+    --btn-tertiary--drk-bg--active: rgba(#{$pure-white}, $btn-active--opacity);
 }
+
+// :root {
+//   --btn-secondary--lgt-bg--hover: rgba(#{$radiant}, #{$btn-focus--opacity});
+//   --btn-secondary--lgt-bg--active: rgba(#{$radiant}, #{$btn-active--opacity});
+
+//   --btn-tertiary--lgt-bg--hover: rgba(#{$radiant}, #{$btn-focus--opacity});
+//   --btn-tertiary--lgt-bg--active: rgba(#{$radiant}, #{$btn-active--opacity});
+
+//   --btn-secondary--drk-bg--hover: rgba(#{$pure-white}, #{$btn-focus--opacity});
+//   --btn-secondary--drk-bg--active: rgba(
+//     #{$pure-white},
+//     #{$btn-active--opacity}
+//   );
+
+//   --btn-tertiary--drk-bg--hover: rgba(#{$pure-white}, #{$btn-focus--opacity});
+//   --btn-tertiary--drk-bg--active: rgba(#{$pure-white}, #{$btn-active--opacity});
+// }
 
 /*--- Color Scheme - Buttons on Contrasting Backgrounds, Styles ---*/
 
-@include colorize('button', 'light-backgrounds', #{$active-theme});
-@include colorize('button', 'dark-backgrounds', #{$active-theme});
+// @include colorize('button', 'light-backgrounds', #{$active-theme});
+// @include colorize('button', 'dark-backgrounds', #{$active-theme});
+
+/* Default Theme */
+:root {
+    @include colorize('button', 'light-backgrounds', 'default-theme');
+    @include colorize('button', 'dark-backgrounds', 'default-theme');
+}
+
+/* Dark Theme */
+[data-theme='dark-theme'] {
+    @include colorize('button', 'light-backgrounds', 'dark-theme');
+    @include colorize('button', 'dark-backgrounds', 'dark-theme');
+}

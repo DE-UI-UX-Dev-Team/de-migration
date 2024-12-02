@@ -1,9 +1,9 @@
 [class*='col--'] {
-    border: 1px dashed var(--success-element);
+    border: 1px dashed var(--success-accessible);
 }
 
 [class*='row']:not([class*='bg--white-base']) {
-    border: 1px dashed var(--error-element);
+    border: 1px dashed var(--error-accessible);
 }
 
 .no-border {

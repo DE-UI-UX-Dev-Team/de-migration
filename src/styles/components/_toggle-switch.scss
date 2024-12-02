@@ -48,7 +48,8 @@
     /*--- Components- Toggle switch DIsabled Track styling ---*/
 
     input:disabled + .slider {
-        background-color: var(--secondary-light-2);
+        // background-color: var(--secondary-light-2);
+        background-color: var(--grayscale-300);
     }
 
     input:not(:disabled):focus {

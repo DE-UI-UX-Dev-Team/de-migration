@@ -101,4 +101,13 @@ table {
     }
 }
 
-@include colorize('tables', 'light-backgrounds', #{$active-theme});
+// @include colorize('tables', 'light-backgrounds', #{$active-theme});
+
+/* Default Theme */
+:root {
+    @include colorize('tables', 'light-backgrounds', 'default-theme');
+}
+
+[data-theme='dark-theme'] {
+    @include colorize('tables', 'light-backgrounds', 'dark-theme');
+}

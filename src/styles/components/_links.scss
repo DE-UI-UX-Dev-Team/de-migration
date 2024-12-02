@@ -73,5 +73,17 @@ a[href^='tel:'] {
 
 /*--- Component - Anchors/Links on Contrasting Backgrounds, Styles ---*/
 
-@include colorize('links', 'light-backgrounds', #{$active-theme});
-@include colorize('links', 'dark-backgrounds', #{$active-theme});
+// @include colorize('links', 'light-backgrounds', #{$active-theme});
+// @include colorize('links', 'dark-backgrounds', #{$active-theme});
+
+/* Default Theme */
+:root {
+    @include colorize('links', 'light-backgrounds', 'default-theme');
+    @include colorize('links', 'dark-backgrounds', 'default-theme');
+}
+
+/* Dark Theme */
+[data-theme='dark-theme'] {
+    @include colorize('links', 'light-backgrounds', 'dark-theme');
+    @include colorize('links', 'dark-backgrounds', 'dark-theme');
+}

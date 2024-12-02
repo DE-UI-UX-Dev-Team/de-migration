@@ -20,7 +20,8 @@ section:not([class*='bg--']) + .customer-care:not([class*='bg--']) {
     padding-top: 0;
 
     & .container:before {
-        border-top: 1px solid var(--secondary-light-3);
+        // border-top: 1px solid var(--secondary-light-3);
+        border-top: 1px solid var(--secondary-light);
         content: '';
         display: block;
         top: 0;

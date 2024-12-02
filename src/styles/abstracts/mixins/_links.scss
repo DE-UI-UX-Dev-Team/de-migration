@@ -5,7 +5,7 @@
 @use '../../abstracts/tokens' as *;
 @use '../functions/string-replace.scss' as *;
 
-@mixin getLinksOnColorBg($palette, $bgSelector, $suffix) {
+@mixin getLinksOnColorBg($palette, $bgSelector, $suffix, $theme: 'default-theme') {
     @each $link, $states in $palette {
         @each $state, $properties in $states {
             @if $link == 'default-links' {
