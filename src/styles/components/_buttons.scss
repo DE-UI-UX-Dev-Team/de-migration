@@ -163,34 +163,6 @@ button.selected,
     // border: none;
 }
 
-/*--- Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/
-
-// :root {
-//   --btn-secondary--lgt-bg--hover: rgba(
-//     #{$blue--base-hsl},
-//     #{$btn-focus--opacity}
-//   );
-//   --btn-secondary--lgt-bg--active: rgba(
-//     #{$blue--base-hsl},
-//     #{$btn-active--opacity}
-//   );
-
-//   --btn-tertiary--lgt-bg--hover: rgba(
-//     #{$blue--base-hsl},
-//     #{$btn-focus--opacity}
-//   );
-//   --btn-tertiary--lgt-bg--active: rgba(
-//     #{$blue--base-hsl},
-//     #{$btn-active--opacity}
-//   );
-
-//   --btn-secondary--drk-bg--hover: rgba(#{$white-hsl}, #{$btn-focus--opacity});
-//   --btn-secondary--drk-bg--active: rgba(#{$white-hsl}, #{$btn-active--opacity});
-
-//   --btn-tertiary--drk-bg--hover: rgba(#{$white-hsl}, #{$btn-focus--opacity});
-//   --btn-tertiary--drk-bg--active: rgba(#{$white-hsl}, #{$btn-active--opacity});
-// }
-
 /*--- New Color Scheme - Buttons on Contrasting Backgrounds, Properties ---*/
 :root {
     --btn-secondary--lgt-bg--hover: rgba(#{$radiant}, $btn-focus--opacity);
@@ -205,28 +177,6 @@ button.selected,
     --btn-tertiary--drk-bg--hover: rgba(#{$pure-white}, $btn-focus--opacity);
     --btn-tertiary--drk-bg--active: rgba(#{$pure-white}, $btn-active--opacity);
 }
-
-// :root {
-//   --btn-secondary--lgt-bg--hover: rgba(#{$radiant}, #{$btn-focus--opacity});
-//   --btn-secondary--lgt-bg--active: rgba(#{$radiant}, #{$btn-active--opacity});
-
-//   --btn-tertiary--lgt-bg--hover: rgba(#{$radiant}, #{$btn-focus--opacity});
-//   --btn-tertiary--lgt-bg--active: rgba(#{$radiant}, #{$btn-active--opacity});
-
-//   --btn-secondary--drk-bg--hover: rgba(#{$pure-white}, #{$btn-focus--opacity});
-//   --btn-secondary--drk-bg--active: rgba(
-//     #{$pure-white},
-//     #{$btn-active--opacity}
-//   );
-
-//   --btn-tertiary--drk-bg--hover: rgba(#{$pure-white}, #{$btn-focus--opacity});
-//   --btn-tertiary--drk-bg--active: rgba(#{$pure-white}, #{$btn-active--opacity});
-// }
-
-/*--- Color Scheme - Buttons on Contrasting Backgrounds, Styles ---*/
-
-// @include colorize('button', 'light-backgrounds', #{$active-theme});
-// @include colorize('button', 'dark-backgrounds', #{$active-theme});
 
 /* Default Theme */
 :root {

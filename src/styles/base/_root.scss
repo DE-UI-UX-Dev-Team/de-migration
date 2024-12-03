@@ -3,16 +3,9 @@
 @use '../abstracts' as *;
 
 :root {
-    //   $active-theme: "default-theme";
-    //   @include getColorCustomProperties();
-
-    //   body {
-    //     background-color: blue;
-    //   }
     @include getColorCustomProperties('default-theme'); // Default theme properties
 
     body {
-        // background-color: var(--grayscale-000);
         background-color: var(--page-fill-grayscale-default);
     }
     section {
@@ -291,12 +284,4 @@
 
 [data-theme='dark-theme'] {
     @include getColorCustomProperties('dark-theme');
-
-    // body {
-    //   background-color: var(--grayscale-000);
-    // }
-
-    //   section {
-    //     background-color: blue;
-    //   }
 }
