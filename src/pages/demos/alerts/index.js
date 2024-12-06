@@ -7,7 +7,7 @@ const Alerts = {
             headline: 'This is an alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--grayscale-400'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -15,7 +15,7 @@ const Alerts = {
             headline: 'This is error alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--red-light'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -23,7 +23,7 @@ const Alerts = {
             headline: 'This is warning alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--warning-background'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -31,7 +31,7 @@ const Alerts = {
             headline: 'This is success alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--green-light'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
     ],
@@ -41,7 +41,7 @@ const Alerts = {
             headline: 'This is an alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--grayscale-400'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -49,7 +49,7 @@ const Alerts = {
             headline: 'This is error alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--red-light'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -57,7 +57,7 @@ const Alerts = {
             headline: 'This is warning alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--warning-background'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -65,7 +65,7 @@ const Alerts = {
             headline: 'This is success alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--green-light'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
     ],
@@ -75,7 +75,7 @@ const Alerts = {
             headline: 'This is an alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--grayscale-400'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -83,7 +83,7 @@ const Alerts = {
             headline: 'This is error alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--red-light'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -91,7 +91,7 @@ const Alerts = {
             headline: 'This is warning alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--warning-background'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
         {
@@ -99,7 +99,7 @@ const Alerts = {
             headline: 'This is success alert headline',
             message:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl',
-            customClassList: ['alert-container', 'bg--green-light'],
+            customClassList: ['alert-container'],
             buttonClassList: ['btn--tertiary'],
         },
     ],

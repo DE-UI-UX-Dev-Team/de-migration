@@ -120,35 +120,3 @@ $colors: (
 );
 
 //  New Map used to adjust/define how base elements interact with different colored backgrounds
-
-// new light bg
-$lightBackgroundClasses: (
-    'bg--primary--lightest',
-    'bg--secondary--lightest',
-    'bg--secondary--lighter',
-    'bg--tertiary--lightest',
-    'bg--grayscale-000'
-);
-
-// new dark bg
-$darkBackgroundClasses: (
-    'bg--primary-base',
-    'bg--primary-lighter',
-    'bg--primary-light',
-    'bg--primary-dark',
-    'bg--primary-darker',
-    'bg--primary-darkest',
-    'bg--secondary-base',
-    'bg--secondary-lighter',
-    'bg--secondary-light',
-    'bg--secondary-dark',
-    'bg--secondary-darker',
-    'bg--secondary-darkest',
-    'bg--tertiary-base',
-    'bg--tertiary-lighter',
-    'bg--tertiary-dark',
-    'bg--tertiary-darker',
-    'bg--tertiary-darkest'
-);
-
-$alertBackgroundClasses: ('bg--red-light', 'bg--yellow-light', 'bg--green-light', 'bg--grayscale-400');

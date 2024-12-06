@@ -44,10 +44,7 @@ const SidebarNav = () => {
     }, []);
 
     return (
-        <aside
-            id="sidebar"
-            className="bg--primary-darker"
-        >
+        <aside id="sidebar">
             <img
                 className="logo"
                 src="/assets/images/mlogo.svg"

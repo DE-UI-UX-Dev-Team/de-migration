@@ -2,17 +2,13 @@
 @use '../../../styles/abstracts/tokens/design-tokens' as *;
 
 #root {
-    background-color: var(--container-fill-primary-primary-3);
+    background-color: var(--container-fill-primary-3);
     display: flex;
     --collapsed-nav: 95px;
     --expanded-nav: 280px;
     --page-top-border: 20px;
     --sidebar-offset-top: 60px;
 }
-
-// [data-theme="dark-theme"] #root {
-//   background-color: var(--primary-dark);
-// }
 
 aside#sidebar {
     width: var(--collapsed-nav);
@@ -21,7 +17,7 @@ aside#sidebar {
     z-index: 5;
     transition: all 250ms ease-in-out;
     padding-top: var(--sidebar-offset-top);
-    background-color: var(--container-fill-primary-primary-3);
+    background-color: var(--container-fill-primary-3);
 
     [class*='logo'] {
         position: absolute;
@@ -49,6 +45,7 @@ aside#sidebar {
             display: none;
             button.btn--tertiary {
                 padding: 5px;
+                background-color: var(--container-fill-primary-3);
 
                 i {
                     margin-top: 3px;
@@ -62,20 +59,10 @@ aside#sidebar {
             padding-right: 10px;
         }
     }
-}
 
-[data-theme='dark-theme'] aside#sidebar {
-    // background-color: var(--primary-dark);
-
-    nav {
-        ul {
-            display: none;
-            button.btn--tertiary {
-                padding: 5px;
-                // background-color: var(--primary-dark);
-                color: var(--grayscale-000);
-            }
-        }
+    a {
+        color: var(--grayscale-900);
+        text-decoration-color: var(--grayscale-900);
     }
 }
 
@@ -89,10 +76,6 @@ main {
     border-top-left-radius: var(--page-top-border);
     overflow: hidden;
 }
-
-// [data-theme="dark-theme"] main {
-//   background-color: var(--grayscale-700);
-// }
 
 body.sidebar-expanded {
     main {
@@ -128,9 +111,9 @@ button.btn--tertiary[disabled] {
     margin-left: -50vw;
     margin-right: -50vw;
     height: 480px;
-    background: #f0f0f0;
-    border-top: 10px solid #f0f0f0;
-    border-bottom: 10px solid #f0f0f0;
+    background: var(--grayscale-300);
+    border-top: 10px solid var(--grayscale-300);
+    border-bottom: 10px solid var(--grayscale-300);
 }
 
 iframe {
@@ -138,7 +121,7 @@ iframe {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    background-color: #f4f4f4;
+    background-color: var(--grayscale-400);
     border: none;
 
     &.sm {
@@ -171,12 +154,12 @@ iframe {
         margin-bottom: 10px;
         margin-right: 15px;
         vertical-align: middle;
-        background-color: #fafafa;
+        background-color: var(--grayscale-800);
         transition: background-color 200ms ease-in-out;
 
         &.active,
         &:hover {
-            background-color: #d5d5d5;
+            background-color: var(--grayscale-500);
         }
 
         &:last-child {
@@ -246,7 +229,7 @@ nav {
     transform: translate(-10px, 0px);
     cursor: pointer;
     transition: transform 250ms ease-in-out;
-    background-color: var(--secondary-light-2);
+    background-color: var(--secondary-light);
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top-left-radius: 0;
@@ -260,7 +243,7 @@ nav {
 
     &:hover {
         transform: translate(0px, 0px);
-        background-color: var(--secondary-light-2);
+        background-color: var(--secondary-light);
     }
 }
 

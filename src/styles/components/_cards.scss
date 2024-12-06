@@ -86,12 +86,7 @@
 
 // setting default card bg to white
 .card {
-    // background-color: var(--white-base);
-    background-color: var(--container-fill-secondary-secondary-4);
-}
-
-[data-theme='dark-theme'] .card {
-    background-color: var(--yellow-light);
+    background-color: var(--container-fill-secondary-4);
 }
 
 //scrollable cards on tab and smaller screens

@@ -3,30 +3,30 @@ import React, { useState, useEffect } from 'react';
 const colors = [
     /* Background Colors */
     '--page-fill-grayscale-default',
-    '--page-fill-grayscale-gray-lighter',
-    '--page-fill-grayscale-gray-light',
-    '--page-fill-primary-primary-brand',
+    '--page-fill-grayscale-lighter',
+    '--page-fill-grayscale-light',
+    '--page-fill-primary-brand',
 
     '--container-fill-grayscale-default',
-    '--container-fill-grayscale-gray-1',
-    '--container-fill-grayscale-gray-2',
+    '--container-fill-grayscale-1',
+    '--container-fill-grayscale-2',
 
-    '--container-fill-primary-default-pastel',
-    '--container-fill-primary-primary-brand',
-    '--container-fill-primary-primary-1',
-    '--container-fill-primary-primary-2',
-    '--container-fill-primary-primary-3',
+    '--container-fill-primary-default',
+    '--container-fill-primary-brand',
+    '--container-fill-primary-1',
+    '--container-fill-primary-2',
+    '--container-fill-primary-3',
 
-    '--container-fill-secondary-default-pastel',
-    '--container-fill-secondary-secondary-brand',
-    '--container-fill-secondary-secondary-1',
-    '--container-fill-secondary-secondary-2',
-    '--container-fill-secondary-secondary-3',
-    '--container-fill-secondary-secondary-4',
+    '--container-fill-secondary-default',
+    '--container-fill-secondary-brand',
+    '--container-fill-secondary-1',
+    '--container-fill-secondary-2',
+    '--container-fill-secondary-3',
+    '--container-fill-secondary-4',
 
-    '--container-fill-tertiary-default-pastel',
-    '--container-fill-tertiary-tertiary-brand',
-    '--container-fill-tertiary-tertiary-1',
+    '--container-fill-tertiary-default',
+    '--container-fill-tertiary-brand',
+    '--container-fill-tertiary-1',
 
     '--container-fill-status-error',
     '--container-fill-status-success',
@@ -53,7 +53,6 @@ function ColorGrid() {
             {colors.map((colorVar) => {
                 const style = {
                     backgroundColor: `var(${colorVar})`,
-                    // width: "600px",
                     height: '60px',
                 };
                 const colorValue = colorValues[colorVar] || '';
@@ -64,7 +63,6 @@ function ColorGrid() {
                     >
                         <div className="color-name">{colorVar}</div>
 
-                        {/* <div className="color-value">{colorValue}</div> */}
                         <div
                             className="color-swatch row"
                             style={style}

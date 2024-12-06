@@ -4,6 +4,14 @@
 
 footer,
 .footer {
+    &.main-footer {
+        background-color: var(--container-fill-primary-3);
+
+        a {
+            color: var(--grayscale-900);
+            text-decoration-color: var(--grayscale-900);
+        }
+    }
     .link-list--head {
         font: var(--h-4--sm);
         letter-spacing: var(--h-5--ltr-spc--sm);

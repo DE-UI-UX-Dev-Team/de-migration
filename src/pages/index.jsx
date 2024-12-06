@@ -11,7 +11,7 @@ ReactDOM.render(
             <SidebarNav />
             <main>
                 {/* <ExpandNavButton /> */}
-                <section className="bg--primary-light-1 bg-btm-curv">
+                <section className=" bg-btm-curv">
                     <div className="container">
                         <div className="row">
                             <div className="col--md-4">

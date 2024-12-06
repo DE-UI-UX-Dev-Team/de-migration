@@ -119,19 +119,19 @@ select,
     // Error Status
 
     .validation-message,
-    .clr--success-element {
+    .validation-success {
         position: absolute;
         font-size: var(--input--font-size--md);
         bottom: calc(var(--input--base-padding) * -1.5);
     }
 
     &.has-lead-icon .validation-message,
-    .has-lead-icon .clr--success-element {
+    .has-lead-icon .validation-success {
         margin-left: calc(var(--input--base-padding) * -1.5);
     }
 
     &.has-lead-icon .validation-message:before,
-    .has-lead-icon .clr--success-element:before {
+    .has-lead-icon .validation-success:before {
         font-size: var(--input--font-size--md);
     }
 
@@ -139,12 +139,12 @@ select,
         content: '\e16b';
     }
 
-    .clr--success-element:before {
+    .validation-success:before {
         content: '\e158';
     }
 
     .validation-message:before,
-    .clr--success-element:before {
+    .validation-success:before {
         padding-right: calc(var(--input--base-padding) / 2);
         font-size: var(--input--font-size--md);
         line-height: var(--input--font-size--md);

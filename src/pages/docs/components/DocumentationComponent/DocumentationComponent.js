@@ -18,10 +18,7 @@ const DocumentationComponent = ({ docType, docMeta }) => {
             {docMeta.map((section, index) => {
                 return (
                     findTag(section[0], 'doc-type').value === docType && (
-                        <section
-                            className="bdr-bottom"
-                            key={index}
-                        >
+                        <section key={index}>
                             <div className="container">
                                 {section.map((item, itemIndex) => {
                                     return (

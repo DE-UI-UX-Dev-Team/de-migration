@@ -95,3 +95,16 @@ section.full-width .alert-container {
 [data-alert-message]:not([data-status='active']) {
     display: none;
 }
+
+.alert-container [data-message-type='warning'] {
+    background-color: var(--container-fill-status-warning);
+}
+.alert-container [data-message-type='error'] {
+    background-color: var(--container-fill-status-error);
+}
+.alert-container [data-message-type='success'] {
+    background-color: var(--container-fill-status-success);
+}
+.alert-container [data-message-type='message'] {
+    background-color: var(--container-fill-status-info);
+}

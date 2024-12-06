@@ -6,7 +6,7 @@ import '../../../styles/main.scss';
 
 const App: React.FC = () => {
     return (
-        <section className="bg--tertiary-base">
+        <section className="">
             <div className="container">
                 <div className="row fs--text-center">
                     <div className="col">

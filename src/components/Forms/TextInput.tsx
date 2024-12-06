@@ -80,7 +80,7 @@ const TextInput: React.FC<TextInputProps> = ({
                 />
                 {showIcon && <i className="fak fa-location-dot-solid"></i>}
                 {error && <div className="validation-message ">{message}</div>}
-                {success && <div className="clr--success-element">Entry Successful</div>}
+                {success && <div className="validation-success">Entry Successful</div>}
                 <span>{label}</span>
                 {showResetButton && (
                     <button

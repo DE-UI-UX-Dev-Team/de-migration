@@ -91,7 +91,7 @@ const App: React.FC = () => {
                     </ModalColumn>
                     <ModalColumn
                         header={modal.headerIsCustomer}
-                        columnClassName="col--md-4 modal-col bg--tertiary-light-1"
+                        columnClassName="col--md-4 modal-col "
                         btnSecondary={modal.btnContinue}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
@@ -132,7 +132,7 @@ const App: React.FC = () => {
                     </ModalColumn>
                     <ModalColumn
                         header={modal.headerIsCustomer}
-                        columnClassName="col--md-4 modal-col bg--tertiary-light-1"
+                        columnClassName="col--md-4 modal-col "
                         btnSecondary={modal.btnContinue}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}
@@ -155,7 +155,7 @@ const App: React.FC = () => {
                         btnPrimary={modal.btnProceed}
                         btnCloseSecondary={modal.btnCancel}
                         onClose={handleModalClose}
-                        withExclamationIcon={<i className="fa fa-exclamation-circle clr--error-element"></i>}
+                        withExclamationIcon={<i className="fa fa-exclamation-circle "></i>}
                         isDisabled={!radioSelected}
                     >
                         <form>
@@ -178,7 +178,7 @@ const App: React.FC = () => {
                         columnClassName="col--md-4 modal-col"
                         btnPrimary={modal.btnZipcode}
                         btnCloseSecondary={modal.btnBack}
-                        withExclamationIcon={<i className="fa fa-exclamation-circle clr--error-element"></i>}
+                        withExclamationIcon={<i className="fa fa-exclamation-circle "></i>}
                         iconClassName="close-icon-left"
                         onClose={handleModalClose}
                     >
@@ -186,7 +186,7 @@ const App: React.FC = () => {
                     </ModalColumn>
                     <ModalColumn
                         header={modal.headerIsCustomer}
-                        columnClassName="col--md-4 modal-col bg--tertiary-light-1"
+                        columnClassName="col--md-4 modal-col "
                         btnSecondary={modal.btnLogin}
                         iconClassName="close-icon-right"
                         onClose={handleModalClose}

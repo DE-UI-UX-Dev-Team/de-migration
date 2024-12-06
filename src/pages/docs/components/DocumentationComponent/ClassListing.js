@@ -20,7 +20,7 @@ const ClassListing = ({ componentId, styles }) => {
             data-expandable-container="collapsed"
             className="pd-l--0"
         >
-            <div class="bdr-btm">
+            <div>
                 <div
                     data-expandable-trigger="click"
                     className="accordion-title h-3"
@@ -37,7 +37,7 @@ const ClassListing = ({ componentId, styles }) => {
                             return (
                                 <div
                                     key={index}
-                                    className="col--sm-2 col--lg-4 bg--secondary-light-2 pd-t--5 pd-b--5 fw--semibold"
+                                    className="col--sm-2 col--lg-4  pd-t--5 pd-b--5 fw--semibold"
                                 >
                                     {value}
                                 </div>

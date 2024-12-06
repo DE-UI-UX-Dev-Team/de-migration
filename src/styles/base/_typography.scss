@@ -215,20 +215,6 @@ h2,
     color: var(--heading-color);
 }
 
-[class*='bg--primary']:not([class*='light-']) hr,
-[class*='bg--secondary']:not([class*='light-']) hr {
-    background-color: var(--body-text--on-dark-background);
-}
-
 /*--- Color Scheme - Type on Colored Backgrounds ---*/
 
-// @include getTypeOnColorBg();
-
 /* --- Color Scheme - Type on Colored Backgrounds --- */
-[data-theme='dark-theme'] {
-    @include getTypeOnColorBg();
-}
-
-:root {
-    @include getTypeOnColorBg();
-}

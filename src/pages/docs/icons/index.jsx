@@ -12,7 +12,7 @@ ReactDOM.render(
             <SidebarNav />
             <main>
                 <ExpandNavButton />
-                <section className="bg--secondary-light-2">
+                <section>
                     <div className="container">
                         <div className="row">
                             <div className="col">

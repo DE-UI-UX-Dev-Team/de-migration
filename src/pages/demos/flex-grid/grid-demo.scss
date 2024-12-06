@@ -1,11 +1,18 @@
 [class*='col--'] {
-    border: 1px dashed var(--success-accessible);
+    border: 1px dashed var(--green-accessible);
 }
 
-[class*='row']:not([class*='bg--white-base']) {
-    border: 1px dashed var(--error-accessible);
+[class*='row']:not([class*='grid-base']) {
+    border: 1px dashed var(--red-accessible);
 }
-
 .no-border {
     border: none;
+}
+
+.grid-row-left {
+    background-color: var(--primary-base);
+}
+
+.grid-row-right {
+    background-color: var(--grayscale-300);
 }
