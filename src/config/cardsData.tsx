@@ -25,7 +25,7 @@ export const cards: CardProps[] = [
         title,
         description: `${descriptionShort}`,
         cardDivClassName: 'col--lg-3 card-container',
-        cardClassName: 'card e',
+        cardClassName: 'card ',
         buttonClassName: 'btn--tertiary',
     },
     {
@@ -62,7 +62,7 @@ export const cardsbody: CardProps[] = [
         title,
         description: `${descriptionShort}`,
         cardDivClassName: 'col--lg-3 card-container',
-        cardClassName: 'card e',
+        cardClassName: 'card ',
         buttonClassName: 'btn--tertiary',
     },
     {
@@ -111,7 +111,7 @@ export const cardsright: CardProps[] = [
         title,
         description: `${descriptionShort}`,
         cardDivClassName: 'col--lg-4 card-container',
-        cardClassName: 'card e',
+        cardClassName: 'card ',
         buttonClassName: 'btn--tertiary',
     },
     {
@@ -168,7 +168,7 @@ export const cardsleft: CardProps[] = [
         title,
         description: 'At Direct Energy, your n',
         cardDivClassName: 'col--md-odd-3 col--lg-4 card-container',
-        cardClassName: 'card e',
+        cardClassName: 'card ',
         buttonClassName: 'btn--tertiary',
     },
     {
@@ -225,7 +225,7 @@ export const cardsbtn: CardProps[] = [
         title,
         description: `${descriptionLong}`,
         cardDivClassName: 'col--lg-3 card-container',
-        cardClassName: 'card e',
+        cardClassName: 'card ',
         buttonClassName: 'btn--primary',
     },
 ];
