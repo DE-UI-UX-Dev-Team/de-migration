@@ -15,7 +15,7 @@ import {
 const App: React.FC = () => {
     return (
         <div>
-            <section className="bdr-bottom">
+            <section>
                 <div className="container">
                     <div className="row fs--text-center">
                         <div className="col">
@@ -29,7 +29,7 @@ const App: React.FC = () => {
                 </div>
             </section>
 
-            <section className="bdr-bottom">
+            <section>
                 <div className="container">
                     <div className="row fs--text-center">
                         <div className="col">
@@ -43,7 +43,7 @@ const App: React.FC = () => {
                 </div>
             </section>
 
-            <section className="bdr-bottom">
+            <section>
                 <div className="container">
                     <div className="row fs--text-center">
                         <div className="col">
@@ -54,7 +54,7 @@ const App: React.FC = () => {
                 </div>
             </section>
 
-            <section className="bdr-bottom">
+            <section>
                 <div className="container card-container">
                     <div className="card-outer--horizontal">
                         <div className="card-outer--body">
@@ -78,7 +78,7 @@ const App: React.FC = () => {
                 </div>
             </section>
 
-            <section className="bdr-bottom">
+            <section>
                 <div className="container card-container">
                     <div className="card-outer--horizontal">
                         <div className="card-outer--body">
@@ -102,7 +102,7 @@ const App: React.FC = () => {
                 </div>
             </section>
 
-            <section className="bdr-bottom">
+            <section>
                 <div className="container card-container">
                     <div className="card-outer--horizontal">
                         <div className="card-outer--img">

@@ -6,6 +6,8 @@ a {
     cursor: pointer;
     text-decoration: $link-default--underline;
     font-weight: $font-weight--medium;
+    color: var(--primary-darkest);
+    text-decoration-color: var(--primary-darkest);
 
     i {
         color: inherit !important;
@@ -28,6 +30,8 @@ a {
     &[disabled] {
         text-decoration: none;
         pointer-events: none;
+        color: var(--grayscale-300);
+        text-decoration-color: var(--grayscale-300);
     }
 }
 
@@ -72,6 +76,3 @@ a[href^='tel:'] {
 }
 
 /*--- Component - Anchors/Links on Contrasting Backgrounds, Styles ---*/
-
-@include colorize('links', 'light-backgrounds', #{$active-theme});
-@include colorize('links', 'dark-backgrounds', #{$active-theme});

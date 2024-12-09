@@ -41,7 +41,7 @@ const App: React.FC = () => {
                 </div>
             </section>
 
-            <section className="bg--tertiary-base">
+            <section>
                 <div className="container">
                     <div className="row accordion--faq accordion--border-full">
                         <div className="col fs--text-center">

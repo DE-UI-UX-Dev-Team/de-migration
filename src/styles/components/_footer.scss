@@ -4,6 +4,14 @@
 
 footer,
 .footer {
+    &.main-footer {
+        background-color: var(--container-fill-primary-3);
+
+        a {
+            color: var(--grayscale-900);
+            text-decoration-color: var(--grayscale-900);
+        }
+    }
     .link-list--head {
         font: var(--h-4--sm);
         letter-spacing: var(--h-5--ltr-spc--sm);
@@ -41,7 +49,8 @@ footer,
         margin-right: $h-spacing--25;
 
         .social-icon i {
-            border: 1px solid var(--white-base);
+            // border: 1px solid var(--white-base);
+            border: 1px solid var(--grayscale-900);
             border-radius: var(--border-radius-25);
             padding: 1rem;
             margin: 0 0 0.75rem 0;

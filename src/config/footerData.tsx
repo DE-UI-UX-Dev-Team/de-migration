@@ -1,7 +1,7 @@
 import { FooterProps, LinkListGroupProps } from '../interfaces/Props';
 import { footerDisclaimer, footerLinkList } from '../local/en/Footer/constants';
 export const footerData: FooterProps = {
-    footerSectionClass: 'bg--primary-base bg--top-curv footer',
+    footerSectionClass: 'main-footer footer',
     disclaimer: footerDisclaimer,
     linkListArray: [
         {

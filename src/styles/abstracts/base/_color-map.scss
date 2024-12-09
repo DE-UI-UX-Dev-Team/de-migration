@@ -2,90 +2,121 @@
 @use 'sass:map';
 // Map used to create utility classes & CSS variables
 
+// new color
+
 $colors: (
     'default-theme': (
         'primary': (
-            'base': $orange--base-hsl,
-            'light-1': $orange--light-1-hsl,
-            'light-2': $orange--light-2-hsl,
-            'light-3': $orange--light-3-hsl,
-            'dark-1': $orange--dark-1-hsl,
-            'dark-2': $orange--dark-2-hsl,
+            'base': $charge,
+            'darkest': $dark-orange-1,
+            'darker': $dark-orange-2,
+            'dark': $amber,
+            'light': $light-orange-1,
+            'lighter': $light-orange-2,
+            'lightest': $light-orange-3,
         ),
         'secondary': (
-            'base': $gray--base-hsl,
-            'light-1': $gray--light-1-hsl,
-            'light-2': $gray--light-2-hsl,
-            'light-3': $gray--light-3-hsl,
-            'dark-1': $gray--dark-1-hsl,
-            'dark-2': $gray--dark-2-hsl,
+            'base': $shine,
+            'darkest': $dark-yellow-2,
+            'darker': $dark-yellow,
+            'dark': $light-yellow-1,
+            'light': $light-yellow-2,
+            'lighter': $glow,
+            'lightest': $light-yellow-3,
         ),
         'tertiary': (
-            'base': $blue--base-hsl,
-            'light-1': $blue--light-1-hsl,
-            'light-2': $blue--light-2-hsl,
-            'light-3': $blue--light-3-hsl,
-            'dark-1': $blue--dark-1-hsl,
-            'dark-2': $blue--dark-2-hsl,
+            'base': $radiant,
+            'darkest': $dark-violet,
+            'darker': $light-violet-1,
+            'dark': $aura,
+            'lighter': $light-violet-2,
+            'lightest': $light-violet-3,
         ),
-        'white': (
-            'base': $white-hsl,
+        'red': (
+            'base': $surge,
+            'light': $light-red,
+            'accessible': $dark-red,
         ),
-        'black': (
-            'base': $black-hsl,
+        'green': (
+            'base': $electric,
+            'light': $light-green,
+            'accessible': $dark-green,
+            'eco': $eco-green,
         ),
-        'success': (
-            'element': $green--base-hsl,
-            'text': $green--dark-1-hsl,
-            'background': $green--light-1-hsl,
+        'yellow': (
+            'base': $shine,
+            'light': $light-yellow-3,
+            'accessible': $dark-yellow-2,
         ),
-        'warning': (
-            'element': $yellow--base-hsl,
-            'text': $yellow--dark-1-hsl,
-            'background': $yellow--light-1-hsl,
+        'grayscale': (
+            '000': $pure-white,
+            '100': $light-gray-2,
+            '200': $light-gray-1,
+            '300': $dim,
+            '400': $shadow,
+            '500': $dark-gray,
+            '600': $ultra-dark-gray,
+            '700': $gray-700,
+            '800': $gray-800,
+            '900': $blackout,
         ),
-        'error': (
-            'element': $red--base-hsl,
-            'text': $red--dark-1-hsl,
-            'background': $red--light-1-hsl,
+    ),
+    'dark-theme': (
+        'primary': (
+            'base': $charge,
+            'darkest': $amber,
+            'darker': $dark-orange-2,
+            'dark': $amber,
+            'light': $light-orange-1,
+            'lighter': $light-orange-2,
+            'lightest': $light-orange-3,
         ),
-        'info': (
-            'element': $blue--base-hsl,
-            'text': $blue--base-hsl,
-            'background': $blue--light-1-hsl,
+        'secondary': (
+            'base': $shine,
+            'darkest': $dark-yellow,
+            'darker': $dark-yellow-2,
+            'dark': $light-yellow-1,
+            'light': $light-yellow-2,
+            'lighter': $glow,
+            'lightest': $light-yellow-3,
+        ),
+        'tertiary': (
+            'base': $radiant,
+            'darkest': $light-violet-3,
+            'darker': $light-violet-2,
+            'dark': $aura,
+            'lighter': $light-violet-1,
+            'lightest': $dark-violet,
+        ),
+        'red': (
+            'base': $surge,
+            'light': $dark-red,
+            'accessible': $light-red,
+        ),
+        'green': (
+            'base': $electric,
+            'light': $dark-green,
+            'accessible': $light-green,
+            'eco': $eco-green,
+        ),
+        'yellow': (
+            'base': $shine,
+            'light': $dark-yellow-2,
+            'accessible': $light-yellow-3,
+        ),
+        'grayscale': (
+            '000': $blackout,
+            '100': $blackout,
+            '200': $blackout,
+            '300': $ultra-dark-gray,
+            '400': $dark-gray,
+            '500': $shadow,
+            '600': $dim,
+            '700': $light-gray-1,
+            '800': $light-gray-2,
+            '900': $pure-white,
         ),
     ),
 );
 
-// Map used to adjust/define how base elements interact with different colored backgrounds
-
-$lightBackgroundClasses: (
-    'bg--primary-light-1',
-    'bg--secondary-light-1',
-    'bg--secondary-light-2',
-    'bg--tertiary-light-1',
-    'bg--white-base'
-);
-
-$darkBackgroundClasses: (
-    'bg--primary-base',
-    'bg--primary-light-2',
-    'bg--primary-light-3',
-    'bg--primary-dark-1',
-    'bg--primary-dark-2',
-    'bg--secondary-base',
-    'bg--secondary-light-3',
-    'bg--secondary-dark-1',
-    'bg--secondary-dark-2',
-    'bg--tertiary-base',
-    'bg--tertiary-light-2',
-    'bg--tertiary-dark-1',
-    'bg--tertiary-dark-2'
-);
-
-$alertBackgroundClasses: (
-    'bg--error-background',
-    'bg--warning-background',
-    'bg--success-background',
-    'bg--info-background'
-);
+//  New Map used to adjust/define how base elements interact with different colored backgrounds

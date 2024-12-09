@@ -10,6 +10,29 @@ table {
     border-style: solid;
     border-width: $table--border-width;
     width: fit-content;
+    border-color: var(--grayscale-900);
+
+    .thead {
+        tr {
+            color: var(--grayscale-900);
+            border-right-color: var(--grayscale-900);
+        }
+        td {
+            background-color: var(--grayscale-300);
+        }
+        td:nth-child(even) {
+            background-color: var(--grayscale-300);
+        }
+    }
+
+    tbody {
+        td {
+            border-bottom-color: var(--grayscale-900);
+        }
+        tr:nth-child(even) {
+            background-color: var(--grayscale-300);
+        }
+    }
 
     tr {
         border-bottom-style: solid;
@@ -43,7 +66,7 @@ table {
     }
 }
 
-@include mediaQuery('desktop-up') {
+@include mediaQuery(desktop-up) {
     .table--layout-fixed {
         table-layout: fixed;
         width: 100%;
@@ -62,7 +85,7 @@ table {
     }
 }
 
-@include mediaQuery('tablet-below') {
+@include mediaQuery(tablet-below) {
     .table--responsive {
         width: 100%;
         overflow-x: auto;
@@ -100,5 +123,3 @@ table {
         }
     }
 }
-
-@include colorize('tables', 'light-backgrounds', #{$active-theme});

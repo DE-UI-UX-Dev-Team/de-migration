@@ -19,7 +19,8 @@
         .col--left {
             margin-bottom: 0;
             padding-bottom: var(--col-margin);
-            border-bottom: 1px solid var(--secondary-light-3);
+            // border-bottom: 1px solid var(--secondary-light-3);
+            border-bottom: 1px solid var(--secondary-light);
         }
 
         .col--right {
@@ -32,7 +33,8 @@
 @include mediaQuery('tablet-up') {
     .text-block-with-link-list {
         .col--left {
-            border-right: 1px solid var(--secondary-light-3);
+            // border-right: 1px solid var(--secondary-light-3);
+            border-right: 1px solid var(--secondary-light);
             flex: 0 1 calc((100% / 12) * 9);
             padding-right: calc((100% / 12) * 0.5);
             margin-right: 0;

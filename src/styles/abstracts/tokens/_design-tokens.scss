@@ -27,43 +27,58 @@ $content--width-md: 800px;
 $content--width-lg: 1236px;
 $content--width-xl: 1440px;
 
-//-- Color Schemes
+// // -- Color Schemes - Hex color system
 
-$white-hsl: 0, 0%, 100%;
-$black-hsl: 0, 0%, 0%;
+// -- New Color Schemes - Hex color system
 
-$orange--base-hsl: 19, 100%, 50%;
-$orange--light-1-hsl: 15, 75%, 97%;
-$orange--light-2-hsl: 19, 100%, 70%;
-$orange--light-3-hsl: 19, 100%, 61%;
-$orange--dark-1-hsl: 19, 100%, 39%;
-$orange--dark-2-hsl: 19, 100%, 30%;
+// new primary
+$charge: #f36f21;
+$dark-orange-1: #cd2500;
+$dark-orange-2: #ff8017;
+$amber: #ffa440;
+$light-orange-1: #ffb37d;
+$light-orange-2: #ffdbb3;
+$light-orange-3: #fff3e2;
 
-$gray--base-hsl: 0, 1%, 26%;
-$gray--light-1-hsl: 0, 0%, 98%;
-$gray--light-2-hsl: 0, 4%, 95%;
-$gray--light-3-hsl: 0, 1%, 77%;
-$gray--dark-1-hsl: 0, 0%, 58%;
-$gray--dark-2-hsl: 0, 0%, 40%;
+// new secondary
+$shine: #ffdd4d;
+$dark-yellow-2: #806f27;
+$dark-yellow: #ffce00;
+$light-yellow-1: #ffeb99;
+$light-yellow-2: #fff5ca;
+$glow: #ffffbd;
+$light-yellow-3: #fffee9;
 
-$blue--base-hsl: 195, 100%, 23%;
-$blue--light-1-hsl: 200, 24%, 93%;
-$blue--light-2-hsl: 195, 100%, 29%;
-$blue--light-3-hsl: 195, 100%, 39%;
-$blue--dark-1-hsl: 195, 100%, 12%;
-$blue--dark-2-hsl: 195, 100%, 18%;
+// new tertiary
+$radiant: #ca9cff;
+$dark-violet: #7648b4;
+$light-violet-1: #9d60f4;
+$aura: #b180f6;
+$light-violet-2: #c4a0f8;
+$light-violet-3: #f0e4fd;
 
-$red--base-hsl: 9, 100%, 37%;
-$red--dark-1-hsl: 354, 61%, 28%;
-$red--light-1-hsl: 355, 70%, 91%;
+// new red - error
+$surge: #fc3530;
+$light-red: #ffe6e5;
+$dark-red: #ad1521;
 
-$yellow--base-hsl: 35, 97%, 57%;
-$yellow--dark-1-hsl: 45, 94%, 27%;
-$yellow--light-1-hsl: 46, 100%, 90%;
+// new green- success
+$electric: #5ed18f;
+$light-green: #d6f2e2;
+$dark-green: #005427;
+$eco-green: #97e8b8;
 
-$green--base-hsl: 140, 100%, 27%;
-$green--dark-1-hsl: 133, 61%, 19%;
-$green--light-1-hsl: 134, 41%, 88%;
+// new grayscale
+$pure-white: #ffffff;
+$light-gray-2: #fafafa;
+$light-gray-1: #f6f6f6;
+$dim: #f0f0f0;
+$shadow: #c8c8c8;
+$dark-gray: #969696;
+$ultra-dark-gray: #6c6c6c;
+$gray-700: #000000;
+$gray-800: #000000;
+$blackout: #000000;
 
 //-- Typography
 

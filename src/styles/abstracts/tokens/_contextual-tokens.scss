@@ -1,10 +1,12 @@
 @use './design-tokens' as *;
 
+// $active-theme: "default"-theme;
 $active-theme: 'default-theme';
 
 //-- Focus Outline
+// $outline--focus: 0.3rem solid "hsl(#{$blue--light-2-hsl})";
+$outline--focus: 0.3rem solid #{$aura};
 
-$outline--focus: 0.3rem solid 'hsl(#{$blue--light-2-hsl})';
 $outline--focus-offset: 0.2rem;
 
 //-- Buttons
@@ -34,6 +36,7 @@ $table-body--font: #{$font-size--mob-lg-5}/#{$line-height--mob-lg-5} #{$font-sta
 $table-head--line-height: $letter-spacing--mob-lg-5;
 $table-body--line-height: $letter-spacing--mob-sm-1;
 
+// new color
 //-- Toggles
 
 $toggle-track--width: 3.4rem;
@@ -46,16 +49,16 @@ $toggle-thumb--left: -0.2rem;
 $toggle-thumb--bottom: -0.2rem;
 $toggle--transition: $transition--ease-40;
 $toggle-check--transform: translateX(1.8rem);
-$toggle-on--hover--shadow: 0 0 0 1.1rem 'hsla(#{$blue--base-hsl}, 10%)';
-$toggle-off--hover--shadow: 0 0 0 1.1rem 'hsla(#{$gray--dark-2-hsl}, 10%)';
-$toggle-on--active--shadow: 0 0 0 1.1rem 'hsla(#{$blue--base-hsl}, 25%)';
-$toggle-off--active--shadow: 0 0 0 1.1rem 'hsla(#{$gray--dark-2-hsl}, 25%)';
+$toggle-on--hover--shadow: 0 0 0 1.1rem 'rgba(#{$dark-yellow}, 0.1)';
+$toggle-off--hover--shadow: 0 0 0 1.1rem 'rgba(#{$light-yellow-3}, 0.1)';
+$toggle-on--active--shadow: 0 0 0 1.1rem 'rgba(#{$shine}, 0.25)';
+$toggle-off--active--shadow: 0 0 0 1.1rem 'rgba(#{$dark-yellow-2}, 0.25)';
 
 //-- Content Switcher
 
-$content-switcher--track-shadow-right: 3px 0 8px 0 'hsla(#{$blue--base-hsl}, 20%)';
+$content-switcher--track-shadow-right: 3px 0 8px 0 'rgba(#{$shine}, 0.2)';
 $content-switcher--track-shadow-left: -3px 0 8px 0 rgba(0, 0, 0, 0.2);
 
 //-- Checkboxes and Radio Buttons
-$checkbox-hover--shadow: 0 0 0 1rem 'hsla(#{$blue--base-hsl}, 10%)';
-$checkbox-hover--background: 'hsla(#{$blue--base-hsl}, 10%)';
+$checkbox-hover--shadow: 0 0 0 1rem 'rgba(#{$shine}, 0.1)';
+$checkbox-hover--background: 'rgba(#{$shine}, 0.1)';

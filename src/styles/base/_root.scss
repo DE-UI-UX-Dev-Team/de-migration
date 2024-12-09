@@ -3,7 +3,14 @@
 @use '../abstracts' as *;
 
 :root {
-    @include getColorCustomProperties();
+    @include getColorCustomProperties('default-theme'); // Default theme properties
+
+    body {
+        background-color: var(--page-fill-grayscale-default);
+    }
+    section {
+        background-color: var(--page-fill-grayscale-default);
+    }
 
     /*--- Default Properties - Dropshadows ---*/
 
@@ -193,4 +200,77 @@
     --icon--size-with-background--sm: calc(var(--icon--size--sm) * 2);
     --icon--size-with-background--md: calc(var(--icon--size--md) * 2);
     --icon--size-with-background--lg: calc(var(--icon--size--lg) * 2);
+
+    /* Page Fill Grayscale */
+    --page-fill-grayscale-default: var(--grayscale-000);
+    --page-fill-grayscale-lighter: var(--grayscale-100);
+    --page-fill-grayscale-light: var(--grayscale-300);
+
+    /* Page Fill Primary */
+    --page-fill-primary-brand: var(--primary-base);
+
+    /* Container Fill Grayscale */
+    --container-fill-grayscale-default: var(--grayscale-000);
+    --container-fill-grayscale-1: var(--grayscale-100);
+    --container-fill-grayscale-2: var(--grayscale-300);
+
+    /* Container Fill Primary */
+    --container-fill-primary-default: var(--primary-lightest);
+    --container-fill-primary-brand: var(--primary-base);
+    --container-fill-primary-1: var(--primary-lighter);
+    --container-fill-primary-2: var(--primary-light);
+    --container-fill-primary-3: var(--primary-darker);
+
+    /* Container Fill Secondary */
+    --container-fill-secondary-default: var(--secondary-lightest);
+    --container-fill-secondary-brand: var(--secondary-base);
+    --container-fill-secondary-1: var(--secondary-light);
+    --container-fill-secondary-2: var(--secondary-lighter);
+    --container-fill-secondary-3: var(--secondary-dark);
+    --container-fill-secondary-4: var(--secondary-darker);
+
+    /* Container Fill Tertiary */
+    --container-fill-tertiary-default: var(--tertiary-lightest);
+    --container-fill-tertiary-brand: var(--tertiary-base);
+    --container-fill-tertiary-1: var(--tertiary-dark);
+
+    /* Container Fill Status */
+    --container-fill-status-error: var(--red-light);
+    --container-fill-status-success: var(--green-light);
+    --container-fill-status-info: var(--tertiary-lightest);
+    --container-fill-status-warning: var(--yellow-light);
+    --container-fill-status-disabled: var(--grayscale-300);
+
+    /* Border Colors */
+    --border-default-primary: var(--grayscale-900);
+    --border-default-secondary: var(--grayscale-400);
+    --border-default-tertiary: var(--grayscale-400);
+
+    --border-status-error: var(--grayscale-900);
+    --border-status-success: var(--grayscale-900);
+    --border-status-info: var(--grayscale-900);
+    --border-status-warning: var(--grayscale-900);
+    --border-status-disabled: var(--grayscale-400);
+
+    /* Icon Colors */
+
+    --icon-default-accessible: var(--grayscale-900);
+    --icon-default-inverse: var(--grayscale-000);
+    --icon-default-primary: var(--primary-base);
+    --icon-default-primary-alt: var(--primary-dark);
+    --icon-default-secondary: var(--secondary-base);
+    --icon-default-secondary-alt: var(--secondary-lighter);
+    --icon-default-tertiary: var(--tertiary-base);
+    --icon-default-tertiary-alt: var(--tertiary-dark);
+    --icon-default-eco-green: var(--green-eco);
+
+    --icon-feedback-error: var(--red-base);
+    --icon-feedback-success: var(--green-base);
+    --icon-feedback-info: var(--tertiary-base);
+    --icon-feedback-warning: var(--primary-dark);
+    --border-icon-feedback-disabled: var(--grayscale-400);
+}
+
+[data-theme='dark-theme'] {
+    @include getColorCustomProperties('dark-theme');
 }

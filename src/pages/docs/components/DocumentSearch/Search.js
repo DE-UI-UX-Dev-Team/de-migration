@@ -102,7 +102,7 @@ const SearchComponent = () => {
                                 </div>
                             </form>
                         </div>
-                        <hr className="mg-t--20 mg-b--20 bg--secondary-light-3" />
+                        <hr className="mg-t--20 mg-b--20" />
                         <div className="col">
                             {Object.entries(matches).length === 0 ? (
                                 <p className="h-3">No results found.</p>
@@ -114,9 +114,7 @@ const SearchComponent = () => {
                                     >
                                         <li key={link}>
                                             {metadata.linkType && (
-                                                <span className="p-2 bg--primary-light-2 link-type">
-                                                    {metadata.linkType}
-                                                </span>
+                                                <span className="p-2  link-type">{metadata.linkType}</span>
                                             )}
                                             <a
                                                 href={

@@ -59,7 +59,7 @@ const IconCards = () => {
                                     key={icon}
                                 >
                                     <button
-                                        className="mg-b--15 bdr-clr--secondary-light-2"
+                                        className="mg-b--15 "
                                         onClick={() => handleCopyIcon(icon)}
                                     >
                                         <i className={icon + ' fak icon-lg display-block mg-r--0'}></i>

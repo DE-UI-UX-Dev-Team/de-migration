@@ -27,7 +27,7 @@ const IframeControl = ({ iframeId, iframeSrc }) => {
     return (
         <div className="iframe-control">
             <button
-                className="iframe-button-full-width btn--tertiary"
+                className="iframe-button-full-width active btn--tertiary"
                 data-iframe={iframeId}
                 data-size="full-width"
                 onClick={() => handleButtonClick('full-width')}
@@ -42,20 +42,20 @@ const IframeControl = ({ iframeId, iframeSrc }) => {
                 onClick={() => handleButtonClick('xl')}
                 aria-label="Extra-large container"
             >
-                <i className="icon-md fa-regular fa-desktop"></i>
+                <i className="icon-md fa-regular  fa-desktop"></i>
             </button>
             <button
-                className="iframe-button-lg btn--tertiary"
+                className="iframe-button-lg active btn--tertiary"
                 data-iframe={iframeId}
                 data-size="lg"
                 onClick={() => handleButtonClick('lg')}
                 aria-label="Large container"
             >
-                <i className="icon-md fa-regular fa-laptop"></i>
+                <i className="icon-md fa-regular active fa-laptop"></i>
                 {/* <img src="/_docs/images/doc-specific/iframe-large-icon.svg" alt="Large Icon" /> */}
             </button>
             <button
-                className="iframe-button-md btn--tertiary"
+                className="iframe-button-md active btn--tertiary"
                 data-iframe={iframeId}
                 data-size="md"
                 onClick={() => handleButtonClick('md')}

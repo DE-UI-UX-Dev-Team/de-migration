@@ -1,21 +1,23 @@
 @use '../../abstracts/tokens' as *;
 
-// Map used to create toggle switch mixins
+// New Map used to create toggle switch mixins
 
 $togglesOnContrastingBg: (
     'default-theme': (
         'light-bg': (
             'slider': (
                 'default': (
-                    'background-color': var(--secondary-light-3),
+                    'background-color': var(--grayscale-400),
+                    'border': 1px solid var(--grayscale-900),
                 ),
                 'disabled': (
-                    'background-color': var(--secondary-light-2),
+                    'border': 1px solid var(--grayscale-400),
                 ),
             ),
             'toggle-on': (
                 'checked': (
-                    'background-color': var(--tertiary-base),
+                    'background-color': var(--primary-dark),
+                    'border': 1px solid var(--grayscale-900),
                 ),
                 'hover': (
                     'background-color': var(--tertiary-base),
@@ -28,28 +30,30 @@ $togglesOnContrastingBg: (
                     'background-color': var(--tertiary-base),
                 ),
                 'disabled': (
-                    'background-color': var(--secondary-light-3),
+                    'border': 1px solid var(--grayscale-400),
                 ),
             ),
             'toggle-off': (
                 'default': (
-                    'background-color': var(--white-base),
+                    'background-color': var(--grayscale-000),
+                    'border': 1px solid var(--grayscale-900),
                 ),
                 'hover': (
                     'box-shadow': var(--toggle-off--hover--shadow),
-                    'background-color': var(--white-base),
+                    'background-color': var(--grayscale-000),
                 ),
                 'focus': (
                     'box-shadow': var(--toggle-off--hover--shadow),
-                    'background-color': var(--white-base),
+                    'background-color': var(--grayscale-000),
                     'outline': $outline--focus,
                 ),
                 'active': (
                     'box-shadow': var(--toggle-off--active--shadow),
-                    'background-color': var(--white-base),
+                    'background-color': var(--grayscale-000),
                 ),
                 'disabled': (
-                    'background-color': var(--white-base),
+                    'background-color': var(--grayscale-000),
+                    'border': 1px solid var(--grayscale-400),
                 ),
             ),
         ),

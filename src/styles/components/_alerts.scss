@@ -24,11 +24,11 @@ section.full-width .alert-container {
     flex-direction: row;
     flex: 0 1 100%;
     padding: 0 var(--alert-gutter);
-    color: var(--tertiary-base);
+    color: var(--grayscale-900);
     margin-bottom: var(--alert-gutter);
 
     > .message {
-        color: var(--tertiary-base);
+        color: var(--grayscale-900);
         position: relative;
         flex-grow: 1;
     }
@@ -58,11 +58,12 @@ section.full-width .alert-container {
         margin-right: var(--icon--margin--lg);
         font-size: var(--icon--size--lg);
         margin-top: 2rem;
-        color: var(--tertiary-base);
+        color: var(--grayscale-900);
     }
 
     .close-button {
-        color: var(--secondary-dark-2);
+        // color: var(--secondary-dark-2);
+        color: var(--secondary-darker);
         min-width: 0;
         font-size: var(--icon--size--md);
         font-weight: var(--font-weight--regular);
@@ -93,4 +94,17 @@ section.full-width .alert-container {
 
 [data-alert-message]:not([data-status='active']) {
     display: none;
+}
+
+.alert-container [data-message-type='warning'] {
+    background-color: var(--container-fill-status-warning);
+}
+.alert-container [data-message-type='error'] {
+    background-color: var(--container-fill-status-error);
+}
+.alert-container [data-message-type='success'] {
+    background-color: var(--container-fill-status-success);
+}
+.alert-container [data-message-type='message'] {
+    background-color: var(--container-fill-status-info);
 }

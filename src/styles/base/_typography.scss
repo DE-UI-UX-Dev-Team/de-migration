@@ -162,27 +162,27 @@ h6:last-child,
     margin-bottom: 0;
 }
 
-/*--- Color Scheme - Typography Default Properties ---*/
+// /*--- New Color Scheme - Typography Default Properties ---*/
 
 :root {
-    --heading-color: var(--seconadary-base);
-    --heading--on-dark-background: var(--white-base);
-    --heading--on-light-background: var(--secondary-base);
+    --heading-color: var(--grayscale-900);
+    --heading--on-dark-background: var(--grayscale-900);
+    --heading--on-light-background: var(--grayscale-900);
 
-    --heading--on-error-background: var(--error-text);
-    --heading--on-success-background: var(--success-text);
-    --heading--on-info-background: var(--info-text);
-    --heading--on-warning-background: var(--warning-text);
+    --heading--on-red-background: var(--red-light);
+    --heading--on-green-background: var(--green-eco);
+    --heading--on-grayscale-background: var(--grayscale-400);
+    --heading--on-yellow-background: var(--yellow-light);
 
-    --body-text--color: var(--secondary-base);
-    --body-text--light-color: var(--secondary-base);
-    --body-text--on-dark-background: var(--white-base);
-    --body-text--on-light-background: var(--secondary-base);
+    --body-text--color: var(--grayscale-900);
+    --body-text--light-color: var(--grayscale-600);
+    --body-text--on-dark-background: var(--grayscale-900);
+    --body-text--on-light-background: var(--grayscale-900);
 
-    --body-text--on-error-background: var(--error-text);
-    --body-text--on-success-background: var(--success-text);
-    --body-text--on-info-background: var(--info-text);
-    --body-text--on-warning-background: var(--warning-text);
+    --body-text--on-red-background: var(--grayscale-900);
+    --body-text--on-green-background: var(--grayscale-900);
+    --body-text--on-grayscale-background: var(--grayscale-900);
+    --body-text--on-yellow-background: var(--grayscale-900);
 }
 
 /*--- Color Scheme - Type Color Palette ---*/
@@ -215,11 +215,6 @@ h2,
     color: var(--heading-color);
 }
 
-[class*='bg--primary']:not([class*='light-']) hr,
-[class*='bg--secondary']:not([class*='light-']) hr {
-    background-color: var(--body-text--on-dark-background);
-}
-
 /*--- Color Scheme - Type on Colored Backgrounds ---*/
 
-@include getTypeOnColorBg();
+/* --- Color Scheme - Type on Colored Backgrounds --- */

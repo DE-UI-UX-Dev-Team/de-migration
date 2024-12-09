@@ -36,7 +36,7 @@ const SearchForm = () => {
                     placeholder=" "
                     onChange={handleInputChange}
                 />
-                <i class="far fa-magnifying-glass icon-sm clr--primary-base"></i>
+                <i className="far fa-magnifying-glass icon-sm "></i>
                 <span>Search Site</span>
             </label>
         </form>
